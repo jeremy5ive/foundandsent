@@ -246,6 +246,358 @@ function renderList(){
   });
 }
 
+function openLb(idx){lbIndex=idx;flipped=false;rotation=0;scale=1;panX=0;panY=0;document.getElementById('lightbox').classList.add('open');document.body.style.overflow='hidden';requestAnimationFrame(()=>requestAnimationFrame(()=>loadCard()))}
+function closeLb(){document.getElementById('lightbox').classList.remove('open');document.body.style.overflow=''}
+function loadCard(){
+  const c=viewList[lbIndex];
+  const imgFront=document.getElementById('img-front');
+  imgFront.src='';
+  document.getElementById('img-back').src=c.back||c.front||'';
+  document.getElementById('lb-title-text').textContent=c.location||'';
+  document.getElementById('lb-side').textContent='Front';
+  document.getElementById('btn-flip').classList.remove('active');
+  document.getElementById('zoom-slider').value=100;
+  document.getElementById('zoom-pct').textContent='100%';
+  const meta=[
+    c.year?{label:'Year',value:c.year}:null,
+    c.sender?{label:'From',value:c.sender}:null,
+    c.recipient?{label:'To',value:c.recipient}:null,
+    c.address?{label:'Address',value:c.address}:null,
+    c.notes?{label:'Notes',value:c.notes}:null
+  ].filter(Boolean);
+  document.getElementById('lb-meta-grid').innerHTML=meta.map(m=>'<span class="lb-meta-item"><strong>'+escHtml(m.label)+'</strong>'+escHtml(m.value)+'</span>').join('');
+  // Size after image loads to avoid zero-dimension render on first open
+  imgFront.onload=function(){sizeAndApply();imgFront.onload=null};
+  imgFront.onerror=function(){sizeAndApply();imgFront.onerror=null};
+  imgFront.src=c.front||'';
+  // If already cached, onload may not fire — force it
+  if(imgFront.complete&&imgFront.naturalWidth>0){sizeAndApply()}
+}
+function sizeAndApply(){
+  const stage=document.getElementById('lb-stage'),card=document.getElementById('lb-card');
+  const sw=stage.offsetWidth*.92,sh=stage.offsetHeight*.92;
+  let w=Math.min(sw,760),h=w/1.5;if(h>sh){h=sh;w=h*1.5}
+  card.style.width=w+'px';card.style.height=h+'px';applyTransform();
+}
+function applyTransform(){
+  document.getElementById('lb-card').style.transform='rotate('+rotation+'deg) scale('+scale+')'+(flipped?' rotateY(180deg)':'');
+  document.getElementById('lb-pan').style.transform='translate('+panX+'px,'+panY+'px)';
+}
+function syncZoom(){const v=Math.round(scale*100);document.getElementById('zoom-slider').value=v;document.getElementById('zoom-pct').textContent=v+'%'}
+
+document.getElementById('lb-close').addEventListener('click',closeLb);
+document.getElementById('lightbox').addEventListener('click',e=>{if(e.target===document.getElementById('lightbox'))closeLb()});
+document.getElementById('lb-prev').addEventListener('click',()=>{lbIndex=(lbIndex-1+viewList.length)%viewList.length;loadCard()});
+document.getElementById('lb-next').addEventListener('click',()=>{lbIndex=(lbIndex+1)%viewList.length;loadCard()});
+document.getElementById('btn-flip').addEventListener('click',()=>{flipped=!flipped;document.getElementById('lb-side').textContent=flipped?'Back':'Front';document.getElementById('btn-flip').classList.toggle('active',flipped);applyTransform()});
+document.getElementById('btn-rotl').addEventListener('click',()=>{rotation-=90;applyTransform()});
+document.getElementById('btn-rotr').addEventListener('click',()=>{rotation+=90;applyTransform()});
+document.getElementById('btn-zin').addEventListener('click',()=>{scale=Math.min(scale+.2,5);syncZoom();applyTransform()});
+document.getElementById('btn-zout').addEventListener('click',()=>{scale=Math.max(scale-.2,.3);syncZoom();applyTransform()});
+document.getElementById('btn-reset').addEventListener('click',()=>{scale=1;rotation=0;panX=0;panY=0;flipped=false;document.getElementById('lb-side').textContent='Front';document.getElementById('btn-flip').classList.remove('active');syncZoom();applyTransform()});
+document.getElementById('zoom-slider').addEventListener('input',function(){scale=parseInt(this.value)/100;document.getElementById('zoom-pct').textContent=this.value+'%';applyTransform()});
+document.getElementById('lb-stage').addEventListener('wheel',e=>{e.preventDefault();scale=Math.min(Math.max(scale-e.deltaY*.0012,.3),5);syncZoom();applyTransform()},{passive:false});
+
+const stageEl=document.getElementById('lb-stage');
+stageEl.addEventListener('mousedown',e=>{if(e.button!==0)return;dragging=true;dStartX=e.clientX;dStartY=e.clientY;dPanX=panX;dPanY=panY;stageEl.style.cursor='grabbing'});
+window.addEventListener('mousemove',e=>{if(!dragging)return;panX=dPanX+(e.clientX-dStartX);panY=dPanY+(e.clientY-dStartY);applyTransform()});
+window.addEventListener('mouseup',()=>{dragging=false;stageEl.style.cursor='grab'});
+stageEl.addEventListener('touchstart',e=>{const t=e.touches[0];dragging=true;dStartX=t.clientX;dStartY=t.clientY;dPanX=panX;dPanY=panY},{passive:true});
+stageEl.addEventListener('touchmove',e=>{if(!dragging)return;const t=e.touches[0];panX=dPanX+(t.clientX-dStartX);panY=dPanY+(t.clientY-dStartY);applyTransform()},{passive:true});
+stageEl.addEventListener('touchend',()=>{dragging=false});
+document.addEventListener('keydown',e=>{
+  if(!document.getElementById('lightbox').classList.contains('open'))return;
+  if(e.key==='Escape')closeLb();
+  if(e.key==='ArrowRight'){lbIndex=(lbIndex+1)%viewList.length;loadCard()}
+  if(e.key==='ArrowLeft'){lbIndex=(lbIndex-1+viewList.length)%viewList.length;loadCard()}
+  if(e.key==='f'||e.key==='F')document.getElementById('btn-flip').click();
+});
+window.addEventListener('resize',()=>{if(document.getElementById('lightbox').classList.contains('open'))sizeAndApply()});
+
+let pendingFront=null,pendingBack=null;
+document.getElementById('open-upload').addEventListener('click',()=>document.getElementById('upload-modal').classList.add('open'));
+function closeUploadModal(){
+  document.getElementById('upload-modal').classList.remove('open');
+  pendingFront=null;pendingBack=null;
+  ['u-loc','u-year','u-address','u-sender','u-recipient','u-notes'].forEach(id=>document.getElementById(id).value='');
+  resetDz('front');resetDz('back');
+}
+document.getElementById('close-upload').addEventListener('click',closeUploadModal);
+document.getElementById('cancel-upload').addEventListener('click',closeUploadModal);
+function resetDz(side){document.getElementById('prev-'+side).style.display='none';document.getElementById('prev-'+side).src='';document.getElementById('dz-'+side+'-hint').style.display=''}
+function setupDz(side){
+  const dz=document.getElementById('dz-'+side),fi=document.getElementById('file-'+side);
+  const prev=document.getElementById('prev-'+side),hint=document.getElementById('dz-'+side+'-hint');
+  dz.addEventListener('click',()=>fi.click());
+  dz.addEventListener('dragover',e=>{e.preventDefault();dz.classList.add('over')});
+  dz.addEventListener('dragleave',()=>dz.classList.remove('over'));
+  dz.addEventListener('drop',e=>{e.preventDefault();dz.classList.remove('over');const f=e.dataTransfer.files[0];if(f)readImg(f,side,prev,hint)});
+  fi.addEventListener('change',()=>{if(fi.files[0])readImg(fi.files[0],side,prev,hint)});
+}
+function readImg(file,side,prev,hint){
+  const r=new FileReader();
+  r.onload=ev=>{if(side==='front')pendingFront=ev.target.result;else pendingBack=ev.target.result;prev.src=ev.target.result;prev.style.display='block';hint.style.display='none'};
+  r.readAsDataURL(file);
+}
+setupDz('front');setupDz('back');
+document.getElementById('do-add').addEventListener('click',()=>{
+  if(!pendingFront){alert('Please upload the front image at minimum.');return}
+  postcards.push({id:Date.now(),location:document.getElementById('u-loc').value.trim()||'Unknown location',address:document.getElementById('u-address').value.trim()||'',year:document.getElementById('u-year').value.trim()||'',sender:document.getElementById('u-sender').value.trim()||'',recipient:document.getElementById('u-recipient').value.trim()||'',notes:document.getElementById('u-notes').value.trim()||'',front:pendingFront,back:pendingBack||pendingFront});
+  closeUploadModal();renderList();
+});
+
+renderList();
+</script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Found & Sent — A Postcard Archive</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:#f7f3ed;--bg2:#efe9df;--ink:#1c1510;--ink-soft:#5a4a38;
+    --rule:#d4c5b0;--gold:#9a7c3f;--gold-dim:#c4a96a;--red:#7a2e22;--hover-bg:#ece4d8;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:'Crimson Pro',Georgia,serif;min-height:100vh;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E")}
+  .masthead{border-bottom:1px solid var(--rule);padding:48px 60px 36px;display:flex;flex-direction:column;gap:6px}
+  .masthead-eyebrow{font-size:10px;letter-spacing:.4em;text-transform:uppercase;color:var(--gold);font-weight:600}
+  .masthead-title{font-family:'Playfair Display',Georgia,serif;font-size:clamp(2.4rem,5vw,4rem);font-weight:400;line-height:1;color:var(--ink);letter-spacing:-.02em}
+  .masthead-title em{font-style:italic;color:var(--gold)}
+  .masthead-sub{font-style:italic;font-size:1.05rem;color:var(--ink-soft);margin-top:4px;font-weight:300}
+  .masthead-count{margin-top:14px;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft);opacity:.6}
+  .search-wrap{max-width:900px;margin:0 auto;padding:24px 60px 0}
+  .search-input-wrap{position:relative}
+  .search-input-wrap svg{position:absolute;left:12px;top:50%;transform:translateY(-50%);width:15px;height:15px;color:var(--gold);opacity:.6;pointer-events:none}
+  #search-input{width:100%;background:var(--bg2);border:1px solid var(--rule);border-radius:2px;font-family:'Crimson Pro',serif;font-size:1rem;color:var(--ink);padding:9px 12px 9px 36px;outline:none;transition:border-color .2s}
+  #search-input:focus{border-color:var(--gold-dim)}
+  #search-input::placeholder{color:var(--ink-soft);opacity:.45;font-style:italic}
+  .search-hint{margin-top:6px;font-size:.72rem;letter-spacing:.1em;color:var(--ink-soft);opacity:.45;font-style:italic}
+  .table-wrap{max-width:900px;margin:0 auto;padding:0 60px 80px}
+  .col-headers{display:grid;grid-template-columns:60px 1fr 180px 100px;padding:20px 0 10px;border-bottom:1px solid var(--rule);font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-soft);opacity:.55;font-weight:600}
+  .postcard-list{list-style:none}
+  .postcard-row{display:grid;grid-template-columns:60px 1fr 180px 100px;align-items:baseline;padding:15px 0;border-bottom:1px solid var(--rule);cursor:pointer;position:relative;color:inherit}
+  .postcard-row::before{content:'';position:absolute;inset:0 -60px;background:var(--hover-bg);opacity:0;transition:opacity .15s;pointer-events:none}
+  .postcard-row:hover::before{opacity:1}
+  .postcard-row:hover .row-num{color:var(--gold)}
+  .postcard-row:hover .row-arrow{opacity:1;transform:translateX(4px)}
+  .row-num{font-size:.75rem;letter-spacing:.1em;color:var(--rule);font-variant-numeric:tabular-nums;transition:color .15s;padding-top:2px}
+  .row-location{font-size:1.15rem;font-weight:400;color:var(--ink);line-height:1.3}
+  .row-location-detail{display:block;font-size:.8rem;font-style:italic;color:var(--ink-soft);margin-top:2px;font-weight:300}
+  .row-year{font-size:1rem;color:var(--ink-soft);font-variant-numeric:tabular-nums;font-weight:300}
+  .row-arrow{font-size:.8rem;color:var(--gold);opacity:0;transition:opacity .15s,transform .15s;text-align:right;padding-right:4px}
+  mark{background:rgba(154,124,63,.2);color:inherit;border-radius:2px;padding:0 1px}
+  #lightbox{display:none;position:fixed;inset:0;z-index:900;background:rgba(20,14,8,.93);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);align-items:center;justify-content:center;flex-direction:column}
+  #lightbox.open{display:flex}
+  #lb-close{position:fixed;top:22px;right:28px;background:none;border:none;color:#c8b89a;font-size:1.5rem;line-height:1;cursor:pointer;z-index:910;opacity:.55;transition:opacity .2s;font-family:'Crimson Pro',serif}
+  #lb-close:hover{opacity:1}
+  .lb-arrow{position:fixed;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.04);border:1px solid rgba(200,170,120,.2);color:#c8b89a;width:42px;height:42px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.1rem;transition:all .18s;z-index:910}
+  .lb-arrow:hover{background:rgba(154,124,63,.2);border-color:var(--gold-dim);color:var(--gold-dim)}
+  #lb-prev{left:18px}#lb-next{right:18px}
+  .lb-controls{display:flex;align-items:center;gap:4px;margin-bottom:14px;background:rgba(255,255,255,.05);border:1px solid rgba(200,170,120,.15);border-radius:30px;padding:6px 14px;flex-wrap:wrap;justify-content:center}
+  .lb-btn{background:none;border:none;color:#b09070;font-family:'Crimson Pro',serif;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;padding:5px 12px;border-radius:20px;transition:all .18s;display:flex;align-items:center;gap:5px;white-space:nowrap}
+  .lb-btn:hover{background:rgba(154,124,63,.18);color:var(--gold-dim)}
+  .lb-btn.active{color:#c4a96a;background:rgba(154,124,63,.14)}
+  .lb-sep{width:1px;height:16px;background:rgba(200,170,120,.18);margin:0 2px;flex-shrink:0}
+  .lb-side-label{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:#7a6a55;padding:0 8px;font-style:italic}
+  .lb-stage{position:relative;width:88vw;max-width:820px;height:52vh;display:flex;align-items:center;justify-content:center;overflow:hidden;cursor:grab}
+  .lb-stage:active{cursor:grabbing}
+  .lb-pan-wrap{width:100%;height:100%;display:flex;align-items:center;justify-content:center;will-change:transform}
+  .lb-card{transform-style:preserve-3d;transition:transform .5s cubic-bezier(.4,0,.2,1);border-radius:3px;box-shadow:0 8px 40px rgba(0,0,0,.7),0 2px 8px rgba(0,0,0,.5);flex-shrink:0}
+  .lb-face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:3px;overflow:hidden;background:#111}
+  .lb-face.back{transform:rotateY(180deg)}
+  .lb-face img{width:100%;height:100%;object-fit:contain;display:block;user-select:none;-webkit-user-drag:none;pointer-events:none}
+  .lb-caption{margin-top:12px;text-align:center;color:#b09070;max-width:700px;width:88vw}
+  .lb-caption-main{font-family:'Playfair Display',serif;font-size:1.05rem;font-style:italic;color:#d4c0a0}
+  .lb-meta-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 20px;margin-top:8px}
+  .lb-meta-item{font-size:.78rem;letter-spacing:.08em;color:#7a6a55}
+  .lb-meta-item strong{color:#a08060;font-weight:600;letter-spacing:.12em;text-transform:uppercase;font-size:.65rem;margin-right:4px}
+  .lb-zoom-row{display:flex;align-items:center;gap:10px;margin-top:10px;font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:#7a6a55}
+  input[type=range]#zoom-slider{-webkit-appearance:none;width:100px;height:2px;background:rgba(200,170,120,.25);border-radius:2px;outline:none}
+  input[type=range]#zoom-slider::-webkit-slider-thumb{-webkit-appearance:none;width:11px;height:11px;border-radius:50%;background:var(--gold-dim);cursor:pointer}
+  #zoom-pct{min-width:36px;text-align:left}
+  .add-bar{border-top:1px solid var(--rule);padding:24px 0 0}
+  .add-link{font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);cursor:pointer;background:none;border:none;font-family:'Crimson Pro',serif;padding:0;opacity:.75;transition:opacity .2s}
+  .add-link:hover{opacity:1}
+  #upload-modal{display:none;position:fixed;inset:0;z-index:1000;background:rgba(20,14,8,.93);backdrop-filter:blur(6px);align-items:center;justify-content:center;overflow-y:auto;padding:30px 0}
+  #upload-modal.open{display:flex}
+  .upload-box{background:#f7f3ed;color:var(--ink);border-radius:4px;padding:40px 44px;width:520px;max-width:95vw;position:relative;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+  .upload-box h2{font-family:'Playfair Display',serif;font-weight:400;font-size:1.7rem;margin-bottom:4px}
+  .upload-desc{font-style:italic;font-size:.9rem;color:var(--ink-soft);margin-bottom:22px;font-weight:300}
+  .u-section-label{font-size:9px;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);font-weight:600;margin:20px 0 12px;padding-bottom:6px;border-bottom:1px solid var(--rule)}
+  .u-field{display:flex;flex-direction:column;gap:5px;margin-bottom:14px}
+  .u-field label{font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);font-weight:600}
+  .u-field input[type=text]{background:var(--bg2);border:1px solid var(--rule);color:var(--ink);font-family:'Crimson Pro',serif;font-size:1rem;padding:8px 10px;border-radius:2px;outline:none;transition:border-color .2s}
+  .u-field input:focus{border-color:var(--gold)}
+  .drop-pair{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px}
+  .dz{border:1.5px dashed var(--rule);border-radius:3px;padding:18px 10px;text-align:center;cursor:pointer;transition:border-color .18s,background .18s;font-style:italic;font-size:.82rem;color:var(--ink-soft);min-height:90px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px}
+  .dz:hover,.dz.over{border-color:var(--gold);background:#ece4d8}
+  .dz input{display:none}
+  .dz-label{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:600}
+  .dz img{width:100%;height:70px;object-fit:cover;border-radius:2px}
+  .u-actions{display:flex;gap:10px;justify-content:flex-end;margin-top:6px}
+  .btn-cancel{background:none;border:1px solid var(--rule);color:var(--ink-soft);font-family:'Crimson Pro',serif;font-size:.95rem;padding:8px 18px;border-radius:2px;cursor:pointer;transition:border-color .2s}
+  .btn-cancel:hover{border-color:var(--ink-soft)}
+  .btn-save{background:var(--ink);border:1px solid var(--ink);color:var(--bg);font-family:'Crimson Pro',serif;font-size:.95rem;padding:8px 22px;border-radius:2px;cursor:pointer;transition:background .2s}
+  .btn-save:hover{background:var(--red);border-color:var(--red)}
+  .close-modal-btn{position:absolute;top:14px;right:18px;background:none;border:none;font-size:1.2rem;cursor:pointer;color:var(--ink-soft);opacity:.5;transition:opacity .2s}
+  .close-modal-btn:hover{opacity:1}
+  footer{text-align:center;padding:40px 20px 50px;font-style:italic;font-size:.82rem;color:var(--ink-soft);opacity:.4;border-top:1px solid var(--rule);letter-spacing:.04em}
+  .empty{padding:60px 0;font-style:italic;color:var(--ink-soft);opacity:.4;font-size:1rem}
+  @media(max-width:680px){
+    .masthead{padding:30px 20px 24px}
+    .search-wrap{padding:18px 20px 0}
+    .table-wrap{padding:0 20px 60px}
+    .col-headers,.postcard-row{grid-template-columns:40px 1fr 100px 36px}
+    .postcard-row::before{inset:0 -20px}
+    #lb-prev{left:6px}#lb-next{right:6px}
+    .upload-box{padding:28px 20px}
+  }
+</style>
+</head>
+<body>
+
+<div class="masthead">
+  <div class="masthead-eyebrow">A Collection of Rescued Mail</div>
+  <h1 class="masthead-title">Found <em>&</em> Sent</h1>
+  <div class="masthead-sub">Postcards gathered from antique malls — written to someone else</div>
+  <div class="masthead-count" id="card-count">8 cards in the archive</div>
+</div>
+
+<div class="search-wrap">
+  <div class="search-input-wrap">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607z"/></svg>
+    <input type="text" id="search-input" placeholder="Search by location, year, sender, recipient, address…">
+  </div>
+  <div class="search-hint">Searches all fields — try a name, city, or year</div>
+</div>
+
+<div class="table-wrap">
+  <div class="col-headers">
+    <span>#</span><span>Location / Details</span><span>Year or Era</span><span></span>
+  </div>
+  <ul class="postcard-list" id="postcard-list"></ul>
+  <div class="add-bar">
+    <button class="add-link" id="open-upload">+ Add a postcard</button>
+  </div>
+</div>
+
+<div id="lightbox" role="dialog" aria-modal="true">
+  <button id="lb-close" title="Close (Esc)">&#x2715;</button>
+  <button class="lb-arrow" id="lb-prev">&#8592;</button>
+  <button class="lb-arrow" id="lb-next">&#8594;</button>
+  <div class="lb-controls">
+    <button class="lb-btn" id="btn-flip">&#8644; Flip</button>
+    <div class="lb-sep"></div>
+    <button class="lb-btn" id="btn-rotl">&#8634; Left</button>
+    <button class="lb-btn" id="btn-rotr">&#8635; Right</button>
+    <div class="lb-sep"></div>
+    <button class="lb-btn" id="btn-zout">&#8722;</button>
+    <button class="lb-btn" id="btn-zin">&#43;</button>
+    <button class="lb-btn" id="btn-reset">Reset</button>
+    <div class="lb-sep"></div>
+    <span class="lb-side-label" id="lb-side">Front</span>
+  </div>
+  <div class="lb-stage" id="lb-stage">
+    <div class="lb-pan-wrap" id="lb-pan">
+      <div class="lb-card" id="lb-card">
+        <div class="lb-face front"><img id="img-front" src="" alt="Front"></div>
+        <div class="lb-face back"><img id="img-back" src="" alt="Back"></div>
+      </div>
+    </div>
+  </div>
+  <div class="lb-caption">
+    <div class="lb-caption-main" id="lb-title-text"></div>
+    <div class="lb-meta-grid" id="lb-meta-grid"></div>
+  </div>
+  <div class="lb-zoom-row">
+    Zoom
+    <input type="range" id="zoom-slider" min="40" max="400" value="100" step="5">
+    <span id="zoom-pct">100%</span>
+    <span style="opacity:.4;font-size:.65rem;">&nbsp;&#183; scroll to zoom &#183; drag to pan</span>
+  </div>
+</div>
+
+<div id="upload-modal">
+  <div class="upload-box">
+    <button class="close-modal-btn" id="close-upload">&#x2715;</button>
+    <h2>Add a Postcard</h2>
+    <p class="upload-desc">Fill in whatever you know — only the front image is required.</p>
+    <div class="u-section-label">Location &amp; Time</div>
+    <div class="u-field"><label>Location / Description</label><input type="text" id="u-loc" placeholder="e.g. Niagara Falls, New York"></div>
+    <div class="u-field"><label>Street Address (if known)</label><input type="text" id="u-address" placeholder="e.g. 123 Main St, Buffalo, NY 14201"></div>
+    <div class="u-field"><label>Year or Era</label><input type="text" id="u-year" placeholder="e.g. 1957  or  c. 1940s"></div>
+    <div class="u-section-label">People</div>
+    <div class="u-field"><label>Sender (From)</label><input type="text" id="u-sender" placeholder="e.g. Aunt Ruth, Cleveland OH"></div>
+    <div class="u-field"><label>Recipient (To)</label><input type="text" id="u-recipient" placeholder="e.g. Margaret Holloway, Dayton OH"></div>
+    <div class="u-section-label">Notes</div>
+    <div class="u-field"><label>Additional notes</label><input type="text" id="u-notes" placeholder="e.g. Postmarked Chicago, stamp intact"></div>
+    <div class="u-section-label">Images</div>
+    <div class="drop-pair">
+      <div class="dz" id="dz-front"><input type="file" id="file-front" accept="image/*"><div class="dz-label">Front</div><div id="dz-front-hint" style="font-style:italic;font-size:.78rem;color:#7a6a55;">Click or drop image</div><img id="prev-front" src="" alt="" style="display:none;"></div>
+      <div class="dz" id="dz-back"><input type="file" id="file-back" accept="image/*"><div class="dz-label">Back</div><div id="dz-back-hint" style="font-style:italic;font-size:.78rem;color:#7a6a55;">Click or drop image</div><img id="prev-back" src="" alt="" style="display:none;"></div>
+    </div>
+    <div class="u-actions">
+      <button class="btn-cancel" id="cancel-upload">Cancel</button>
+      <button class="btn-save" id="do-add">Add to Archive</button>
+    </div>
+  </div>
+</div>
+
+<footer>Rescued from antique malls &nbsp;&#183;&nbsp; foundandsent.net</footer>
+
+<script>
+let postcards = [
+  { id:1, location:"Philadelphia, Pennsylvania", address:"", year:"c. 1900s\u20131910s", sender:"", recipient:"", notes:"", front:"https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/19xx - Philadelphia - front.jpg", back:"https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/19xx - Philadelphia - back.jpg" },
+  { id:2, location:"Vermont\u2013New York Border Bridge", address:"", year:"1937", sender:"", recipient:"", notes:"", front:"https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1937 - NY Vermont bridge - front.jpg", back:"https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1937 - NY Vermont bridge - back.jpg" },
+  { id:3, location:"Staten Island, New York", address:"", year:"1942", sender:"", recipient:"", notes:"", front:"https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1942 - Staten Island - front.jpg", back:"https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1942 - Staten Island - back.jpg" },
+  { id:4, location:"Monterrey, Mexico", address:"", year:"1949", sender:"", recipient:"", notes:"", front:"https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1949 - Monterry, MX - front.jpg", back:"https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1949 - Monterry, MX - back.jpg" },
+  { id:5, location:"Chicago, Illinois \u2014 Sheraton Blackstone Hotel", address:"636 S Michigan Ave, Chicago, IL 60605", year:"1957", sender:"", recipient:"", notes:"", front:"https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1957 - Chicago - Sheraton - Blackstone Hotel - front.jpg", back:"https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1957 - Chicago - Sheraton - Blackstone Hotel - back.jpg" },
+  { id:6, location:"Excelsior Springs, Missouri", address:"", year:"1960", sender:"", recipient:"", notes:"", front:"https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1960 - Excellsier Springs, MO - front.jpg", back:"https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1960 - Excellsier Springs, MO - back.jpg" },
+  { id:7, location:"Atlantic City, New Jersey", address:"", year:"1992", sender:"", recipient:"", notes:"", front:"https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1992 - Atlantic City, NJ - front.jpg", back:"https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1992 - Atlantic City, NJ - back.jpg" },
+  { id:8, location:"Duluth, Minnesota", address:"", year:"1992", sender:"", recipient:"", notes:"", front:"https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1992 - Duluth, MN - front.jpg", back:"https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1992 - Duluth, MN - back.jpg" }
+];
+
+let viewList=[],lbIndex=0,rotation=0,scale=1,flipped=false;
+let panX=0,panY=0,dragging=false,dStartX,dStartY,dPanX,dPanY,searchTerm='';
+
+function searchable(c){return[c.location,c.year,c.sender,c.recipient,c.address,c.notes].filter(Boolean).join(' ').toLowerCase()}
+function escHtml(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
+function highlight(text,term){if(!term||!text)return escHtml(text||'');const e=term.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');return escHtml(text).replace(new RegExp('('+e+')','gi'),'<mark>$1</mark>')}
+
+document.getElementById('search-input').addEventListener('input',function(){searchTerm=this.value.trim().toLowerCase();renderList()});
+
+function renderList(){
+  viewList=searchTerm?postcards.filter(c=>searchable(c).includes(searchTerm)):[...postcards];
+  const ul=document.getElementById('postcard-list');
+  const ce=document.getElementById('card-count');
+  const total=postcards.length,shown=viewList.length;
+  ce.textContent=searchTerm?shown+' of '+total+' cards match':total===1?'1 card in the archive':total+' cards in the archive';
+  if(!viewList.length){ul.innerHTML='<li class="empty">No postcards match your search.</li>';return}
+  ul.innerHTML='';
+  viewList.forEach((card,i)=>{
+    const li=document.createElement('li');
+    li.className='postcard-row';li.setAttribute('role','button');li.setAttribute('tabindex','0');
+    const det=[card.sender?'From: '+card.sender:'',card.recipient?'To: '+card.recipient:''].filter(Boolean).join('  \u00b7  ');
+    li.innerHTML='<span class="row-num">'+String(i+1).padStart(2,'0')+'</span>'
+      +'<span class="row-location">'+highlight(card.location,searchTerm)
+      +(det?'<span class="row-location-detail">'+highlight(det,searchTerm)+'</span>':'')
+      +(card.notes?'<span class="row-location-detail">'+highlight(card.notes,searchTerm)+'</span>':'')
+      +'</span>'
+      +'<span class="row-year">'+highlight(card.year,searchTerm)+'</span>'
+      +'<span class="row-arrow">View \u2192</span>';
+    li.addEventListener('click',()=>openLb(i));
+    li.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' ')openLb(i)});
+    ul.appendChild(li);
+  });
+}
+
 function openLb(idx){lbIndex=idx;flipped=false;rotation=0;scale=1;panX=0;panY=0;loadCard();document.getElementById('lightbox').classList.add('open');document.body.style.overflow='hidden'}
 function closeLb(){document.getElementById('lightbox').classList.remove('open');document.body.style.overflow=''}
 function loadCard(){
