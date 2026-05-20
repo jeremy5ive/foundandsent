@@ -250,7 +250,8 @@ function openLb(idx){lbIndex=idx;flipped=false;rotation=0;scale=1;panX=0;panY=0;
 function closeLb(){document.getElementById('lightbox').classList.remove('open');document.body.style.overflow=''}
 function loadCard(){
   const c=viewList[lbIndex];
-  document.getElementById('img-front').src=c.front||'';
+  const imgFront=document.getElementById('img-front');
+  imgFront.src='';
   document.getElementById('img-back').src=c.back||c.front||'';
   document.getElementById('lb-title-text').textContent=c.location||'';
   document.getElementById('lb-side').textContent='Front';
@@ -265,7 +266,12 @@ function loadCard(){
     c.notes?{label:'Notes',value:c.notes}:null
   ].filter(Boolean);
   document.getElementById('lb-meta-grid').innerHTML=meta.map(m=>'<span class="lb-meta-item"><strong>'+escHtml(m.label)+'</strong>'+escHtml(m.value)+'</span>').join('');
-  sizeAndApply();
+  // Size after image loads to avoid zero-dimension render on first open
+  imgFront.onload=function(){sizeAndApply();imgFront.onload=null};
+  imgFront.onerror=function(){sizeAndApply();imgFront.onerror=null};
+  imgFront.src=c.front||'';
+  // If already cached, onload may not fire — force it
+  if(imgFront.complete&&imgFront.naturalWidth>0){sizeAndApply()}
 }
 function sizeAndApply(){
   const stage=document.getElementById('lb-stage'),card=document.getElementById('lb-card');
