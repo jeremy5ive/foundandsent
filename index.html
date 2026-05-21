@@ -99,13 +99,9 @@
   footer{text-align:center;padding:40px 20px 50px;font-style:italic;font-size:.82rem;color:var(--ink-soft);opacity:.4;border-top:1px solid var(--rule);letter-spacing:.04em}
   .empty{padding:60px 0;font-style:italic;color:var(--ink-soft);opacity:.4;font-size:1rem}
   @media(max-width:680px){
-    .masthead{padding:30px 20px 24px}
-    .search-wrap{padding:18px 20px 0}
-    .table-wrap{padding:0 20px 60px}
+    .masthead{padding:30px 20px 24px}.search-wrap{padding:18px 20px 0}.table-wrap{padding:0 20px 60px}
     .col-headers,.postcard-row{grid-template-columns:40px 1fr 100px 36px}
-    .postcard-row::before{inset:0 -20px}
-    #lb-prev{left:6px}#lb-next{right:6px}
-    .upload-box{padding:28px 20px}
+    .postcard-row::before{inset:0 -20px}#lb-prev{left:6px}#lb-next{right:6px}.upload-box{padding:28px 20px}
   }
 </style>
 </head>
@@ -115,7 +111,7 @@
   <div class="masthead-eyebrow">A Collection of Rescued Mail</div>
   <h1 class="masthead-title">Found <em>&</em> Sent</h1>
   <div class="masthead-sub">Postcards gathered from antique malls — written to someone else</div>
-  <div class="masthead-count" id="card-count">8 cards in the archive</div>
+  <div class="masthead-count" id="card-count">24 cards in the archive</div>
 </div>
 
 <div class="search-wrap">
@@ -137,7 +133,7 @@
 </div>
 
 <div id="lightbox" role="dialog" aria-modal="true">
-  <button id="lb-close" title="Close (Esc)">&#x2715;</button>
+  <button id="lb-close">&#x2715;</button>
   <button class="lb-arrow" id="lb-prev">&#8592;</button>
   <button class="lb-arrow" id="lb-next">&#8594;</button>
   <div class="lb-controls">
@@ -198,98 +194,38 @@
   </div>
 </div>
 
-<footer>Rescued from antique malls &nbsp;&#183;&nbsp; foundandsent.net</footer>
+<footer>Rescued from antique malls &nbsp;&#183;&nbsp; foundandsent.net &nbsp;&#183;&nbsp; &copy; 2025 Found &amp; Sent</footer>
 
 <script>
+const IMG = "https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/";
+
 let postcards = [
-  {
-    id:1,
-    location:"Philadelphia, Pennsylvania \u2014 Fiberglass Bust of Benjamin Franklin",
-    address:"4th & Arch Streets, Philadelphia, PA",
-    year:"c. early 1970s",
-    sender:"Guyla",
-    recipient:"Mr. Guy S. Lewis, Route Two, Gering, Nebraska 69341",
-    notes:"Message: \u201cDear Grandad, Well here we are in Philadelphia. Jun. We went to see the Liberty Bell, Independence Hall, and Betsy Ross\u2019s house. It is neat. I had fun today when we went through the Navy\u2019s U.S.S. Olympia, Admiral Dewey\u2019s flagship. I even got to go in the engine room. It was really neat. Tomorrow we go to the Easter Parade. Hope you have a good day. Guyla.\u201d 8\u00a2 US flag stamp.",
-    front:"https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/19xx - Philadelphia - front.jpg",
-    back:"https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/19xx - Philadelphia - back.jpg"
-  },
-  {
-    id:2,
-    location:"Vermont\u2013New York Border Bridge",
-    address:"",
-    year:"July 22, 1937",
-    sender:"Unknown (signature illegible)",
-    recipient:"Mr. Joseph R. Page, Greene, New York",
-    notes:"Postmarked Colebrook, NH, July 22, 1937. 1\u00a2 Franklin stamp. Message written in pencil in two directions \u2014 heavily faded and partially illegible. Fragments mention Colebrook, a covered bridge, and traveling. Full transcription not possible from scan.",
-    front:"https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1937 - NY Vermont bridge - front.jpg",
-    back:"https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1937 - NY Vermont bridge - back.jpg"
-  },
-  {
-    id:3,
-    location:"Staten Island, New York \u2014 Fort Wadsworth",
-    address:"Ft. Wadsworth, Staten Island, NY",
-    year:"December 3, 1942",
-    sender:"Pvt. Freddie, Battery 6, Coast Artillery",
-    recipient:"Mr. & Mrs. Harry, P.O. Box 503, Lisco, Nebraska",
-    notes:"Free wartime military mail \u2014 no stamp required. Message: \u201cDear Mother & dad, Just time for a few words of thanks, and to tell you your package and card arrived. It was a very pleasant surprise, only wish there was a way I could show my appreciation. Well thanks again as I must take leave for guard duty call. [?] has just went so till tomorrow. I must bid you a cheerio good night and may God bless you one and all mother and dad, I still remain as ever Freddie.\u201d",
-    front:"https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1942 - Staten Island - front.jpg",
-    back:"https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1942 - Staten Island - back.jpg"
-  },
-  {
-    id:4,
-    location:"Monterrey, Mexico \u2014 Ham Radio QSL Card",
-    address:"Apdo. 717, Monterrey, Mexico",
-    year:"May 18, 1949",
-    sender:"Ramon (XE2OD), Monterrey, Mexico",
-    recipient:"Mr. Nicholas J.P. Rauch (KL7BE), Box 2279 or 236 Tenth Ave., Anchorage, Alaska",
-    notes:"QSL card confirming ham radio contact. Fecha: 5/18/49. Hora: 2:25 a.m. Banda: 14 (20 meter band). R: 5 / S: 9\u201310 DB / T: 8. Message: \u201cThank you for calling me, hope I will meet you again.\u201d Signed X-E-2-O-D, Ramon, Apdo. 717, Monterrey, Mejico.",
-    front:"https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1949 - Monterry, MX - front.jpg",
-    back:"https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1949 - Monterry, MX - back.jpg"
-  },
-  {
-    id:5,
-    location:"Chicago, Illinois \u2014 Sheraton Blackstone Hotel",
-    address:"636 S Michigan Ave, Chicago, IL 60605",
-    year:"November 25, 1957",
-    sender:"Unknown (signature unclear)",
-    recipient:"Douglas Fogland, Rt. 4, Fort Collins, Colorado",
-    notes:"Postmarked Iowa, Nov 25, 1957. 3\u00a2 Liberty stamp. Message partially obscured by printed hotel text: \u201cDearest Douglas, I thought you might like this card for your collection. My dreams aren\u2019t to make you a letter. Do you have the think that Santa has come to \u2014 [obscured] will find you more. You\u2019ll read nice for Christmas. Love.\u201d Sent knowingly to a postcard collector.",
-    front:"https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1957 - Chicago - Sheraton - Blackstone Hotel - front.jpg",
-    back:"https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1957 - Chicago - Sheraton - Blackstone Hotel - back.jpg"
-  },
-  {
-    id:6,
-    location:"Excelsior Springs, Missouri \u2014 McCleary-Thornton Minor Hospital",
-    address:"McCleary-Thornton Minor Hospital, Excelsior Springs, MO",
-    year:"March 19, 1960",
-    sender:"Mildred & Merritt",
-    recipient:"Miss Dixie McConkey, c/o Rev. McConkey, Oakesh, Nebraska",
-    notes:"Postmarked Excelsior Springs, MO, Mar 19, 1960. 3\u00a2 stamp. Handwritten in corner: \u201cThis is where we eat our meals.\u201d Message: \u201cDear Dixie: I am writing Trey Ann a card this morning so you will get some mail, ha. We are doing fine and hope to come home feeling like new again. The weather down here is terrible yet, seems winter is really drawn out. Merritt is down getting his treatments. I go at 10:00. Don\u2019t leave the room till about 5 min before so don\u2019t like to sit so long and wait. Tell all hello for me at home & we will see you before too many weeks pass. With love, Mildred & Merritt.\u201d",
-    front:"https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1960 - Excellsier Springs, MO - front.jpg",
-    back:"https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1960 - Excellsier Springs, MO - back.jpg"
-  },
-  {
-    id:7,
-    location:"Atlantic City, New Jersey",
-    address:"",
-    year:"September 16, 1982",
-    sender:"CD & MB",
-    recipient:"M/M Miller, 2050 Floral Dr., Boulder, CO 80302",
-    notes:"Postmarked South Jersey, NJ, Sep 16, 1982. 20\u00a2 bighorn sheep stamp. Message: \u201cHi \u2014 We haven\u2019t dipped our \u2018seed\u2019 yet, in fact we\u2019re $16. richer (although we haven\u2019t left yet). Playclub + Harrah\u2019s seem to be the nicest hotels. Talk to you later, Love, CD & MB.\u201d",
-    front:"https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1992 - Atlantic City, NJ - front.jpg",
-    back:"https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1992 - Atlantic City, NJ - back.jpg"
-  },
-  {
-    id:8,
-    location:"Duluth, Minnesota \u2014 Duluth-Superior Harbor",
-    address:"Duluth Canal, Duluth, MN",
-    year:"June 4, 1992",
-    sender:"Allison",
-    recipient:"Amanda Gostemaker, Oshkosh, Nebraska 69154",
-    notes:"Postmarked Fort Frances, Ontario, Canada \u2014 Allison had crossed into Canada during the trip. 19\u00a2 fawn stamp. Message: \u201cDear Amanda, Long time no see. Tried to talk you before I left. Tonight we are about a half mile from the border. The border of Canada. Um yah, I guess. You would love it in Duluth. There are kids cruising all the time. See ya when I get home. Allison.\u201d",
-    front:"https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1992 - Duluth, MN - front.jpg",
-    back:"https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1992 - Duluth, MN - back.jpg"
-  }
+  // ── ORIGINAL 8 ──
+  {id:1,location:"Philadelphia, Pennsylvania \u2014 Fiberglass Bust of Benjamin Franklin",address:"4th & Arch Streets, Philadelphia, PA",year:"c. early 1970s",sender:"Guyla",recipient:"Mr. Guy S. Lewis, Route Two, Gering, Nebraska 69341",notes:"Message: \u201cDear Grandad, Well here we are in Philadelphia. Jun. We went to see the Liberty Bell, Independence Hall, and Betsy Ross\u2019s house. It is neat. I had fun today when we went through the Navy\u2019s U.S.S. Olympia, Admiral Dewey\u2019s flagship. I even got to go in the engine room. It was really neat. Tomorrow we go to the Easter Parade. Hope you have a good day. Guyla.\u201d 8\u00a2 US flag stamp.",front:IMG+"19xx - Philadelphia - front.jpg",back:IMG+"19xx - Philadelphia - back.jpg"},
+  {id:2,location:"Vermont\u2013New York Border Bridge",address:"",year:"July 22, 1937",sender:"Unknown (signature illegible)",recipient:"Mr. Joseph R. Page, Greene, New York",notes:"Postmarked Colebrook, NH. 1\u00a2 Franklin stamp. Message written in pencil in two directions \u2014 heavily faded and partially illegible. Fragments mention Colebrook, a covered bridge, and traveling.",front:IMG+"1937 - NY Vermont bridge - front.jpg",back:IMG+"1937 - NY Vermont bridge - back.jpg"},
+  {id:3,location:"Staten Island, New York \u2014 Fort Wadsworth",address:"Ft. Wadsworth, Staten Island, NY",year:"December 3, 1942",sender:"Pvt. Freddie, Battery 6, Coast Artillery",recipient:"Mr. & Mrs. Harry, P.O. Box 503, Lisco, Nebraska",notes:"Free wartime military mail. Message: \u201cDear Mother & dad, Just time for a few words of thanks, and to tell you your package and card arrived. It was a very pleasant surprise, only wish there was a way I could show my appreciation. Well thanks again as I must take leave for guard duty call. I must bid you a cheerio good night and may God bless you one and all mother and dad, I still remain as ever Freddie.\u201d",front:IMG+"1942 - Staten Island - front.jpg",back:IMG+"1942 - Staten Island - back.jpg"},
+  {id:4,location:"Monterrey, Mexico \u2014 Ham Radio QSL Card",address:"Apdo. 717, Monterrey, Mexico",year:"May 18, 1949",sender:"Ramon (XE2OD), Monterrey, Mexico",recipient:"Mr. Nicholas J.P. Rauch (KL7BE), Box 2279 or 236 Tenth Ave., Anchorage, Alaska",notes:"QSL card confirming ham radio contact. Fecha: 5/18/49. Hora: 2:25 a.m. Banda: 14 (20 meter band). R:5 / S:9\u201310 DB / T:8. Message: \u201cThank you for calling me, hope I will meet you again.\u201d Signed X-E-2-O-D, Ramon.",front:IMG+"1949 - Monterry, MX - front.jpg",back:IMG+"1949 - Monterry, MX - back.jpg"},
+  {id:5,location:"Chicago, Illinois \u2014 Sheraton Blackstone Hotel",address:"636 S Michigan Ave, Chicago, IL 60605",year:"November 25, 1957",sender:"Unknown (signature unclear)",recipient:"Douglas Fogland, Rt. 4, Fort Collins, Colorado",notes:"Postmarked Iowa, Nov 25, 1957. 3\u00a2 Liberty stamp. Message partially obscured: \u201cDearest Douglas, I thought you might like this card for your collection.\u201d Sent knowingly to a postcard collector.",front:IMG+"1957 - Chicago - Sheraton - Blackstone Hotel - front.jpg",back:IMG+"1957 - Chicago - Sheraton - Blackstone Hotel - back.jpg"},
+  {id:6,location:"Excelsior Springs, Missouri \u2014 McCleary-Thornton Minor Hospital",address:"McCleary-Thornton Minor Hospital, Excelsior Springs, MO",year:"March 19, 1960",sender:"Mildred & Merritt",recipient:"Miss Dixie McConkey, c/o Rev. McConkey, Oakesh, Nebraska",notes:"Postmarked Excelsior Springs, MO. Handwritten in corner: \u201cThis is where we eat our meals.\u201d Message: \u201cDear Dixie: I am writing Trey Ann a card this morning so you will get some mail, ha. We are doing fine and hope to come home feeling like new again. The weather down here is terrible yet, seems winter is really drawn out. Merritt is down getting his treatments. I go at 10:00. Don\u2019t leave the room till about 5 min before so don\u2019t like to sit so long and wait. Tell all hello for me at home & we will see you before too many weeks pass. With love, Mildred & Merritt.\u201d",front:IMG+"1960 - Excellsier Springs, MO - front.jpg",back:IMG+"1960 - Excellsier Springs, MO - back.jpg"},
+  {id:7,location:"Atlantic City, New Jersey",address:"",year:"September 16, 1982",sender:"CD & MB",recipient:"M/M Miller, 2050 Floral Dr., Boulder, CO 80302",notes:"Postmarked South Jersey, NJ. 20\u00a2 bighorn sheep stamp. Message: \u201cHi \u2014 We haven\u2019t dipped our \u2018seed\u2019 yet, in fact we\u2019re $16. richer (although we haven\u2019t left yet). Playclub + Harrah\u2019s seem to be the nicest hotels. Talk to you later, Love, CD & MB.\u201d",front:IMG+"1992 - Atlantic City, NJ - front.jpg",back:IMG+"1992 - Atlantic City, NJ - back.jpg"},
+  {id:8,location:"Duluth, Minnesota \u2014 Duluth-Superior Harbor",address:"Duluth Canal, Duluth, MN",year:"June 4, 1992",sender:"Allison",recipient:"Amanda Gostemaker, Oshkosh, Nebraska 69154",notes:"Postmarked Fort Frances, Ontario, Canada. 19\u00a2 fawn stamp. Message: \u201cDear Amanda, Long time no see. Tried to talk you before I left. Tonight we are about a half mile from the border. The border of Canada. Um yah, I guess. You would love it in Duluth. There are kids cruising all the time. See ya when I get home. Allison.\u201d",front:IMG+"1992 - Duluth, MN - front.jpg",back:IMG+"1992 - Duluth, MN - back.jpg"},
+
+  // ── NEW 16 ──
+  {id:9,location:"Greetings (Embossed Floral)",address:"",year:"December 25, 1914",sender:"Aunt Mary",recipient:"Miss Mary A. Hammond, c/o Mrs. J. Hammond, Glendora, California",notes:"Postmarked Dec 25, 1914. 1\u00a2 green stamp. Message heavily faded and written at angles \u2014 largely illegible due to age. Fragments: \u201c...lots of good wishes...would [?]...Aunt Mary...\u201d Heavily embossed floral card.",front:IMG+"1914 Geetings - FRONT.jpg",back:IMG+"1914 Geetings - BACK.jpg"},
+  {id:10,location:"Louisville, Kentucky \u2014 Churchill Downs",address:"Churchill Downs, Louisville, KY",year:"November 1958",sender:"Nedra",recipient:"Mrs. Ed Hiner, 4954 No. Figueroa, Los Angeles 42, California",notes:"Postmarked Lexington, KY, Nov 1958. 3\u00a2 Liberty stamp. \u201cFight TB \u2014 Support Your TB Association\u201d cancellation. Message: \u201cMy childhood friend here has been trying to persuade me to visit her and would not take no for an answer. Decided Tuesday morning to come and left by plane Tuesday at 4:15 PM arriving at Fort Worth at 10:15 PM where I spent next day with an old acquaintance, left there at 4:15 PM Wed + changed planes in St. Louis, arrived Louisville after midnight + got here next a.m. fine. Love, Nedra.\u201d",front:IMG+"1958 Churchill Downs - FRONT.jpg",back:IMG+"1958 Churchill Downs - BACK.jpg"},
+  {id:11,location:"Chicago, Illinois \u2014 Buckingham Fountain, Grant Park",address:"Grant Park, Chicago, IL",year:"November 1959",sender:"Faye",recipient:"Mother, Oak Grove",notes:"Postmarked Chicago, IL, Nov 1959, 10:05 AM. 2\u00a2 + 3\u00a2 Liberty stamps. \u201cGive to the Community Fund\u201d cancellation. Message: \u201cHi Mom, Saw this card and thought you would enjoy seeing this sight. This is the one Carol, Vickie and Mike saw during the summer. I got your card this morning and read it while I was in the barber\u2019s chair. See you, Faye.\u201d",front:IMG+"1959 Chicago - Buckingham Fountain FRONT.jpg",back:IMG+"1959 Chicago - Buckingham Fountain BACK.jpg"},
+  {id:12,location:"Chicago, Illinois \u2014 Midway Airport",address:"5700 S Cicero Ave, Chicago, IL",year:"1959",sender:"Faye",recipient:"Carol, Oak Shore",notes:"Postmarked Amarillo, TX, 1959. Two 3\u00a2 Liberty stamps. Message written sideways and heavily obscured by postmark. Same sender as Buckingham Fountain card \u2014 appears to be a series from the same trip to Chicago.",front:IMG+"1959 Chicago - Midway Airport FRONT.jpg",back:IMG+"1959 Chicago - Midway Airport BACK.jpg"},
+  {id:13,location:"Chicago, Illinois \u2014 The Sherman Hotel (Card 1, unsent)",address:"Randolph, Clark & La Salle Streets, Chicago, IL",year:"c. 1959",sender:"",recipient:"",notes:"Never sent \u2014 blank back. Printed hotel advertisement only: \u201cThe Sherman, Chicago. Air-conditioned. 1501 rooms with bath. 1001 things to see and do. Chicago\u2019s celebrity hotel located at Randolph, Clark, and La Salle Streets. Chicago\u2019s only Loop Hotel with Drive-In Garage.\u201d",front:IMG+"1959 Chicago - The Sherman 1 FRONT.jpg",back:IMG+"1959 Chicago - The Sherman 1 BACK.jpg"},
+  {id:14,location:"Chicago, Illinois \u2014 The Sherman Hotel (Card 2)",address:"Randolph, Clark & La Salle Streets, Chicago, IL",year:"November 1959",sender:"Faye",recipient:"Carol Charles, Oak Shore",notes:"Postmarked Chicago, IL, Nov 1959. 5\u00a2 stamp. \u201cGive Through Community Fund\u201d cancellation. Message written sideways and partially obscured. Same sender as other Chicago cards from this trip.",front:IMG+"1959 Chicago - The Sherman 2 FRONT.jpg",back:IMG+"1959 Chicago - The Sherman 2 BACK.jpg"},
+  {id:15,location:"Chicago, Illinois \u2014 The Sherman Hotel (Card 3)",address:"Randolph, Clark & La Salle Streets, Chicago, IL",year:"November 14, 1959",sender:"Faye",recipient:"Carol Shore",notes:"Postmarked Chicago, IL, Nov 14, 1959. 5\u00a2 stamp. Message written sideways. Third Sherman Hotel card from the same Chicago trip \u2014 Faye appears to have sent multiple cards on the same visit.",front:IMG+"1959 Chicago - The Sherman 3 FRONT.jpg",back:IMG+"1959 Chicago - The Sherman 3 BACK.jpg"},
+  {id:16,location:"Ireland",address:"",year:"September 22, 1959",sender:"Virginia & Gene",recipient:"E.R. Crotty, 2412 E. 70th St. Terrace, Kansas City, Missouri, U.S.A.",notes:"Postmarked Cork, Ireland, Sep 22, 1959. AIRMAIL. Irish 6d stamp. Carta Poise (Irish postal card). Message: \u201cTuesday. Dear Dad, Grace & Dick, Arrived in Ireland Monday morning, spent the day driving. It is a beautiful land. As green as they say and wonderful people. Love, Virginia & Gene.\u201d",front:IMG+"1959 Ireland - FRONT.jpg",back:IMG+"1959 Ireland - BACK.jpg"},
+  {id:17,location:"Atlanta, Georgia",address:"",year:"November 1962",sender:"Anna & Era",recipient:"Mrs. Anna Hiner, 4757 North Figueroa, Los Angeles, California",notes:"Postmarked Atlanta, GA, Nov 1962. 8\u00a2 airmail stamp. Message written sideways and heavily obscured. Dated 10/27/62 in message. Partial read: mentions being in Atlanta all week, mentions Nick, and family matters.",front:IMG+"1962 Atlanta - FRONT.jpg",back:IMG+"1962 Atlanta - BACK.jpg"},
+  {id:18,location:"Northern California \u2014 The Three Shastas",address:"Shasta Dam Vista House, Summit City, CA",year:"August 7, 1965",sender:"Ross",recipient:"Mr. & Mrs. Fred McConaghy, Cedar Vale, Kansas 67024",notes:"Meter mail, no stamp. Message: \u201cHi: We decided to take a weekend jaunt and see a little more of California. Left home at 7 this morning & have just finished a tour of this dam at 2 o\u2019clock. Plan to stay in a motel tonight, go thru Lassen Park tomorrow & then home tomorrow afternoon. This tour was really interesting. Love, Ross.\u201d",front:IMG+"1965 The Three Shastas - FRONT.jpg",back:IMG+"1965 The Three Shastas - BACK.jpg"},
+  {id:19,location:"Langtry, Texas \u2014 Judge Bean Museum",address:"Judge Bean Museum, Langtry, TX",year:"September 16, 1967",sender:"Bill & Helena",recipient:"Miss Helen Johnson, 2455 Prairie Ave., Evanston, Illinois",notes:"4\u00a2 Lincoln stamp. Message: \u201cDear Helen, I hope you are beginning to get down to earth after your fabulous trip to Europe. In a mere now. Petrified Forest, Indian Ruins, Meteor Crater, Carlsbad Caverns (fantastic!), The Longhorn herd, Ranch. Next to an 1890 Saloon! Cowboys (in jeeps) and horses. Staying at L.B.J.\u2019s ranch on way to visiting friends on a ranch at Alta, Texas \u2014 New Orleans. Love, Bill & Helena.\u201d",front:IMG+"1967 TX - Judge Bean FRONT.jpg",back:IMG+"1967 TX - Judge Bean BACK.jpg"},
+  {id:20,location:"Yellowstone National Park \u2014 Lower Falls",address:"Yellowstone National Park, WY",year:"July 24, 1971",sender:"Bob, Alyce, Ron & Alison",recipient:"Mrs. Harry Muller, 3635 Cleveland, Kansas City, Missouri",notes:"Meter mail. Written in hot pink pen. Message: \u201cWe stood at the top of this falls and felt like we were going over ourselves. The platform is circled in red. Have driven 5,600 miles thru Canada \u2014 to L.A. and now on way home. 106 here in Arizona. A highlight of our trip was the \u2018Queen Mary\u2019 tour. Bob-Alyce-Ron-Alison.\u201d",front:IMG+"1971 Yellowstone - FRONT.jpg",back:IMG+"1971 Yellowstone - BACK.jpg"},
+  {id:21,location:"Chinle, Arizona \u2014 Mummy Cave Ruin, Canyon de Chelly",address:"Canyon de Chelly National Monument, Chinle, AZ",year:"May 1976",sender:"Pearl",recipient:"Miss Laura Remp, 804 E. 8th St., Newton, Kansas 67114",notes:"Postmarked Santa Rosa, NM, May 1976. 9\u00a2 US Capitol stamp. Message: \u201cDear Sister, Just a line to let you know I might see you soon. Got to see you soon. Roys & then, Okla City, Roys & Lord willing with so Lord willing. The folks from Pa. were talking about Elton. Love, Pearl.\u201d",front:IMG+"1976 Chinle AZ - Mummy Cave FRONT.jpg",back:IMG+"1976 Chinle AZ - Mummy Cave BACK.jpg"},
+  {id:22,location:"Oceanside, California \u2014 Oceanside Harbor",address:"Oceanside Harbor, Oceanside, CA",year:"September 8, 1978",sender:"Unknown (signature cut off)",recipient:"Mrs. Wilma Wheeler, RR 2 Box 90, Blackwell, Oklahoma 74631",notes:"Postmarked San Diego, CA, Sep 8, 1978. 15\u00a2 rose stamp. Message: \u201cDear Wilma 9/8/78 \u2014 Made it here in Oceanside Calif. last Sunday. Having a good time. Hope to be here until next Thursday. Then will start home [?] Sunday.\u201d",front:IMG+"1978 Oceanside CA - FRONT.jpg",back:IMG+"1978 Oceanside CA - BACK.jpg"},
+  {id:23,location:"Arlington, Texas \u2014 Six Flags Over Texas, Shock Wave",address:"Six Flags Over Texas, Arlington, TX 76010",year:"July 22, 1988",sender:"Jeannette Family",recipient:"Bob & MaryLou Newsome, 2066 Tecumseh Rd., Manhattan, Kansas 66502",notes:"Postmarked Jul 25, 1988. Oliver Wendell Holmes stamp. Message: \u201cHaving a lot of fun in Texas. Mark & Rachelle rode this ride, on front, I watched. Have spent two afternoons in Six Flags. Plan to return this evening to finish up, and head for Okla. in the morning. Hope to see you soon! Love, Jeannette Family.\u201d",front:IMG+"1988 Six Flags - FRONT.jpg",back:IMG+"1988 Six Flags - BACK.jpg"}
 ];
 
 let viewList=[],lbIndex=0,rotation=0,scale=1,flipped=false;
@@ -316,7 +252,7 @@ function renderList(){
     li.innerHTML='<span class="row-num">'+String(i+1).padStart(2,'0')+'</span>'
       +'<span class="row-location">'+highlight(card.location,searchTerm)
       +(det?'<span class="row-location-detail">'+highlight(det,searchTerm)+'</span>':'')
-      +(card.notes?'<span class="row-location-detail">'+highlight(card.notes,searchTerm)+'</span>':'')
+      +(card.notes?'<span class="row-location-detail">'+highlight(card.notes.substring(0,80)+(card.notes.length>80?'...':''),searchTerm)+'</span>':'')
       +'</span>'
       +'<span class="row-year">'+highlight(card.year,searchTerm)+'</span>'
       +'<span class="row-arrow">View \u2192</span>';
@@ -346,11 +282,9 @@ function loadCard(){
     c.notes?{label:'Notes',value:c.notes}:null
   ].filter(Boolean);
   document.getElementById('lb-meta-grid').innerHTML=meta.map(m=>'<span class="lb-meta-item"><strong>'+escHtml(m.label)+'</strong>'+escHtml(m.value)+'</span>').join('');
-  // Size after image loads to avoid zero-dimension render on first open
   imgFront.onload=function(){sizeAndApply();imgFront.onload=null};
   imgFront.onerror=function(){sizeAndApply();imgFront.onerror=null};
   imgFront.src=c.front||'';
-  // If already cached, onload may not fire — force it
   if(imgFront.complete&&imgFront.naturalWidth>0){sizeAndApply()}
 }
 function sizeAndApply(){
