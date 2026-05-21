@@ -96,6 +96,20 @@
   .btn-save:hover{background:var(--red);border-color:var(--red)}
   .close-modal-btn{position:absolute;top:14px;right:18px;background:none;border:none;font-size:1.2rem;cursor:pointer;color:var(--ink-soft);opacity:.5;transition:opacity .2s}
   .close-modal-btn:hover{opacity:1}
+
+  .contact-section{max-width:900px;margin:0 auto;padding:0 60px 60px;border-top:1px solid var(--rule)}
+  .contact-section h2{font-family:'Playfair Display',serif;font-weight:400;font-size:1.8rem;color:var(--ink);margin-bottom:6px;margin-top:40px}
+  .contact-section p{font-style:italic;font-size:.95rem;color:var(--ink-soft);margin-bottom:28px;font-weight:300}
+  .contact-form{display:flex;flex-direction:column;gap:14px;max-width:520px}
+  .cf-field{display:flex;flex-direction:column;gap:5px}
+  .cf-field label{font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);font-weight:600}
+  .cf-field input,.cf-field textarea{background:var(--bg2);border:1px solid var(--rule);color:var(--ink);font-family:'Crimson Pro',serif;font-size:1rem;padding:9px 12px;border-radius:2px;outline:none;transition:border-color .2s}
+  .cf-field input:focus,.cf-field textarea:focus{border-color:var(--gold-dim)}
+  .cf-field textarea{resize:vertical;min-height:120px}
+  .cf-submit{align-self:flex-start;background:var(--ink);border:1px solid var(--ink);color:var(--bg);font-family:'Crimson Pro',serif;font-size:.95rem;padding:10px 28px;border-radius:2px;cursor:pointer;letter-spacing:.04em;transition:background .2s}
+  .cf-submit:hover{background:var(--red);border-color:var(--red)}
+  .cf-success{display:none;font-style:italic;color:var(--stamp-green,#4a6741);font-size:.95rem;padding:12px 0}
+  @media(max-width:680px){.contact-section{padding:0 20px 60px}}
   footer{text-align:center;padding:40px 20px 50px;font-style:italic;font-size:.82rem;color:var(--ink-soft);opacity:.4;border-top:1px solid var(--rule);letter-spacing:.04em}
   .empty{padding:60px 0;font-style:italic;color:var(--ink-soft);opacity:.4;font-size:1rem}
   @media(max-width:680px){
@@ -110,7 +124,7 @@
 <div class="masthead">
   <div class="masthead-eyebrow">A Collection of Rescued Mail</div>
   <h1 class="masthead-title">Found <em>&</em> Sent</h1>
-  <div class="masthead-sub">Postcards gathered from antique malls — written to someone else</div>
+  <div class="masthead-sub">Past words&hellip; discovered again</div>
   <div class="masthead-count" id="card-count">28 cards in the archive</div>
 </div>
 
@@ -194,7 +208,28 @@
   </div>
 </div>
 
-<footer>Rescued from antique malls &nbsp;&#183;&nbsp; foundandsent.net &nbsp;&#183;&nbsp; &copy; 2025 Found &amp; Sent</footer>
+<div class="contact-section">
+  <h2>Get in Touch</h2>
+  <p>Have a postcard to share, a story to add, or just want to say hello?</p>
+  <form class="contact-form" id="contact-form" action="https://formspree.io/f/mjgzwpvr" method="POST">
+    <div class="cf-field">
+      <label>Your Name</label>
+      <input type="text" name="name" placeholder="e.g. Jane Smith" required>
+    </div>
+    <div class="cf-field">
+      <label>Your Email</label>
+      <input type="email" name="email" placeholder="e.g. jane@example.com" required>
+    </div>
+    <div class="cf-field">
+      <label>Message</label>
+      <textarea name="message" placeholder="Say hello, share a story, or tell us about a postcard..." required></textarea>
+    </div>
+    <button type="submit" class="cf-submit">Send Message</button>
+    <div class="cf-success" id="cf-success">Thank you — your message has been sent.</div>
+  </form>
+</div>
+
+<footer>Rescued from antique malls &nbsp;&#183;&nbsp; foundandsent.net &nbsp;&#183;&nbsp; &copy; 2025&ndash;2026 Found &amp; Sent. All rights reserved. Site design &amp; archive by Jeremy.</footer>
 
 <script>
 const IMG = "https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/";
@@ -368,6 +403,35 @@ document.getElementById('do-add').addEventListener('click',()=>{
 });
 
 renderList();
+
+// Contact form
+const cfForm = document.getElementById('contact-form');
+if (cfForm) {
+  cfForm.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const btn = cfForm.querySelector('.cf-submit');
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+    try {
+      const res = await fetch(cfForm.action, {
+        method: 'POST',
+        body: new FormData(cfForm),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        cfForm.reset();
+        document.getElementById('cf-success').style.display = 'block';
+        btn.style.display = 'none';
+      } else {
+        btn.textContent = 'Error — try again';
+        btn.disabled = false;
+      }
+    } catch(err) {
+      btn.textContent = 'Error — try again';
+      btn.disabled = false;
+    }
+  });
+}
 </script>
 </body>
 </html>
