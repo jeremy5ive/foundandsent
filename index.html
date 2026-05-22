@@ -13,8 +13,26 @@
   }
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
-  body{background:var(--bg);color:var(--ink);font-family:'Crimson Pro',Georgia,serif;min-height:100vh;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E")}
-  .masthead{border-bottom:1px solid var(--rule);padding:48px 60px 36px;display:flex;flex-direction:column;gap:6px}
+  body{background-color:#c8a97e;color:var(--ink);font-family:'Crimson Pro',Georgia,serif;min-height:100vh;background-image:repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 2px,
+      rgba(101,67,33,0.04) 2px,
+      rgba(101,67,33,0.04) 3px
+    ),
+    repeating-linear-gradient(
+      180deg,
+      transparent,
+      transparent 40px,
+      rgba(80,50,20,0.06) 40px,
+      rgba(80,50,20,0.06) 42px,
+      transparent 42px,
+      transparent 80px,
+      rgba(60,35,10,0.05) 80px,
+      rgba(60,35,10,0.05) 81px
+    ),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='wood'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.015 0.65' numOctaves='3' seed='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0.3'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23wood)' opacity='0.18'/%3E%3C/svg%3E")}
+  .masthead{border-bottom:1px solid var(--rule);padding:48px 60px 36px;display:flex;flex-direction:column;gap:6px;background:rgba(247,243,237,0.92);backdrop-filter:blur(2px)}
   .masthead-eyebrow{font-size:10px;letter-spacing:.4em;text-transform:uppercase;color:var(--gold);font-weight:600}
   .masthead-title{font-family:'Playfair Display',Georgia,serif;font-size:clamp(2.4rem,5vw,4rem);font-weight:400;line-height:1;color:var(--ink);letter-spacing:-.02em}
   .masthead-title em{font-style:italic;color:var(--gold)}
@@ -110,7 +128,9 @@
   .cf-submit:hover{background:var(--red);border-color:var(--red)}
   .cf-success{display:none;font-style:italic;color:var(--stamp-green,#4a6741);font-size:.95rem;padding:12px 0}
   @media(max-width:680px){.contact-section{padding:0 20px 60px}}
-  footer{text-align:center;padding:40px 20px 50px;font-style:italic;font-size:.82rem;color:var(--ink-soft);opacity:.4;border-top:1px solid var(--rule);letter-spacing:.04em}
+  .content-panel{background:rgba(247,243,237,0.92);backdrop-filter:blur(2px);max-width:960px;margin:0 auto 0;padding:0 0 20px}
+  .contact-section{background:rgba(247,243,237,0.92);backdrop-filter:blur(2px)}
+  footer{background:rgba(247,243,237,0.85);text-align:center;padding:40px 20px 50px;font-style:italic;font-size:.82rem;color:var(--ink-soft);opacity:.4;border-top:1px solid var(--rule);letter-spacing:.04em}
   .empty{padding:60px 0;font-style:italic;color:var(--ink-soft);opacity:.4;font-size:1rem}
   @media(max-width:680px){
     .masthead{padding:30px 20px 24px}.search-wrap{padding:18px 20px 0}.table-wrap{padding:0 20px 60px}
@@ -125,10 +145,10 @@
   <div class="masthead-eyebrow">A Collection of Rescued Mail</div>
   <h1 class="masthead-title">Found <em>&</em> Sent</h1>
   <div class="masthead-sub">Past words&hellip; discovered again</div>
-  <div class="masthead-count" id="card-count">28 cards in the archive</div>
+  <div class="masthead-count" id="card-count">33 cards in the archive</div>
 </div>
 
-<div class="search-wrap">
+<div class="content-panel"><div class="search-wrap">
   <div class="search-input-wrap">
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607z"/></svg>
     <input type="text" id="search-input" placeholder="Search by location, year, sender, recipient, address…">
@@ -206,7 +226,7 @@
       <button class="btn-save" id="do-add">Add to Archive</button>
     </div>
   </div>
-</div>
+</div></div>
 
 <div class="contact-section">
   <h2>Get in Touch</h2>
@@ -267,7 +287,14 @@ let postcards = [
   {id:25,location:"Northwoods Vacation View \u2014 A Scenic Lake",address:"",year:"c. 1940s",sender:"Unknown (signature cut off)",recipient:"Mrs. Anna Hiner, 4757 N. Figueroa, Los Angeles, California",notes:"Postmarked via Railway Post Office (St. P & NOY, TR 7, Jul 5) \u2014 sorted on a moving train. 2\u00a2 stamp. Message written in bright green ink sideways \u2014 heavily obscured. Genuine Curteich-Chicago CT Art-Colortone card.",front:IMG+"Northwoods Vacation - front.jpg",back:IMG+"Northwoods Vacation - back.jpg"},
   {id:26,location:"Evansville, Indiana \u2014 Post Office",address:"Post Office, Evansville, IN",year:"November 9, 1932",sender:"Estelle",recipient:"Mrs. Gentry, 1218 E. 31st Ave., Denver, Colorado",notes:"Postmarked Evansville, IND, Nov 9, 1932. 1\u00a2 Washington stamp. Great Depression era. Message: \u201cDear Mrs. Gentry, I am home for a visit. & I don\u2019t like the drive I\u2019ve been in but will stay in Chi. if I get anything at all. as I have enough rags to last awhile. But jobs seem awful scarce in Chi. maybe after the Election it will be better, hope so. you can write here & if I leave will forward my mail. as ever Estelle.\u201d",front:IMG+"1982 - Evansville, Ind - front.jpg",back:IMG+"1982 - Evansville, Ind - back.jpg"},
   {id:27,location:"Chicago, Illinois \u2014 The Sands Motel",address:"Sheridan Rd. & Foster Ave., Chicago, IL",year:"July 21, 1959",sender:"Bill",recipient:"Mrs. Anna Robinson, Oak Grove, Missouri",notes:"Postmarked Chicago, Jul 21, 1959. Three 1\u00a2 Washington stamps. Message: \u201cDon\u2019t have time to go and buy any cards. Tomorrow we go for a 2 hour ride up the shore of Lake Michigan by boat. We go from morning to night without stopping! See you about Friday or Saturday. Bye, Bill.\u201d Pool and Cabana Club, 150 air-conditioned rooms with 21-inch television.",front:IMG+"1959 - Chicago, Ill - Sands Motel - front.jpg",back:IMG+"1959 - Chicago, Ill - Sands Motel - back.jpg"},
-  {id:28,location:"Chicago, Illinois \u2014 LaSalle Street",address:"LaSalle Street, Chicago, IL",year:"November 17, 1959",sender:"Faye",recipient:"Mick & Mother, Oak Grove, Missouri",notes:"Postmarked Chicago, ILL, Nov 17, 1959. 5\u00a2 Monroe airmail stamp. AIRMAIL postcard. \u201cGive Through Community Fund\u201d cancellation. Message: \u201cMonday Night 8 o\u2019clock. Just get back to the hotel from work and are going out for a good dinner. I didn\u2019t know but it\u2019s really cold. The wind is down to 12 and the [wind] off Lake Michigan. I\u2019m in for a [surprise]. Love Faye.\u201d Same Faye who sent the Sherman Hotel, Buckingham Fountain, Midway Airport and Sands Motel cards \u2014 all from the same November 1959 Chicago trip to Oak Grove, MO.",front:IMG+"1959 - Chicago, Ill - LaSalle St - front.jpg",back:IMG+"1959 - Chicago, Ill - LaSalle St - back.jpg"}
+  {id:28,location:"Chicago, Illinois \u2014 LaSalle Street",address:"LaSalle Street, Chicago, IL",year:"November 17, 1959",sender:"Faye",recipient:"Mick & Mother, Oak Grove, Missouri",notes:"Postmarked Chicago, ILL, Nov 17, 1959. 5\u00a2 Monroe airmail stamp. AIRMAIL postcard. \u201cGive Through Community Fund\u201d cancellation. Message: \u201cMonday Night 8 o\u2019clock. Just get back to the hotel from work and are going out for a good dinner. I didn\u2019t know but it\u2019s really cold. The wind is down to 12 and the [wind] off Lake Michigan. I\u2019m in for a [surprise]. Love Faye.\u201d Same Faye who sent the Sherman Hotel, Buckingham Fountain, Midway Airport and Sands Motel cards \u2014 all from the same November 1959 Chicago trip to Oak Grove, MO.",front:IMG+"1959 - Chicago, Ill - LaSalle St - front.jpg",back:IMG+"1959 - Chicago, Ill - LaSalle St - back.jpg"},
+
+  // ── V4 BATCH ──
+  {id:29,location:"Chicago, Illinois \u2014 Randolph Street at Night",address:"Randolph Street, Chicago, IL",year:"1959",sender:"Faye",recipient:"Carol Robinson, Oak Grove, Missouri",notes:"Postmarked Chicago, IL, 1959. 5\u00a2 Monroe airmail stamp. AIRMAIL. \u201cGive Through Community Fund\u201d cancellation. Message: \u201cHi honey, This is directly across the street from the hotel. At night it looks like daylight. Got your letter and card today. Sorry to hear the kids have such severe colds. Maybe they can shake it. The maid left our window open when she cleaned up and it was really cold. I just closed it and ran hot water for 30 minutes to warm it up. Bye.” Faye card #7 from the November 1959 Chicago trip.",front:IMG+"1959 - Chicago - front.jpg",back:IMG+"1959 - Chicago - back.jpg"},
+  {id:30,location:"Chicago, Illinois \u2014 Museum of Science and Industry",address:"5700 S Lake Shore Dr, Chicago, IL 60637",year:"November 12, 1959",sender:"Bill",recipient:"Mother, Oak Grove, Missouri",notes:"Postmarked Chicago, IL, Nov 12, 1959. 7\u00a2 airmail stamp. \u201cGive Through Community Fund\u201d cancellation. Message: \u201cHi Mom: Saturday, I think I\u2019ll go out to this place again and see all of the building. This is the one Carroll could spend all day in. Be good and I\u2019ll see you. Bill.\u201d Same Oak Grove, MO family as Faye \u2014 Bill appears to be a sibling also in Chicago that November.",front:IMG+"1959 - Chicago, ILL - Museum of Science - front.jpg",back:IMG+"1959 - Chicago, ILL - Museum of Science - back.jpg"},
+  {id:31,location:"Dayton, Ohio \u2014 Downtown Skyline at Twilight",address:"Downtown Dayton, OH",year:"November 25, 1991",sender:"Unknown (signature illegible)",recipient:"Ms. Dorothy Viola, 1243 Baldwin Lane #609, Palatine, IL 60067",notes:"Postmarked Dayton, OH, Nov 25, 1991. 19\u00a2 fawn stamp. Message: \u201cDear Dor \u2014 How do you like our skyline? Concentrated beauty \u2014 Dayton, my kind of Town. Love.” Photographed by Wayne Schwegel for the Downtown Dayton Association\u2019s \u201cTurn It On Dayton!\u201d photo contest.",front:IMG+"1991 - Dayton, OH - front.jpg",back:IMG+"1991 - Dayton, OH - back.jpg"},
+  {id:32,location:"Montreal, Quebec \u2014 Ch\u00e2teau Champlain at Night",address:"Ch\u00e2teau Champlain & Place du Canada, Montreal, QC",year:"October 4, 1992",sender:"Jo & John",recipient:"Mr. & Mrs. James W. Kirby, 308 Drury Lane, El Paso, Texas 79915",notes:"Posted on board M/S Sagafjord cruise ship. 40\u00a2 Bahamas stamp. Message: \u201cHi There, Well we sure do miss you guys. Without you at the table, we are all alone. Had a good time yesterday in Montreal, saw many tour buses, looked for you. Its now 10:45 AM in Quebec & its dam cold, but sunny. Hope you two had a good time, our next stop is Prince Edward Island & then back to the good ole U.S.A. Will talk soon. Lots of love, Jo & John.\u201d Printed in Italy by Kina Italia SPA Milano.",front:IMG+"Old - El Paso, TX - front.jpg",back:IMG+"Old - El Paso, TX - back.jpg"},
+  {id:33,location:"Reims, France \u2014 Joan of Arc at the Cathedral",address:"Cath\u00e9drale Notre-Dame de Reims, Reims, France",year:"c. 1923\u20131931",sender:"Nellie G.",recipient:"Mrs. Oscar Hamm, Wenatchee, Oklahoma, U.S.A.",notes:"Postmarked Paris, France. French 30\u00a2 Pasteur stamp (issued 1923\u20131931). Carte Postale. Published by Baudet, \u00e9diteur. Caption: \u201cReims \u2014 Jeanne d\u2019Arc devant la Cath\u00e9drale avant la guerre\u201d (Joan of Arc in front of the Cathedral before the war). Message: \u201cDear Florence, Here. Just returned from a two days trip on the battle fields & was wonderful. Love from, Nellie G.\u201d Nellie had just visited WWI battlefields near Reims.",front:IMG+"Old - Paris - front.jpg",back:IMG+"Old - Paris - back.jpg"}
 ];
 
 let viewList=[],lbIndex=0,rotation=0,scale=1,flipped=false;
