@@ -131,6 +131,19 @@
   .close-modal-btn{position:absolute;top:14px;right:18px;background:none;border:none;font-size:1.2rem;cursor:pointer;color:var(--ink-soft);opacity:.5;transition:opacity .2s}
   .close-modal-btn:hover{opacity:1}
 
+  /* Pagination */
+  .pagination{display:flex;align-items:center;justify-content:center;gap:8px;padding:24px 0 0;border-top:1px solid var(--rule);margin-top:4px}
+  .page-btn{background:none;border:1px solid var(--rule);color:var(--ink-soft);font-family:'Crimson Pro',serif;font-size:.88rem;padding:6px 14px;border-radius:2px;cursor:pointer;transition:all .2s;min-width:36px}
+  .page-btn:hover{border-color:var(--gold);color:var(--gold)}
+  .page-btn.active{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+  .page-btn:disabled{opacity:.3;cursor:default;border-color:var(--rule);color:var(--ink-soft)}
+  .page-info{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);opacity:.5;padding:0 8px}
+  .pagination{display:flex;align-items:center;justify-content:center;gap:8px;padding:24px 0 0;border-top:1px solid var(--rule);margin-top:4px;flex-wrap:wrap}
+  .page-btn{background:none;border:1px solid var(--rule);color:var(--ink-soft);font-family:'Crimson Pro',serif;font-size:.88rem;padding:6px 14px;border-radius:2px;cursor:pointer;transition:all .2s;min-width:36px}
+  .page-btn:hover{border-color:var(--gold);color:var(--gold)}
+  .page-btn.active{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+  .page-btn:disabled{opacity:.3;cursor:default}
+  .page-info{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);opacity:.5;padding:0 4px}
   .contact-section{max-width:900px;margin:0 auto;padding:0 60px 60px;border-top:1px solid var(--rule)}
   .contact-section h2{font-family:'Playfair Display',serif;font-weight:400;font-size:1.8rem;color:var(--ink);margin-bottom:6px;margin-top:40px}
   .contact-section p{font-style:italic;font-size:.95rem;color:var(--ink-soft);margin-bottom:28px;font-weight:300}
@@ -145,6 +158,13 @@
   .cf-success{display:none;font-style:italic;color:var(--stamp-green,#4a6741);font-size:.95rem;padding:12px 0}
   @media(max-width:680px){.contact-section{padding:0 20px 60px}}
   .content-panel{background:rgba(247,243,237,0.92);backdrop-filter:blur(2px);max-width:960px;margin:0 auto 0;padding:0 0 20px}
+  /* Pagination */
+  .pagination{display:flex;align-items:center;justify-content:center;gap:8px;padding:24px 0 0;border-top:1px solid var(--rule);margin-top:4px}
+  .page-btn{background:none;border:1px solid var(--rule);color:var(--ink-soft);font-family:'Crimson Pro',serif;font-size:.88rem;padding:6px 14px;border-radius:2px;cursor:pointer;transition:all .2s;min-width:36px}
+  .page-btn:hover{border-color:var(--gold);color:var(--gold)}
+  .page-btn.active{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+  .page-btn:disabled{opacity:.3;cursor:default;border-color:var(--rule);color:var(--ink-soft)}
+  .page-info{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);opacity:.5;padding:0 8px}
   .contact-section{background:rgba(247,243,237,0.92);backdrop-filter:blur(2px)}
   footer{background:rgba(247,243,237,0.85);text-align:center;padding:40px 20px 50px;font-style:italic;font-size:.82rem;color:var(--ink-soft);opacity:.4;border-top:1px solid var(--rule);letter-spacing:.04em}
   .empty{padding:60px 0;font-style:italic;color:var(--ink-soft);opacity:.4;font-size:1rem}
@@ -159,7 +179,7 @@
 
 <div class="masthead">
   <div class="masthead-eyebrow">A Collection of Rescued Mail</div>
-  <h1 class="masthead-title">Found <em>&</em> Sent</h1>
+  <a href="/" style="text-decoration:none;color:inherit;"><a href="/" style="text-decoration:none;color:inherit;display:block;"><h1 class="masthead-title">Found <em>&</em> Sent</h1></a></a>
   <div class="masthead-sub">Past words&hellip; discovered again</div>
   <div class="masthead-count" id="card-count">33 cards in the archive</div>
 </div>
@@ -177,6 +197,8 @@
     <span>#</span><span>Location / Details</span><span>Year or Era</span><span></span>
   </div>
   <ul class="postcard-list" id="postcard-list"></ul>
+  <div class="pagination" id="pagination"></div>
+  <div class="pagination" id="pagination"></div>
   <div class="add-bar">
     <button class="add-link" id="open-upload">+ Add a postcard</button>
   </div>
@@ -323,29 +345,65 @@ function highlight(text,term){if(!term||!text)return escHtml(text||'');const e=t
 
 document.getElementById('search-input').addEventListener('input',function(){searchTerm=this.value.trim().toLowerCase();renderList()});
 
+const PAGE_SIZE=10;
+let currentPage=1;
+
 function renderList(){
   viewList=searchTerm?postcards.filter(c=>searchable(c).includes(searchTerm)).reverse():[...postcards].reverse();
   const ul=document.getElementById('postcard-list');
   const ce=document.getElementById('card-count');
   const total=postcards.length,shown=viewList.length;
   ce.textContent=searchTerm?shown+' of '+total+' cards match':total===1?'1 card in the archive':total+' cards in the archive';
-  if(!viewList.length){ul.innerHTML='<li class="empty">No postcards match your search.</li>';return}
+  if(searchTerm) currentPage=1;
+  if(!viewList.length){ul.innerHTML='<li class="empty">No postcards match your search.</li>';renderPagination();return}
+  const totalPages=Math.ceil(viewList.length/PAGE_SIZE);
+  if(currentPage>totalPages) currentPage=totalPages;
+  const start=(currentPage-1)*PAGE_SIZE;
+  const pageItems=viewList.slice(start,start+PAGE_SIZE);
   ul.innerHTML='';
-  viewList.forEach((card,i)=>{
+  pageItems.forEach((card,i)=>{
+    const gi=start+i;
     const li=document.createElement('li');
     li.className='postcard-row';li.setAttribute('role','button');li.setAttribute('tabindex','0');
     const det=[card.sender?'From: '+card.sender:'',card.recipient?'To: '+card.recipient:''].filter(Boolean).join('  \u00b7  ');
-    li.innerHTML='<span class="row-num">'+String(i+1).padStart(2,'0')+'</span>'
+    li.innerHTML='<span class="row-num">'+String(gi+1).padStart(2,'0')+'</span>'
       +'<span class="row-location">'+highlight(card.location,searchTerm)
       +(det?'<span class="row-location-detail">'+highlight(det,searchTerm)+'</span>':'')
       +(card.notes?'<span class="row-location-detail">'+highlight(card.notes.substring(0,80)+(card.notes.length>80?'...':''),searchTerm)+'</span>':'')
       +'</span>'
       +'<span class="row-year">'+highlight(card.year,searchTerm)+'</span>'
       +'<span class="row-arrow">View \u2192</span>';
-    li.addEventListener('click',()=>openLb(i));
-    li.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' ')openLb(i)});
+    li.addEventListener('click',()=>openLb(gi));
+    li.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' ')openLb(gi)});
     ul.appendChild(li);
   });
+  renderPagination();
+}
+
+function renderPagination(){
+  const pg=document.getElementById('pagination');
+  if(!pg) return;
+  const totalPages=Math.ceil(viewList.length/PAGE_SIZE);
+  if(totalPages<=1){pg.innerHTML='';return}
+  let html='';
+  html+='<button class="page-btn" '+(currentPage===1?'disabled':'')+' onclick="goPage(currentPage-1)">&#8592; Prev</button>';
+  for(let i=1;i<=totalPages;i++){
+    if(i===1||i===totalPages||Math.abs(i-currentPage)<=1){
+      html+='<button class="page-btn'+(i===currentPage?' active':'')+'" onclick="goPage('+i+')">'+i+'</button>';
+    } else if(Math.abs(i-currentPage)===2){
+      html+='<span class="page-info">&hellip;</span>';
+    }
+  }
+  html+='<button class="page-btn" '+(currentPage===totalPages?'disabled':'')+' onclick="goPage(currentPage+1)">Next &#8594;</button>';
+  html+='<span class="page-info">'+currentPage+' of '+totalPages+'</span>';
+  pg.innerHTML=html;
+}
+
+function goPage(n){
+  const totalPages=Math.ceil(viewList.length/PAGE_SIZE);
+  currentPage=Math.min(Math.max(n,1),totalPages);
+  renderList();
+  window.scrollTo({top:0,behavior:'smooth'});
 }
 
 function openLb(idx){
