@@ -4,7 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Found & Sent — A Postcard Archive</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -13,26 +15,31 @@
   }
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
-  body{background-color:#c8a97e;color:var(--ink);font-family:'Crimson Pro',Georgia,serif;min-height:100vh;background-image:repeating-linear-gradient(
+  body{background-color:#2c1a0e;color:var(--ink);font-family:'Crimson Pro',Georgia,serif;min-height:100vh;background-image:
+    repeating-linear-gradient(
       90deg,
       transparent,
-      transparent 2px,
-      rgba(101,67,33,0.04) 2px,
-      rgba(101,67,33,0.04) 3px
+      transparent 1px,
+      rgba(255,255,255,0.012) 1px,
+      rgba(255,255,255,0.012) 2px
     ),
     repeating-linear-gradient(
       180deg,
       transparent,
-      transparent 40px,
-      rgba(80,50,20,0.06) 40px,
-      rgba(80,50,20,0.06) 42px,
-      transparent 42px,
-      transparent 80px,
-      rgba(60,35,10,0.05) 80px,
-      rgba(60,35,10,0.05) 81px
+      transparent 3px,
+      rgba(0,0,0,0.08) 3px,
+      rgba(0,0,0,0.08) 4px,
+      transparent 4px,
+      transparent 8px,
+      rgba(255,255,255,0.015) 8px,
+      rgba(255,255,255,0.015) 9px,
+      transparent 9px,
+      transparent 18px,
+      rgba(0,0,0,0.06) 18px,
+      rgba(0,0,0,0.06) 19px
     ),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='wood'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.015 0.65' numOctaves='3' seed='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0.3'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23wood)' opacity='0.18'/%3E%3C/svg%3E")}
-  .masthead{border-bottom:1px solid var(--rule);padding:48px 60px 36px;display:flex;flex-direction:column;gap:6px;background:rgba(247,243,237,0.92);backdrop-filter:blur(2px)}
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600'%3E%3Cfilter id='wood'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.012 0.7' numOctaves='4' seed='8' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0.6 0.3 0 0 0.1 0.3 0.15 0 0 0.05 0.1 0.05 0 0 0 0 0 0 1 0'/%3E%3C/filter%3E%3Crect width='600' height='600' filter='url(%23wood)' opacity='0.35'/%3E%3C/svg%3E")}
+  .masthead{border-bottom:1px solid var(--rule);padding:48px 60px 36px;display:flex;flex-direction:column;gap:6px;background:rgba(245,238,228,0.95);backdrop-filter:blur(2px)}
   .masthead-eyebrow{font-size:10px;letter-spacing:.4em;text-transform:uppercase;color:var(--gold);font-weight:600}
   .masthead-title{font-family:'Playfair Display',Georgia,serif;font-size:clamp(2.4rem,5vw,4rem);font-weight:400;line-height:1;color:var(--ink);letter-spacing:-.02em}
   .masthead-title em{font-style:italic;color:var(--gold)}
@@ -132,12 +139,74 @@
   .close-modal-btn:hover{opacity:1}
 
   /* Pagination */
+  /* Masthead bottom row */
+  .masthead-bottom{display:flex;align-items:center;justify-content:space-between;margin-top:14px;flex-wrap:wrap;gap:10px}
+  .globe-btn{display:flex;align-items:center;gap:7px;background:none;border:1px solid rgba(154,124,63,.4);color:var(--gold);font-family:'Crimson Pro',serif;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;padding:7px 16px;border-radius:2px;cursor:pointer;transition:all .2s;opacity:.8}
+  .globe-btn:hover,.globe-btn.active{background:rgba(154,124,63,.12);opacity:1;border-color:var(--gold)}
+  .globe-btn.active{background:rgba(154,124,63,.18)}
+  /* Map panel */
+  #map-panel{display:none;max-width:900px;margin:0 auto;padding:0 60px 40px;background:rgba(245,238,228,0.95)}
+  #map-panel.open{display:block}
+  #map-container{height:520px;border-radius:4px;overflow:hidden;border:1px solid var(--rule);box-shadow:0 4px 20px rgba(0,0,0,.1)}
+  .map-hint{font-style:italic;font-size:.82rem;color:var(--ink-soft);opacity:.55;margin-top:10px;text-align:center;letter-spacing:.04em}
+  /* Leaflet popup custom style */
+  .map-popup{min-width:200px;max-width:280px}
+  .map-popup-title{font-family:'Playfair Display',serif;font-size:1rem;font-style:italic;color:var(--ink);margin-bottom:8px;border-bottom:1px solid var(--rule);padding-bottom:6px}
+  .map-popup-card{font-size:.82rem;color:var(--ink-soft);padding:4px 0;cursor:pointer;transition:color .15s;border-bottom:1px solid rgba(212,197,176,.3);line-height:1.4}
+  .map-popup-card:last-child{border-bottom:none}
+  .map-popup-card:hover{color:var(--gold)}
+  .map-popup-year{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;opacity:.6;margin-top:1px}
+  @media(max-width:680px){#map-panel{padding:0 20px 30px}#map-container{height:380px}}
+  .masthead-bottom{display:flex;align-items:center;justify-content:space-between;margin-top:14px;flex-wrap:wrap;gap:10px}
+  .globe-btn{display:flex;align-items:center;gap:6px;background:none;border:1px solid rgba(154,124,63,.35);color:var(--gold);font-family:'Crimson Pro',serif;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;padding:6px 14px;border-radius:2px;cursor:pointer;transition:all .2s;opacity:.75}
+  .globe-btn:hover,.globe-btn.active{opacity:1;background:rgba(154,124,63,.12);border-color:var(--gold)}
+  #map-panel{display:none;max-width:900px;margin:0 auto;padding:0 60px 40px;background:rgba(245,238,228,0.95)}
+  #map-panel.open{display:block}
+  #map-container{height:520px;border-radius:4px;overflow:hidden;border:1px solid var(--rule);box-shadow:0 4px 20px rgba(0,0,0,.08)}
+  .map-hint{font-style:italic;font-size:.8rem;color:var(--ink-soft);opacity:.5;margin-top:8px;text-align:center}
+  .map-popup-title{font-family:'Playfair Display',serif;font-size:.95rem;font-style:italic;color:#1c1510;margin-bottom:6px;padding-bottom:5px;border-bottom:1px solid #d4c5b0}
+  .map-popup-card{font-size:.8rem;color:#5a4a38;padding:4px 0;cursor:pointer;border-bottom:1px solid rgba(212,197,176,.3);line-height:1.4}
+  .map-popup-card:last-child{border-bottom:none}
+  .map-popup-card:hover{color:#9a7c3f}
+  .map-popup-year{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;opacity:.55}
+  @media(max-width:680px){#map-panel{padding:0 20px 30px}#map-container{height:360px}}
   .pagination{display:flex;align-items:center;justify-content:center;gap:8px;padding:24px 0 0;border-top:1px solid var(--rule);margin-top:4px}
   .page-btn{background:none;border:1px solid var(--rule);color:var(--ink-soft);font-family:'Crimson Pro',serif;font-size:.88rem;padding:6px 14px;border-radius:2px;cursor:pointer;transition:all .2s;min-width:36px}
   .page-btn:hover{border-color:var(--gold);color:var(--gold)}
   .page-btn.active{background:var(--ink);border-color:var(--ink);color:var(--bg)}
   .page-btn:disabled{opacity:.3;cursor:default;border-color:var(--rule);color:var(--ink-soft)}
   .page-info{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);opacity:.5;padding:0 8px}
+  /* Masthead bottom row */
+  .masthead-bottom{display:flex;align-items:center;justify-content:space-between;margin-top:14px;flex-wrap:wrap;gap:10px}
+  .globe-btn{display:flex;align-items:center;gap:7px;background:none;border:1px solid rgba(154,124,63,.4);color:var(--gold);font-family:'Crimson Pro',serif;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;padding:7px 16px;border-radius:2px;cursor:pointer;transition:all .2s;opacity:.8}
+  .globe-btn:hover,.globe-btn.active{background:rgba(154,124,63,.12);opacity:1;border-color:var(--gold)}
+  .globe-btn.active{background:rgba(154,124,63,.18)}
+  /* Map panel */
+  #map-panel{display:none;max-width:900px;margin:0 auto;padding:0 60px 40px;background:rgba(245,238,228,0.95)}
+  #map-panel.open{display:block}
+  #map-container{height:520px;border-radius:4px;overflow:hidden;border:1px solid var(--rule);box-shadow:0 4px 20px rgba(0,0,0,.1)}
+  .map-hint{font-style:italic;font-size:.82rem;color:var(--ink-soft);opacity:.55;margin-top:10px;text-align:center;letter-spacing:.04em}
+  /* Leaflet popup custom style */
+  .map-popup{min-width:200px;max-width:280px}
+  .map-popup-title{font-family:'Playfair Display',serif;font-size:1rem;font-style:italic;color:var(--ink);margin-bottom:8px;border-bottom:1px solid var(--rule);padding-bottom:6px}
+  .map-popup-card{font-size:.82rem;color:var(--ink-soft);padding:4px 0;cursor:pointer;transition:color .15s;border-bottom:1px solid rgba(212,197,176,.3);line-height:1.4}
+  .map-popup-card:last-child{border-bottom:none}
+  .map-popup-card:hover{color:var(--gold)}
+  .map-popup-year{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;opacity:.6;margin-top:1px}
+  @media(max-width:680px){#map-panel{padding:0 20px 30px}#map-container{height:380px}}
+  .masthead-bottom{display:flex;align-items:center;justify-content:space-between;margin-top:14px;flex-wrap:wrap;gap:10px}
+  .globe-btn{display:flex;align-items:center;gap:6px;background:none;border:1px solid rgba(154,124,63,.35);color:var(--gold);font-family:'Crimson Pro',serif;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;padding:6px 14px;border-radius:2px;cursor:pointer;transition:all .2s;opacity:.75}
+  .globe-btn:hover,.globe-btn.active{opacity:1;background:rgba(154,124,63,.12);border-color:var(--gold)}
+  #map-panel{display:none;max-width:900px;margin:0 auto;padding:0 60px 40px;background:rgba(245,238,228,0.95)}
+  #map-panel.open{display:block}
+  #map-container{height:520px;border-radius:4px;overflow:hidden;border:1px solid var(--rule);box-shadow:0 4px 20px rgba(0,0,0,.08)}
+  .map-hint{font-style:italic;font-size:.8rem;color:var(--ink-soft);opacity:.5;margin-top:8px;text-align:center}
+  .map-popup-title{font-family:'Playfair Display',serif;font-size:.95rem;font-style:italic;color:#1c1510;margin-bottom:6px;padding-bottom:5px;border-bottom:1px solid #d4c5b0}
+  .map-popup-card{font-size:.8rem;color:#5a4a38;padding:4px 0;cursor:pointer;border-bottom:1px solid rgba(212,197,176,.3);line-height:1.4}
+  .map-popup-card:last-child{border-bottom:none}
+  .map-popup-card:hover{color:#9a7c3f}
+  .map-popup-year{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;opacity:.55}
+  @media(max-width:680px){#map-panel{padding:0 20px 30px}#map-container{height:360px}}
   .pagination{display:flex;align-items:center;justify-content:center;gap:8px;padding:24px 0 0;border-top:1px solid var(--rule);margin-top:4px;flex-wrap:wrap}
   .page-btn{background:none;border:1px solid var(--rule);color:var(--ink-soft);font-family:'Crimson Pro',serif;font-size:.88rem;padding:6px 14px;border-radius:2px;cursor:pointer;transition:all .2s;min-width:36px}
   .page-btn:hover{border-color:var(--gold);color:var(--gold)}
@@ -157,16 +226,47 @@
   .cf-submit:hover{background:var(--red);border-color:var(--red)}
   .cf-success{display:none;font-style:italic;color:var(--stamp-green,#4a6741);font-size:.95rem;padding:12px 0}
   @media(max-width:680px){.contact-section{padding:0 20px 60px}}
-  .content-panel{background:rgba(247,243,237,0.92);backdrop-filter:blur(2px);max-width:960px;margin:0 auto 0;padding:0 0 20px}
+  .content-panel{background:rgba(245,238,228,0.95);backdrop-filter:blur(2px);max-width:960px;margin:0 auto 0;padding:0 0 20px}
   /* Pagination */
+  /* Masthead bottom row */
+  .masthead-bottom{display:flex;align-items:center;justify-content:space-between;margin-top:14px;flex-wrap:wrap;gap:10px}
+  .globe-btn{display:flex;align-items:center;gap:7px;background:none;border:1px solid rgba(154,124,63,.4);color:var(--gold);font-family:'Crimson Pro',serif;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;padding:7px 16px;border-radius:2px;cursor:pointer;transition:all .2s;opacity:.8}
+  .globe-btn:hover,.globe-btn.active{background:rgba(154,124,63,.12);opacity:1;border-color:var(--gold)}
+  .globe-btn.active{background:rgba(154,124,63,.18)}
+  /* Map panel */
+  #map-panel{display:none;max-width:900px;margin:0 auto;padding:0 60px 40px;background:rgba(245,238,228,0.95)}
+  #map-panel.open{display:block}
+  #map-container{height:520px;border-radius:4px;overflow:hidden;border:1px solid var(--rule);box-shadow:0 4px 20px rgba(0,0,0,.1)}
+  .map-hint{font-style:italic;font-size:.82rem;color:var(--ink-soft);opacity:.55;margin-top:10px;text-align:center;letter-spacing:.04em}
+  /* Leaflet popup custom style */
+  .map-popup{min-width:200px;max-width:280px}
+  .map-popup-title{font-family:'Playfair Display',serif;font-size:1rem;font-style:italic;color:var(--ink);margin-bottom:8px;border-bottom:1px solid var(--rule);padding-bottom:6px}
+  .map-popup-card{font-size:.82rem;color:var(--ink-soft);padding:4px 0;cursor:pointer;transition:color .15s;border-bottom:1px solid rgba(212,197,176,.3);line-height:1.4}
+  .map-popup-card:last-child{border-bottom:none}
+  .map-popup-card:hover{color:var(--gold)}
+  .map-popup-year{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;opacity:.6;margin-top:1px}
+  @media(max-width:680px){#map-panel{padding:0 20px 30px}#map-container{height:380px}}
+  .masthead-bottom{display:flex;align-items:center;justify-content:space-between;margin-top:14px;flex-wrap:wrap;gap:10px}
+  .globe-btn{display:flex;align-items:center;gap:6px;background:none;border:1px solid rgba(154,124,63,.35);color:var(--gold);font-family:'Crimson Pro',serif;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;padding:6px 14px;border-radius:2px;cursor:pointer;transition:all .2s;opacity:.75}
+  .globe-btn:hover,.globe-btn.active{opacity:1;background:rgba(154,124,63,.12);border-color:var(--gold)}
+  #map-panel{display:none;max-width:900px;margin:0 auto;padding:0 60px 40px;background:rgba(245,238,228,0.95)}
+  #map-panel.open{display:block}
+  #map-container{height:520px;border-radius:4px;overflow:hidden;border:1px solid var(--rule);box-shadow:0 4px 20px rgba(0,0,0,.08)}
+  .map-hint{font-style:italic;font-size:.8rem;color:var(--ink-soft);opacity:.5;margin-top:8px;text-align:center}
+  .map-popup-title{font-family:'Playfair Display',serif;font-size:.95rem;font-style:italic;color:#1c1510;margin-bottom:6px;padding-bottom:5px;border-bottom:1px solid #d4c5b0}
+  .map-popup-card{font-size:.8rem;color:#5a4a38;padding:4px 0;cursor:pointer;border-bottom:1px solid rgba(212,197,176,.3);line-height:1.4}
+  .map-popup-card:last-child{border-bottom:none}
+  .map-popup-card:hover{color:#9a7c3f}
+  .map-popup-year{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;opacity:.55}
+  @media(max-width:680px){#map-panel{padding:0 20px 30px}#map-container{height:360px}}
   .pagination{display:flex;align-items:center;justify-content:center;gap:8px;padding:24px 0 0;border-top:1px solid var(--rule);margin-top:4px}
   .page-btn{background:none;border:1px solid var(--rule);color:var(--ink-soft);font-family:'Crimson Pro',serif;font-size:.88rem;padding:6px 14px;border-radius:2px;cursor:pointer;transition:all .2s;min-width:36px}
   .page-btn:hover{border-color:var(--gold);color:var(--gold)}
   .page-btn.active{background:var(--ink);border-color:var(--ink);color:var(--bg)}
   .page-btn:disabled{opacity:.3;cursor:default;border-color:var(--rule);color:var(--ink-soft)}
   .page-info{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);opacity:.5;padding:0 8px}
-  .contact-section{background:rgba(247,243,237,0.92);backdrop-filter:blur(2px)}
-  footer{background:rgba(247,243,237,0.85);text-align:center;padding:40px 20px 50px;font-style:italic;font-size:.82rem;color:var(--ink-soft);opacity:.4;border-top:1px solid var(--rule);letter-spacing:.04em}
+  .contact-section{background:rgba(245,238,228,0.95);backdrop-filter:blur(2px)}
+  footer{background:rgba(245,238,228,0.95);text-align:center;padding:40px 20px 50px;font-style:italic;font-size:.82rem;color:var(--ink-soft);opacity:.4;border-top:1px solid var(--rule);letter-spacing:.04em}
   .empty{padding:60px 0;font-style:italic;color:var(--ink-soft);opacity:.4;font-size:1rem}
   @media(max-width:680px){
     .masthead{padding:30px 20px 24px}.search-wrap{padding:18px 20px 0}.table-wrap{padding:0 20px 60px}
@@ -179,9 +279,21 @@
 
 <div class="masthead">
   <div class="masthead-eyebrow">A Collection of Rescued Mail</div>
-  <a href="/" style="text-decoration:none;color:inherit;"><a href="/" style="text-decoration:none;color:inherit;display:block;"><h1 class="masthead-title">Found <em>&</em> Sent</h1></a></a>
+  <a href="/" style="text-decoration:none;color:inherit;display:block;"><h1 class="masthead-title">Found <em>&</em> Sent</h1></a>
   <div class="masthead-sub">Past words&hellip; discovered again</div>
-  <div class="masthead-count" id="card-count">33 cards in the archive</div>
+  <div class="masthead-bottom">
+    <div class="masthead-bottom">
+    <div class="masthead-count" id="card-count">38 cards in the archive</div>
+    <button class="globe-btn" id="globe-btn" title="Map view">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418"/></svg>
+      Map View
+    </button>
+  </div>
+    <button class="globe-btn" id="globe-btn" title="View map">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" width="22" height="22"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418"/></svg>
+      <span>Map View</span>
+    </button>
+  </div>
 </div>
 
 <div class="content-panel"><div class="search-wrap">
@@ -192,6 +304,14 @@
   <div class="search-hint">Searches all fields — try a name, city, or year</div>
 </div>
 
+<div id="map-panel">
+  <div id="map-container"></div>
+  <div class="map-hint">Click a marker to see postcards from that location &nbsp;&#183;&nbsp; Marker size reflects number of cards</div>
+</div>
+<div id="map-panel">
+  <div id="map-container"></div>
+  <div class="map-hint">Click any marker to see postcards from that location &nbsp;&#183;&nbsp; Larger markers = more cards</div>
+</div>
 <div class="table-wrap">
   <div class="col-headers">
     <span>#</span><span>Location / Details</span><span>Year or Era</span><span></span>
@@ -333,6 +453,11 @@ let postcards = [
   {id:30,location:"Chicago, Illinois \u2014 Museum of Science and Industry",address:"5700 S Lake Shore Dr, Chicago, IL 60637",year:"November 12, 1959",sender:"Bill",recipient:"Mother, Oak Grove, Missouri",notes:"Postmarked Chicago, IL, Nov 12, 1959. 7\u00a2 airmail stamp. \u201cGive Through Community Fund\u201d cancellation. Message: \u201cHi Mom: Saturday, I think I\u2019ll go out to this place again and see all of the building. This is the one Carroll could spend all day in. Be good and I\u2019ll see you. Bill.\u201d Same Oak Grove, MO family as Faye \u2014 Bill appears to be a sibling also in Chicago that November.",front:IMG+"1959 - Chicago, ILL - Museum of Science - front.jpg",back:IMG+"1959 - Chicago, ILL - Museum of Science - back.jpg"},
   {id:31,location:"Dayton, Ohio \u2014 Downtown Skyline at Twilight",address:"Downtown Dayton, OH",year:"November 25, 1991",sender:"Unknown (signature illegible)",recipient:"Ms. Dorothy Viola, 1243 Baldwin Lane #609, Palatine, IL 60067",notes:"Postmarked Dayton, OH, Nov 25, 1991. 19\u00a2 fawn stamp. Message: \u201cDear Dor \u2014 How do you like our skyline? Concentrated beauty \u2014 Dayton, my kind of Town. Love.” Photographed by Wayne Schwegel for the Downtown Dayton Association\u2019s \u201cTurn It On Dayton!\u201d photo contest.",front:IMG+"1991 - Dayton, OH - front.jpg",back:IMG+"1991 - Dayton, OH - back.jpg"},
   {id:32,location:"Montreal, Quebec \u2014 Ch\u00e2teau Champlain at Night",address:"Ch\u00e2teau Champlain & Place du Canada, Montreal, QC",year:"October 4, 1992",sender:"Jo & John",recipient:"Mr. & Mrs. James W. Kirby, 308 Drury Lane, El Paso, Texas 79915",notes:"Posted on board M/S Sagafjord cruise ship. 40\u00a2 Bahamas stamp. Message: \u201cHi There, Well we sure do miss you guys. Without you at the table, we are all alone. Had a good time yesterday in Montreal, saw many tour buses, looked for you. Its now 10:45 AM in Quebec & its dam cold, but sunny. Hope you two had a good time, our next stop is Prince Edward Island & then back to the good ole U.S.A. Will talk soon. Lots of love, Jo & John.\u201d Printed in Italy by Kina Italia SPA Milano.",front:IMG+"Old - El Paso, TX - front.jpg",back:IMG+"Old - El Paso, TX - back.jpg"},
+  {id:34,location:"Philadelphia, Pennsylvania — Easter Greetings",address:"",year:"April 4, 1912",sender:"M. Casey",recipient:"Mr. S.J. Ellis, 319 Ardmore Ave., Ardmore, Pennsylvania",notes:"Postmarked Philadelphia, PA, Apr 4, 9:30 PM, 1912. 1¢ green stamp. Message: “Best wishes for a Glorious Easter from M. Casey to Mr. Y.J. Ellis.” Embossed card with Easter verse: ‘So let us keep the festival Whereto the Lord invites us; Christ is Himself the joy of all, The sun that warms and lights us.’",front:IMG+"1912 - Easter - front.jpg",back:IMG+"1912 - Easter - back.jpg"},
+  {id:35,location:"Chicago, Illinois — Wacker Drive",address:"Wacker Drive, Chicago, IL",year:"November 1959",sender:"Faye",recipient:"Mother, Oak Grove, Missouri",notes:"Postmarked Chicago, IL, Nov 1959. 5¢ Monroe airmail stamp. AIRMAIL. Message: “Hi Mom: Cold as — wind sure is cold blowing off of Lake Michigan! Hope you get to go to Brother’s funeral. Hope everybody is well and I’ll see you in a few days. Bye.” Faye card #8 from the November 1959 Chicago trip — a somber note mentioning a death in the family back home.",front:IMG+"1959 - Chicago, ILL - Wacker Drive - front.jpg",back:IMG+"1959 - Chicago, ILL - Wacker Drive - back.jpg"},
+  {id:36,location:"Ponca City, Oklahoma — Pioneer Woman Statue",address:"Pioneer Woman Statue, Ponca City, OK",year:"June 23, 1968",sender:"Tom (signature unclear)",recipient:"Mrs. Jim Hagood, 901 Stark Drive, Austin, Texas 78752",notes:"Postmarked Ponca City, OK, Jun 23, 1968. 6¢ FDR stamp. Message: “Dear Mom, I’ve just returned from a tour of Ponca City. There’s also more from a city here than I ever imagined. It’s a nicer place. After a broiled steak tonight I’ll go to bed early to prepare for an early departure tomorrow. I’ll take Interstate 40 all the way. Take care.” Published by Oklahoma News Co.",front:IMG+"1968 - Austin, TX - front.jpg",back:IMG+"1968 - Austin, TX - back.jpg"},
+  {id:37,location:"Washington, D.C. — Labor Day Parade (1894 photograph)",address:"Pennsylvania Ave. & 11th St. N.W., Washington, D.C.",year:"July 9, 1982",sender:"Bob",recipient:"David & Maré, 6003 Martel, Dallas, TX 75206",notes:"Postmarked Washington, DC. 14¢ Sinclair Lewis stamp. Photo from 1894 Library of Congress. Copyright 1984 Dover Publications. Message: “9 July. Dear David: My friend Bruce McLoy just returned to Hotlanta after spending July 4 weekend here. The Mall was a madhouse for fireworks preceded by the Symphony at the Capitol and Beach Boys at Wash. Monument. Actually, we opted for barbecue on the deck at Tracks, the new tech-ed out disco. We also did a play at Kennedy Center, a Diane Arbus exhibit at the Corcoran, had Vietnamese cuisine in Georgetown, and bicycled to Old Town Alexandria. I just returned from conference at Princeton; also took in NYC and Cape May (fabulous restored Victorians). Next year’s conference is in Berlin (want to go?). On July 25 I close on a small 1-br. condo! My first real estate! I’m excited! Bob”",front:IMG+"1982 - Washington, DC (1894 photo) - front.jpg",back:IMG+"1982 - Washington, DC (1894 photo) - back.jpg"},
+  {id:38,location:"Norway — Flydalsjuvet, Geiranger Fjord",address:"Geiranger, Norway",year:"July 4, 1994",sender:"Connie",recipient:"Mrs. John Craig, 3506 Richmond Terrace, Minnetonka, MN 55305",notes:"Postmarked Lerwick, Shetland, Scotland, Jul 4, 1994. PRIORITAIRE PAR AVION. Norwegian card published by Normanns Kunstforlag A/S, Oslo. Message: “Sunrise 3:15 AM, Sunset 11:18 PM. Midnight — and I’m not tired. It’s the long days. The cappuccino served whenever you want it. We are having a fabulous time. The ship is magnificent. The tours wonderful. The fjords are thrilling. Love, Connie.” Posted from Scotland while cruising the Norwegian fjords.",front:IMG+"1991 - Norge - front.jpg",back:IMG+"1991 - Norge - back.jpg"},
   {id:33,location:"Reims, France \u2014 Joan of Arc at the Cathedral",address:"Cath\u00e9drale Notre-Dame de Reims, Reims, France",year:"c. 1923\u20131931",sender:"Nellie G.",recipient:"Mrs. Oscar Hamm, Wenatchee, Oklahoma, U.S.A.",notes:"Postmarked Paris, France. French 30\u00a2 Pasteur stamp (issued 1923\u20131931). Carte Postale. Published by Baudet, \u00e9diteur. Caption: \u201cReims \u2014 Jeanne d\u2019Arc devant la Cath\u00e9drale avant la guerre\u201d (Joan of Arc in front of the Cathedral before the war). Message: \u201cDear Florence, Here. Just returned from a two days trip on the battle fields & was wonderful. Love from, Nellie G.\u201d Nellie had just visited WWI battlefields near Reims.",front:IMG+"Old - Paris - front.jpg",back:IMG+"Old - Paris - back.jpg"}
 ];
 
@@ -546,5 +671,95 @@ if (cfForm) {
   });
 }
 </script>
+
+// ── MAP ──
+const LOCATIONS = [
+  {name:"Chicago, Illinois",lat:41.8781,lng:-87.6298,ids:[5,11,12,13,14,15,27,28,29,30]},
+  {name:"Philadelphia, Pennsylvania",lat:39.9526,lng:-75.1652,ids:[1]},
+  {name:"Vermont-New York Border",lat:44.0,lng:-73.5,ids:[2]},
+  {name:"Staten Island, New York",lat:40.5795,lng:-74.1502,ids:[3]},
+  {name:"Monterrey, Mexico",lat:25.6866,lng:-100.3161,ids:[4]},
+  {name:"Excelsior Springs, Missouri",lat:39.3397,lng:-94.2272,ids:[6]},
+  {name:"Atlantic City, New Jersey",lat:39.3643,lng:-74.4229,ids:[7]},
+  {name:"Duluth, Minnesota",lat:46.7867,lng:-92.1005,ids:[8]},
+  {name:"Louisville, Kentucky",lat:38.2527,lng:-85.7585,ids:[10]},
+  {name:"Cork, Ireland",lat:51.8985,lng:-8.4756,ids:[16]},
+  {name:"Atlanta, Georgia",lat:33.749,lng:-84.388,ids:[17]},
+  {name:"Shasta Dam, California",lat:40.7021,lng:-122.4169,ids:[18]},
+  {name:"Langtry, Texas",lat:29.8074,lng:-101.5599,ids:[19]},
+  {name:"Yellowstone National Park",lat:44.428,lng:-110.5885,ids:[20]},
+  {name:"Chinle, Arizona",lat:36.1586,lng:-109.5551,ids:[21]},
+  {name:"Oceanside, California",lat:33.1959,lng:-117.3795,ids:[22]},
+  {name:"Arlington, Texas",lat:32.7357,lng:-97.1081,ids:[23]},
+  {name:"Evansville, Indiana",lat:37.9716,lng:-87.5711,ids:[26]},
+  {name:"Dayton, Ohio",lat:39.7589,lng:-84.1916,ids:[31]},
+  {name:"Montreal, Quebec",lat:45.5017,lng:-73.5673,ids:[32]},
+  {name:"Reims, France",lat:49.2583,lng:3.9199,ids:[33]},
+];
+
+let map=null,mapInitialized=false;
+
+function initMap(){
+  if(mapInitialized) return;
+  mapInitialized=true;
+  map=L.map('map-container',{center:[39,-30],zoom:3,scrollWheelZoom:true});
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{
+    attribution:'&copy; OpenStreetMap &copy; CARTO',subdomains:'abcd',maxZoom:19
+  }).addTo(map);
+  LOCATIONS.forEach(loc=>{
+    const r=Math.min(6+loc.ids.length*3,22);
+    const m=L.circleMarker([loc.lat,loc.lng],{
+      radius:r,fillColor:'#9a7c3f',color:'#6b5229',
+      weight:1.5,opacity:.9,fillOpacity:.75
+    }).addTo(map);
+    const cards=loc.ids.map(id=>{
+      const c=postcards.find(x=>x.id===id);
+      if(!c) return '';
+      const sl=c.location.split('—')[0].trim();
+      return '<div class="map-popup-card" onclick="openCardFromMap('+id+'"><div>'+escHtml(sl)+'</div><div class="map-popup-year">'+escHtml(c.year||'')+'</div></div>';
+    }).filter(Boolean).join('');
+    m.bindPopup('<div class="map-popup-title">'+escHtml(loc.name)+'</div>'+cards,{maxWidth:280});
+  });
+}
+
+function openCardFromMap(id){
+  if(map) map.closePopup();
+  toggleMap(false);
+  searchTerm='';
+  document.getElementById('search-input').value='';
+  currentPage=1;
+  renderList();
+  const idx=viewList.findIndex(c=>c.id===id);
+  if(idx>=0){
+    currentPage=Math.ceil((idx+1)/PAGE_SIZE);
+    renderList();
+    setTimeout(()=>openLb(idx),150);
+  }
+}
+
+function toggleMap(forceClose){
+  const panel=document.getElementById('map-panel');
+  const btn=document.getElementById('globe-btn');
+  const cp=document.querySelector('.content-panel');
+  const sw=document.querySelector('.search-wrap');
+  const isOpen=panel.classList.contains('open');
+  if(forceClose===true||isOpen){
+    panel.classList.remove('open');
+    btn.classList.remove('active');
+    if(cp) cp.style.display='';
+    if(sw) sw.style.display='';
+  } else {
+    panel.classList.add('open');
+    btn.classList.add('active');
+    if(cp) cp.style.display='none';
+    if(sw) sw.style.display='none';
+    initMap();
+    setTimeout(()=>{if(map) map.invalidateSize();},200);
+  }
+}
+
+document.getElementById('globe-btn').addEventListener('click',()=>toggleMap());
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 </body>
 </html>
