@@ -18,7 +18,7 @@
   .masthead-title{font-family:'Playfair Display',Georgia,serif;font-size:clamp(2.4rem,5vw,4rem);font-weight:400;line-height:1;color:var(--ink);letter-spacing:-.02em}
   .masthead-title em{font-style:italic;color:var(--gold)}
   .masthead-sub{font-style:italic;font-size:1.05rem;color:var(--ink-soft);margin-top:4px;font-weight:300}
-  .masthead-bottom{display:flex;align-items:center;justify-content:space-between;margin-top:14px;flex-wrap:wrap;gap:10px}
+  .masthead-bottom{display:flex;align-items:center;justify-content:space-between;margin-top:14px;flex-wrap:wrap;gap:10px;position:relative}
   .masthead-count{font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft);opacity:.6}
   .globe-btn{display:flex;align-items:center;gap:6px;background:none;border:1px solid rgba(154,124,63,.35);color:var(--gold);font-family:'Crimson Pro',serif;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;padding:6px 14px;border-radius:2px;cursor:pointer;transition:all .2s;opacity:.75}
   .globe-btn:hover,.globe-btn.active{opacity:1;background:rgba(154,124,63,.12);border-color:var(--gold)}
@@ -158,8 +158,8 @@
   </a>
   <div class="masthead-sub">Past words&hellip; discovered again</div>
   <div class="masthead-bottom">
-    <div class="masthead-count" id="card-count">38 cards in the archive</div>
-    <div style="display:flex;align-items:center;gap:14px;">
+    <div class="masthead-count" id="card-count">43 cards in the archive</div>
+    <button id="globe-btn" class="globe-btn" style="position:absolute;left:50%;transform:translateX(-50%);">
       <svg width="90" viewBox="0 0 600 230" role="img" xmlns="http://www.w3.org/2000/svg" style="display:block;flex-shrink:0;">
   <title>Found and Sent logo</title>
   <defs><clipPath id="fns"><text x="10" y="200" font-family="Georgia, serif" font-weight="900" font-size="200" letter-spacing="-8">F&amp;S</text></clipPath></defs>
@@ -169,9 +169,7 @@
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" width="20" height="20" style="pointer-events:none;"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418"/></svg>
       Map View
     </button>
-    </div>
-  </div>
-</div>
+    <div style="margin-left:auto;">
 
 <div class="search-wrap">
   <div class="search-input-wrap">
@@ -321,7 +319,14 @@ let postcards = [
   {id:36,location:"Ponca City, Oklahoma — Pioneer Woman Statue",address:"Pioneer Woman Statue, Ponca City, OK",year:"June 23, 1968",sender:"Tom (signature unclear)",recipient:"Mrs. Jim Hagood, 901 Stark Drive, Austin, Texas 78752",notes:"Postmarked Ponca City, OK, Jun 23, 1968. 6¢ FDR stamp. Message: “Dear Mom, I’ve just returned from a tour of Ponca City. There’s also more from a city here than I ever imagined. It’s a nicer place. After a broiled steak tonight I’ll go to bed early to prepare for an early departure tomorrow. I’ll take Interstate 40 all the way. Take care.” Published by Oklahoma News Co.",front:IMG+"1968 - Austin, TX - front.jpg",back:IMG+"1968 - Austin, TX - back.jpg"},
   {id:37,location:"Washington, D.C. — Labor Day Parade (1894 photograph)",address:"Pennsylvania Ave. & 11th St. N.W., Washington, D.C.",year:"July 9, 1982",sender:"Bob",recipient:"David & Maré, 6003 Martel, Dallas, TX 75206",notes:"Postmarked Washington, DC. 14¢ Sinclair Lewis stamp. Photo from 1894 Library of Congress. Copyright 1984 Dover Publications. Message: “9 July. Dear David: My friend Bruce McLoy just returned to Hotlanta after spending July 4 weekend here. The Mall was a madhouse for fireworks preceded by the Symphony at the Capitol and Beach Boys at Wash. Monument. Actually, we opted for barbecue on the deck at Tracks, the new tech-ed out disco. We also did a play at Kennedy Center, a Diane Arbus exhibit at the Corcoran, had Vietnamese cuisine in Georgetown, and bicycled to Old Town Alexandria. I just returned from conference at Princeton; also took in NYC and Cape May (fabulous restored Victorians). Next year’s conference is in Berlin (want to go?). On July 25 I close on a small 1-br. condo! My first real estate! I’m excited! Bob”",front:IMG+"1982 - Washington, DC (1894 photo) - front.jpg",back:IMG+"1982 - Washington, DC (1894 photo) - back.jpg"},
   {id:38,location:"Norway — Flydalsjuvet, Geiranger Fjord",address:"Geiranger, Norway",year:"July 4, 1994",sender:"Connie",recipient:"Mrs. John Craig, 3506 Richmond Terrace, Minnetonka, MN 55305",notes:"Postmarked Lerwick, Shetland, Scotland, Jul 4, 1994. PRIORITAIRE PAR AVION. Norwegian card published by Normanns Kunstforlag A/S, Oslo. Message: “Sunrise 3:15 AM, Sunset 11:18 PM. Midnight — and I’m not tired. It’s the long days. The cappuccino served whenever you want it. We are having a fabulous time. The ship is magnificent. The tours wonderful. The fjords are thrilling. Love, Connie.” Posted from Scotland while cruising the Norwegian fjords.",front:IMG+"1991 - Norge - front.jpg",back:IMG+"1991 - Norge - back.jpg"},
-  {id:33,location:"Reims, France \u2014 Joan of Arc at the Cathedral",address:"Cath\u00e9drale Notre-Dame de Reims, Reims, France",year:"c. 1923\u20131931",sender:"Nellie G.",recipient:"Mrs. Oscar Hamm, Wenatchee, Oklahoma, U.S.A.",notes:"Postmarked Paris, France. French 30\u00a2 Pasteur stamp (issued 1923\u20131931). Carte Postale. Published by Baudet, \u00e9diteur. Caption: \u201cReims \u2014 Jeanne d\u2019Arc devant la Cath\u00e9drale avant la guerre\u201d (Joan of Arc in front of the Cathedral before the war). Message: \u201cDear Florence, Here. Just returned from a two days trip on the battle fields & was wonderful. Love from, Nellie G.\u201d Nellie had just visited WWI battlefields near Reims.",front:IMG+"Old - Paris - front.jpg",back:IMG+"Old - Paris - back.jpg"}
+  {id:33,location:"Reims, France \u2014 Joan of Arc at the Cathedral",address:"Cath\u00e9drale Notre-Dame de Reims, Reims, France",year:"c. 1923\u20131931",sender:"Nellie G.",recipient:"Mrs. Oscar Hamm, Wenatchee, Oklahoma, U.S.A.",notes:"Postmarked Paris, France. French 30\u00a2 Pasteur stamp (issued 1923\u20131931). Carte Postale. Published by Baudet, \u00e9diteur. Caption: \u201cReims \u2014 Jeanne d\u2019Arc devant la Cath\u00e9drale avant la guerre\u201d (Joan of Arc in front of the Cathedral before the war). Message: \u201cDear Florence, Here. Just returned from a two days trip on the battle fields & was wonderful. Love from, Nellie G.\u201d Nellie had just visited WWI battlefields near Reims.",front:IMG+"Old - Paris - front.jpg",back:IMG+"Old - Paris - back.jpg"},
+
+  // \u2500\u2500 V5 BATCH \u2500\u2500
+  {id:39,location:"Chicago, Illinois \u2014 Buckingham Fountain",address:"Grant Park, Chicago, IL",year:"November 3, 1959",sender:"Age",recipient:"Mother, Oak Grove, Missouri",notes:"Postmarked Chicago, ILL, Nov 3, 1959. 2\u00a2 Jefferson + 3\u00a2 Liberty stamps. \u201cGive Through Community Fund\u201d cancellation. Pub. by Cameo Greeting Cards, Inc., Chicago. Color by Chicago Park District. Card P267. Message: \u201cHi Mom. Saw this card and thought you would enjoy seeing this sight. This is the one Carol, Vickie and Mike saw during the Summer. I got your card this morning and read it while I was in the barbers chair. See you. Age.\u201d Another card from the Oak Grove, MO family\u2019s November 1959 Chicago orbit \u2014 \u2018Age\u2019 appears to be a sibling alongside Faye and Bill.",front:IMG+"1959 - Chicago, ILL - Buckingham Fountain - front.jpg",back:IMG+"1959 - Chicago, ILL - Buckingham Fountain - back.jpg"},
+  {id:40,location:"Waterford City, Ireland \u2014 Clock Tower & River Suir",address:"The Quay, Waterford City, Ireland",year:"September 22, 1959",sender:"Virginia & Gene",recipient:"E.R. Crotty, 2412 E. 70th St. Terrace, Kansas City, Missouri",notes:"Postmarked Corcaigh (Cork), Ireland, 22 IX 1959. Irish 6d stamp. AIRMAIL. C\u00e1rta Poise. Printed in Ireland by Irish Printers, Ltd. \u201cP.C.\u201d Color Card No. 252. Message (written Tuesday): \u201cDear Dad, Grace & Dick, Arrived in Ireland Monday morning, spent the day driving. It is a beautiful land. As green as they say and wonderful people. Love Virginia & Gene.\u201d Front caption: \u2018The Clock Tower and River Suir, The Quay, Waterford City, Ireland.\u2019",front:IMG+"1959 - Waterford City, Ireland - Clock Tower - front.jpg",back:IMG+"1959 - Waterford City, Ireland - Clock Tower - back.jpg"},
+  {id:41,location:"Boston, Massachusetts \u2014 WNAC-TV Pen Pals for Cash",address:"Box 5000, Boston, MA 02114",year:"c. 1975\u20131977",sender:"WNAC Candlepins for Cash (TV show)",recipient:"Beatrice Gardner, 18 Mistuxet Ave., Mystic, Connecticut 06355",notes:"No postmark date visible; 13\u00a2 Liberty Bell stamp (issued 1975). Card sent by the WNAC-TV Boston bowling show \u201cCandlepins for Cash\u201d as part of its Pen Pals for Cash segment. Front shows a Harvard Botanical Museum glass model: Echinocereus engelmannii (Parry) Rumpler, Model 529, Ware Collection of Glass Models of Plants, photo by J. Barnell, courtesy Readers Digest. Handwritten: \u201cGood Luck!\u201d and a secondary handwritten note: \u201c415-93 Kathi Cline.\u201d A wonderfully odd artifact \u2014 a cactus museum card repurposed as a game-show mailer.",front:IMG+"1973 - WNAC TV - Pen Pals - front.jpg",back:IMG+"1973 - WNAC TV - Pen Pals - back.jpg"},
+  {id:42,location:"Boca Raton, Florida \u2014 Waterway",address:"Boca Raton, FL",year:"March 8, 1978",sender:"A. Reba & A. Ruth",recipient:"Miss Ann Gibbs, 1213 Hampton Street, Scranton, Pennsylvania 18504",notes:"Postmarked West Palm Beach, FL, Mar 8, 1978. 9\u00a2 Capitol stamp. Published by D&M Post Card Co., West Palm Beach, FL. Curteichcolor\u00ae 3-D Natural Color Reproduction. Front caption: \u201cTropical Palm Trees and beautiful boats along the banks of this picturesque waterway.\u201d Message: \u201cDear Ann, We are enjoying meeting old friends. Weather is some warmer, just hope you don\u2019t have to shovel any more snow, seems you have had enough. Friends of mine are taking us to Boca Del Mar for lunch tomorrow \u2014 A. Ruth sat out in sun for about 10 mins. today \u2014 we will come home, Lily White \u2014 Love & our best to the Family. A. Reba & A. Ruth.\u201d",front:IMG+"1978 - Boca Raton, FL - front.jpg",back:IMG+"1978 - Boca Raton, FL - back.jpg"},
+  {id:43,location:"Northern Ontario, Canada \u2014 Scenic Multiview",address:"Northern Ontario, Canada",year:"1988",sender:"G.",recipient:"Hillary Harrow, 401 S. Camden Dr. #6, Beverly Hills, California 90212",notes:"Postmarked 1988 (Sault Ste. Marie area). 25\u00a2 Jack London stamp + $0.29 meter. Published by Soo Photo Service Ltd., Canadian Photoscene Products Inc., Sault Ste. Marie, Ont. Card No. 36390-D. Made in Canada. Nine-panel multiview of lakes, rapids, forest, sunset, and a train in snow. Message (in full): \u201cI\u2019m home! This is the tackiest one in the road stop in North Ontario. We drove through Quebec too \u2014 cute French-Can. guys & French speaking! I\u2019m going to hit the Montreal clubs next week with Sonya, I hope. My room is coming along \u2014 I\u2019m going to make curtains tomorrow. Us & I never really said \u2018goodbye\u2019 on Saturday \u2014 that\u2019s weird. She & Matt were together the whole last couple of days. I feel bad, but there\u2019s nothing to be done, I s\u2019pose. I see Mitch on Friday! God \u2014 how exciting! Then, I\u2019ll vege some next week & start my job on next Fri. on the Island! HOO-RAY! I have this urge to be in Beantown badly \u2014 but not w/out you! Slut! Will it be any fun when I visit Lis at Hah-vahd? I need Newbury Street & Davis\u2019s!! I\u2019ll probably end up going to BU anyway \u2014 & you? \u2661 G\u2014\u201d Grad. was nice & up-lifting! VIP-EEE! I \u2661 North Ontario.",front:IMG+"1988 - Northern Ontario - front.jpg",back:IMG+"1988 - Northern Ontario - back.jpg"}
 ];
 
 const PAGE_SIZE=10;
@@ -513,7 +518,7 @@ if(cfForm){
 
 // Map
 const LOCATIONS=[
-  {name:"Chicago, Illinois",lat:41.8781,lng:-87.6298,ids:[5,11,12,13,14,15,27,28,29,30,35]},
+  {name:"Chicago, Illinois",lat:41.8781,lng:-87.6298,ids:[5,11,12,13,14,15,27,28,29,30,35,39]},
   {name:"Philadelphia, Pennsylvania",lat:39.9526,lng:-75.1652,ids:[1]},
   {name:"Vermont–New York Border",lat:44.0,lng:-73.5,ids:[2]},
   {name:"Staten Island, New York",lat:40.5795,lng:-74.1502,ids:[3]},
@@ -538,6 +543,10 @@ const LOCATIONS=[
   {name:"Ponca City, Oklahoma",lat:36.7067,lng:-97.0856,ids:[36]},
   {name:"Washington, D.C.",lat:38.9072,lng:-77.0369,ids:[37]},
   {name:"Geiranger, Norway",lat:62.1003,lng:7.2055,ids:[38]},
+  {name:"Waterford City, Ireland",lat:52.2593,lng:-7.1101,ids:[40]},
+  {name:"Boston, Massachusetts",lat:42.3601,lng:-71.0589,ids:[41]},
+  {name:"Boca Raton, Florida",lat:26.3683,lng:-80.1289,ids:[42]},
+  {name:"Northern Ontario, Canada",lat:47.0,lng:-84.0,ids:[43]},
 ];
 
 let map=null,mapInitialized=false;
