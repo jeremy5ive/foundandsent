@@ -545,8 +545,8 @@ document.getElementById('btn-flip').addEventListener('click',()=>{
   const isBack=norm>90&&norm<270;
   animateLbTo(isBack?base+360:base+180);
 });
-document.getElementById('btn-rotl').addEventListener('click',()=>{animateLbToXY(rotY3d,rotX3d-90,400)});
-document.getElementById('btn-rotr').addEventListener('click',()=>{animateLbToXY(rotY3d,rotX3d+90,400)});
+document.getElementById('btn-rotl').addEventListener('click',()=>{rotation-=90;applyTransform()});
+document.getElementById('btn-rotr').addEventListener('click',()=>{rotation+=90;applyTransform()});
 document.getElementById('btn-zin').addEventListener('click',()=>{scale=Math.min(scale+.2,5);syncZoom();applyTransform()});
 document.getElementById('btn-zout').addEventListener('click',()=>{scale=Math.max(scale-.2,.3);syncZoom();applyTransform()});
 document.getElementById('btn-reset').addEventListener('click',()=>{scale=1;rotation=0;panX=0;panY=0;document.getElementById('lb-side').textContent='Front';document.getElementById('btn-flip').classList.remove('active');syncZoom();animateLbToXY(0,-4,400)});
