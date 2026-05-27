@@ -501,8 +501,10 @@ function applyTransform(){
   card.style.transition=lb3dDragging?'none':'transform .55s cubic-bezier(.4,0,.2,1)';
   card.style.transform='rotate('+rotation+'deg) scale('+scale+') rotateX('+rotX3d+'deg) rotateY('+rotY3d+'deg)';
   document.getElementById('lb-pan').style.transform='translate('+panX+'px,'+panY+'px)';
-  const norm=((rotY3d%360)+360)%360;
-  const side=norm<75||norm>285?'Front':norm>105&&norm<255?'Back':'Edge';
+  const normY=((rotY3d%360)+360)%360;
+  const normX=((rotX3d%360)+360)%360;
+  const xEdge=(normX>75&&normX<285);
+  const side=xEdge?'Edge':normY<75||normY>285?'Front':normY>105&&normY<255?'Back':'Edge';
   document.getElementById('lb-side').textContent=side;
   document.getElementById('btn-flip').classList.toggle('active',side==='Back');
 }
@@ -513,6 +515,19 @@ function animateLbTo(targetY,duration){
     const t=Math.min((now-start)/duration,1);
     const e=t<0.5?2*t*t:-1+(4-2*t)*t;
     rotY3d=startY+(targetY-startY)*e;
+    applyTransform();
+    if(t<1)requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+}
+function animateLbToXY(targetY,targetX,duration){
+  duration=duration||550;
+  const startY=rotY3d,startX=rotX3d,start=performance.now();
+  function step(now){
+    const t=Math.min((now-start)/duration,1);
+    const e=t<0.5?2*t*t:-1+(4-2*t)*t;
+    rotY3d=startY+(targetY-startY)*e;
+    rotX3d=startX+(targetX-startX)*e;
     applyTransform();
     if(t<1)requestAnimationFrame(step);
   }
@@ -530,11 +545,11 @@ document.getElementById('btn-flip').addEventListener('click',()=>{
   const isBack=norm>90&&norm<270;
   animateLbTo(isBack?base+360:base+180);
 });
-document.getElementById('btn-rotl').addEventListener('click',()=>{rotation-=90;applyTransform()});
-document.getElementById('btn-rotr').addEventListener('click',()=>{rotation+=90;applyTransform()});
+document.getElementById('btn-rotl').addEventListener('click',()=>{animateLbToXY(rotY3d,rotX3d-90,400)});
+document.getElementById('btn-rotr').addEventListener('click',()=>{animateLbToXY(rotY3d,rotX3d+90,400)});
 document.getElementById('btn-zin').addEventListener('click',()=>{scale=Math.min(scale+.2,5);syncZoom();applyTransform()});
 document.getElementById('btn-zout').addEventListener('click',()=>{scale=Math.max(scale-.2,.3);syncZoom();applyTransform()});
-document.getElementById('btn-reset').addEventListener('click',()=>{scale=1;rotation=0;panX=0;panY=0;rotY3d=0;rotX3d=-4;document.getElementById('lb-side').textContent='Front';document.getElementById('btn-flip').classList.remove('active');syncZoom();animateLbTo(0,400)});
+document.getElementById('btn-reset').addEventListener('click',()=>{scale=1;rotation=0;panX=0;panY=0;document.getElementById('lb-side').textContent='Front';document.getElementById('btn-flip').classList.remove('active');syncZoom();animateLbToXY(0,-4,400)});
 document.getElementById('zoom-slider').addEventListener('input',function(){scale=parseInt(this.value)/100;document.getElementById('zoom-pct').textContent=this.value+'%';applyTransform()});
 document.getElementById('lb-stage').addEventListener('wheel',e=>{e.preventDefault();scale=Math.min(Math.max(scale-e.deltaY*.0012,.3),5);syncZoom();applyTransform()},{passive:false});
 
@@ -545,13 +560,15 @@ window.addEventListener('mousemove',e=>{
   const dx=e.clientX-lb3dStartX,dy=e.clientY-lb3dStartY;
   if(Math.abs(dx)>3||Math.abs(dy)>3)lb3dDragMoved=true;
   if(scale>1.05){panX=dPanX+(e.clientX-lb3dStartX);panY=dPanY+(e.clientY-lb3dStartY);}
-  else{rotY3d+=dx*.45;rotX3d=Math.max(-30,Math.min(30,rotX3d-dy*.25));lb3dStartX=e.clientX;lb3dStartY=e.clientY;}
+  else{rotY3d+=dx*.45;rotX3d-=dy*.45;lb3dStartX=e.clientX;lb3dStartY=e.clientY;}
   applyTransform();
 });
 window.addEventListener('mouseup',()=>{
   if(!lb3dDragging)return;
   lb3dDragging=false;stageEl.style.cursor='grab';
-  if(!lb3dDragMoved&&scale<=1.05){
+  const normX=((rotX3d%360)+360)%360;
+  const xNeutral=normX<30||normX>330;
+  if(!lb3dDragMoved&&scale<=1.05&&xNeutral){
     const norm=((rotY3d%360)+360)%360;
     const base=Math.floor(rotY3d/360)*360;
     animateLbTo(norm>90&&norm<270?base+360:base+180);
@@ -563,12 +580,14 @@ stageEl.addEventListener('touchmove',e=>{
   const t=e.touches[0],dx=t.clientX-lb3dStartX,dy=t.clientY-lb3dStartY;
   if(Math.abs(dx)>3||Math.abs(dy)>3)lb3dDragMoved=true;
   if(scale>1.05){panX=dPanX+(t.clientX-lb3dStartX);panY=dPanY+(t.clientY-lb3dStartY);}
-  else{rotY3d+=dx*.45;rotX3d=Math.max(-30,Math.min(30,rotX3d-dy*.25));lb3dStartX=t.clientX;lb3dStartY=t.clientY;}
+  else{rotY3d+=dx*.45;rotX3d-=dy*.45;lb3dStartX=t.clientX;lb3dStartY=t.clientY;}
   applyTransform();
 },{passive:true});
 stageEl.addEventListener('touchend',e=>{
   const dx=Math.abs(panX-dPanX),dy=Math.abs(panY-dPanY);
-  if(dx<8&&dy<8&&!lb3dDragMoved){
+  const normX=((rotX3d%360)+360)%360;
+  const xNeutral=normX<30||normX>330;
+  if(dx<8&&dy<8&&!lb3dDragMoved&&xNeutral){
     const norm=((rotY3d%360)+360)%360;
     const base=Math.floor(rotY3d/360)*360;
     animateLbTo(norm>90&&norm<270?base+360:base+180);
