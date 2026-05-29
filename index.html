@@ -79,12 +79,23 @@
   .lb-edge-r{width:2px;height:100%;right:0;transform-origin:right center;transform:rotateY(90deg)}
   .lb-edge-t{width:100%;height:2px;top:0;transform-origin:top center;transform:rotateX(90deg)}
   .lb-edge-b{width:100%;height:2px;bottom:0;transform-origin:bottom center;transform:rotateX(-90deg)}
-  .lb-caption{margin-top:10px;text-align:center;color:#b09070;max-width:760px;width:90vw;padding:0 16px}
+  .lb-caption{margin-top:10px;text-align:center;color:#b09070;max-width:760px;width:90vw;padding:0 16px;display:flex;flex-direction:column;align-items:center;max-height:28vh;overflow-y:auto;scrollbar-width:thin;scrollbar-color:rgba(200,170,120,.2) transparent}
   .lb-caption-main{font-family:'Playfair Display',serif;font-size:1.1rem;font-style:italic;color:#d4c0a0}
   .lb-meta-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:5px 18px;margin-top:6px}
   .lb-meta-item{font-size:.76rem;letter-spacing:.08em;color:#7a6a55}
   .lb-meta-item strong{color:#a08060;font-weight:600;letter-spacing:.12em;text-transform:uppercase;font-size:.63rem;margin-right:4px}
   .lb-zoom-row{display:flex;align-items:center;gap:10px;margin-top:8px;font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;color:#7a6a55}
+  /* Address bar — above the card */
+  .lb-address-bar{width:calc(100vw - 120px);max-width:1200px;display:flex;justify-content:flex-end;padding:0 8px 6px;min-height:0}
+  .lb-address-lines{font-family:'Crimson Pro',Georgia,serif;font-size:1rem;font-weight:400;color:#d4c0a0;line-height:1.65;text-align:left;letter-spacing:.01em}
+  .lb-address-lines:empty{display:none}
+  /* Hero message block */
+  .lb-hero-block{margin-top:10px;max-width:760px;width:90vw;text-align:left;border:1px solid rgba(200,170,120,.18);border-radius:3px;padding:14px 18px;background:rgba(255,255,255,.04)}
+  .lb-hero-block:empty,.lb-hero-block[data-empty="1"]{display:none}
+  /* Notes section */
+  .lb-notes-block{max-width:760px;width:90vw;margin-top:8px;text-align:left}
+  .lb-notes-label{font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;color:#7a6a55;margin-bottom:5px;padding-bottom:4px;border-bottom:1px solid rgba(200,170,120,.12)}
+  .lb-notes-block:empty{display:none}
   input[type=range]#zoom-slider{-webkit-appearance:none;width:90px;height:2px;background:rgba(200,170,120,.25);border-radius:2px;outline:none}
   input[type=range]#zoom-slider::-webkit-slider-thumb{-webkit-appearance:none;width:11px;height:11px;border-radius:50%;background:var(--gold-dim);cursor:pointer}
   #zoom-pct{min-width:34px;text-align:left}
@@ -175,6 +186,8 @@
     .lb-tap-hint{display:block!important}
     #map-container{height:360px}
     .upload-box{padding:28px 20px}
+    .lb-address-bar{width:calc(100vw - 20px);padding:0 4px 4px}
+    .lb-address-lines{font-size:.85rem}
   }
 </style>
 </head>
@@ -253,6 +266,9 @@
     <div class="lb-sep"></div>
     <span class="lb-side-label" id="lb-side">Front</span>
   </div>
+  <div class="lb-address-bar" id="lb-address-bar">
+    <div class="lb-address-lines" id="lb-address-lines"></div>
+  </div>
   <div class="lb-stage" id="lb-stage">
     <div class="lb-pan-wrap" id="lb-pan">
       <div class="lb-card" id="lb-card">
@@ -267,7 +283,13 @@
   </div>
   <div class="lb-caption">
     <div class="lb-caption-main" id="lb-title-text"></div>
-    <div class="lb-meta-grid" id="lb-meta-grid"></div>
+    <div class="lb-hero-block" id="lb-hero-block">
+      <div class="lb-hero-message" id="lb-hero-message"></div>
+    </div>
+    <div class="lb-notes-block" id="lb-notes-block">
+      <div class="lb-notes-label">Notes</div>
+      <div class="lb-meta-grid" id="lb-meta-grid"></div>
+    </div>
   </div>
   <div class="lb-tap-hint">Tap card to flip &nbsp;&#183;&nbsp; swipe to navigate</div>
   <div class="lb-zoom-row">
@@ -396,7 +418,14 @@ let postcards = [
   {id:60,location:"Bad Driburg, Germany \u2014 Gr\u00e4fliche Kurh\u00e4user",address:"Bad Driburg, Nordrhein-Westfalen, Germany",year:"c. 1958\u20131961",sender:"H.M.",recipient:"Professor Melanie Rosborough, University of Miami, German Dept., Miami, Fla., U.S.A.",notes:"Postmarked Bad Driburg, September 1 (year partially legible, c. 1958\u20131961). 10 Deutsche Bundespost stamp depicting Schulze-Delitzsch (1808\u20131883). Published by Cramers Kunstanstalt KG, Dortmund \u2014 60th anniversary edition. Card caption: \u2018Bad Driburg \u2014 Gr\u00e4fliche Kurh\u00e4user\u2019 (Count\u2019s Spa Houses). Front shows the half-timbered Kurhaus street in warm afternoon light, flower beds lining the walk, no-parking sign in the foreground. Message written in German cursive and partially legible; mentions Westfalen, a beautiful resort, children, regards, and is signed H.M. Sent to a professor in the University of Miami German Department.",front:IMG+"1950 - Dortmund - front.jpg",back:IMG+"1950 - Dortmund - back.jpg"},
   {id:61,location:"Kauai, Hawaii \u2014 Kauai Surf Hotel, Kalapaki Beach",address:"Kauai Surf Hotel, Kalapaki Beach, Lihue, HI",year:"September 20, 1977",sender:"Hazel",recipient:"Mrs. Della Fleischman, 177 White Oak Drive, Santa Rosa, Calif. 95405",notes:"Postmarked Honolulu, Hawaii, Sept 22, 1977. Hawaiian hula dancer machine cancellation. 13\u00a2 US Flag (Bicentennial) stamp. Plastichrome, Boston. Photo by Don Ceppi. Hawaiian Service, Inc., P.O. Box 2835, Honolulu, Hawaii 96803. Meter $0.49, label 1843. Card caption: \u2018The Kauai Surf \u2014 Kauai\u2019s luxury destination resort at golden Kalapaki Beach. The Surf\u2019s Pali Kai Cliff Cottages are visible on the right.\u2019 Front shows the twin resort towers framing Kalapaki Bay, tropical bougainvillea and torch ginger in the foreground. Message dated Sept 20: \u201cHi Della \u2014 Sure is a nice spot to be in. Lois & I are having a ball. Went to Fern Grotto yesterday. Thought we would take it easy today. Spending our time on this island alone. Leave for Honolulu the 23rd to pick up ship for return trip. Hope I am a good sailor. Weather warm but partly cloudy. Will be home on the 28th. Love, Hazel.\u201d",front:IMG+"1977 - Kauai, HI - Kauai Surf - front.jpg",back:IMG+"1977 - Kauai, HI - Kauai Surf - back.jpg"},
   {id:62,location:"Victoria, British Columbia \u2014 Parliament Buildings at Night",address:"Parliament Buildings, Victoria, BC, Canada",year:"September 29, 1989",sender:"Carl & Blanche",recipient:"Mr. & Mrs. R. McLouth, Rt. 10 Box 913, Tyler, Texas 75707, U.S.A.",notes:"Postmarked Victoria, BC, 30 IX 1989. 44\u00a2 Canada stamp (Atlantic Walrus). Impact Photography. Photo by Stuart Westmoreland. \u00a9IMPACT 1988, Photo Canada. Card #7172, G-1745. Caption: \u2018The Parliament Buildings are illuminated each night by 3,330 light bulbs.\u2019 Printed in Japan. Meter $0.39, label 1843. Front shows the Romanesque Revival Parliament Buildings spectacularly lit against a deep blue night sky, full moon rising at right, colorful geranium beds in the foreground. Message dated 9 p.m., 63\u00b0, 9/29/89: \u201cHi \u2014 Just came from seeing this all lighted and it is quite spectacular. Took a 1\u00bd hr. ferry ride (236 vehicles) this a.m. coming from Vancouver \u2014 fun. Had a Senior pass in Vancouver for $6.00 for 3 days. Traveled by Skytrain, Sea Bus & regular bus all over the place. We\u2019ve lost track of days \u2014 hope we get to San Diego to fly home on time. Our best! Carl & Blanche.\u201d",front:IMG+"1989 - British Columbia, Victoria, Canada - Parliament Buildings - front.jpg",back:IMG+"1989 - British Columbia, Victoria, Canada - Parliament Buildings - back.jpg"},
-  {id:63,location:"Mount Hood, Oregon \u2014 Timberline Lodge",address:"Timberline Lodge, Mt. Hood, OR",year:"July 4, 1974",sender:"Mom",recipient:"Mr. & Mrs. R.J. Oelner, 217 F Dodge, Evanston, Illinois 60602",notes:"Postmarked Cannon Beach, OR, Jul 5, 1974. 8\u00a2 Eisenhower stamp. CT-1783. Made by Dexter Press, Inc., West Nyack, New York. Published by Smith-Western, Inc., 1133 N.W. Glisan, Portland, Oregon. Card 58976-C. Union Pacific Color Photo. Caption: \u2018Mount Hood and Timberline Lodge, Oregon \u2014 Oregon\u2019s world famous Sentinel Peak provides a spectacular backdrop for this ski-lodge among the world\u2019s finest.\u2019 Front shows the lodge nestled among snow-laden firs with the full snow pyramid of Mt. Hood rising dramatically behind. Message dated July 4: \u201cDear Sue, Ralph & Kathy \u2014 We stayed here last night & went swimming in the heated pool between 9 & 10 PM! The cold breeze over the pool almost froze our wet hair. Today we went in a snow cat up Mt. Hood \u2014 tonight we are 12 miles south of Portland in a motel as it is starting to rain. Love, Mom.\u201d Posted from Cannon Beach the following day \u2014 a classic Pacific Northwest Fourth of July in one card.",front:IMG+"1977 - Mount Hood, OR - Timberline Lodge - front.jpg",back:IMG+"1977 - Mount Hood, OR - Timberline Lodge - back.jpg"}
+  {id:63,location:"Mount Hood, Oregon \u2014 Timberline Lodge",address:"Timberline Lodge, Mt. Hood, OR",year:"July 4, 1974",sender:"Mom",recipient:"Mr. & Mrs. R.J. Oelner, 217 F Dodge, Evanston, Illinois 60602",notes:"Postmarked Cannon Beach, OR, Jul 5, 1974. 8\u00a2 Eisenhower stamp. CT-1783. Made by Dexter Press, Inc., West Nyack, New York. Published by Smith-Western, Inc., 1133 N.W. Glisan, Portland, Oregon. Card 58976-C. Union Pacific Color Photo. Caption: \u2018Mount Hood and Timberline Lodge, Oregon \u2014 Oregon\u2019s world famous Sentinel Peak provides a spectacular backdrop for this ski-lodge among the world\u2019s finest.\u2019 Front shows the lodge nestled among snow-laden firs with the full snow pyramid of Mt. Hood rising dramatically behind. Message dated July 4: \u201cDear Sue, Ralph & Kathy \u2014 We stayed here last night & went swimming in the heated pool between 9 & 10 PM! The cold breeze over the pool almost froze our wet hair. Today we went in a snow cat up Mt. Hood \u2014 tonight we are 12 miles south of Portland in a motel as it is starting to rain. Love, Mom.\u201d Posted from Cannon Beach the following day \u2014 a classic Pacific Northwest Fourth of July in one card.",front:IMG+"1977 - Mount Hood, OR - Timberline Lodge - front.jpg",back:IMG+"1977 - Mount Hood, OR - Timberline Lodge - back.jpg"},
+
+  // \u2500\u2500 V8 BATCH \u2500\u2500
+  {id:64,location:"Hunt, Texas \u2014 Camp La Junta",address:"Camp La Junta, Hunt, TX (on the Guadalupe River)",year:"March 6, 1961",sender:"Josephine",recipient:"Mr. & Mrs. Eby, 2600 San Pedro, Austin (15) Texas",recipientAddress:"2600 San Pedro Ave, Austin, TX",recipientLat:30.3075,recipientLng:-97.7467,notes:"Postmarked Hunt, TX, Mar 6, 1961 PM. 3\u00a2 Liberty stamp. Pub. by Aerial Photo Adv. Co., 315 Palmero St., Corpus Christi, Texas. Color Photo by Don Bartels. Card C-14396. Meter $0.39, label 1843. Caption: \u2018FW-162 \u2014 Camp La Junta, located at Hunt, Texas, twelve miles west of Kerrville on the beautiful Guadalupe River. A Western Camp for Junior Boys established in 1928.\u2019 Front shows horseback riders along the Guadalupe River dam spillway. Message: \u201cBess dear! I am so sorry to hear of your great sorrow. I am very happy here. Good accommodations \u2014 Excellent food. Good companionship \u2014 marvelous comradeship \u2014 wonderful preaching \u2014 will tell you when I come home. Love, Josephine.\u201d",front:IMG+"1961 - Hunt, TX - Camp La Junta - front.jpg",back:IMG+"1961 - Hunt, TX - Camp La Junta - back.jpg"},
+  {id:65,location:"Albuquerque, New Mexico \u2014 Sandia Peak Ski Area",address:"Sandia Peak Ski Area, Albuquerque, NM",year:"February 22, 1968",sender:"Gram & Gramph",recipient:"Debbie McLouth, 520 Spring Valley Rd., Richardson, Texas 75080",recipientAddress:"520 Spring Valley Rd, Richardson, TX 75080",recipientLat:32.9483,recipientLng:-96.7299,notes:"Postmarked Albuquerque, NM, 22 Feb 1968 PM. 5\u00a2 Mississippi statehood sesquicentennial stamp (1817\u20131967, magnolia). Meter $0.49, label 1843. Southwest Post Card Company. Printed by Henry McGrew Printing, K.C., MO. Card 56619. Caption: \u2018Sandia Peak Ski Area \u2014 20 Miles from Albuquerque, N.M. A thrilling run down Exhibition Trail, and intermediate ski slope 1.5 miles in length with a vertical drop of 1,750 feet.\u2019 Front shows ski slopes and tram infrastructure on Sandia Peak. Message: \u201cDear Debbie, This town has changed a lot since we visited you sixteen yrs. ago. We toured Old Town and enjoyed walking around. Gramph bought a few \u2018rocks.\u2019 Love, Gram & Gramph.\u201d",front:IMG+"1968 - Albequerque, NM - Sandia Peak Ski Area - front.jpg",back:IMG+"1968 - Albequerque, NM - Sandia Peak Ski Area - back.jpg"},
+  {id:66,location:"Lexington, Virginia \u2014 Lee Memorial Chapel, Washington & Lee University",address:"Washington & Lee University, Lexington, VA",year:"July 6, 1976",sender:"Elaine, Billy & John",recipient:"Mr. and Mrs. Jack Lipscombe, 2404 Allendale Rd., Big Spring, TX 79720",recipientAddress:"2404 Allendale Rd, Big Spring, TX 79720",recipientLat:32.2504,recipientLng:-101.4874,notes:"Postmarked Stanton, PA, Jul 6 PM 1976. 13\u00a2 United States Bicentennial flag stamp. \u2018Defeat Muscular Dystrophy \u2014 Support MDA\u2019 machine cancel. Published by Valley Views, Bridgewater, VA 22812. Luke Roberts, Berkeley 94710. Caption: \u2018The Lee Memorial Chapel, Washington and Lee University, Lexington, Virginia. Built during the presidency of Robert E. Lee, it serves as students\u2019 chapel as well as mausoleum and museum of the Lee family.\u2019 Front shows the ivy-clad brick chapel with clock tower amid spring-budding trees. Message: \u201cDear Mommy & Daddy \u2014 As you can see, doing a little sightseeing. W&L was beautiful. Wonder why Scott didn\u2019t stay? So far no problems at all, knock wood. I\u2019m having fun! Tivi, Billy & John say love. Jason too. Love, Elaine.\u201d",front:IMG+"1976 - Stanton, PA - Lee Memorial - front.jpg",back:IMG+"1976 - Stanton, PA - Lee Memorial - back.jpg"},
+  {id:67,location:"Burg Karlstein, Bavaria, Germany",address:"Burg Karlstein, Bavaria, Germany",year:"February 11, 1981",sender:"[Bob/Rob] (partially legible)",recipient:"Mrs. Louise Reichert, 4759 N. Marvine, Phila., PA 19141, USA",recipientAddress:"4759 N Marvine St, Philadelphia, PA 19141",recipientLat:40.0390,recipientLng:-75.1398,notes:"Dated Feb 11, 1981 (handwritten). Two 40pf Deutsche Bundespost stamps (Weltraumlabor \u2014 Space Shuttle/Spacelab). Mit Luftpost / Par Avion airmail label. Verlagshaus Sudetenland GmbH, M\u00fcnchen 19, Postfach 46. Caption: \u2018Burg Karlstein\u2019 \u2014 illustrated painting of the castle perched on its rock outcrop, figures and horses in the foreground. Message: \u201cDear Louise, The bright and cheerful bird calendar just arrived. And with our name on it! Many thanks my dear. Hope you are well. If I get over I\u2019ll ring you. Best wishes, [Bob/Rob].\u201d",front:IMG+"1981 - Philadelphia, PA - front.jpg",back:IMG+"1981 - Philadelphia, PA - back.jpg"},
+  {id:68,location:"Kalamazoo, Michigan \u2014 Bernhard Student Center, Western Michigan University",address:"Bernhard Student Center, Western Michigan University, Kalamazoo, MI",year:"July 24, 1989",sender:"Kenneth",recipient:"Hillary Harrow, 401 S. Camden Dr. #6, Beverly Hills, CA 90212",recipientAddress:"401 S Camden Dr, Beverly Hills, CA 90212",recipientLat:34.0614,recipientLng:-118.3993,notes:"Postmarked Augusta, GA, PM 24 Jul 1989. 15\u00a2 Buffalo Bill Cody stamp. Pub. by H.K. Barnett, Allison Park, PA 15101. Card WMU-3, #631433. Caption: \u2018Bernhard Student Center, Western Michigan University, Kalamazoo, Michigan. This attractive facility was opened in 1957. It contains a 20 lane bowling alley, two ballrooms, a snack bar and a public cafeteria. Western\u2019s Campus bookstore is housed in the West wing.\u2019 Front shows the modernist student center with sweeping lawn and mature trees. Message: \u201cDear Hillary, Sorry it took me so long to write to you. Hope you still remember me from NU last summer \u2014 KENNETH. Well anyway, how\u2019s piano coming? How\u2019s Stacy? Tell her \u2018hello\u2019 for me. I\u2019m here at Western Michigan for a music camp. It\u2019s pretty cool! Lots of interesting people. Well, gotta go, but don\u2019t forget that you\u2019re always taking me to the POINT OF NO RETURN. \ud83d\ude42 Love, Kenneth.\u201d",front:IMG+"1989 - Kalamazoo, MI - WMU - front.jpg",back:IMG+"1989 - Kalamazoo, MI - WMU - back.jpg"}
 ];
 
 const PAGE_SIZE=10;
@@ -487,14 +516,57 @@ function loadCard(){
   document.getElementById('zoom-slider').value=100;
   document.getElementById('zoom-pct').textContent='100%';
   rotY3d=0;rotX3d=-4;flipped=false;
+  // ── Address bar above card: traditional mailing format ──
+  const addrLines=document.getElementById('lb-address-lines');
+  // Parse recipient into name line(s) vs city/state line
+  // address field often has street + city, recipient has the name
+  // We want: Name / Street (if present) / City, State ZIP / Country
+  let mailLines=[];
+  if(c.recipient) mailLines.push(c.recipient);
+  if(c.address){
+    // Split address on commas to get street / city / state+zip / country
+    const parts=c.address.split(',').map(s=>s.trim()).filter(Boolean);
+    if(parts.length>=2){
+      // Re-join sensibly: street alone, then city+state+zip, then country if present
+      mailLines.push(parts[0]); // street / venue
+      if(parts.length===2) mailLines.push(parts[1]);
+      else if(parts.length===3) mailLines.push(parts[1]+', '+parts[2]);
+      else mailLines.push(parts[1]+', '+parts[2]+', '+parts[3]);
+    } else {
+      mailLines.push(c.address);
+    }
+  }
+  // Deduplicate lines that are already contained in the recipient string
+  mailLines=mailLines.filter((l,i)=>i===0||!mailLines[0].toLowerCase().includes(l.toLowerCase()));
+  addrLines.innerHTML=mailLines.map(l=>'<div>'+escHtml(l)+'</div>').join('');
+
+  // ── Hero block: written message ──
+  const heroMsg=document.getElementById('lb-hero-message');
+  const heroBlock=document.getElementById('lb-hero-block');
+  if(c.notes){
+    // Match: Message[dated ...][:][ "]text["] — grab the quoted or unquoted message
+    const msgMatch=c.notes.match(/Message(?:[^:]*)?:\s*["\u201c]?([\s\S]+?)(?:["\u201d]?\s*(?:Posted|A |Same|Sent|$))/);
+    if(msgMatch){
+      messageText=msgMatch[1].replace(/["\u201c\u201d]$/,'').trim();
+      // Notes remainder = everything before the message match
+      notesRemainder=c.notes.substring(0,c.notes.search(/Message(?:[^:]*)?:/)).trim();
+      // Also grab any trailing note after the message (e.g. "Posted from Cannon Beach...")
+      const trailMatch=c.notes.match(/["\u201d]\s*((?:Posted|A |Same|Sent)[^$]+)$/);
+      if(trailMatch) notesRemainder+=' '+trailMatch[1].trim();
+    }
+  }
+  heroMsg.textContent=messageText;
+  heroBlock.style.display=messageText?'':'none';
+
+  // ── Notes section: postmark, publisher, caption, etc ──
   const meta=[
     c.year?{label:'Year',value:c.year}:null,
     c.sender?{label:'From',value:c.sender}:null,
-    c.recipient?{label:'To',value:c.recipient}:null,
-    c.address?{label:'Address',value:c.address}:null,
-    c.notes?{label:'Notes',value:c.notes}:null
+    notesRemainder?{label:'',value:notesRemainder}:null
   ].filter(Boolean);
+  const notesBlock=document.getElementById('lb-notes-block');
   document.getElementById('lb-meta-grid').innerHTML=meta.map(m=>'<span class="lb-meta-item"><strong>'+escHtml(m.label)+'</strong>'+escHtml(m.value)+'</span>').join('');
+  notesBlock.style.display=meta.length?'':'none';
   imgFront.onload=function(){sizeAndApply();imgFront.onload=null};
   imgFront.onerror=function(){sizeAndApply();imgFront.onerror=null};
   imgFront.src=c.front||'';
@@ -708,6 +780,20 @@ const LOCATIONS=[
   {name:"Kalapaki Beach, Kauai, Hawaii",lat:21.9611,lng:-159.3507,ids:[61]},
   {name:"Victoria, British Columbia",lat:48.4284,lng:-123.3656,ids:[62]},
   {name:"Mount Hood, Oregon",lat:45.3735,lng:-121.6958,ids:[63]},
+  {name:"Hunt, Texas \u2014 Camp La Junta",lat:30.0621,lng:-99.3384,ids:[64]},
+  {name:"Albuquerque, New Mexico \u2014 Sandia Peak",lat:35.2081,lng:-106.4424,ids:[65]},
+  {name:"Lexington, Virginia \u2014 Washington & Lee",lat:37.7882,lng:-79.4428,ids:[66]},
+  {name:"Burg Karlstein, Bavaria",lat:49.3614,lng:11.4186,ids:[67]},
+  {name:"Kalamazoo, Michigan \u2014 WMU",lat:42.2842,lng:-85.6182,ids:[68]},
+];
+
+// Recipient "To" address markers (diamond style)
+const RECIPIENT_LOCATIONS=[
+  {name:"Austin, TX \u2014 2600 San Pedro (Eby)",lat:30.3075,lng:-97.7467,ids:[64]},
+  {name:"Richardson, TX \u2014 520 Spring Valley Rd (McLouth)",lat:32.9483,lng:-96.7299,ids:[65]},
+  {name:"Big Spring, TX \u2014 2404 Allendale Rd (Lipscombe)",lat:32.2504,lng:-101.4874,ids:[66]},
+  {name:"Philadelphia, PA \u2014 4759 N. Marvine (Reichert)",lat:40.0390,lng:-75.1398,ids:[67]},
+  {name:"Beverly Hills, CA \u2014 401 S. Camden Dr. (Harrow)",lat:34.0614,lng:-118.3993,ids:[68]},
 ];
 
 let map=null,mapInitialized=false,_mapMarkers=[];
@@ -733,6 +819,25 @@ function refreshMapMarkers(){
       return'<div class="map-popup-card" onclick="openCardFromMap('+id+')">'+'<div>'+escHtml(sl)+'</div><div class="map-popup-year">'+escHtml(c.year||'')+'</div></div>';
     }).filter(Boolean).join('');
     m.bindPopup('<div class="map-popup-title">'+escHtml(loc.name)+'</div>'+cards,{maxWidth:280});
+    _mapMarkers.push(m);
+  });
+  // Recipient "To" address markers — hollow diamond style in red
+  RECIPIENT_LOCATIONS.forEach(loc=>{
+    const visibleIds=loc.ids.filter(id=>{
+      const c=postcards.find(x=>x.id===id);
+      if(!c)return false;
+      if(activeDecade===null)return true;
+      return parseDecade(c.year)===activeDecade;
+    });
+    if(!visibleIds.length)return;
+    const icon=L.divIcon({className:'',html:'<div style="width:12px;height:12px;transform:rotate(45deg);border:2px solid #7a2e22;background:rgba(122,46,34,0.25);margin-top:-6px;margin-left:-6px;"></div>',iconSize:[12,12],iconAnchor:[6,6]});
+    const m=L.marker([loc.lat,loc.lng],{icon}).addTo(map);
+    const cards=visibleIds.map(id=>{
+      const c=postcards.find(x=>x.id===id);
+      if(!c)return'';
+      return'<div class="map-popup-card" onclick="openCardFromMap('+id+')">'+'<div style="font-size:.7rem;color:#a05040;">&#9671; Delivered to</div><div>'+escHtml(c.recipient||'')+'</div><div class="map-popup-year">'+escHtml(c.year||'')+'</div></div>';
+    }).filter(Boolean).join('');
+    m.bindPopup('<div class="map-popup-title">'+escHtml(loc.name)+'</div>'+cards,{maxWidth:300});
     _mapMarkers.push(m);
   });
 }
