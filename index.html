@@ -43,7 +43,6 @@
   .row-year{font-size:1rem;color:var(--ink-soft);font-variant-numeric:tabular-nums;font-weight:300}
   .row-arrow{font-size:.8rem;color:var(--gold);opacity:0;transition:opacity .15s,transform .15s;text-align:right;padding-right:4px}
   mark{background:rgba(154,124,63,.2);color:inherit;border-radius:2px;padding:0 1px}
-  /* Map */
   #map-panel{display:none;max-width:900px;margin:0 auto;padding:0 60px 40px;background:rgba(247,243,237,0.92)}
   #map-panel.open{display:block}
   #map-container{height:520px;border-radius:4px;overflow:hidden;border:1px solid var(--rule);box-shadow:0 4px 20px rgba(0,0,0,.08)}
@@ -53,7 +52,6 @@
   .map-popup-card:last-child{border-bottom:none}
   .map-popup-card:hover{color:#9a7c3f}
   .map-popup-year{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;opacity:.55}
-  /* Lightbox */
   #lightbox{display:none;position:fixed;inset:0;z-index:9999;background:rgba(14,10,5,.96);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);align-items:center;justify-content:center;flex-direction:column;width:100vw;height:100vh}
   #lightbox.open{display:flex}
   #lb-close{position:fixed;top:16px;right:20px;background:rgba(0,0,0,.3);border:1px solid rgba(200,170,120,.2);color:#c8b89a;font-size:1.2rem;line-height:1;cursor:pointer;z-index:10000;opacity:.8;transition:opacity .2s;font-family:'Crimson Pro',serif;width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center}
@@ -85,14 +83,11 @@
   .lb-meta-item{font-size:.76rem;letter-spacing:.08em;color:#7a6a55}
   .lb-meta-item strong{color:#a08060;font-weight:600;letter-spacing:.12em;text-transform:uppercase;font-size:.63rem;margin-right:4px}
   .lb-zoom-row{display:flex;align-items:center;gap:10px;margin-top:8px;font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;color:#7a6a55}
-  /* Address bar — above the card */
   .lb-address-bar{width:calc(100vw - 120px);max-width:1200px;display:flex;justify-content:flex-end;padding:0 8px 6px;min-height:0}
   .lb-address-lines{font-family:'Crimson Pro',Georgia,serif;font-size:1rem;font-weight:400;color:#d4c0a0;line-height:1.65;text-align:left;letter-spacing:.01em}
   .lb-address-lines:empty{display:none}
-  /* Hero message block */
   .lb-hero-block{margin-top:10px;max-width:760px;width:90vw;text-align:left;border:1px solid rgba(200,170,120,.18);border-radius:3px;padding:14px 18px;background:rgba(255,255,255,.04)}
   .lb-hero-block:empty,.lb-hero-block[data-empty="1"]{display:none}
-  /* Notes section */
   .lb-notes-block{max-width:760px;width:90vw;margin-top:8px;text-align:left}
   .lb-notes-label{font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;color:#7a6a55;margin-bottom:5px;padding-bottom:4px;border-bottom:1px solid rgba(200,170,120,.12)}
   .lb-notes-block:empty{display:none}
@@ -100,18 +95,15 @@
   input[type=range]#zoom-slider::-webkit-slider-thumb{-webkit-appearance:none;width:11px;height:11px;border-radius:50%;background:var(--gold-dim);cursor:pointer}
   #zoom-pct{min-width:34px;text-align:left}
   .lb-tap-hint{display:none;font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:#7a6a55;margin-top:6px;text-align:center}
-  /* Pagination */
   .pagination{display:flex;align-items:center;justify-content:center;gap:8px;padding:24px 0 0;border-top:1px solid var(--rule);margin-top:4px;flex-wrap:wrap}
   .page-btn{background:none;border:1px solid var(--rule);color:var(--ink-soft);font-family:'Crimson Pro',serif;font-size:.88rem;padding:6px 14px;border-radius:2px;cursor:pointer;transition:all .2s;min-width:36px}
   .page-btn:hover{border-color:var(--gold);color:var(--gold)}
   .page-btn.active{background:var(--ink);border-color:var(--ink);color:var(--bg)}
   .page-btn:disabled{opacity:.3;cursor:default}
   .page-info{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);opacity:.5;padding:0 4px}
-  /* Add bar */
   .add-bar{border-top:1px solid var(--rule);padding:24px 0 0}
   .add-link{font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);cursor:pointer;background:none;border:none;font-family:'Crimson Pro',serif;padding:0;opacity:.75;transition:opacity .2s}
   .add-link:hover{opacity:1}
-  /* Upload modal */
   #upload-modal{display:none;position:fixed;inset:0;z-index:1000;background:rgba(20,14,8,.93);backdrop-filter:blur(6px);align-items:center;justify-content:center;overflow-y:auto;padding:30px 0}
   #upload-modal.open{display:flex}
   .upload-box{background:#f7f3ed;color:var(--ink);border-radius:4px;padding:40px 44px;width:520px;max-width:95vw;position:relative;box-shadow:0 20px 60px rgba(0,0,0,.5)}
@@ -135,7 +127,6 @@
   .btn-save:hover{background:var(--red);border-color:var(--red)}
   .close-modal-btn{position:absolute;top:14px;right:18px;background:none;border:none;font-size:1.2rem;cursor:pointer;color:var(--ink-soft);opacity:.5;transition:opacity .2s}
   .close-modal-btn:hover{opacity:1}
-  /* Contact */
   .contact-section{max-width:900px;margin:0 auto;padding:0 60px 60px;background:rgba(247,243,237,0.92)}
   .contact-section h2{font-family:'Playfair Display',serif;font-weight:400;font-size:1.8rem;color:var(--ink);margin-bottom:6px;margin-top:40px;border-top:1px solid var(--rule);padding-top:40px}
   .contact-section p{font-style:italic;font-size:.95rem;color:var(--ink-soft);margin-bottom:28px;font-weight:300}
@@ -150,7 +141,6 @@
   .cf-success{display:none;font-style:italic;color:#4a6741;font-size:.95rem;padding:12px 0}
   footer{text-align:center;padding:40px 20px 50px;font-style:italic;font-size:.82rem;color:var(--ink-soft);opacity:.4;border-top:1px solid var(--rule);letter-spacing:.04em;background:rgba(247,243,237,0.85)}
   .empty{padding:60px 0;font-style:italic;color:var(--ink-soft);opacity:.4;font-size:1rem}
-  /* ── Timeline ── */
   .timeline-wrap{max-width:900px;margin:0 auto;padding:28px 60px 0;background:rgba(247,243,237,0.92)}
   .timeline-track{position:relative;display:flex;align-items:center;gap:0;overflow-x:auto;padding:28px 0 20px;scrollbar-width:none}
   .timeline-track::-webkit-scrollbar{display:none}
@@ -173,8 +163,6 @@
     .timeline-wrap{padding-left:20px;padding-right:20px}
     .timeline-node{min-width:52px}
     .timeline-node-label{font-size:.65rem}
-  }
-  @media(max-width:680px){
     .masthead{padding:30px 20px 24px}
     .search-wrap,.table-wrap,.contact-section,#map-panel{padding-left:20px;padding-right:20px}
     .col-headers,.postcard-row{grid-template-columns:40px 1fr 100px 36px}
@@ -219,9 +207,9 @@
 <div class="search-wrap">
   <div class="search-input-wrap">
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" style="pointer-events:none;"><path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607z"/></svg>
-    <input type="text" id="search-input" placeholder="Search by location, year, sender, recipient, address…">
+    <input type="text" id="search-input" placeholder="Search by location, year, sender, recipient, address&hellip;">
   </div>
-  <div class="search-hint">Searches all fields — try a name, city, or year</div>
+  <div class="search-hint">Searches all fields &mdash; try a name, city, or year</div>
 </div>
 
 <div class="timeline-wrap" id="timeline-wrap">
@@ -230,7 +218,7 @@
     <div class="timeline-track" id="timeline-track">
       <div class="timeline-line"></div>
     </div>
-    <button class="timeline-clear" id="timeline-clear">✕ clear</button>
+    <button class="timeline-clear" id="timeline-clear">&#x2715; clear</button>
   </div>
 </div>
 
@@ -303,7 +291,7 @@
   <div class="upload-box">
     <button class="close-modal-btn" id="close-upload">&#x2715;</button>
     <h2>Add a Postcard</h2>
-    <p class="upload-desc">Fill in whatever you know — only the front image is required.</p>
+    <p class="upload-desc">Fill in whatever you know &mdash; only the front image is required.</p>
     <div class="u-section-label">Location &amp; Time</div>
     <div class="u-field"><label>Location / Description</label><input type="text" id="u-loc" placeholder="e.g. Niagara Falls, New York"></div>
     <div class="u-field"><label>Street Address (if known)</label><input type="text" id="u-address" placeholder="e.g. 123 Main St, Buffalo, NY 14201"></div>
@@ -333,7 +321,7 @@
     <div class="cf-field"><label>Your Email</label><input type="email" name="email" placeholder="e.g. jane@example.com" required></div>
     <div class="cf-field"><label>Message</label><textarea name="message" placeholder="Say hello, share a story, or tell us about a postcard..." required></textarea></div>
     <button type="submit" class="cf-submit">Send Message</button>
-    <div class="cf-success" id="cf-success">Thank you — your message has been sent.</div>
+    <div class="cf-success" id="cf-success">Thank you &mdash; your message has been sent.</div>
   </form>
 </div>
 
@@ -343,7 +331,6 @@
 const IMG = "https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/";
 
 let postcards = [
-  // ── ORIGINAL 8 ──
   {id:1,location:"Philadelphia, Pennsylvania \u2014 Fiberglass Bust of Benjamin Franklin",address:"4th & Arch Streets, Philadelphia, PA",year:"c. early 1970s",sender:"Guyla",recipient:"Mr. Guy S. Lewis, Route Two, Gering, Nebraska 69341",notes:"Message: \u201cDear Grandad, Well here we are in Philadelphia. Jun. We went to see the Liberty Bell, Independence Hall, and Betsy Ross\u2019s house. It is neat. I had fun today when we went through the Navy\u2019s U.S.S. Olympia, Admiral Dewey\u2019s flagship. I even got to go in the engine room. It was really neat. Tomorrow we go to the Easter Parade. Hope you have a good day. Guyla.\u201d 8\u00a2 US flag stamp.",front:IMG+"19xx - Philadelphia - front.jpg",back:IMG+"19xx - Philadelphia - back.jpg"},
   {id:2,location:"Vermont\u2013New York Border Bridge",address:"",year:"July 22, 1937",sender:"Unknown (signature illegible)",recipient:"Mr. Joseph R. Page, Greene, New York",notes:"Postmarked Colebrook, NH. 1\u00a2 Franklin stamp. Message written in pencil in two directions \u2014 heavily faded and partially illegible. Fragments mention Colebrook, a covered bridge, and traveling.",front:IMG+"1937 - NY Vermont bridge - front.jpg",back:IMG+"1937 - NY Vermont bridge - back.jpg"},
   {id:3,location:"Staten Island, New York \u2014 Fort Wadsworth",address:"Ft. Wadsworth, Staten Island, NY",year:"December 3, 1942",sender:"Pvt. Freddie, Battery 6, Coast Artillery",recipient:"Mr. & Mrs. Harry, P.O. Box 503, Lisco, Nebraska",notes:"Free wartime military mail. Message: \u201cDear Mother & dad, Just time for a few words of thanks, and to tell you your package and card arrived. It was a very pleasant surprise, only wish there was a way I could show my appreciation. Well thanks again as I must take leave for guard duty call. I must bid you a cheerio good night and may God bless you one and all mother and dad, I still remain as ever Freddie.\u201d",front:IMG+"1942 - Staten Island - front.jpg",back:IMG+"1942 - Staten Island - back.jpg"},
@@ -352,8 +339,6 @@ let postcards = [
   {id:6,location:"Excelsior Springs, Missouri \u2014 McCleary-Thornton Minor Hospital",address:"McCleary-Thornton Minor Hospital, Excelsior Springs, MO",year:"March 19, 1960",sender:"Mildred & Merritt",recipient:"Miss Dixie McConkey, c/o Rev. McConkey, Oakesh, Nebraska",notes:"Postmarked Excelsior Springs, MO. Handwritten in corner: \u201cThis is where we eat our meals.\u201d Message: \u201cDear Dixie: I am writing Trey Ann a card this morning so you will get some mail, ha. We are doing fine and hope to come home feeling like new again. The weather down here is terrible yet, seems winter is really drawn out. Merritt is down getting his treatments. I go at 10:00. Don\u2019t leave the room till about 5 min before so don\u2019t like to sit so long and wait. Tell all hello for me at home & we will see you before too many weeks pass. With love, Mildred & Merritt.\u201d",front:IMG+"1960 - Excelsior Springs, MO - McCleary Thornton Hospital - front.jpg",back:IMG+"1960 - Excelsior Springs, MO - McCleary Thornton Hospital - back.jpg"},
   {id:7,location:"Atlantic City, New Jersey",address:"",year:"September 16, 1982",sender:"CD & MB",recipient:"M/M Miller, 2050 Floral Dr., Boulder, CO 80302",notes:"Postmarked South Jersey, NJ. 20\u00a2 bighorn sheep stamp. Message: \u201cHi \u2014 We haven\u2019t dipped our \u2018seed\u2019 yet, in fact we\u2019re $16. richer (although we haven\u2019t left yet). Playclub + Harrah\u2019s seem to be the nicest hotels. Talk to you later, Love, CD & MB.\u201d",front:IMG+"1992 - Atlantic City, NJ - front.jpg",back:IMG+"1992 - Atlantic City, NJ - back.jpg"},
   {id:8,location:"Duluth, Minnesota \u2014 Duluth-Superior Harbor",address:"Duluth Canal, Duluth, MN",year:"June 4, 1992",sender:"Allison",recipient:"Amanda Gostemaker, Oshkosh, Nebraska 69154",notes:"Postmarked Fort Frances, Ontario, Canada. 19\u00a2 fawn stamp. Message: \u201cDear Amanda, Long time no see. Tried to talk you before I left. Tonight we are about a half mile from the border. The border of Canada. Um yah, I guess. You would love it in Duluth. There are kids cruising all the time. See ya when I get home. Allison.\u201d",front:IMG+"1992 - Duluth, MN - front.jpg",back:IMG+"1992 - Duluth, MN - back.jpg"},
-
-  // ── NEW 16 ──
   {id:9,location:"Greetings (Embossed Floral)",address:"",year:"December 25, 1914",sender:"Aunt Mary",recipient:"Miss Mary A. Hammond, c/o Mrs. J. Hammond, Glendora, California",notes:"Postmarked Dec 25, 1914. 1\u00a2 green stamp. Message heavily faded and written at angles \u2014 largely illegible due to age. Fragments: \u201c...lots of good wishes...would [?]...Aunt Mary...\u201d Heavily embossed floral card.",front:IMG+"1914 Geetings - FRONT.jpg",back:IMG+"1914 Geetings - BACK.jpg"},
   {id:10,location:"Louisville, Kentucky \u2014 Churchill Downs",address:"Churchill Downs, Louisville, KY",year:"November 1958",sender:"Nedra",recipient:"Mrs. Ed Hiner, 4954 No. Figueroa, Los Angeles 42, California",notes:"Postmarked Lexington, KY, Nov 1958. 3\u00a2 Liberty stamp. \u201cFight TB \u2014 Support Your TB Association\u201d cancellation. Message: \u201cMy childhood friend here has been trying to persuade me to visit her and would not take no for an answer. Decided Tuesday morning to come and left by plane Tuesday at 4:15 PM arriving at Fort Worth at 10:15 PM where I spent next day with an old acquaintance, left there at 4:15 PM Wed + changed planes in St. Louis, arrived Louisville after midnight + got here next a.m. fine. Love, Nedra.\u201d",front:IMG+"1958 Churchill Downs - FRONT.jpg",back:IMG+"1958 Churchill Downs - BACK.jpg"},
   {id:11,location:"Chicago, Illinois \u2014 Buckingham Fountain, Grant Park",address:"Grant Park, Chicago, IL",year:"November 1959",sender:"Faye",recipient:"Mother, Oak Grove",notes:"Postmarked Chicago, IL, Nov 1959, 10:05 AM. 2\u00a2 + 3\u00a2 Liberty stamps. \u201cGive to the Community Fund\u201d cancellation. Message: \u201cHi Mom, Saw this card and thought you would enjoy seeing this sight. This is the one Carol, Vickie and Mike saw during the summer. I got your card this morning and read it while I was in the barber\u2019s chair. See you, Faye.\u201d",front:IMG+"1959 Chicago - Buckingham Fountain FRONT.jpg",back:IMG+"1959 Chicago - Buckingham Fountain BACK.jpg"},
@@ -369,41 +354,31 @@ let postcards = [
   {id:21,location:"Chinle, Arizona \u2014 Mummy Cave Ruin, Canyon de Chelly",address:"Canyon de Chelly National Monument, Chinle, AZ",year:"May 1976",sender:"Pearl",recipient:"Miss Laura Remp, 804 E. 8th St., Newton, Kansas 67114",notes:"Postmarked Santa Rosa, NM, May 1976. 9\u00a2 US Capitol stamp. Message: \u201cDear Sister, Just a line to let you know I might see you soon. Got to see you soon. Roys & then, Okla City, Roys & Lord willing with so Lord willing. The folks from Pa. were talking about Elton. Love, Pearl.\u201d",front:IMG+"1976 Chinle AZ - Mummy Cave FRONT.jpg",back:IMG+"1976 Chinle AZ - Mummy Cave BACK.jpg"},
   {id:22,location:"Oceanside, California \u2014 Oceanside Harbor",address:"Oceanside Harbor, Oceanside, CA",year:"September 8, 1978",sender:"Unknown (signature cut off)",recipient:"Mrs. Wilma Wheeler, RR 2 Box 90, Blackwell, Oklahoma 74631",notes:"Postmarked San Diego, CA, Sep 8, 1978. 15\u00a2 rose stamp. Message: \u201cDear Wilma 9/8/78 \u2014 Made it here in Oceanside Calif. last Sunday. Having a good time. Hope to be here until next Thursday. Then will start home [?] Sunday.\u201d",front:IMG+"1978 Oceanside CA - FRONT.jpg",back:IMG+"1978 Oceanside CA - BACK.jpg"},
   {id:23,location:"Arlington, Texas \u2014 Six Flags Over Texas, Shock Wave",address:"Six Flags Over Texas, Arlington, TX 76010",year:"July 22, 1988",sender:"Jeannette Family",recipient:"Bob & MaryLou Newsome, 2066 Tecumseh Rd., Manhattan, Kansas 66502",notes:"Postmarked Jul 25, 1988. Oliver Wendell Holmes stamp. Message: \u201cHaving a lot of fun in Texas. Mark & Rachelle rode this ride, on front, I watched. Have spent two afternoons in Six Flags. Plan to return this evening to finish up, and head for Okla. in the morning. Hope to see you soon! Love, Jeannette Family.\u201d",front:IMG+"1988 Six Flags - FRONT.jpg",back:IMG+"1988 Six Flags - BACK.jpg"},
-
-  // \u2500\u2500 V3 BATCH \u2500\u2500
   {id:24,location:"WWI Military \u2014 Getting Ready for Action",address:"",year:"c. 1917\u20131918",sender:"Charles",recipient:"Master Arnett Dart, Pawnee City, Nebraska, R.F.D. 4",notes:"No postmark. WWI era artillery card. Message: \u201cWell Arnell how is it comes with you? it is very good here with me, how was lever that Mrs. Porter gene you? how das old Jay look? his he por? how is that little calb? Good night, ans soon, Charles.\u201d Published by Illustrated Postal Card & Nov. Co., N.Y.",front:IMG+"WW1 - front.jpg",back:IMG+"WW1 - back.jpg"},
   {id:25,location:"Northwoods Vacation View \u2014 A Scenic Lake",address:"",year:"c. 1940s",sender:"Unknown (signature cut off)",recipient:"Mrs. Anna Hiner, 4757 N. Figueroa, Los Angeles, California",notes:"Postmarked via Railway Post Office (St. P & NOY, TR 7, Jul 5) \u2014 sorted on a moving train. 2\u00a2 stamp. Message written in bright green ink sideways \u2014 heavily obscured. Genuine Curteich-Chicago CT Art-Colortone card.",front:IMG+"Northwoods Vacation - front.jpg",back:IMG+"Northwoods Vacation - back.jpg"},
   {id:26,location:"Evansville, Indiana \u2014 Post Office",address:"Post Office, Evansville, IN",year:"November 9, 1932",sender:"Estelle",recipient:"Mrs. Gentry, 1218 E. 31st Ave., Denver, Colorado",notes:"Postmarked Evansville, IND, Nov 9, 1932. 1\u00a2 Washington stamp. Great Depression era. Message: \u201cDear Mrs. Gentry, I am home for a visit. & I don\u2019t like the drive I\u2019ve been in but will stay in Chi. if I get anything at all. as I have enough rags to last awhile. But jobs seem awful scarce in Chi. maybe after the Election it will be better, hope so. you can write here & if I leave will forward my mail. as ever Estelle.\u201d",front:IMG+"1982 - Evansville, Ind - front.jpg",back:IMG+"1982 - Evansville, Ind - back.jpg"},
   {id:27,location:"Chicago, Illinois \u2014 The Sands Motel",address:"Sheridan Rd. & Foster Ave., Chicago, IL",year:"July 21, 1959",sender:"Bill",recipient:"Mrs. Anna Robinson, Oak Grove, Missouri",notes:"Postmarked Chicago, Jul 21, 1959. Three 1\u00a2 Washington stamps. Message: \u201cDon\u2019t have time to go and buy any cards. Tomorrow we go for a 2 hour ride up the shore of Lake Michigan by boat. We go from morning to night without stopping! See you about Friday or Saturday. Bye, Bill.\u201d Pool and Cabana Club, 150 air-conditioned rooms with 21-inch television.",front:IMG+"1959 - Chicago, Ill - Sands Motel - front.jpg",back:IMG+"1959 - Chicago, Ill - Sands Motel - back.jpg"},
   {id:28,location:"Chicago, Illinois \u2014 LaSalle Street",address:"LaSalle Street, Chicago, IL",year:"November 17, 1959",sender:"Faye",recipient:"Mick & Mother, Oak Grove, Missouri",notes:"Postmarked Chicago, ILL, Nov 17, 1959. 5\u00a2 Monroe airmail stamp. AIRMAIL postcard. \u201cGive Through Community Fund\u201d cancellation. Message: \u201cMonday Night 8 o\u2019clock. Just get back to the hotel from work and are going out for a good dinner. I didn\u2019t know but it\u2019s really cold. The wind is down to 12 and the [wind] off Lake Michigan. I\u2019m in for a [surprise]. Love Faye.\u201d Same Faye who sent the Sherman Hotel, Buckingham Fountain, Midway Airport and Sands Motel cards \u2014 all from the same November 1959 Chicago trip to Oak Grove, MO.",front:IMG+"1959 - Chicago, Ill - LaSalle St - front.jpg",back:IMG+"1959 - Chicago, Ill - LaSalle St - back.jpg"},
-
-  // ── V4 BATCH ──
-  {id:29,location:"Chicago, Illinois \u2014 Randolph Street at Night",address:"Randolph Street, Chicago, IL",year:"1959",sender:"Faye",recipient:"Carol Robinson, Oak Grove, Missouri",notes:"Postmarked Chicago, IL, 1959. 5\u00a2 Monroe airmail stamp. AIRMAIL. \u201cGive Through Community Fund\u201d cancellation. Message: \u201cHi honey, This is directly across the street from the hotel. At night it looks like daylight. Got your letter and card today. Sorry to hear the kids have such severe colds. Maybe they can shake it. The maid left our window open when she cleaned up and it was really cold. I just closed it and ran hot water for 30 minutes to warm it up. Bye.” Faye card #7 from the November 1959 Chicago trip.",front:IMG+"1959 - Chicago - front.jpg",back:IMG+"1959 - Chicago - back.jpg"},
+  {id:29,location:"Chicago, Illinois \u2014 Randolph Street at Night",address:"Randolph Street, Chicago, IL",year:"1959",sender:"Faye",recipient:"Carol Robinson, Oak Grove, Missouri",notes:"Postmarked Chicago, IL, 1959. 5\u00a2 Monroe airmail stamp. AIRMAIL. \u201cGive Through Community Fund\u201d cancellation. Message: \u201cHi honey, This is directly across the street from the hotel. At night it looks like daylight. Got your letter and card today. Sorry to hear the kids have such severe colds. Maybe they can shake it. The maid left our window open when she cleaned up and it was really cold. I just closed it and ran hot water for 30 minutes to warm it up. Bye.\u201d Faye card #7 from the November 1959 Chicago trip.",front:IMG+"1959 - Chicago - front.jpg",back:IMG+"1959 - Chicago - back.jpg"},
   {id:30,location:"Chicago, Illinois \u2014 Museum of Science and Industry",address:"5700 S Lake Shore Dr, Chicago, IL 60637",year:"November 12, 1959",sender:"Bill",recipient:"Mother, Oak Grove, Missouri",notes:"Postmarked Chicago, IL, Nov 12, 1959. 7\u00a2 airmail stamp. \u201cGive Through Community Fund\u201d cancellation. Message: \u201cHi Mom: Saturday, I think I\u2019ll go out to this place again and see all of the building. This is the one Carroll could spend all day in. Be good and I\u2019ll see you. Bill.\u201d Same Oak Grove, MO family as Faye \u2014 Bill appears to be a sibling also in Chicago that November.",front:IMG+"1959 - Chicago, ILL - Museum of Science - front.jpg",back:IMG+"1959 - Chicago, ILL - Museum of Science - back.jpg"},
-  {id:31,location:"Dayton, Ohio \u2014 Downtown Skyline at Twilight",address:"Downtown Dayton, OH",year:"November 25, 1991",sender:"Unknown (signature illegible)",recipient:"Ms. Dorothy Viola, 1243 Baldwin Lane #609, Palatine, IL 60067",notes:"Postmarked Dayton, OH, Nov 25, 1991. 19\u00a2 fawn stamp. Message: \u201cDear Dor \u2014 How do you like our skyline? Concentrated beauty \u2014 Dayton, my kind of Town. Love.” Photographed by Wayne Schwegel for the Downtown Dayton Association\u2019s \u201cTurn It On Dayton!\u201d photo contest.",front:IMG+"1991 - Dayton, OH - front.jpg",back:IMG+"1991 - Dayton, OH - back.jpg"},
+  {id:31,location:"Dayton, Ohio \u2014 Downtown Skyline at Twilight",address:"Downtown Dayton, OH",year:"November 25, 1991",sender:"Unknown (signature illegible)",recipient:"Ms. Dorothy Viola, 1243 Baldwin Lane #609, Palatine, IL 60067",notes:"Postmarked Dayton, OH, Nov 25, 1991. 19\u00a2 fawn stamp. Message: \u201cDear Dor \u2014 How do you like our skyline? Concentrated beauty \u2014 Dayton, my kind of Town. Love.\u201d Photographed by Wayne Schwegel for the Downtown Dayton Association\u2019s \u201cTurn It On Dayton!\u201d photo contest.",front:IMG+"1991 - Dayton, OH - front.jpg",back:IMG+"1991 - Dayton, OH - back.jpg"},
   {id:32,location:"Montreal, Quebec \u2014 Ch\u00e2teau Champlain at Night",address:"Ch\u00e2teau Champlain & Place du Canada, Montreal, QC",year:"October 4, 1992",sender:"Jo & John",recipient:"Mr. & Mrs. James W. Kirby, 308 Drury Lane, El Paso, Texas 79915",notes:"Posted on board M/S Sagafjord cruise ship. 40\u00a2 Bahamas stamp. Message: \u201cHi There, Well we sure do miss you guys. Without you at the table, we are all alone. Had a good time yesterday in Montreal, saw many tour buses, looked for you. Its now 10:45 AM in Quebec & its dam cold, but sunny. Hope you two had a good time, our next stop is Prince Edward Island & then back to the good ole U.S.A. Will talk soon. Lots of love, Jo & John.\u201d Printed in Italy by Kina Italia SPA Milano.",front:IMG+"Old - El Paso, TX - front.jpg",back:IMG+"Old - El Paso, TX - back.jpg"},
-  {id:34,location:"Philadelphia, Pennsylvania — Easter Greetings",address:"",year:"April 4, 1912",sender:"M. Casey",recipient:"Mr. S.J. Ellis, 319 Ardmore Ave., Ardmore, Pennsylvania",notes:"Postmarked Philadelphia, PA, Apr 4, 9:30 PM, 1912. 1¢ green stamp. Message: “Best wishes for a Glorious Easter from M. Casey to Mr. Y.J. Ellis.” Embossed card with Easter verse: ‘So let us keep the festival Whereto the Lord invites us; Christ is Himself the joy of all, The sun that warms and lights us.’",front:IMG+"1912 - Easter - front.jpg",back:IMG+"1912 - Easter - back.jpg"},
-  {id:35,location:"Chicago, Illinois — Wacker Drive",address:"Wacker Drive, Chicago, IL",year:"November 1959",sender:"Faye",recipient:"Mother, Oak Grove, Missouri",notes:"Postmarked Chicago, IL, Nov 1959. 5¢ Monroe airmail stamp. AIRMAIL. Message: “Hi Mom: Cold as — wind sure is cold blowing off of Lake Michigan! Hope you get to go to Brother’s funeral. Hope everybody is well and I’ll see you in a few days. Bye.” Faye card #8 from the November 1959 Chicago trip — a somber note mentioning a death in the family back home.",front:IMG+"1959 - Chicago, ILL - Wacker Drive - front.jpg",back:IMG+"1959 - Chicago, ILL - Wacker Drive - back.jpg"},
-  {id:36,location:"Ponca City, Oklahoma — Pioneer Woman Statue",address:"Pioneer Woman Statue, Ponca City, OK",year:"June 23, 1968",sender:"Tom (signature unclear)",recipient:"Mrs. Jim Hagood, 901 Stark Drive, Austin, Texas 78752",notes:"Postmarked Ponca City, OK, Jun 23, 1968. 6¢ FDR stamp. Message: “Dear Mom, I’ve just returned from a tour of Ponca City. There’s also more from a city here than I ever imagined. It’s a nicer place. After a broiled steak tonight I’ll go to bed early to prepare for an early departure tomorrow. I’ll take Interstate 40 all the way. Take care.” Published by Oklahoma News Co.",front:IMG+"1968 - Austin, TX - front.jpg",back:IMG+"1968 - Austin, TX - back.jpg"},
-  {id:37,location:"Washington, D.C. — Labor Day Parade (1894 photograph)",address:"Pennsylvania Ave. & 11th St. N.W., Washington, D.C.",year:"July 9, 1982",sender:"Bob",recipient:"David & Maré, 6003 Martel, Dallas, TX 75206",notes:"Postmarked Washington, DC. 14¢ Sinclair Lewis stamp. Photo from 1894 Library of Congress. Copyright 1984 Dover Publications. Message: “9 July. Dear David: My friend Bruce McLoy just returned to Hotlanta after spending July 4 weekend here. The Mall was a madhouse for fireworks preceded by the Symphony at the Capitol and Beach Boys at Wash. Monument. Actually, we opted for barbecue on the deck at Tracks, the new tech-ed out disco. We also did a play at Kennedy Center, a Diane Arbus exhibit at the Corcoran, had Vietnamese cuisine in Georgetown, and bicycled to Old Town Alexandria. I just returned from conference at Princeton; also took in NYC and Cape May (fabulous restored Victorians). Next year’s conference is in Berlin (want to go?). On July 25 I close on a small 1-br. condo! My first real estate! I’m excited! Bob”",front:IMG+"1982 - Washington, DC (1894 photo) - front.jpg",back:IMG+"1982 - Washington, DC (1894 photo) - back.jpg"},
-  {id:38,location:"Norway — Flydalsjuvet, Geiranger Fjord",address:"Geiranger, Norway",year:"July 4, 1994",sender:"Connie",recipient:"Mrs. John Craig, 3506 Richmond Terrace, Minnetonka, MN 55305",notes:"Postmarked Lerwick, Shetland, Scotland, Jul 4, 1994. PRIORITAIRE PAR AVION. Norwegian card published by Normanns Kunstforlag A/S, Oslo. Message: “Sunrise 3:15 AM, Sunset 11:18 PM. Midnight — and I’m not tired. It’s the long days. The cappuccino served whenever you want it. We are having a fabulous time. The ship is magnificent. The tours wonderful. The fjords are thrilling. Love, Connie.” Posted from Scotland while cruising the Norwegian fjords.",front:IMG+"1991 - Norge - front.jpg",back:IMG+"1991 - Norge - back.jpg"},
   {id:33,location:"Reims, France \u2014 Joan of Arc at the Cathedral",address:"Cath\u00e9drale Notre-Dame de Reims, Reims, France",year:"c. 1923\u20131931",sender:"Nellie G.",recipient:"Mrs. Oscar Hamm, Wenatchee, Oklahoma, U.S.A.",notes:"Postmarked Paris, France. French 30\u00a2 Pasteur stamp (issued 1923\u20131931). Carte Postale. Published by Baudet, \u00e9diteur. Caption: \u201cReims \u2014 Jeanne d\u2019Arc devant la Cath\u00e9drale avant la guerre\u201d (Joan of Arc in front of the Cathedral before the war). Message: \u201cDear Florence, Here. Just returned from a two days trip on the battle fields & was wonderful. Love from, Nellie G.\u201d Nellie had just visited WWI battlefields near Reims.",front:IMG+"Old - Paris - front.jpg",back:IMG+"Old - Paris - back.jpg"},
-
-  // \u2500\u2500 V5 BATCH \u2500\u2500
+  {id:34,location:"Philadelphia, Pennsylvania \u2014 Easter Greetings",address:"",year:"April 4, 1912",sender:"M. Casey",recipient:"Mr. S.J. Ellis, 319 Ardmore Ave., Ardmore, Pennsylvania",notes:"Postmarked Philadelphia, PA, Apr 4, 9:30 PM, 1912. 1\u00a2 green stamp. Message: \u201cBest wishes for a Glorious Easter from M. Casey to Mr. Y.J. Ellis.\u201d Embossed card with Easter verse: \u2018So let us keep the festival Whereto the Lord invites us; Christ is Himself the joy of all, The sun that warms and lights us.\u2019",front:IMG+"1912 - Easter - front.jpg",back:IMG+"1912 - Easter - back.jpg"},
+  {id:35,location:"Chicago, Illinois \u2014 Wacker Drive",address:"Wacker Drive, Chicago, IL",year:"November 1959",sender:"Faye",recipient:"Mother, Oak Grove, Missouri",notes:"Postmarked Chicago, IL, Nov 1959. 5\u00a2 Monroe airmail stamp. AIRMAIL. Message: \u201cHi Mom: Cold as \u2014 wind sure is cold blowing off of Lake Michigan! Hope you get to go to Brother\u2019s funeral. Hope everybody is well and I\u2019ll see you in a few days. Bye.\u201d Faye card #8 from the November 1959 Chicago trip \u2014 a somber note mentioning a death in the family back home.",front:IMG+"1959 - Chicago, ILL - Wacker Drive - front.jpg",back:IMG+"1959 - Chicago, ILL - Wacker Drive - back.jpg"},
+  {id:36,location:"Ponca City, Oklahoma \u2014 Pioneer Woman Statue",address:"Pioneer Woman Statue, Ponca City, OK",year:"June 23, 1968",sender:"Tom (signature unclear)",recipient:"Mrs. Jim Hagood, 901 Stark Drive, Austin, Texas 78752",notes:"Postmarked Ponca City, OK, Jun 23, 1968. 6\u00a2 FDR stamp. Message: \u201cDear Mom, I\u2019ve just returned from a tour of Ponca City. There\u2019s also more from a city here than I ever imagined. It\u2019s a nicer place. After a broiled steak tonight I\u2019ll go to bed early to prepare for an early departure tomorrow. I\u2019ll take Interstate 40 all the way. Take care.\u201d Published by Oklahoma News Co.",front:IMG+"1968 - Austin, TX - front.jpg",back:IMG+"1968 - Austin, TX - back.jpg"},
+  {id:37,location:"Washington, D.C. \u2014 Labor Day Parade (1894 photograph)",address:"Pennsylvania Ave. & 11th St. N.W., Washington, D.C.",year:"July 9, 1982",sender:"Bob",recipient:"David & Mar\u00e9, 6003 Martel, Dallas, TX 75206",notes:"Postmarked Washington, DC. 14\u00a2 Sinclair Lewis stamp. Photo from 1894 Library of Congress. Copyright 1984 Dover Publications. Message: \u201c9 July. Dear David: My friend Bruce McLoy just returned to Hotlanta after spending July 4 weekend here. The Mall was a madhouse for fireworks preceded by the Symphony at the Capitol and Beach Boys at Wash. Monument. Actually, we opted for barbecue on the deck at Tracks, the new tech-ed out disco. We also did a play at Kennedy Center, a Diane Arbus exhibit at the Corcoran, had Vietnamese cuisine in Georgetown, and bicycled to Old Town Alexandria. I just returned from conference at Princeton; also took in NYC and Cape May (fabulous restored Victorians). Next year\u2019s conference is in Berlin (want to go?). On July 25 I close on a small 1-br. condo! My first real estate! I\u2019m excited! Bob\u201d",front:IMG+"1982 - Washington, DC (1894 photo) - front.jpg",back:IMG+"1982 - Washington, DC (1894 photo) - back.jpg"},
+  {id:38,location:"Norway \u2014 Flydalsjuvet, Geiranger Fjord",address:"Geiranger, Norway",year:"July 4, 1994",sender:"Connie",recipient:"Mrs. John Craig, 3506 Richmond Terrace, Minnetonka, MN 55305",notes:"Postmarked Lerwick, Shetland, Scotland, Jul 4, 1994. PRIORITAIRE PAR AVION. Norwegian card published by Normanns Kunstforlag A/S, Oslo. Message: \u201cSunrise 3:15 AM, Sunset 11:18 PM. Midnight \u2014 and I\u2019m not tired. It\u2019s the long days. The cappuccino served whenever you want it. We are having a fabulous time. The ship is magnificent. The tours wonderful. The fjords are thrilling. Love, Connie.\u201d Posted from Scotland while cruising the Norwegian fjords.",front:IMG+"1991 - Norge - front.jpg",back:IMG+"1991 - Norge - back.jpg"},
   {id:39,location:"Chicago, Illinois \u2014 Buckingham Fountain",address:"Grant Park, Chicago, IL",year:"November 3, 1959",sender:"Age",recipient:"Mother, Oak Grove, Missouri",notes:"Postmarked Chicago, ILL, Nov 3, 1959. 2\u00a2 Jefferson + 3\u00a2 Liberty stamps. \u201cGive Through Community Fund\u201d cancellation. Pub. by Cameo Greeting Cards, Inc., Chicago. Color by Chicago Park District. Card P267. Message: \u201cHi Mom. Saw this card and thought you would enjoy seeing this sight. This is the one Carol, Vickie and Mike saw during the Summer. I got your card this morning and read it while I was in the barbers chair. See you. Age.\u201d Another card from the Oak Grove, MO family\u2019s November 1959 Chicago orbit \u2014 \u2018Age\u2019 appears to be a sibling alongside Faye and Bill.",front:IMG+"1959 - Chicago, ILL - Buckingham Fountain - front.jpg",back:IMG+"1959 - Chicago, ILL - Buckingham Fountain - back.jpg"},
   {id:40,location:"Waterford City, Ireland \u2014 Clock Tower & River Suir",address:"The Quay, Waterford City, Ireland",year:"September 22, 1959",sender:"Virginia & Gene",recipient:"E.R. Crotty, 2412 E. 70th St. Terrace, Kansas City, Missouri",notes:"Postmarked Corcaigh (Cork), Ireland, 22 IX 1959. Irish 6d stamp. AIRMAIL. C\u00e1rta Poise. Printed in Ireland by Irish Printers, Ltd. \u201cP.C.\u201d Color Card No. 252. Message (written Tuesday): \u201cDear Dad, Grace & Dick, Arrived in Ireland Monday morning, spent the day driving. It is a beautiful land. As green as they say and wonderful people. Love Virginia & Gene.\u201d Front caption: \u2018The Clock Tower and River Suir, The Quay, Waterford City, Ireland.\u2019",front:IMG+"1959 - Waterford City, Ireland - Clock Tower - front.jpg",back:IMG+"1959 - Waterford City, Ireland - Clock Tower - back.jpg"},
   {id:41,location:"Boston, Massachusetts \u2014 WNAC-TV Pen Pals for Cash",address:"Box 5000, Boston, MA 02114",year:"c. 1975\u20131977",sender:"WNAC Candlepins for Cash (TV show)",recipient:"Beatrice Gardner, 18 Mistuxet Ave., Mystic, Connecticut 06355",notes:"No postmark date visible; 13\u00a2 Liberty Bell stamp (issued 1975). Card sent by the WNAC-TV Boston bowling show \u201cCandlepins for Cash\u201d as part of its Pen Pals for Cash segment. Front shows a Harvard Botanical Museum glass model: Echinocereus engelmannii (Parry) Rumpler, Model 529, Ware Collection of Glass Models of Plants, photo by J. Barnell, courtesy Readers Digest. Handwritten: \u201cGood Luck!\u201d and a secondary handwritten note: \u201c415-93 Kathi Cline.\u201d A wonderfully odd artifact \u2014 a cactus museum card repurposed as a game-show mailer.",front:IMG+"1973 - WNAC TV - Pen Pals - front.jpg",back:IMG+"1973 - WNAC TV - Pen Pals - back.jpg"},
   {id:42,location:"Boca Raton, Florida \u2014 Waterway",address:"Boca Raton, FL",year:"March 8, 1978",sender:"A. Reba & A. Ruth",recipient:"Miss Ann Gibbs, 1213 Hampton Street, Scranton, Pennsylvania 18504",notes:"Postmarked West Palm Beach, FL, Mar 8, 1978. 9\u00a2 Capitol stamp. Published by D&M Post Card Co., West Palm Beach, FL. Curteichcolor\u00ae 3-D Natural Color Reproduction. Front caption: \u201cTropical Palm Trees and beautiful boats along the banks of this picturesque waterway.\u201d Message: \u201cDear Ann, We are enjoying meeting old friends. Weather is some warmer, just hope you don\u2019t have to shovel any more snow, seems you have had enough. Friends of mine are taking us to Boca Del Mar for lunch tomorrow \u2014 A. Ruth sat out in sun for about 10 mins. today \u2014 we will come home, Lily White \u2014 Love & our best to the Family. A. Reba & A. Ruth.\u201d",front:IMG+"1978 - Boca Raton, FL - front.jpg",back:IMG+"1978 - Boca Raton, FL - back.jpg"},
   {id:43,location:"Northern Ontario, Canada \u2014 Scenic Multiview",address:"Northern Ontario, Canada",year:"1988",sender:"G.",recipient:"Hillary Harrow, 401 S. Camden Dr. #6, Beverly Hills, California 90212",notes:"Postmarked 1988 (Sault Ste. Marie area). 25\u00a2 Jack London stamp + $0.29 meter. Published by Soo Photo Service Ltd., Canadian Photoscene Products Inc., Sault Ste. Marie, Ont. Card No. 36390-D. Made in Canada. Nine-panel multiview of lakes, rapids, forest, sunset, and a train in snow. Message (in full): \u201cI\u2019m home! This is the tackiest one in the road stop in North Ontario. We drove through Quebec too \u2014 cute French-Can. guys & French speaking! I\u2019m going to hit the Montreal clubs next week with Sonya, I hope. My room is coming along \u2014 I\u2019m going to make curtains tomorrow. Us & I never really said \u2018goodbye\u2019 on Saturday \u2014 that\u2019s weird. She & Matt were together the whole last couple of days. I feel bad, but there\u2019s nothing to be done, I s\u2019pose. I see Mitch on Friday! God \u2014 how exciting! Then, I\u2019ll vege some next week & start my job on next Fri. on the Island! HOO-RAY! I have this urge to be in Beantown badly \u2014 but not w/out you! Slut! Will it be any fun when I visit Lis at Hah-vahd? I need Newbury Street & Davis\u2019s!! I\u2019ll probably end up going to BU anyway \u2014 & you? \u2661 G\u2014\u201d Grad. was nice & up-lifting! VIP-EEE! I \u2661 North Ontario.",front:IMG+"1988 - Northern Ontario - front.jpg",back:IMG+"1988 - Northern Ontario - back.jpg"},
-
-  // \u2500\u2500 V6 BATCH \u2500\u2500
   {id:44,location:"Coral Gables, Florida \u2014 Granada Entrance",address:"Granada Blvd., Coral Gables, FL",year:"January 21, 1958",sender:"Mrs. Smails",recipient:"Mr. & Mrs. David Gibbs, 1215 Hampton St., Scranton 4, Pa.",notes:"Postmarked Miami, FL, Jan 21, 1958. 2\u00a2 Jefferson stamp. Gulf Stream Card & Distributing Co., Miami. Genuine Curteich-Chicago C.T. Art-Colortone card. D.C. 212. Card 3B-H1303. Message: \u201cHello folks: Well, how is the weather up there? I\u2019m telling you we have had very cold weather down in the high 30s but no snow nor ice right here. But when we have fair weather it\u2019s beautiful and nice & warm, but we have had so much wind and rain. Windy & Raining today. Sincerely, Mrs. Smails.\u201d",front:IMG+"1958 - Coral Gables, FL - front.jpg",back:IMG+"1958 - Coral Gables, FL - back.jpg"},
   {id:45,location:"Chicago, Illinois \u2014 Lakefront Skyline",address:"Chicago, IL",year:"January 24, 1973",sender:"Ralph, 5491 Hyde Park Blvd., Chicago, IL 60615",recipient:"David Maret, 1501 West Ave., Austin, TX 78701",notes:"Postmarked Chicago, ILL, Jan 24, 1973. 8\u00a2 Eisenhower stamp. Curteichcolor\u00ae 3-D Natural Color Reproduction. Distributed by Patriot Distributing Co., Evanston, ILL. Message: \u201cDavid, Slow as usual in answering cartas, but was busy getting my shit together for school. Was forced to make the decision when a job offer fell in my lap. Got a loan, unemployment (finally). Now if I can land a part-time job here, I\u2019m in. Would\u2019ve preferred the casual life on the road but Dick doesn\u2019t give loans for such. Had considered Managua but couldn\u2019t find any programs that needed a person with my talents. If you run into some kid in Austin named Dave Quamman, tell him you\u2019re an amigo. He\u2019s moving down there shortly. Later, Ralph.\u201d",front:IMG+"1973 - Chicago, ILL - Lakefront skyline - front.jpg",back:IMG+"1973 - Chicago, ILL - Lakefront skyline - back.jpg"},
   {id:46,location:"Hawaii \u2014 Volcano, Madam Pele\u2019s Fire",address:"Hawaii Volcanoes National Park, Hawaii",year:"September 17, 1973",sender:"Blank",recipient:"D.R. Gibbs, 1213 Hampton St., Scranton, Pa. 18504",notes:"Postmarked Airmail, Sep 17, 1973. 9\u00a2 US Air Mail stamp. Distributed by Lesco, Ltd., P.O. Box 10223, Honolulu, Hawaii 96816. Card No. 1425. Caption: \u201cStarkly outlined palms frame one of Madam Pele\u2019s volcanic outbursts of fiery temper, on the Island of Hawaii. Ke ahi lapalapa o Pele.\u201d Message: \u201cHi Dave, This is a wonderful place to spend a vacation. I\u2019ll see you in November. Blank.\u201d",front:IMG+"1973 - Hawaii - Volcano - front.jpg",back:IMG+"1973 - Hawaii - Volcano - back.jpg"},
   {id:47,location:"Tampa, Florida \u2014 Florida\u2019s Sunshine Skyway",address:"Tampa Bay, FL (St. Petersburg to Bradenton)",year:"January 6, 1979",sender:"Dottie & George",recipient:"Mr. & Mrs. Louis Gibbs, 1213 Hampton St., Scranton, Pa. 18504",notes:"Postmarked Tampa, FL, Jan 6, 1979. 10\u00a2 People\u2019s Right to Petition stamp. HSC-FC-71. Printed in U.S.A. Photo by Ward Beckett. Caption: \u201cFlorida\u2019s fabulous Sunshine Skyway. Eleven miles of bridges and causeways crossing Tampa Bay from St. Petersburg to Bradenton. This roadway over the main bridge is 150 feet above water level giving ample clearance for the largest ocean-going vessels.\u201d Message: \u201cDear Peg, Dore & Ann, We are enjoying our two weeks in Florida. We stayed at Orlando two nights with Lil & John. Uncle Lowell wasn\u2019t well. We took him to Dr. We stayed with Carol & Bill, our friends, and are now at David & Bettye\u2019s. They have a lovely place. Love, Dottie & George.\u201d",front:IMG+"1979 - Florida Sunshine Skyway - front.jpg",back:IMG+"1979 - Florida Sunshine Skyway - back.jpg"},
   {id:48,location:"Papeete, Tahiti \u2014 Ville et Port de Papeete",address:"Papeete, Tahiti, Polyn\u00e9sie Fran\u00e7aise",year:"1985",sender:"Bill & Pat",recipient:"Mr. Dick Dooley, 6129 Glenloch St., Phila., Pa. 19135, U.S.A.",notes:"Postmarked Papeete, Tahiti, 1985. Two French Polyn\u00e9sie Fran\u00e7aise stamps (7F Le Chemin de Croix, 1983 & 33F portrait stamp, 1984). Air Polyn\u00e9sie. Edition & Copyright: Erwin Christian. Distributeur exclusif: Terii Photo, B.P. 216 Papeete. Card No. 203. Imprim\u00e9 en Suisse par Engadin Press AG, Samedan. Message: \u201cHi Everybody! Greetings from Tahiti. This is a beautiful island. There were 30 hours without a good sleep. The plane ride was great but you just can\u2019t sleep on it. Hope all is well. Take care, maybe I\u2019ll send you a kangaroo from Australia. Love to all, Bill & Pat.\u201d",front:IMG+"1985 - Papeete, Tahiti - front.jpg",back:IMG+"1985 - Papeete, Tahiti - back.jpg"},
-
-  // \u2500\u2500 V7 BATCH \u2500\u2500
   {id:49,location:"Lincolnville Beach, Maine \u2014 Isleboro Ferry",address:"Lincolnville Beach, ME",year:"May 18, 1956",sender:"Unknown (partially legible)",recipient:"Mrs. Maude Guiey, Serenity Hill, Wrentham, Mass., R.F.D.",notes:"Postmarked Camden, Maine, 1 PM, May 18, 1956. Two 1\u00a2 Washington stamps. Published by Eastern Illustrating and Publishing Co., Inc., Belfast, Me. \u201cIsleboro Ferry leaving the Landing at Lincolnville Beach, Maine. Color by Ray Goodrich.\u201d Linen-era chrome card. Message written sideways and partially rotated \u2014 largely illegible; fragments mention \u201cThursday\u201d and \u201cSanders.\u201d",front:IMG+"1956 - Lincolnville Beach, ME - Isleboro Ferry - front.jpg",back:IMG+"1956 - Lincolnville Beach, ME - Isleboro Ferry - back.jpg"},
   {id:50,location:"Excelsior Springs, Missouri \u2014 McCleary-Thornton Hospital Dining Hall",address:"McCleary-Thornton Minor Hospital, Excelsior Springs, MO",year:"March 19, 1960",sender:"Mildred & Merritt",recipient:"Miss Dixie McConkey, Oakesh, Nebraska, c/o Rev. McConkey",notes:"Postmarked Excelsior Springs, MO, Mar 19, 1960, 8:30 PM. 3\u00a2 300th Anniversary Volunteer Firemen stamp (Peter Stuyvesant). Card No. 12315. Published by J.E. Tetirica. \u201cWhere cheerfulness and courtesy have been the rule for over 50 years. Many patients can enjoy meals in this lovely dining hall. Particularly specializing in Diseases of the Rectum and Colon.\u201d Front shows the hospital\u2019s turquoise-and-cream dining room, set for service with flowers on every table. A companion card to id:6 \u2014 same senders, same recipient, same hospital stay. Message: \u201cDear Dixie: I am writing Trey Ann a card this morning so you will get some mail, ha. We are doing fine and hope to come home feeling like new again. The weather down here is terrible yet, seems winter is really drawn out. Merritt is down getting his treatments. I go at 10:00. Don\u2019t leave the room till about 5 min before as don\u2019t like to sit so long and wait. Tell all hello for me at home & we will see you before too many weeks pass. With love, Mildred & Merritt.\u201d",front:IMG+"1960 - Excelsior Springs, MO - McCleary Thornton Hospital - front.jpg",back:IMG+"1960 - Excelsior Springs, MO - McCleary Thornton Hospital - back.jpg"},
   {id:51,location:"Chicago, Illinois \u2014 Greater Chicago River Bridges",address:"Chicago River at Dearborn, Wacker Drive, Chicago, IL",year:"September 1961",sender:"Pat",recipient:"Mr. and Mrs. K.F. Chow, 2037 Makanani Dr., Honolulu 17, Hawaii",notes:"Postmarked Chicago, IL, Sep 15, 1961. 5\u00a2 Airmail Eagle stamp. CK-132, Curteichcolor\u00ae 3-D Natural Color Reproduction. Aero Distributing Co., Inc., Chicago, IL. Card label $0.19, item 1843. Caption: \u201cThe City of Beautiful Bridges which span the Chicago River at the site of old Fort Dearborn. Wacker Drive extends along the river thru the length of the Business District.\u201d Front shows multiple bascule bridges raised simultaneously over the bright-green Chicago River, cargo ship passing through. Message: \u201cDear Mr. and Mrs. Chow, Thanks a lot for the handkerchiefs. They really come in handy in this horribly humid weather we are having. Aloha, Pat.\u201d A Chicago card mailed to Hawaii.",front:IMG+"1961 - Chicago River Bridges - front.jpg",back:IMG+"1961 - Chicago River Bridges - back.jpg"},
@@ -419,20 +394,16 @@ let postcards = [
   {id:61,location:"Kauai, Hawaii \u2014 Kauai Surf Hotel, Kalapaki Beach",address:"Kauai Surf Hotel, Kalapaki Beach, Lihue, HI",year:"September 20, 1977",sender:"Hazel",recipient:"Mrs. Della Fleischman, 177 White Oak Drive, Santa Rosa, Calif. 95405",notes:"Postmarked Honolulu, Hawaii, Sept 22, 1977. Hawaiian hula dancer machine cancellation. 13\u00a2 US Flag (Bicentennial) stamp. Plastichrome, Boston. Photo by Don Ceppi. Hawaiian Service, Inc., P.O. Box 2835, Honolulu, Hawaii 96803. Meter $0.49, label 1843. Card caption: \u2018The Kauai Surf \u2014 Kauai\u2019s luxury destination resort at golden Kalapaki Beach. The Surf\u2019s Pali Kai Cliff Cottages are visible on the right.\u2019 Front shows the twin resort towers framing Kalapaki Bay, tropical bougainvillea and torch ginger in the foreground. Message dated Sept 20: \u201cHi Della \u2014 Sure is a nice spot to be in. Lois & I are having a ball. Went to Fern Grotto yesterday. Thought we would take it easy today. Spending our time on this island alone. Leave for Honolulu the 23rd to pick up ship for return trip. Hope I am a good sailor. Weather warm but partly cloudy. Will be home on the 28th. Love, Hazel.\u201d",front:IMG+"1977 - Kauai, HI - Kauai Surf - front.jpg",back:IMG+"1977 - Kauai, HI - Kauai Surf - back.jpg"},
   {id:62,location:"Victoria, British Columbia \u2014 Parliament Buildings at Night",address:"Parliament Buildings, Victoria, BC, Canada",year:"September 29, 1989",sender:"Carl & Blanche",recipient:"Mr. & Mrs. R. McLouth, Rt. 10 Box 913, Tyler, Texas 75707, U.S.A.",notes:"Postmarked Victoria, BC, 30 IX 1989. 44\u00a2 Canada stamp (Atlantic Walrus). Impact Photography. Photo by Stuart Westmoreland. \u00a9IMPACT 1988, Photo Canada. Card #7172, G-1745. Caption: \u2018The Parliament Buildings are illuminated each night by 3,330 light bulbs.\u2019 Printed in Japan. Meter $0.39, label 1843. Front shows the Romanesque Revival Parliament Buildings spectacularly lit against a deep blue night sky, full moon rising at right, colorful geranium beds in the foreground. Message dated 9 p.m., 63\u00b0, 9/29/89: \u201cHi \u2014 Just came from seeing this all lighted and it is quite spectacular. Took a 1\u00bd hr. ferry ride (236 vehicles) this a.m. coming from Vancouver \u2014 fun. Had a Senior pass in Vancouver for $6.00 for 3 days. Traveled by Skytrain, Sea Bus & regular bus all over the place. We\u2019ve lost track of days \u2014 hope we get to San Diego to fly home on time. Our best! Carl & Blanche.\u201d",front:IMG+"1989 - British Columbia, Victoria, Canada - Parliament Buildings - front.jpg",back:IMG+"1989 - British Columbia, Victoria, Canada - Parliament Buildings - back.jpg"},
   {id:63,location:"Mount Hood, Oregon \u2014 Timberline Lodge",address:"Timberline Lodge, Mt. Hood, OR",year:"July 4, 1974",sender:"Mom",recipient:"Mr. & Mrs. R.J. Oelner, 217 F Dodge, Evanston, Illinois 60602",notes:"Postmarked Cannon Beach, OR, Jul 5, 1974. 8\u00a2 Eisenhower stamp. CT-1783. Made by Dexter Press, Inc., West Nyack, New York. Published by Smith-Western, Inc., 1133 N.W. Glisan, Portland, Oregon. Card 58976-C. Union Pacific Color Photo. Caption: \u2018Mount Hood and Timberline Lodge, Oregon \u2014 Oregon\u2019s world famous Sentinel Peak provides a spectacular backdrop for this ski-lodge among the world\u2019s finest.\u2019 Front shows the lodge nestled among snow-laden firs with the full snow pyramid of Mt. Hood rising dramatically behind. Message dated July 4: \u201cDear Sue, Ralph & Kathy \u2014 We stayed here last night & went swimming in the heated pool between 9 & 10 PM! The cold breeze over the pool almost froze our wet hair. Today we went in a snow cat up Mt. Hood \u2014 tonight we are 12 miles south of Portland in a motel as it is starting to rain. Love, Mom.\u201d Posted from Cannon Beach the following day \u2014 a classic Pacific Northwest Fourth of July in one card.",front:IMG+"1977 - Mount Hood, OR - Timberline Lodge - front.jpg",back:IMG+"1977 - Mount Hood, OR - Timberline Lodge - back.jpg"},
-
-  // \u2500\u2500 V8 BATCH \u2500\u2500
   {id:64,location:"Hunt, Texas \u2014 Camp La Junta",address:"Camp La Junta, Hunt, TX (on the Guadalupe River)",year:"March 6, 1961",sender:"Josephine",recipient:"Mr. & Mrs. Eby, 2600 San Pedro, Austin (15) Texas",recipientAddress:"2600 San Pedro Ave, Austin, TX",recipientLat:30.3075,recipientLng:-97.7467,notes:"Postmarked Hunt, TX, Mar 6, 1961 PM. 3\u00a2 Liberty stamp. Pub. by Aerial Photo Adv. Co., 315 Palmero St., Corpus Christi, Texas. Color Photo by Don Bartels. Card C-14396. Meter $0.39, label 1843. Caption: \u2018FW-162 \u2014 Camp La Junta, located at Hunt, Texas, twelve miles west of Kerrville on the beautiful Guadalupe River. A Western Camp for Junior Boys established in 1928.\u2019 Front shows horseback riders along the Guadalupe River dam spillway. Message: \u201cBess dear! I am so sorry to hear of your great sorrow. I am very happy here. Good accommodations \u2014 Excellent food. Good companionship \u2014 marvelous comradeship \u2014 wonderful preaching \u2014 will tell you when I come home. Love, Josephine.\u201d",front:IMG+"1961 - Hunt, TX - Camp La Junta - front.jpg",back:IMG+"1961 - Hunt, TX - Camp La Junta - back.jpg"},
   {id:65,location:"Albuquerque, New Mexico \u2014 Sandia Peak Ski Area",address:"Sandia Peak Ski Area, Albuquerque, NM",year:"February 22, 1968",sender:"Gram & Gramph",recipient:"Debbie McLouth, 520 Spring Valley Rd., Richardson, Texas 75080",recipientAddress:"520 Spring Valley Rd, Richardson, TX 75080",recipientLat:32.9483,recipientLng:-96.7299,notes:"Postmarked Albuquerque, NM, 22 Feb 1968 PM. 5\u00a2 Mississippi statehood sesquicentennial stamp (1817\u20131967, magnolia). Meter $0.49, label 1843. Southwest Post Card Company. Printed by Henry McGrew Printing, K.C., MO. Card 56619. Caption: \u2018Sandia Peak Ski Area \u2014 20 Miles from Albuquerque, N.M. A thrilling run down Exhibition Trail, and intermediate ski slope 1.5 miles in length with a vertical drop of 1,750 feet.\u2019 Front shows ski slopes and tram infrastructure on Sandia Peak. Message: \u201cDear Debbie, This town has changed a lot since we visited you sixteen yrs. ago. We toured Old Town and enjoyed walking around. Gramph bought a few \u2018rocks.\u2019 Love, Gram & Gramph.\u201d",front:IMG+"1968 - Albequerque, NM - Sandia Peak Ski Area - front.jpg",back:IMG+"1968 - Albequerque, NM - Sandia Peak Ski Area - back.jpg"},
   {id:66,location:"Lexington, Virginia \u2014 Lee Memorial Chapel, Washington & Lee University",address:"Washington & Lee University, Lexington, VA",year:"July 6, 1976",sender:"Elaine, Billy & John",recipient:"Mr. and Mrs. Jack Lipscombe, 2404 Allendale Rd., Big Spring, TX 79720",recipientAddress:"2404 Allendale Rd, Big Spring, TX 79720",recipientLat:32.2504,recipientLng:-101.4874,notes:"Postmarked Stanton, PA, Jul 6 PM 1976. 13\u00a2 United States Bicentennial flag stamp. \u2018Defeat Muscular Dystrophy \u2014 Support MDA\u2019 machine cancel. Published by Valley Views, Bridgewater, VA 22812. Luke Roberts, Berkeley 94710. Caption: \u2018The Lee Memorial Chapel, Washington and Lee University, Lexington, Virginia. Built during the presidency of Robert E. Lee, it serves as students\u2019 chapel as well as mausoleum and museum of the Lee family.\u2019 Front shows the ivy-clad brick chapel with clock tower amid spring-budding trees. Message: \u201cDear Mommy & Daddy \u2014 As you can see, doing a little sightseeing. W&L was beautiful. Wonder why Scott didn\u2019t stay? So far no problems at all, knock wood. I\u2019m having fun! Tivi, Billy & John say love. Jason too. Love, Elaine.\u201d",front:IMG+"1976 - Stanton, PA - Lee Memorial - front.jpg",back:IMG+"1976 - Stanton, PA - Lee Memorial - back.jpg"},
   {id:67,location:"Burg Karlstein, Bavaria, Germany",address:"Burg Karlstein, Bavaria, Germany",year:"February 11, 1981",sender:"[Bob/Rob] (partially legible)",recipient:"Mrs. Louise Reichert, 4759 N. Marvine, Phila., PA 19141, USA",recipientAddress:"4759 N Marvine St, Philadelphia, PA 19141",recipientLat:40.0390,recipientLng:-75.1398,notes:"Dated Feb 11, 1981 (handwritten). Two 40pf Deutsche Bundespost stamps (Weltraumlabor \u2014 Space Shuttle/Spacelab). Mit Luftpost / Par Avion airmail label. Verlagshaus Sudetenland GmbH, M\u00fcnchen 19, Postfach 46. Caption: \u2018Burg Karlstein\u2019 \u2014 illustrated painting of the castle perched on its rock outcrop, figures and horses in the foreground. Message: \u201cDear Louise, The bright and cheerful bird calendar just arrived. And with our name on it! Many thanks my dear. Hope you are well. If I get over I\u2019ll ring you. Best wishes, [Bob/Rob].\u201d",front:IMG+"1981 - Philadelphia, PA - front.jpg",back:IMG+"1981 - Philadelphia, PA - back.jpg"},
   {id:68,location:"Kalamazoo, Michigan \u2014 Bernhard Student Center, Western Michigan University",address:"Bernhard Student Center, Western Michigan University, Kalamazoo, MI",year:"July 24, 1989",sender:"Kenneth",recipient:"Hillary Harrow, 401 S. Camden Dr. #6, Beverly Hills, CA 90212",recipientAddress:"401 S Camden Dr, Beverly Hills, CA 90212",recipientLat:34.0614,recipientLng:-118.3993,notes:"Postmarked Augusta, GA, PM 24 Jul 1989. 15\u00a2 Buffalo Bill Cody stamp. Pub. by H.K. Barnett, Allison Park, PA 15101. Card WMU-3, #631433. Caption: \u2018Bernhard Student Center, Western Michigan University, Kalamazoo, Michigan. This attractive facility was opened in 1957. It contains a 20 lane bowling alley, two ballrooms, a snack bar and a public cafeteria. Western\u2019s Campus bookstore is housed in the West wing.\u2019 Front shows the modernist student center with sweeping lawn and mature trees. Message: \u201cDear Hillary, Sorry it took me so long to write to you. Hope you still remember me from NU last summer \u2014 KENNETH. Well anyway, how\u2019s piano coming? How\u2019s Stacy? Tell her \u2018hello\u2019 for me. I\u2019m here at Western Michigan for a music camp. It\u2019s pretty cool! Lots of interesting people. Well, gotta go, but don\u2019t forget that you\u2019re always taking me to the POINT OF NO RETURN. \ud83d\ude42 Love, Kenneth.\u201d",front:IMG+"1989 - Kalamazoo, MI - WMU - front.jpg",back:IMG+"1989 - Kalamazoo, MI - WMU - back.jpg"},
-
-  // \u2500\u2500 V9 BATCH \u2500\u2500
   {id:69,location:"Seattle, Washington \u2014 Forestry Building, Alaska-Yukon-Pacific Exposition",address:"Alaska-Yukon-Pacific Exposition, Seattle, WA",year:"August 15\u201316, 1909",sender:"Unknown (signed initials only)",recipient:"Mrs. W.E. Cattle, 2865 So. Broadway, Englewood, Colorado",recipientAddress:"2865 S Broadway, Englewood, CO 80110",recipientLat:39.6483,recipientLng:-104.9877,notes:"Postmarked Seattle, WA, Aug 16, 1909, 9 AM. Machine cancel: \u2018World Fair Seattle.\u2019 Receiving postmark: Englewood, CO, Aug 19, 1909. 1\u00a2 green Washington stamp. Published by Portland Post Card Co., Seattle, Wash., and Portland, Ore. Official Post Card of the Alaska-Yukon-Pacific Exposition, Seattle 1909. Front shows the Forestry Building (likely) and Band Stand with the circular A-Y-P Exposition emblem inset upper right. Caption partially legible: \u2018\u2026Building and Band Stand.\u2019 Message dated Aug 15: \u201cDear Mama \u2014 I am getting the letters & the plans of my house ready to send you. Our address is Sta. 9. Home every day. We are going for a boat ride...\u201d (remainder cut off at card edge).",front:IMG+"1909 - Seattle, WA - Forestry Building - front.jpeg",back:IMG+"1909 - Seattle, WA - Forestry Building - back.jpeg"},
   {id:70,location:"Langtry, Texas \u2014 Judge Roy Bean Museum",address:"Judge Roy Bean Museum, Langtry, TX",year:"September 16, 1967",sender:"Bill & Gloria",recipient:"Miss Helen Johnson, 2455 Prairie Ave., Evanston, Illinois",recipientAddress:"2455 Prairie Ave, Evanston, IL 60201",recipientLat:42.0451,recipientLng:-87.6877,notes:"Date written: 9-16-67 (handwritten top). Postmarked Pecos, TX (partially legible), 1967. 4\u00a2 Lincoln stamp (purple). Distributed by Baxter Lane, Box 175, Amarillo, Texas. Color by Daddy-O\u2019 Payne. Anchor Color #8985. Card number 421 (pencil). Caption: \u2018Judge Bean Museum, Langtry, Texas \u2014 For years Judge Bean was the only \u201cLaw west of the Pecos.\u201d Preserved by the State of Texas, this old house with many curious relics is a historic landmark.\u2019 Front shows the Judge Roy Bean saloon/museum with \u2018Justice of the Peace Law West of the Pecos\u2019 sign, captioned \u2018Howdy from Texas\u2019 in red script. Message: \u201cDear Helen \u2014 I hope you are beginning to get down to earth after your fabulous trip to Europe. I\u2019m on a mine now. Petrified Forest, Indian Ruins, Meteor Crater, Carlsbad Caverns (fantastic!), the Longhorn Dude Ranch next to an 1890 saloon! Cowboys (in jeeps) not horses herding LBJ\u2019s ranch on way to visiting friends on a ranch at Alta, Texas \u2014 via New Orleans. Love, Bill & Gloria.\u201d",front:IMG+"1967 - Langtry, TX - Judge Bean - front.jpeg",back:IMG+"1967 - Langtry, TX - Judge Bean - back.jpeg"},
   {id:71,location:"Cleveland, Ohio \u2014 Edgar Degas, \u201cDancers Adjusting Their Slippers\u201d",address:"Cleveland Museum of Art, 11150 East Blvd, Cleveland, OH 44106",year:"May 19, 1973",sender:"Kathy",recipient:"Mr. & Mrs. Jack Lipscombe, 204 Allendale Road, Big Spring, Texas 79720",recipientAddress:"204 Allendale Rd, Big Spring, TX 79720",recipientLat:32.2479,recipientLng:-101.4805,notes:"Postmarked Cleveland, Ohio, May 19, 1973 PM. 6\u00a2 Eisenhower stamp (gray). Price sticker: $0.29, label 1843. Published by Soho Gallery Ltd., 18 Soho Square, London W.1. Printed in England. Soho Card 386. Art: Edgar Degas (1834\u20131917), \u2018Dancers Adjusting Their Slippers,\u2019 Pastel, Cleveland Museum of Art (gift of the Hanna Fund). Available as a Braun Print, size 10\u00bd\u201d \u00d7 30\u00bc\u201d. Front shows five ballerinas in muted gray-green tutus bending to adjust their slippers against a warm orange-sienna background. Message (to \u201cMommy and Daddy\u201d): \u201cI went through the art museum today. They have Rodin\u2019s \u2018The Thinker\u2019 out front. My favorite room was the Impressionists from France \u2014 Monet, Renoir, Gauguin, etc. I was so excited to see the paintings (not the artists!). Last night we all got together at something \u2014 we all had a good time being together... To my major worries \u2014 \u2018Patty\u2019 and the Christian wife yours. At least I am getting more mature to do not mention to continue anyway. Love, Kathy.\u201d (latter portion difficult to parse).",front:IMG+"1973 - Edgar Degas art - Cleveland, OH - front.jpeg",back:IMG+"1973 - Edgar Degas art - Cleveland, OH - back.jpeg"},
   {id:72,location:"Buena Vista, Colorado \u2014 City Park Lake",address:"City Park, Buena Vista, CO 81211",year:"August 13, 1984",sender:"C. Helen & Marshall",recipient:"Mr. & Mrs. Don Hill & Family, P.O. Box 812, Somerset, Texas 78069",recipientAddress:"Somerset, TX 78069",recipientLat:29.2252,recipientLng:-98.6568,notes:"Date written: 8-13-84 (handwritten top). Postmarked Buena Vista, CO. 13\u00a2 Crazy Horse stamp (red-brown). Meter $0.39, label 1843. Distributed by Triangle Distributing Co., Colorado Springs, CO 80904. Photo by Bill Noble. McGrew Color Graphics (MCG), Kansas City, MO 64108. Card 401133. Caption: \u2018This beautiful lake lies in the city park in downtown Buena Vista, Colo.\u2019 Front shows a serene lake with a wide sheet-waterfall spillway in the foreground, lush cottonwoods and willows lining the banks under a bright blue sky. Message: \u201cHi Folks \u2014 We\u2019re enjoying the cool climate up here. Left home 8-3rd and plan to be back last week of Aug. We\u2019ll go to Gunnison tomorrow then Durango, home via Santa Fe. Hope you will come up Labor Day Weekend. Love, C. Helen & Marshall.\u201d",front:IMG+"1984 - Buena Vista, CO - Sommersit, TX - front.jpeg",back:IMG+"1984 - Buena Vista, CO - Sommersit, TX - back.jpeg"},
-  {id:73,location:"Columbus, Ohio \u2014 Vincent van Gogh, \u201cLa Chambre de Van Gogh \u00e0 Arles\u201d",address:"Columbus, OH (postmark origin)",year:"1988",sender:"Brian \u201c6 Jolts in one night\u201d Marshall",recipient:"Hillary Harrow, #6 401 S. Camden Dr., Beverly Hills, CA 90212",recipientAddress:"401 S Camden Dr, Beverly Hills, CA 90212",recipientLat:34.0614,recipientLng:-118.3993,notes:"Postmarked Columbus, OH, PM 1988. 25\u00a2 New Hampshire statehood bicentennial stamp (June 21, 1788) plus a partially visible additional stamp. Price sticker: $0.29, label 1843. Published by R\u00e9union des musées nationaux, Paris. \u00a9 Imprimi\u00e9 en France 1988. Art: Vincent van Gogh (1853\u20131890), \u2018La chambre de Van Gogh \u00e0 Arles,\u2019 1889, huile sur toile, 0.575 \u00d7 0.740. Mus\u00e9e d\u2019Orsay, Paris. Front shows the iconic bedroom painting with the wood-frame bed, two chairs, red-topped table, and portraits on blue-walled room. Message to Hillary: speech-bubble drawing reads \u2018God: He must hate me; he keeps sending me Van Gogh. Why?!\u2019 followed by: \u201cYou\u2019re probably wondering why I\u2019m sending you yet another Van Gogh when you specifically said that you didn\u2019t like him. Well, the truth is\u2026.. I do! There! I said it! I admit I like Van Gogh, will you still talk to me?! Write. Brian \u20186 Jolts in one night\u2019 Marshall.\u201d Note: same recipient (Hillary Harrow, Beverly Hills) as card #68 (Kalamazoo, 1989 \u2014 Kenneth) \u2014 Hillary appears to be a recurring recipient in this collection.",front:IMG+"1988 - Van Gohh - Columbus       - front.jpeg",back:IMG+"1988 - Van Gohh - Columbus       - back.jpeg"}
+  {id:73,location:"Columbus, Ohio \u2014 Vincent van Gogh, \u201cLa Chambre de Van Gogh \u00e0 Arles\u201d",address:"Columbus, OH (postmark origin)",year:"1988",sender:"Brian \u201c6 Jolts in one night\u201d Marshall",recipient:"Hillary Harrow, #6 401 S. Camden Dr., Beverly Hills, CA 90212",recipientAddress:"401 S Camden Dr, Beverly Hills, CA 90212",recipientLat:34.0614,recipientLng:-118.3993,notes:"Postmarked Columbus, OH, PM 1988. 25\u00a2 New Hampshire statehood bicentennial stamp (June 21, 1788) plus a partially visible additional stamp. Price sticker: $0.29, label 1843. Published by R\u00e9union des mus\u00e9es nationaux, Paris. \u00a9 Imprimi\u00e9 en France 1988. Art: Vincent van Gogh (1853\u20131890), \u2018La chambre de Van Gogh \u00e0 Arles,\u2019 1889, huile sur toile, 0.575 \u00d7 0.740. Mus\u00e9e d\u2019Orsay, Paris. Front shows the iconic bedroom painting with the wood-frame bed, two chairs, red-topped table, and portraits on blue-walled room. Message to Hillary: speech-bubble drawing reads \u2018God: He must hate me; he keeps sending me Van Gogh. Why?!\u2019 followed by: \u201cYou\u2019re probably wondering why I\u2019m sending you yet another Van Gogh when you specifically said that you didn\u2019t like him. Well, the truth is\u2026.. I do! There! I said it! I admit I like Van Gogh, will you still talk to me?! Write. Brian \u20186 Jolts in one night\u2019 Marshall.\u201d Note: same recipient (Hillary Harrow, Beverly Hills) as card #68 (Kalamazoo, 1989 \u2014 Kenneth) \u2014 Hillary appears to be a recurring recipient in this collection.",front:IMG+"1988 - Van Gogh - Columbus - front.jpeg",back:IMG+"1988 - Van Gogh - Columbus - back.jpeg"}
 ];
 
 const PAGE_SIZE=10;
@@ -440,12 +411,11 @@ let currentPage=1;
 let viewList=[],lbIndex=0,rotation=0,scale=1,flipped=false;
 let panX=0,panY=0,dragging=false,dStartX,dStartY,dPanX,dPanY,searchTerm='';
 let rotY3d=0,rotX3d=-4,lb3dDragging=false,lb3dStartX=0,lb3dStartY=0,lb3dDragMoved=false;
+let messageText='',notesRemainder='';
 
 function searchable(c){return[c.location,c.year,c.sender,c.recipient,c.address,c.notes].filter(Boolean).join(' ').toLowerCase()}
 function escHtml(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
 function highlight(text,term){if(!term||!text)return escHtml(text||'');const e=term.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');return escHtml(text).replace(new RegExp('('+e+')','gi'),'<mark>$1</mark>')}
-
-
 
 function renderList(){
   viewList=searchTerm?postcards.filter(c=>searchable(c).includes(searchTerm)).reverse():[...postcards].reverse();
@@ -463,14 +433,14 @@ function renderList(){
     const gi=start+i;
     const li=document.createElement('li');
     li.className='postcard-row';li.setAttribute('role','button');li.setAttribute('tabindex','0');
-    const det=[card.sender?'From: '+card.sender:'',card.recipient?'To: '+card.recipient:''].filter(Boolean).join('  ·  ');
+    const det=[card.sender?'From: '+card.sender:'',card.recipient?'To: '+card.recipient:''].filter(Boolean).join('  \u00b7  ');
     li.innerHTML='<span class="row-num">'+String(gi+1).padStart(2,'0')+'</span>'
       +'<span class="row-location">'+highlight(card.location,searchTerm)
       +(det?'<span class="row-location-detail">'+highlight(det,searchTerm)+'</span>':'')
       +(card.notes?'<span class="row-location-detail">'+highlight(card.notes.substring(0,80)+(card.notes.length>80?'...':''),searchTerm)+'</span>':'')
       +'</span>'
       +'<span class="row-year">'+highlight(card.year,searchTerm)+'</span>'
-      +'<span class="row-arrow">View →</span>';
+      +'<span class="row-arrow">View \u2192</span>';
     li.addEventListener('click',()=>openLb(gi));
     li.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' ')openLb(gi)});
     ul.appendChild(li);
@@ -484,7 +454,7 @@ function renderPagination(){
   const totalPages=Math.ceil(viewList.length/PAGE_SIZE);
   if(totalPages<=1){pg.innerHTML='';return}
   let html='';
-  html+='<button class="page-btn" '+(currentPage===1?'disabled':'')+' onclick="goPage(currentPage-1)">← Prev</button>';
+  html+='<button class="page-btn" '+(currentPage===1?'disabled':'')+' onclick="goPage(currentPage-1)">\u2190 Prev</button>';
   for(let i=1;i<=totalPages;i++){
     if(i===1||i===totalPages||Math.abs(i-currentPage)<=1){
       html+='<button class="page-btn'+(i===currentPage?' active':'')+'" onclick="goPage('+i+')">'+i+'</button>';
@@ -492,7 +462,7 @@ function renderPagination(){
       html+='<span class="page-info">&hellip;</span>';
     }
   }
-  html+='<button class="page-btn" '+(currentPage===totalPages?'disabled':'')+' onclick="goPage(currentPage+1)">Next →</button>';
+  html+='<button class="page-btn" '+(currentPage===totalPages?'disabled':'')+' onclick="goPage(currentPage+1)">Next \u2192</button>';
   html+='<span class="page-info">'+currentPage+' of '+totalPages+'</span>';
   pg.innerHTML=html;
 }
@@ -513,6 +483,7 @@ function openLb(idx){
 }
 function closeLb(){document.getElementById('lightbox').classList.remove('open');document.body.style.overflow=''}
 function loadCard(){
+  messageText='';notesRemainder='';
   const c=viewList[lbIndex];
   const imgFront=document.getElementById('img-front');
   imgFront.src='';
@@ -523,19 +494,13 @@ function loadCard(){
   document.getElementById('zoom-slider').value=100;
   document.getElementById('zoom-pct').textContent='100%';
   rotY3d=0;rotX3d=-4;flipped=false;
-  // ── Address bar above card: traditional mailing format ──
   const addrLines=document.getElementById('lb-address-lines');
-  // Parse recipient into name line(s) vs city/state line
-  // address field often has street + city, recipient has the name
-  // We want: Name / Street (if present) / City, State ZIP / Country
   let mailLines=[];
   if(c.recipient) mailLines.push(c.recipient);
   if(c.address){
-    // Split address on commas to get street / city / state+zip / country
     const parts=c.address.split(',').map(s=>s.trim()).filter(Boolean);
     if(parts.length>=2){
-      // Re-join sensibly: street alone, then city+state+zip, then country if present
-      mailLines.push(parts[0]); // street / venue
+      mailLines.push(parts[0]);
       if(parts.length===2) mailLines.push(parts[1]);
       else if(parts.length===3) mailLines.push(parts[1]+', '+parts[2]);
       else mailLines.push(parts[1]+', '+parts[2]+', '+parts[3]);
@@ -543,29 +508,21 @@ function loadCard(){
       mailLines.push(c.address);
     }
   }
-  // Deduplicate lines that are already contained in the recipient string
   mailLines=mailLines.filter((l,i)=>i===0||!mailLines[0].toLowerCase().includes(l.toLowerCase()));
   addrLines.innerHTML=mailLines.map(l=>'<div>'+escHtml(l)+'</div>').join('');
-
-  // ── Hero block: written message ──
   const heroMsg=document.getElementById('lb-hero-message');
   const heroBlock=document.getElementById('lb-hero-block');
   if(c.notes){
-    // Match: Message[dated ...][:][ "]text["] — grab the quoted or unquoted message
-    const msgMatch=c.notes.match(/Message(?:[^:]*)?:\s*["\u201c]?([\s\S]+?)(?:["\u201d]?\s*(?:Posted|A |Same|Sent|$))/);
+    const msgMatch=c.notes.match(/Message(?:[^:]*)?:\s*[\u201c"]?([\s\S]+?)(?:[\u201d"]?\s*(?:Posted|A |Same|Sent|$))/);
     if(msgMatch){
       messageText=msgMatch[1].replace(/["\u201c\u201d]$/,'').trim();
-      // Notes remainder = everything before the message match
       notesRemainder=c.notes.substring(0,c.notes.search(/Message(?:[^:]*)?:/)).trim();
-      // Also grab any trailing note after the message (e.g. "Posted from Cannon Beach...")
       const trailMatch=c.notes.match(/["\u201d]\s*((?:Posted|A |Same|Sent)[^$]+)$/);
       if(trailMatch) notesRemainder+=' '+trailMatch[1].trim();
     }
   }
   heroMsg.textContent=messageText;
   heroBlock.style.display=messageText?'':'none';
-
-  // ── Notes section: postmark, publisher, caption, etc ──
   const meta=[
     c.year?{label:'Year',value:c.year}:null,
     c.sender?{label:'From',value:c.sender}:null,
@@ -600,26 +557,13 @@ function applyTransform(){
 function animateLbTo(targetY,duration){
   duration=duration||550;
   const startY=rotY3d,start=performance.now();
-  function step(now){
-    const t=Math.min((now-start)/duration,1);
-    const e=t<0.5?2*t*t:-1+(4-2*t)*t;
-    rotY3d=startY+(targetY-startY)*e;
-    applyTransform();
-    if(t<1)requestAnimationFrame(step);
-  }
+  function step(now){const t=Math.min((now-start)/duration,1);const e=t<0.5?2*t*t:-1+(4-2*t)*t;rotY3d=startY+(targetY-startY)*e;applyTransform();if(t<1)requestAnimationFrame(step);}
   requestAnimationFrame(step);
 }
 function animateLbToXY(targetY,targetX,duration){
   duration=duration||550;
   const startY=rotY3d,startX=rotX3d,start=performance.now();
-  function step(now){
-    const t=Math.min((now-start)/duration,1);
-    const e=t<0.5?2*t*t:-1+(4-2*t)*t;
-    rotY3d=startY+(targetY-startY)*e;
-    rotX3d=startX+(targetX-startX)*e;
-    applyTransform();
-    if(t<1)requestAnimationFrame(step);
-  }
+  function step(now){const t=Math.min((now-start)/duration,1);const e=t<0.5?2*t*t:-1+(4-2*t)*t;rotY3d=startY+(targetY-startY)*e;rotX3d=startX+(targetX-startX)*e;applyTransform();if(t<1)requestAnimationFrame(step);}
   requestAnimationFrame(step);
 }
 function syncZoom(){const v=Math.round(scale*100);document.getElementById('zoom-slider').value=v;document.getElementById('zoom-pct').textContent=v+'%'}
@@ -628,12 +572,7 @@ document.getElementById('lb-close').addEventListener('click',closeLb);
 document.getElementById('lightbox').addEventListener('click',e=>{if(e.target===document.getElementById('lightbox'))closeLb()});
 document.getElementById('lb-prev').addEventListener('click',()=>{lbIndex=(lbIndex-1+viewList.length)%viewList.length;loadCard()});
 document.getElementById('lb-next').addEventListener('click',()=>{lbIndex=(lbIndex+1)%viewList.length;loadCard()});
-document.getElementById('btn-flip').addEventListener('click',()=>{
-  const norm=((rotY3d%360)+360)%360;
-  const base=Math.floor(rotY3d/360)*360;
-  const isBack=norm>90&&norm<270;
-  animateLbTo(isBack?base+360:base+180);
-});
+document.getElementById('btn-flip').addEventListener('click',()=>{const norm=((rotY3d%360)+360)%360;const base=Math.floor(rotY3d/360)*360;const isBack=norm>90&&norm<270;animateLbTo(isBack?base+360:base+180);});
 document.getElementById('btn-rotl').addEventListener('click',()=>{rotation-=90;applyTransform()});
 document.getElementById('btn-rotr').addEventListener('click',()=>{rotation+=90;applyTransform()});
 document.getElementById('btn-zin').addEventListener('click',()=>{scale=Math.min(scale+.2,5);syncZoom();applyTransform()});
@@ -644,103 +583,28 @@ document.getElementById('lb-stage').addEventListener('wheel',e=>{e.preventDefaul
 
 const stageEl=document.getElementById('lb-stage');
 stageEl.addEventListener('mousedown',e=>{if(e.button!==0)return;lb3dDragging=true;lb3dDragMoved=false;lb3dStartX=e.clientX;lb3dStartY=e.clientY;dPanX=panX;dPanY=panY;stageEl.style.cursor='grabbing'});
-window.addEventListener('mousemove',e=>{
-  if(!lb3dDragging)return;
-  const dx=e.clientX-lb3dStartX,dy=e.clientY-lb3dStartY;
-  if(Math.abs(dx)>3||Math.abs(dy)>3)lb3dDragMoved=true;
-  if(scale>1.05){panX=dPanX+(e.clientX-lb3dStartX);panY=dPanY+(e.clientY-lb3dStartY);}
-  else{rotY3d+=dx*.45;rotX3d-=dy*.45;lb3dStartX=e.clientX;lb3dStartY=e.clientY;}
-  applyTransform();
-});
-window.addEventListener('mouseup',()=>{
-  if(!lb3dDragging)return;
-  lb3dDragging=false;stageEl.style.cursor='grab';
-  const normX=((rotX3d%360)+360)%360;
-  const xNeutral=normX<30||normX>330;
-  if(!lb3dDragMoved&&scale<=1.05&&xNeutral){
-    const norm=((rotY3d%360)+360)%360;
-    const base=Math.floor(rotY3d/360)*360;
-    animateLbTo(norm>90&&norm<270?base+360:base+180);
-  }
-});
+window.addEventListener('mousemove',e=>{if(!lb3dDragging)return;const dx=e.clientX-lb3dStartX,dy=e.clientY-lb3dStartY;if(Math.abs(dx)>3||Math.abs(dy)>3)lb3dDragMoved=true;if(scale>1.05){panX=dPanX+(e.clientX-lb3dStartX);panY=dPanY+(e.clientY-lb3dStartY);}else{rotY3d+=dx*.45;rotX3d-=dy*.45;lb3dStartX=e.clientX;lb3dStartY=e.clientY;}applyTransform();});
+window.addEventListener('mouseup',()=>{if(!lb3dDragging)return;lb3dDragging=false;stageEl.style.cursor='grab';const normX=((rotX3d%360)+360)%360;const xNeutral=normX<30||normX>330;if(!lb3dDragMoved&&scale<=1.05&&xNeutral){const norm=((rotY3d%360)+360)%360;const base=Math.floor(rotY3d/360)*360;animateLbTo(norm>90&&norm<270?base+360:base+180);}});
 stageEl.addEventListener('touchstart',e=>{const t=e.touches[0];lb3dDragging=true;lb3dDragMoved=false;lb3dStartX=t.clientX;lb3dStartY=t.clientY;dPanX=panX;dPanY=panY},{passive:true});
-stageEl.addEventListener('touchmove',e=>{
-  if(!lb3dDragging)return;
-  const t=e.touches[0],dx=t.clientX-lb3dStartX,dy=t.clientY-lb3dStartY;
-  if(Math.abs(dx)>3||Math.abs(dy)>3)lb3dDragMoved=true;
-  if(scale>1.05){panX=dPanX+(t.clientX-lb3dStartX);panY=dPanY+(t.clientY-lb3dStartY);}
-  else{rotY3d+=dx*.45;rotX3d-=dy*.45;lb3dStartX=t.clientX;lb3dStartY=t.clientY;}
-  applyTransform();
-},{passive:true});
-stageEl.addEventListener('touchend',e=>{
-  const dx=Math.abs(panX-dPanX),dy=Math.abs(panY-dPanY);
-  const normX=((rotX3d%360)+360)%360;
-  const xNeutral=normX<30||normX>330;
-  if(dx<8&&dy<8&&!lb3dDragMoved&&xNeutral){
-    const norm=((rotY3d%360)+360)%360;
-    const base=Math.floor(rotY3d/360)*360;
-    animateLbTo(norm>90&&norm<270?base+360:base+180);
-  }
-  lb3dDragging=false;
-});
-document.addEventListener('keydown',e=>{
-  if(!document.getElementById('lightbox').classList.contains('open'))return;
-  if(e.key==='Escape')closeLb();
-  if(e.key==='ArrowRight'){lbIndex=(lbIndex+1)%viewList.length;loadCard()}
-  if(e.key==='ArrowLeft'){lbIndex=(lbIndex-1+viewList.length)%viewList.length;loadCard()}
-  if(e.key==='f'||e.key==='F')document.getElementById('btn-flip').click();
-});
+stageEl.addEventListener('touchmove',e=>{if(!lb3dDragging)return;const t=e.touches[0],dx=t.clientX-lb3dStartX,dy=t.clientY-lb3dStartY;if(Math.abs(dx)>3||Math.abs(dy)>3)lb3dDragMoved=true;if(scale>1.05){panX=dPanX+(t.clientX-lb3dStartX);panY=dPanY+(t.clientY-lb3dStartY);}else{rotY3d+=dx*.45;rotX3d-=dy*.45;lb3dStartX=t.clientX;lb3dStartY=t.clientY;}applyTransform();},{passive:true});
+stageEl.addEventListener('touchend',e=>{const dx=Math.abs(panX-dPanX),dy=Math.abs(panY-dPanY);const normX=((rotX3d%360)+360)%360;const xNeutral=normX<30||normX>330;if(dx<8&&dy<8&&!lb3dDragMoved&&xNeutral){const norm=((rotY3d%360)+360)%360;const base=Math.floor(rotY3d/360)*360;animateLbTo(norm>90&&norm<270?base+360:base+180);}lb3dDragging=false;});
+document.addEventListener('keydown',e=>{if(!document.getElementById('lightbox').classList.contains('open'))return;if(e.key==='Escape')closeLb();if(e.key==='ArrowRight'){lbIndex=(lbIndex+1)%viewList.length;loadCard()}if(e.key==='ArrowLeft'){lbIndex=(lbIndex-1+viewList.length)%viewList.length;loadCard()}if(e.key==='f'||e.key==='F')document.getElementById('btn-flip').click();});
 window.addEventListener('resize',()=>{if(document.getElementById('lightbox').classList.contains('open'))sizeAndApply()});
 
-// Upload modal
 let pendingFront=null,pendingBack=null;
 document.getElementById('open-upload').addEventListener('click',()=>document.getElementById('upload-modal').classList.add('open'));
-function closeUploadModal(){
-  document.getElementById('upload-modal').classList.remove('open');
-  pendingFront=null;pendingBack=null;
-  ['u-loc','u-year','u-address','u-sender','u-recipient','u-notes'].forEach(id=>document.getElementById(id).value='');
-  resetDz('front');resetDz('back');
-}
+function closeUploadModal(){document.getElementById('upload-modal').classList.remove('open');pendingFront=null;pendingBack=null;['u-loc','u-year','u-address','u-sender','u-recipient','u-notes'].forEach(id=>document.getElementById(id).value='');resetDz('front');resetDz('back');}
 document.getElementById('close-upload').addEventListener('click',closeUploadModal);
 document.getElementById('cancel-upload').addEventListener('click',closeUploadModal);
 function resetDz(side){document.getElementById('prev-'+side).style.display='none';document.getElementById('prev-'+side).src='';document.getElementById('dz-'+side+'-hint').style.display=''}
-function setupDz(side){
-  const dz=document.getElementById('dz-'+side),fi=document.getElementById('file-'+side);
-  const prev=document.getElementById('prev-'+side),hint=document.getElementById('dz-'+side+'-hint');
-  dz.addEventListener('click',()=>fi.click());
-  dz.addEventListener('dragover',e=>{e.preventDefault();dz.classList.add('over')});
-  dz.addEventListener('dragleave',()=>dz.classList.remove('over'));
-  dz.addEventListener('drop',e=>{e.preventDefault();dz.classList.remove('over');const f=e.dataTransfer.files[0];if(f)readImg(f,side,prev,hint)});
-  fi.addEventListener('change',()=>{if(fi.files[0])readImg(fi.files[0],side,prev,hint)});
-}
-function readImg(file,side,prev,hint){
-  const r=new FileReader();
-  r.onload=ev=>{if(side==='front')pendingFront=ev.target.result;else pendingBack=ev.target.result;prev.src=ev.target.result;prev.style.display='block';hint.style.display='none'};
-  r.readAsDataURL(file);
-}
+function setupDz(side){const dz=document.getElementById('dz-'+side),fi=document.getElementById('file-'+side);const prev=document.getElementById('prev-'+side),hint=document.getElementById('dz-'+side+'-hint');dz.addEventListener('click',()=>fi.click());dz.addEventListener('dragover',e=>{e.preventDefault();dz.classList.add('over')});dz.addEventListener('dragleave',()=>dz.classList.remove('over'));dz.addEventListener('drop',e=>{e.preventDefault();dz.classList.remove('over');const f=e.dataTransfer.files[0];if(f)readImg(f,side,prev,hint)});fi.addEventListener('change',()=>{if(fi.files[0])readImg(fi.files[0],side,prev,hint)});}
+function readImg(file,side,prev,hint){const r=new FileReader();r.onload=ev=>{if(side==='front')pendingFront=ev.target.result;else pendingBack=ev.target.result;prev.src=ev.target.result;prev.style.display='block';hint.style.display='none'};r.readAsDataURL(file);}
 setupDz('front');setupDz('back');
-document.getElementById('do-add').addEventListener('click',()=>{
-  if(!pendingFront){alert('Please upload the front image at minimum.');return}
-  postcards.push({id:Date.now(),location:document.getElementById('u-loc').value.trim()||'Unknown location',address:document.getElementById('u-address').value.trim()||'',year:document.getElementById('u-year').value.trim()||'',sender:document.getElementById('u-sender').value.trim()||'',recipient:document.getElementById('u-recipient').value.trim()||'',notes:document.getElementById('u-notes').value.trim()||'',front:pendingFront,back:pendingBack||pendingFront});
-  closeUploadModal();renderList();
-});
+document.getElementById('do-add').addEventListener('click',()=>{if(!pendingFront){alert('Please upload the front image at minimum.');return}postcards.push({id:Date.now(),location:document.getElementById('u-loc').value.trim()||'Unknown location',address:document.getElementById('u-address').value.trim()||'',year:document.getElementById('u-year').value.trim()||'',sender:document.getElementById('u-sender').value.trim()||'',recipient:document.getElementById('u-recipient').value.trim()||'',notes:document.getElementById('u-notes').value.trim()||'',front:pendingFront,back:pendingBack||pendingFront});closeUploadModal();renderList();});
 
-// Contact form
 const cfForm=document.getElementById('contact-form');
-if(cfForm){
-  cfForm.addEventListener('submit',async function(e){
-    e.preventDefault();
-    const btn=cfForm.querySelector('.cf-submit');
-    btn.textContent='Sending...';btn.disabled=true;
-    try{
-      const res=await fetch(cfForm.action,{method:'POST',body:new FormData(cfForm),headers:{'Accept':'application/json'}});
-      if(res.ok){cfForm.reset();document.getElementById('cf-success').style.display='block';btn.style.display='none';}
-      else{btn.textContent='Error — try again';btn.disabled=false;}
-    }catch(err){btn.textContent='Error — try again';btn.disabled=false;}
-  });
-}
+if(cfForm){cfForm.addEventListener('submit',async function(e){e.preventDefault();const btn=cfForm.querySelector('.cf-submit');btn.textContent='Sending...';btn.disabled=true;try{const res=await fetch(cfForm.action,{method:'POST',body:new FormData(cfForm),headers:{'Accept':'application/json'}});if(res.ok){cfForm.reset();document.getElementById('cf-success').style.display='block';btn.style.display='none';}else{btn.textContent='Error \u2014 try again';btn.disabled=false;}}catch(err){btn.textContent='Error \u2014 try again';btn.disabled=false;}});}
 
-// Map
 const LOCATIONS=[
   {name:"Niagara Falls, Ontario, Canada",lat:43.0896,lng:-79.0849,ids:[53]},
   {name:"Lincolnville Beach, Maine",lat:44.2787,lng:-68.9956,ids:[49]},
@@ -748,7 +612,7 @@ const LOCATIONS=[
   {name:"Atlanta, Georgia",lat:33.749,lng:-84.388,ids:[17,52]},
   {name:"Chicago, Illinois",lat:41.8781,lng:-87.6298,ids:[5,11,12,13,14,15,27,28,29,30,35,39,45,51]},
   {name:"Excelsior Springs, Missouri",lat:39.3397,lng:-94.2272,ids:[6,50]},
-  {name:"Vermont–New York Border",lat:44.0,lng:-73.5,ids:[2]},
+  {name:"Vermont\u2013New York Border",lat:44.0,lng:-73.5,ids:[2]},
   {name:"Staten Island, New York",lat:40.5795,lng:-74.1502,ids:[3]},
   {name:"Monterrey, Mexico",lat:25.6866,lng:-100.3161,ids:[4]},
   {name:"Atlantic City, New Jersey",lat:39.3643,lng:-74.4229,ids:[7]},
@@ -792,9 +656,9 @@ const LOCATIONS=[
   {name:"Lexington, Virginia \u2014 Washington & Lee",lat:37.7882,lng:-79.4428,ids:[66]},
   {name:"Burg Karlstein, Bavaria",lat:49.3614,lng:11.4186,ids:[67]},
   {name:"Kalamazoo, Michigan \u2014 WMU",lat:42.2842,lng:-85.6182,ids:[68]},
+  {name:"Columbus, Ohio",lat:39.9612,lng:-82.9988,ids:[73]},
 ];
 
-// Recipient "To" address markers (diamond style)
 const RECIPIENT_LOCATIONS=[
   {name:"Austin, TX \u2014 2600 San Pedro (Eby)",lat:30.3075,lng:-97.7467,ids:[64]},
   {name:"Richardson, TX \u2014 520 Spring Valley Rd (McLouth)",lat:32.9483,lng:-96.7299,ids:[65]},
@@ -810,203 +674,66 @@ function refreshMapMarkers(){
   _mapMarkers.forEach(m=>m.remove());
   _mapMarkers=[];
   LOCATIONS.forEach(loc=>{
-    const visibleIds=loc.ids.filter(id=>{
-      const c=postcards.find(x=>x.id===id);
-      if(!c)return false;
-      if(activeDecade===null)return true;
-      return parseDecade(c.year)===activeDecade;
-    });
+    const visibleIds=loc.ids.filter(id=>{const c=postcards.find(x=>x.id===id);if(!c)return false;if(activeDecade===null)return true;return parseDecade(c.year)===activeDecade;});
     if(!visibleIds.length)return;
     const r=Math.min(6+visibleIds.length*3,22);
     const m=L.circleMarker([loc.lat,loc.lng],{radius:r,fillColor:'#9a7c3f',color:'#6b5229',weight:1.5,opacity:.9,fillOpacity:.75}).addTo(map);
-    const cards=visibleIds.map(id=>{
-      const c=postcards.find(x=>x.id===id);
-      if(!c)return'';
-      const sl=c.location.split('—')[0].trim();
-      return'<div class="map-popup-card" onclick="openCardFromMap('+id+')">'+'<div>'+escHtml(sl)+'</div><div class="map-popup-year">'+escHtml(c.year||'')+'</div></div>';
-    }).filter(Boolean).join('');
+    const cards=visibleIds.map(id=>{const c=postcards.find(x=>x.id===id);if(!c)return'';const sl=c.location.split('\u2014')[0].trim();return'<div class="map-popup-card" onclick="openCardFromMap('+id+')">'+'<div>'+escHtml(sl)+'</div><div class="map-popup-year">'+escHtml(c.year||'')+'</div></div>';}).filter(Boolean).join('');
     m.bindPopup('<div class="map-popup-title">'+escHtml(loc.name)+'</div>'+cards,{maxWidth:280});
     _mapMarkers.push(m);
   });
-  // Recipient "To" address markers — hollow diamond style in red
   RECIPIENT_LOCATIONS.forEach(loc=>{
-    const visibleIds=loc.ids.filter(id=>{
-      const c=postcards.find(x=>x.id===id);
-      if(!c)return false;
-      if(activeDecade===null)return true;
-      return parseDecade(c.year)===activeDecade;
-    });
+    const visibleIds=loc.ids.filter(id=>{const c=postcards.find(x=>x.id===id);if(!c)return false;if(activeDecade===null)return true;return parseDecade(c.year)===activeDecade;});
     if(!visibleIds.length)return;
     const icon=L.divIcon({className:'',html:'<div style="width:12px;height:12px;transform:rotate(45deg);border:2px solid #7a2e22;background:rgba(122,46,34,0.25);margin-top:-6px;margin-left:-6px;"></div>',iconSize:[12,12],iconAnchor:[6,6]});
     const m=L.marker([loc.lat,loc.lng],{icon}).addTo(map);
-    const cards=visibleIds.map(id=>{
-      const c=postcards.find(x=>x.id===id);
-      if(!c)return'';
-      return'<div class="map-popup-card" onclick="openCardFromMap('+id+')">'+'<div style="font-size:.7rem;color:#a05040;">&#9671; Delivered to</div><div>'+escHtml(c.recipient||'')+'</div><div class="map-popup-year">'+escHtml(c.year||'')+'</div></div>';
-    }).filter(Boolean).join('');
+    const cards=visibleIds.map(id=>{const c=postcards.find(x=>x.id===id);if(!c)return'';return'<div class="map-popup-card" onclick="openCardFromMap('+id+')">'+'<div style="font-size:.7rem;color:#a05040;">&#9671; Delivered to</div><div>'+escHtml(c.recipient||'')+'</div><div class="map-popup-year">'+escHtml(c.year||'')+'</div></div>';}).filter(Boolean).join('');
     m.bindPopup('<div class="map-popup-title">'+escHtml(loc.name)+'</div>'+cards,{maxWidth:300});
     _mapMarkers.push(m);
   });
 }
 
-function initMap(){
-  if(mapInitialized)return;
-  mapInitialized=true;
-  map=L.map('map-container',{center:[39,-20],zoom:3,scrollWheelZoom:true});
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{
-    attribution:'&copy; OpenStreetMap &copy; CARTO',subdomains:'abcd',maxZoom:19
-  }).addTo(map);
-  refreshMapMarkers();
-}
+function initMap(){if(mapInitialized)return;mapInitialized=true;map=L.map('map-container',{center:[39,-20],zoom:3,scrollWheelZoom:true});L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{attribution:'&copy; OpenStreetMap &copy; CARTO',subdomains:'abcd',maxZoom:19}).addTo(map);refreshMapMarkers();}
 
-function openCardFromMap(id){
-  if(map)map.closePopup();
-  toggleMap(false);
-  searchTerm='';document.getElementById('search-input').value='';
-  currentPage=1;renderList();
-  const idx=viewList.findIndex(c=>c.id===id);
-  if(idx>=0){currentPage=Math.ceil((idx+1)/PAGE_SIZE);renderList();setTimeout(()=>openLb(idx),150);}
-}
+function openCardFromMap(id){if(map)map.closePopup();toggleMap(false);searchTerm='';document.getElementById('search-input').value='';currentPage=1;renderList();const idx=viewList.findIndex(c=>c.id===id);if(idx>=0){currentPage=Math.ceil((idx+1)/PAGE_SIZE);renderList();setTimeout(()=>openLb(idx),150);}}
 
-function toggleMap(forceClose){
-  const panel=document.getElementById('map-panel');
-  const btn=document.getElementById('globe-btn');
-  const tw=document.querySelector('.table-wrap');
-  const sw=document.querySelector('.search-wrap');
-  const isOpen=panel.classList.contains('open');
-  if(forceClose===true||isOpen){
-    panel.classList.remove('open');
-    btn.classList.remove('active');
-    if(tw)tw.style.display='';
-    if(sw)sw.style.display='';
-  } else {
-    panel.classList.add('open');
-    btn.classList.add('active');
-    if(tw)tw.style.display='none';
-    if(sw)sw.style.display='none';
-    initMap();
-    setTimeout(()=>{if(map)map.invalidateSize();},200);
-  }
-}
-
+function toggleMap(forceClose){const panel=document.getElementById('map-panel');const btn=document.getElementById('globe-btn');const tw=document.querySelector('.table-wrap');const sw=document.querySelector('.search-wrap');const isOpen=panel.classList.contains('open');if(forceClose===true||isOpen){panel.classList.remove('open');btn.classList.remove('active');if(tw)tw.style.display='';if(sw)sw.style.display='';}else{panel.classList.add('open');btn.classList.add('active');if(tw)tw.style.display='none';if(sw)sw.style.display='none';initMap();setTimeout(()=>{if(map)map.invalidateSize();},200);}}
 document.getElementById('globe-btn').addEventListener('click',toggleMap);
 
-// ── Timeline ──
-let activeDecade = null;
+let activeDecade=null;
 
-function parseDecade(yearStr) {
-  if (!yearStr) return null;
-  if (/ww\s*i/i.test(yearStr)) return 1910;
-  const m = yearStr.match(/\b(1[89]\d{2}|20\d{2})\b/);
-  if (m) return Math.floor(parseInt(m[1]) / 10) * 10;
-  const approx = yearStr.match(/\b(1[89]\d)0s?\b/i);
-  if (approx) return parseInt(approx[1] + '0');
-  return null;
-}
+function parseDecade(yearStr){if(!yearStr)return null;if(/ww\s*i/i.test(yearStr))return 1910;const m=yearStr.match(/\b(1[89]\d{2}|20\d{2})\b/);if(m)return Math.floor(parseInt(m[1])/10)*10;const approx=yearStr.match(/\b(1[89]\d)0s?\b/i);if(approx)return parseInt(approx[1]+'0');return null;}
 
-function buildTimeline() {
-  const counts = {};
-  postcards.forEach(c => {
-    const d = parseDecade(c.year);
-    if (d) counts[d] = (counts[d] || 0) + 1;
-  });
-  const decades = Object.keys(counts).map(Number).sort((a, b) => a - b);
-  const track = document.getElementById('timeline-track');
-  const line = track.querySelector('.timeline-line');
-  track.innerHTML = '';
-  track.appendChild(line);
-  const labels = {1910:'1910s',1920:'1920s',1930:'1930s',1940:'1940s',
-    1950:'1950s',1960:'1960s',1970:'1970s',1980:'1980s',
-    1990:'1990s',2000:'2000s',2010:'2010s',2020:'2020s'};
-  decades.forEach(d => {
-    const node = document.createElement('div');
-    node.className = 'timeline-node';
-    node.dataset.decade = d;
-    node.innerHTML = '<div class="timeline-node-dot"></div>'
-      + '<div class="timeline-node-label">' + (labels[d] || d + 's') + '</div>'
-      + '<div class="timeline-node-count">' + counts[d] + ' card' + (counts[d] !== 1 ? 's' : '') + '</div>';
-    node.addEventListener('click', () => selectDecade(d));
-    track.appendChild(node);
-  });
-}
+function buildTimeline(){const counts={};postcards.forEach(c=>{const d=parseDecade(c.year);if(d)counts[d]=(counts[d]||0)+1;});const decades=Object.keys(counts).map(Number).sort((a,b)=>a-b);const track=document.getElementById('timeline-track');const line=track.querySelector('.timeline-line');track.innerHTML='';track.appendChild(line);const labels={1910:'1910s',1920:'1920s',1930:'1930s',1940:'1940s',1950:'1950s',1960:'1960s',1970:'1970s',1980:'1980s',1990:'1990s',2000:'2000s',2010:'2010s',2020:'2020s'};decades.forEach(d=>{const node=document.createElement('div');node.className='timeline-node';node.dataset.decade=d;node.innerHTML='<div class="timeline-node-dot"></div>'+'<div class="timeline-node-label">'+(labels[d]||d+'s')+'</div>'+'<div class="timeline-node-count">'+counts[d]+' card'+(counts[d]!==1?'s':'')+'</div>';node.addEventListener('click',()=>selectDecade(d));track.appendChild(node);});}
 
-function selectDecade(decade) {
-  if (activeDecade === decade) { clearDecade(); return; }
-  activeDecade = decade;
-  searchTerm = '';
-  document.getElementById('search-input').value = '';
-  currentPage = 1;
-  document.querySelectorAll('.timeline-node').forEach(n => {
-    n.classList.toggle('active', parseInt(n.dataset.decade) === decade);
-  });
-  const labels = {1910:'1910s',1920:'1920s',1930:'1930s',1940:'1940s',
-    1950:'1950s',1960:'1960s',1970:'1970s',1980:'1980s',
-    1990:'1990s',2000:'2000s',2010:'2010s',2020:'2020s'};
-  const lbl = document.getElementById('timeline-filter-label');
-  lbl.textContent = 'Showing: ' + (labels[decade] || decade + 's');
-  lbl.style.display = 'block';
-  document.getElementById('timeline-clear').classList.add('visible');
-  renderList();
-  refreshMapMarkers();
-}
+function selectDecade(decade){if(activeDecade===decade){clearDecade();return;}activeDecade=decade;searchTerm='';document.getElementById('search-input').value='';currentPage=1;document.querySelectorAll('.timeline-node').forEach(n=>{n.classList.toggle('active',parseInt(n.dataset.decade)===decade);});const labels={1910:'1910s',1920:'1920s',1930:'1930s',1940:'1940s',1950:'1950s',1960:'1960s',1970:'1970s',1980:'1980s',1990:'1990s',2000:'2000s',2010:'2010s',2020:'2020s'};const lbl=document.getElementById('timeline-filter-label');lbl.textContent='Showing: '+(labels[decade]||decade+'s');lbl.style.display='block';document.getElementById('timeline-clear').classList.add('visible');renderList();refreshMapMarkers();}
 
-function clearDecade() {
-  activeDecade = null;
-  document.querySelectorAll('.timeline-node').forEach(n => n.classList.remove('active'));
-  document.getElementById('timeline-filter-label').style.display = 'none';
-  document.getElementById('timeline-clear').classList.remove('visible');
-  currentPage = 1;
-  renderList();
-  refreshMapMarkers();
-}
+function clearDecade(){activeDecade=null;document.querySelectorAll('.timeline-node').forEach(n=>n.classList.remove('active'));document.getElementById('timeline-filter-label').style.display='none';document.getElementById('timeline-clear').classList.remove('visible');currentPage=1;renderList();refreshMapMarkers();}
 
-document.getElementById('timeline-clear').addEventListener('click', clearDecade);
+document.getElementById('timeline-clear').addEventListener('click',clearDecade);
 
-// Patch search input to also clear decade (or keep it — decade + search stack)
-document.getElementById('search-input').addEventListener('input', function() {
-  searchTerm = this.value.trim().toLowerCase();
-  currentPage = 1;
-  renderList();
-});
+document.getElementById('search-input').addEventListener('input',function(){searchTerm=this.value.trim().toLowerCase();currentPage=1;renderList();});
 
-// Override renderList to respect activeDecade
-renderList = function() {
-  viewList = postcards.filter(c => {
-    const decadeMatch = activeDecade === null || parseDecade(c.year) === activeDecade;
-    const searchMatch = !searchTerm || searchable(c).includes(searchTerm);
-    return decadeMatch && searchMatch;
-  }).reverse();
-
-  const ul = document.getElementById('postcard-list');
-  const ce = document.getElementById('card-count');
-  const total = postcards.length, shown = viewList.length;
-  ce.textContent = (activeDecade !== null || searchTerm)
-    ? shown + ' of ' + total + ' cards match'
-    : total === 1 ? '1 card in the archive' : total + ' cards in the archive';
-
-  if (!viewList.length) {
-    ul.innerHTML = '<li class="empty">No postcards match your search.</li>';
-    renderPagination(); return;
-  }
-  const totalPages = Math.ceil(viewList.length / PAGE_SIZE);
-  if (currentPage > totalPages) currentPage = totalPages;
-  const start = (currentPage - 1) * PAGE_SIZE;
-  const pageItems = viewList.slice(start, start + PAGE_SIZE);
-  ul.innerHTML = '';
-  pageItems.forEach((card, i) => {
-    const gi = start + i;
-    const li = document.createElement('li');
-    li.className = 'postcard-row'; li.setAttribute('role','button'); li.setAttribute('tabindex','0');
-    const det = [card.sender ? 'From: ' + card.sender : '', card.recipient ? 'To: ' + card.recipient : ''].filter(Boolean).join('  ·  ');
-    li.innerHTML = '<span class="row-num">' + String(gi+1).padStart(2,'0') + '</span>'
-      + '<span class="row-location">' + highlight(card.location, searchTerm)
-      + (det ? '<span class="row-location-detail">' + highlight(det, searchTerm) + '</span>' : '')
-      + (card.notes ? '<span class="row-location-detail">' + highlight(card.notes.substring(0,80)+(card.notes.length>80?'...':''), searchTerm) + '</span>' : '')
-      + '</span>'
-      + '<span class="row-year">' + highlight(card.year, searchTerm) + '</span>'
-      + '<span class="row-arrow">View →</span>';
-    li.addEventListener('click', () => openLb(gi));
-    li.addEventListener('keydown', e => { if(e.key==='Enter'||e.key===' ') openLb(gi); });
+renderList=function(){
+  viewList=postcards.filter(c=>{const decadeMatch=activeDecade===null||parseDecade(c.year)===activeDecade;const searchMatch=!searchTerm||searchable(c).includes(searchTerm);return decadeMatch&&searchMatch;}).reverse();
+  const ul=document.getElementById('postcard-list');
+  const ce=document.getElementById('card-count');
+  const total=postcards.length,shown=viewList.length;
+  ce.textContent=(activeDecade!==null||searchTerm)?shown+' of '+total+' cards match':total===1?'1 card in the archive':total+' cards in the archive';
+  if(!viewList.length){ul.innerHTML='<li class="empty">No postcards match your search.</li>';renderPagination();return;}
+  const totalPages=Math.ceil(viewList.length/PAGE_SIZE);
+  if(currentPage>totalPages)currentPage=totalPages;
+  const start=(currentPage-1)*PAGE_SIZE;
+  const pageItems=viewList.slice(start,start+PAGE_SIZE);
+  ul.innerHTML='';
+  pageItems.forEach((card,i)=>{
+    const gi=start+i;
+    const li=document.createElement('li');
+    li.className='postcard-row';li.setAttribute('role','button');li.setAttribute('tabindex','0');
+    const det=[card.sender?'From: '+card.sender:'',card.recipient?'To: '+card.recipient:''].filter(Boolean).join('  \u00b7  ');
+    li.innerHTML='<span class="row-num">'+String(gi+1).padStart(2,'0')+'</span>'+'<span class="row-location">'+highlight(card.location,searchTerm)+(det?'<span class="row-location-detail">'+highlight(det,searchTerm)+'</span>':'')+(card.notes?'<span class="row-location-detail">'+highlight(card.notes.substring(0,80)+(card.notes.length>80?'...':''),searchTerm)+'</span>':'')+'</span>'+'<span class="row-year">'+highlight(card.year,searchTerm)+'</span>'+'<span class="row-arrow">View \u2192</span>';
+    li.addEventListener('click',()=>openLb(gi));
+    li.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' ')openLb(gi);});
     ul.appendChild(li);
   });
   renderPagination();
