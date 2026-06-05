@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>Found & Sent — A Postcard Archive</title>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -616,9 +616,11 @@ const stageEl=document.getElementById('lb-stage');
 stageEl.addEventListener('mousedown',e=>{if(e.button!==0)return;lb3dDragging=true;lb3dDragMoved=false;lb3dStartX=e.clientX;lb3dStartY=e.clientY;dPanX=panX;dPanY=panY;stageEl.style.cursor='grabbing'});
 window.addEventListener('mousemove',e=>{if(!lb3dDragging)return;const dx=e.clientX-lb3dStartX,dy=e.clientY-lb3dStartY;if(Math.abs(dx)>3||Math.abs(dy)>3)lb3dDragMoved=true;if(scale>1.05){panX=dPanX+(e.clientX-lb3dStartX);panY=dPanY+(e.clientY-lb3dStartY);}else{rotY3d+=dx*.45;rotX3d-=dy*.45;lb3dStartX=e.clientX;lb3dStartY=e.clientY;}applyTransform();});
 window.addEventListener('mouseup',()=>{if(!lb3dDragging)return;lb3dDragging=false;stageEl.style.cursor='grab';const normX=((rotX3d%360)+360)%360;const xNeutral=normX<30||normX>330;if(!lb3dDragMoved&&scale<=1.05&&xNeutral){const norm=((rotY3d%360)+360)%360;const base=Math.floor(rotY3d/360)*360;animateLbTo(norm>90&&norm<270?base+360:base+180);}});
-stageEl.addEventListener('touchstart',e=>{const t=e.touches[0];lb3dDragging=true;lb3dDragMoved=false;lb3dStartX=t.clientX;lb3dStartY=t.clientY;dPanX=panX;dPanY=panY},{passive:true});
-stageEl.addEventListener('touchmove',e=>{if(!lb3dDragging)return;const t=e.touches[0],dx=t.clientX-lb3dStartX,dy=t.clientY-lb3dStartY;if(Math.abs(dx)>3||Math.abs(dy)>3)lb3dDragMoved=true;if(scale>1.05){panX=dPanX+(t.clientX-lb3dStartX);panY=dPanY+(t.clientY-lb3dStartY);}else{rotY3d+=dx*.45;rotX3d-=dy*.45;lb3dStartX=t.clientX;lb3dStartY=t.clientY;}applyTransform();},{passive:true});
-stageEl.addEventListener('touchend',e=>{const dx=Math.abs(panX-dPanX),dy=Math.abs(panY-dPanY);const normX=((rotX3d%360)+360)%360;const xNeutral=normX<30||normX>330;if(dx<8&&dy<8&&!lb3dDragMoved&&xNeutral){const norm=((rotY3d%360)+360)%360;const base=Math.floor(rotY3d/360)*360;animateLbTo(norm>90&&norm<270?base+360:base+180);}lb3dDragging=false;});
+let pinchStartDist=0,pinchStartScale=1;
+function getTouchDist(e){const a=e.touches[0],b=e.touches[1];return Math.hypot(b.clientX-a.clientX,b.clientY-a.clientY);}
+stageEl.addEventListener('touchstart',e=>{if(e.touches.length===2){pinchStartDist=getTouchDist(e);pinchStartScale=scale;lb3dDragging=false;return;}const t=e.touches[0];lb3dDragging=true;lb3dDragMoved=false;lb3dStartX=t.clientX;lb3dStartY=t.clientY;dPanX=panX;dPanY=panY;},{passive:true});
+stageEl.addEventListener('touchmove',e=>{if(e.touches.length===2){e.preventDefault();const dist=getTouchDist(e);scale=Math.min(Math.max(pinchStartScale*(dist/pinchStartDist),.3),5);syncZoom();applyTransform();return;}if(!lb3dDragging)return;const t=e.touches[0],dx=t.clientX-lb3dStartX,dy=t.clientY-lb3dStartY;if(Math.abs(dx)>3||Math.abs(dy)>3)lb3dDragMoved=true;if(scale>1.05){panX=dPanX+(t.clientX-lb3dStartX);panY=dPanY+(t.clientY-lb3dStartY);}else{rotY3d+=dx*.45;rotX3d-=dy*.45;lb3dStartX=t.clientX;lb3dStartY=t.clientY;}applyTransform();},{passive:false});
+stageEl.addEventListener('touchend',e=>{if(e.touches.length>0)return;const dx=Math.abs(panX-dPanX),dy=Math.abs(panY-dPanY);const normX=((rotX3d%360)+360)%360;const xNeutral=normX<30||normX>330;if(dx<8&&dy<8&&!lb3dDragMoved&&xNeutral){const norm=((rotY3d%360)+360)%360;const base=Math.floor(rotY3d/360)*360;animateLbTo(norm>90&&norm<270?base+360:base+180);}lb3dDragging=false;});
 document.addEventListener('keydown',e=>{if(!document.getElementById('lightbox').classList.contains('open'))return;if(e.key==='Escape')closeLb();if(e.key==='ArrowRight'){lbIndex=(lbIndex+1)%viewList.length;loadCard()}if(e.key==='ArrowLeft'){lbIndex=(lbIndex-1+viewList.length)%viewList.length;loadCard()}if(e.key==='f'||e.key==='F')document.getElementById('btn-flip').click();});
 window.addEventListener('resize',()=>{if(document.getElementById('lightbox').classList.contains('open'))sizeAndApply()});
 
