@@ -95,6 +95,9 @@
   input[type=range]#zoom-slider::-webkit-slider-thumb{-webkit-appearance:none;width:11px;height:11px;border-radius:50%;background:var(--gold-dim);cursor:pointer}
   #zoom-pct{min-width:34px;text-align:left}
   .lb-tap-hint{display:none;font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:#7a6a55;margin-top:6px;text-align:center}
+  .lb-mobile-controls{display:none;align-items:center;justify-content:center;gap:8px;margin-top:10px;}
+  .lb-mob-btn{background:rgba(255,255,255,.07);border:1px solid rgba(200,170,120,.2);border-radius:20px;color:#c8b068;font-family:'Crimson Pro',Georgia,serif;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;padding:6px 14px;cursor:pointer;transition:background .18s;}
+  .lb-mob-btn:active{background:rgba(200,170,120,.18);}
   .pagination{display:flex;align-items:center;justify-content:center;gap:8px;padding:24px 0 0;border-top:1px solid var(--rule);margin-top:4px;flex-wrap:wrap}
   .page-btn{background:none;border:1px solid var(--rule);color:var(--ink-soft);font-family:'Crimson Pro',serif;font-size:.88rem;padding:6px 14px;border-radius:2px;cursor:pointer;transition:all .2s;min-width:36px}
   .page-btn:hover{border-color:var(--gold);color:var(--gold)}
@@ -172,6 +175,7 @@
     .lb-zoom-row{display:none}
     .lb-stage{height:60vh;cursor:pointer}
     .lb-tap-hint{display:block!important}
+    .lb-mobile-controls{display:flex!important}
     #map-container{height:360px}
     .upload-box{padding:28px 20px}
     .lb-address-bar{width:calc(100vw - 20px);padding:0 4px 4px}
@@ -280,6 +284,12 @@
     </div>
   </div>
   <div class="lb-tap-hint">Tap card to flip &nbsp;&#183;&nbsp; swipe to navigate</div>
+  <div class="lb-mobile-controls">
+    <button class="lb-mob-btn" id="mob-rotl">&#8634; Rotate</button>
+    <button class="lb-mob-btn" id="mob-flip">&#8644; Flip</button>
+    <button class="lb-mob-btn" id="mob-rotr">&#8635; Rotate</button>
+    <button class="lb-mob-btn" id="mob-reset">&#8855; Reset</button>
+  </div>
   <div class="lb-zoom-row">
     Zoom <input type="range" id="zoom-slider" min="40" max="400" value="100" step="5">
     <span id="zoom-pct">100%</span>
@@ -610,6 +620,10 @@ document.getElementById('btn-zin').addEventListener('click',()=>{scale=Math.min(
 document.getElementById('btn-zout').addEventListener('click',()=>{scale=Math.max(scale-.2,.3);syncZoom();applyTransform()});
 document.getElementById('btn-reset').addEventListener('click',()=>{scale=1;rotation=0;panX=0;panY=0;document.getElementById('lb-side').textContent='Front';document.getElementById('btn-flip').classList.remove('active');syncZoom();animateLbToXY(0,-4,400)});
 document.getElementById('zoom-slider').addEventListener('input',function(){scale=parseInt(this.value)/100;document.getElementById('zoom-pct').textContent=this.value+'%';applyTransform()});
+document.getElementById('mob-rotl').addEventListener('click',()=>{rotation-=90;applyTransform()});
+document.getElementById('mob-rotr').addEventListener('click',()=>{rotation+=90;applyTransform()});
+document.getElementById('mob-flip').addEventListener('click',()=>{const norm=((rotY3d%360)+360)%360;const base=Math.floor(rotY3d/360)*360;const isBack=norm>90&&norm<270;animateLbTo(isBack?base+360:base+180);});
+document.getElementById('mob-reset').addEventListener('click',()=>{scale=1;rotation=0;panX=0;panY=0;syncZoom();animateLbToXY(0,-4,400)});
 document.getElementById('lb-stage').addEventListener('wheel',e=>{e.preventDefault();scale=Math.min(Math.max(scale-e.deltaY*.0012,.3),5);syncZoom();applyTransform()},{passive:false});
 
 const stageEl=document.getElementById('lb-stage');
