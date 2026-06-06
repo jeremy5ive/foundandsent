@@ -204,6 +204,17 @@
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" width="20" height="20" style="pointer-events:none;"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418"/></svg>
       Map View
     </button>
+    <div style="position:relative;display:inline-block;">
+      <button id="category-btn" class="globe-btn" style="margin-left:8px;">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" width="18" height="18" style="pointer-events:none;"><path stroke-linecap="round" stroke-linejoin="round" d="M9.568 3H5.25A2.25 2.25 0 0 0 3 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 0 0 5.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 0 0 9.568 3Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M6 6h.008v.008H6V6Z"/></svg>
+        Categories &#9662;
+      </button>
+      <div id="category-dropdown" style="display:none;position:absolute;top:calc(100% + 6px);left:0;z-index:500;background:rgba(30,22,12,.97);border:1px solid rgba(154,124,63,.3);border-radius:4px;padding:10px;min-width:220px;box-shadow:0 8px 32px rgba(0,0,0,.5);">
+        <div style="font-family:'Crimson Pro',serif;font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:#7a6a55;padding:0 4px 8px;border-bottom:1px solid rgba(154,124,63,.15);margin-bottom:8px;">Filter by category</div>
+        <div id="category-pills" style="display:flex;flex-wrap:wrap;gap:6px;"></div>
+        <button id="category-clear" style="display:none;margin-top:10px;background:none;border:none;font-family:'Crimson Pro',serif;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);cursor:pointer;opacity:.7;padding:0;">&#x2715; clear filter</button>
+      </div>
+    </div>
     <div style="margin-left:auto;"></div>
   </div>
 </div>
@@ -444,6 +455,11 @@ let postcards = [
   {id:101,location:"Florida \u2014 Backyard Orange Grove",address:"Florida (statewide subject)",year:"February 21, 1973",sender:"Belva & Chester",recipient:"Mrs. Grace Senterney, Weiner, Ark. 72479",notes:"Postmarked FL 334, Feb 21, 1973. 8\u00a2 Eisenhower stamp. Price sticker: 1843, $0.89. Florida Natural Color, Inc., 190 N.E. 186th Terr., Miami. Photo by Ted Lagerberg. Card FG-189, No. 101511. Caption: \u2018Florida residents enjoy their own backyard orange grove.\u2019 Front shows a man on a wooden stepladder harvesting oranges from a dense, heavily-laden grove while three small children gather fruit below into wooden bushel baskets. A child\u2019s doll lies in the grass, forgotten, at the edge of the scene. Message: \u201cHi, I think it is about as warm at home as here. Chester enjoying the fishing. Belva & Chester.\u201d Sent to Weiner, Arkansas \u2014 a small farming community in the Arkansas Delta.",front:IMG+"1973 - Florida - front .jpeg",back:IMG+"1973 - Florida - back.jpeg"},
   {id:102,location:"Williamsburg, Virginia \u2014 Gardens at Governor\u2019s Palace",address:"Governor\u2019s Palace, Colonial Williamsburg, Williamsburg, VA 23185",year:"c. 1978",sender:"Karen",recipient:"Gibbs Family, 1213 Hampton St., Saxton, Pa. 18504",notes:"Postmarked Richmond, VA, 197[8]. 10\u00a2 \u2018People\u2019s Right to Petition for Redress\u2019 stamp (purple). Published by Town Crier Publishers, Williamsburg, Virginia 23185. Card back: \u2018The Palace Gardens, Williamsburg, Va. The Governor\u2019s Palace and its dependencies, pre-eminent among notable estates in colonial America. The gardens are considered more typical of formal eighteenth century gardens than any others in America.\u2019 Front shows an aerial view looking north from atop the Governor\u2019s Palace \u2014 a perfectly symmetrical formal garden with geometric parterres, sculpted hedges, a central gravel promenade flanked by urns, iron gates, and open pasture extending to the horizon. Scalloped card edges. The Gibbs family also received card #47 (Florida Sunshine Skyway, 1979) from Dottie & George. Message: \u201cHi! Well, Mr. Gibbs, your almanac was right, it is good weather for ducks! We toured Washington Sunday in the rain \u2014 yesterday we went to Kings Dominion & it rained & today, here in Williamsburg, we got caught in a downpour! See ya all soon, Karen.\u201d",front:IMG+"1978 - Palace Gardens - Williamsburg, VA - front.jpeg",back:IMG+"1978 - Palace Gardens - Williamsburg, VA - back.jpeg"},
   {id:103,location:"New York City \u2014 Rockefeller Center (RCA Building)",address:"Rockefeller Center, Midtown Manhattan, New York, NY 10020",year:"c. 1980",sender:"Two Danish travelers",recipient:"Fam. Carter, 247 E. Rosewood, San Antonio, Texas 78212",notes:"Postmark partially illegible, c. 1980. 10\u00a2 \u2018People\u2019s Right to Petition for Redress\u2019 stamp. Acacia Card Company, 258 Broadway, New York, N.Y. 10007. Card No. 306. Caption: \u2018Rockefeller Center \u2014 New York, N.Y. This building shows famous R.C.A. building in Radio City. This building is 70 stories in height and has an observatory on the 70th floor. This is one of 14 ultra modern skyscrapers that comprise Radio City.\u2019 Price sticker: #1843, 70\u00a2. Front shows the RCA Building (now 30 Rock) soaring above the surrounding Midtown skyline against a vivid teal sky, with Central Park and the Hudson River visible in the distance. Message fills every available inch: \u201cDear Elmer & Marian Carter, We are two Danish boys who are travelling around all over America. Now we are in Ft. Lauderdale, Florida. We have been in Niagara Falls \u2014 New York City \u2014 Washington \u2014 and now we are going West. We will be in San Antonio in about 14 days. Hope to see you. We will call you up when we arrive. Hope to see you.\u201d Left margin adds: \u2018Your [name] Danning [?].\u2019 A remarkable unsolicited road-trip letter to a San Antonio family from two young Danes making their way across the continent.",front:IMG+"1980 - Rockefeller Center - front.jpeg",back:IMG+"1980 - Rockefeller Center - back.jpeg"},
+  {id:105,location:"Bethlehem, Pennsylvania \u2014 Easter Greeting",address:"414 New St., Bethlehem, PA",year:"April 6, 1912",sender:"Florence Schaffer",recipient:"Miss Pearl Reed, 414 New St., Bethlehem, PA",notes:"Postmarked Bethlehem, PA, Apr 6, 3:30 PM, 1912. 1\u00a2 green Washington stamp (Series of 1908\u20131909). Printed in Germany. Embossed divided-back card with ornate raised border of egg-shaped medallions and scrollwork. Front is a chromolithograph Easter greeting: an Art Nouveau arched frame enclosing a pastoral lakeside scene with a hen in the foreground and colored Easter eggs \u2014 green, pink, and lavender \u2014 arranged below. Red diamond ornaments flank the arch. Text reads \u2018A Joyous Easter\u2019 in an oval cartouche at top. Publisher\u2019s monogram \u2018EAS\u2019 in a small heart at lower left. The embossed texture gives the card a tactile, luxurious quality typical of German-printed holiday cards of the Edwardian era. Message: \u2018Dear Pearl, I hardly will be at your house. Florence Schaffer.\u2019 Sender and recipient share the same address \u2014 414 New St. \u2014 suggesting Florence and Pearl may have been neighbors or housemates, and the card was sent as a holiday gesture between people who lived in close proximity.",front:IMG+"1912 - Bethlehem, PA - front.jpeg",back:IMG+"1912 - Bethlehem, PA - back.jpeg"},
+  {id:106,location:"Chicago, Illinois \u2014 The Merchandise Mart",address:"222 W. Merchandise Mart Plaza, Chicago, IL",year:"November 1, 1959",sender:"Faye",recipient:"Vickie and Mike, Oak Grove, Mo.",notes:"Postmarked Chicago, ILL, Nov 1, 1959. 5\u00a2 Monroe stamp. \u2018Air Mail Through Community Fund\u2019 cancellation. Published by Cameo Greeting Cards, Inc., Chicago, Illinois. Color by Egon Berka, Chicago, Ill. Colourpicture Publishers, Inc., Boston 15, Mass. Card P797. Caption: \u2018The Merchandise Mart, Chicago, Illinois \u2014 One of the world\u2019s largest buildings, was built by the Marshall Field Estate in 1930. Its cost was between 30 and 32 million dollars. This building houses several hundred wholesale concerns. Twenty-six thousand persons constitute the working population of the building.\u2019 Front shows the Merchandise Mart from across the Chicago River \u2014 its massive limestone fa\u00e7ade rising 25 stories, flanked by corner towers, with period automobiles and a city bus visible along the riverbank below. This is the fifth card from Faye\u2019s November 1959 Chicago trip \u2014 mailed November 1, the earliest postmark of her entire Chicago series (cards #13, #14, #15, #100, and this one). Message: \u2018Hi Kids: This place is right behind my hotel and I look out at it at night. The first time I saw it at night it looked like a prison at night. Tomorrow night I will pack and then leave Wednesday. Be good and I see you. Faye.\u2019",front:IMG+"1959 - Chicago, ILL - Merchandise Mart - front.jpeg",back:IMG+"1959 - Chicago, ILL - Merchandise Mart - back.jpeg"},
+  {id:107,location:"Corpus Christi, Texas \u2014 Christmas Card",address:"8100 Maplecrest Dr., #3003, Houston, Texas 77072",year:"December 21, 1987",sender:"Valentino, Corpus Christi, Texas",recipient:"Charlotte North, 8100 Maplecrest Dr. #3003, Houston, Texas 77072",notes:"Postmarked Corpus Christi, TX 784, 4 PM, 21 Dec 1987. 14\u00a2 Sinclair Lewis stamp. Price sticker: 1843, $0.39. Argus Communications, Allen, TX. Printed in U.S.A. Illustration by Pam Powers. Card P3490. Front is a warm watercolor illustration of two stuffed teddy bears \u2014 one smaller and darker, one larger with a red ribbon bow \u2014 sitting together beneath a decorated Christmas tree with ornaments and wrapped gifts. Text at bottom reads \u2018We wish you a Merry Christmas.\u2019 Message written in red ink with cursive flourish: \u2018Charlotte, Have a Merry Christmas and a Happy New Year! Valentino, Corpus Christi, Texas, Dec 1987.\u2019 A cheerful holiday card with a Texas-to-Texas connection, sent just four days before Christmas.",front:IMG+"1987 - Christmas Card - front.jpeg",back:IMG+"1987 - Christmas Card - back.jpeg"},
+  {id:108,location:"Arlington, Texas \u2014 Six Flags Over Texas (Shock Wave)",address:"2201 Road to Six Flags, Arlington, TX 76010",year:"July 25, 1988",sender:"Jeannette Family",recipient:"Bob & MaryLou Newsome, 2066 Tecumseh Rd., Manhattan, Kansas 66502",notes:"Postmarked Arlington, TX, 25 Jul 1988. 15\u00a2 Oliver Wendell Holmes stamp. Dist. by A-W Distributors, P.O. Box 154123, Irving, Texas 75015-4123. Rocker Co., Inc. Card AW-04882. Caption: \u2018Shock Wave, Six Flags Over Texas, Arlington, TX 76010 \u2014 The Shock Wave, at Six Flags Over Texas, is the tallest, longest, fastest double-loop coaster in the world. Riders are turned completely upside down, while traveling up to 60 mph through two 70 ft. loops while negotiating more than 3,500 feet of track.\u2019 Front shows the Shock Wave double-loop roller coaster and the park\u2019s illuminated tower at dusk \u2014 the coaster loops outlined in white lights against a twilight sky of blue, pink, and orange. The Six Flags logo appears in the upper right in bold black and white. Message dated Friday, July 22: \u2018Having a lot of fun in Texas. Mark & Rachelle rode this ride, on front, I watched. Have spent two afternoons in Six Flags. Plan to return this evening to finish up, and head for Okla. in the morning. Hope to see you soon. Love, Jeannette Family.\u2019 A local Texas card \u2014 the Shock Wave operated at Six Flags Over Texas from 1978 to 2002.",front:IMG+"1988 Six Flags - Arlington, TX - front.jpeg",back:IMG+"1988 Six Flags - Arlington, TX - back.jpeg"},
+  {id:109,location:"Atlantic City, New Jersey \u2014 Harrah\u2019s Hotel Casino",address:"777 Harrah\u2019s Blvd., Atlantic City, NJ",year:"September 16, 1992",sender:"CD & MB",recipient:"M/M Miller, 2050 Floral Dr., Boulder, CO 80302",notes:"Postmarked South Jersey, NJ 081, Sep 16, 1992. 20\u00a2 Bighorn Sheep stamp. Jack Freeman, Inc., Longport, N.J. Front shows Harrah\u2019s Hotel Casino at night \u2014 the gleaming white tower blazing with light against a dark sky, its curved lower structure and marina visible below. The neon \u2018Harrah\u2019s\u2019 sign glows atop the building. Message: \u2018Hi \u2014 We haven\u2019t dipped our \u201cseed\u201d yet, in fact we\u2019re $16 richer (although we haven\u2019t left yet). Playclub + Harrah\u2019s seem to be the nicest hotels. Talk to you later. Love, CD & MB.\u2019 The casual, knowing tone \u2014 \u201cseed\u201d money in quotes, counting winnings before they\u2019ve even hit the floor \u2014 captures the anticipatory energy of an Atlantic City trip perfectly. Handwritten notes at top: \u201852/350\u2019 and \u20189/16\u2019 suggest a collection numbering system from a prior owner.",front:IMG+"1992 - Harrahs Casino - Atlantic City, NJ - front.jpeg",back:IMG+"1992 - Harrahs Casino - Atlantic City, NJ - back.jpeg"},
   {id:104,location:"Mojave Desert, Arizona \u2014 Joshua Trees at Sunset",address:"Mojave Desert, AZ",year:"December 3, c. 1963",sender:"Daughter (signature: \u2018Daught\u2019)",recipient:"Mrs. Myrtle Davis, c/o Arcade Hotel, Ponca City, Okla.",notes:"Postmarked [Cashome?], Ariz., 11:30 AM, Dec 3. 4\u00a2 Lincoln stamp (purple) \u2014 issued 1958; rate in use c. 1958\u20131963. The file is named 1983 but the 4\u00a2 Lincoln stamp dates this to the early 1960s, most likely December 1963. \u2018Another Chris Card\u2019 imprint with burro logo. Published by Colourpicture Publishers, Inc., Boston 30, Mass. Card P25579. Caption: \u2018Strangely contorted Joshua trees silhouetted against strikingly colorful sunsets are the true trademark of the Mojave Desert. The most spectacular plants of the Mojave, the Joshuas have a natural growth boundary that coincides almost exactly with the borders of this Desert.\u2019 Front is a stunning dusk photograph: two large Joshua trees silhouetted against a gradient sky of deep blue, purple, pink, and blazing orange-gold, with low mountain ridges in silhouette below. Message: \u201cReal busy past few days. Hope you had nice Holiday. Living in Okla. City would be real well & the best thing. Will find out about schedules home a little later. Laura has [a] 1964 Volks so she might drive back. We\u2019ll see. I\u2019m fine. Hope you are also. Lotsa Love, Daught.\u201d Addressed to Mrs. Myrtle Davis at the Arcade Hotel, Ponca City, Oklahoma \u2014 a recipient staying at a hotel, not a home address.",front:IMG+"1983 - Mojave Desert - front.jpeg",back:IMG+"1983 - Mojave Desert - back.jpeg"}
 ];
 
@@ -756,7 +772,7 @@ function refreshMapMarkers(){
   _mapMarkers.forEach(m=>m.remove());
   _mapMarkers=[];
   LOCATIONS.forEach(loc=>{
-    const visibleIds=loc.ids.filter(id=>{const c=postcards.find(x=>x.id===id);if(!c)return false;if(activeDecade===null)return true;return parseDecade(c.year)===activeDecade;});
+    const visibleIds=loc.ids.filter(id=>{const c=postcards.find(x=>x.id===id);if(!c)return false;if(activeDecade!==null&&parseDecade(c.year)!==activeDecade)return false;if(activeCategory!==null&&!(c.tags&&c.tags.includes(activeCategory)))return false;return true;});
     if(!visibleIds.length)return;
     const r=Math.min(6+visibleIds.length*3,22);
     const m=L.circleMarker([loc.lat,loc.lng],{radius:r,fillColor:'#9a7c3f',color:'#6b5229',weight:1.5,opacity:.9,fillOpacity:.75}).addTo(map);
@@ -765,7 +781,7 @@ function refreshMapMarkers(){
     _mapMarkers.push(m);
   });
   RECIPIENT_LOCATIONS.forEach(loc=>{
-    const visibleIds=loc.ids.filter(id=>{const c=postcards.find(x=>x.id===id);if(!c)return false;if(activeDecade===null)return true;return parseDecade(c.year)===activeDecade;});
+    const visibleIds=loc.ids.filter(id=>{const c=postcards.find(x=>x.id===id);if(!c)return false;if(activeDecade!==null&&parseDecade(c.year)!==activeDecade)return false;if(activeCategory!==null&&!(c.tags&&c.tags.includes(activeCategory)))return false;return true;});
     if(!visibleIds.length)return;
     const icon=L.divIcon({className:'',html:'<div style="width:12px;height:12px;transform:rotate(45deg);border:2px solid #7a2e22;background:rgba(122,46,34,0.25);margin-top:-6px;margin-left:-6px;"></div>',iconSize:[12,12],iconAnchor:[6,6]});
     const m=L.marker([loc.lat,loc.lng],{icon}).addTo(map);
@@ -783,6 +799,83 @@ function toggleMap(forceClose){const panel=document.getElementById('map-panel');
 document.getElementById('globe-btn').addEventListener('click',toggleMap);
 
 let activeDecade=null;
+let activeCategory=null;
+
+// ── Auto-tag engine ──────────────────────────────────────────────
+const CATEGORIES = [
+  {id:'hotels',    label:'🏨 Hotels',     color:'#7b9e87', keywords:['hotel','inn','motel','lodge','resort','casino','harrah','sherman','hilton','marriott','hyatt','rooms with bath','drive-in garage']},
+  {id:'cities',    label:'🏙️ Cities',     color:'#5b8db8', keywords:['downtown','skyline','skyscraper','loop hotel','city beautiful','merchandise mart','rockefeller','city hall','times square','main street','broadway','plaza','avenue']},
+  {id:'nature',    label:'🌿 Nature',     color:'#7aab6e', keywords:['desert','park','forest','beach','mountain','lake','river','canyon','grove','garden','wilderness','joshua tree','mojave','national park','orange grove','scenic','landscape','waterfall','ocean','coast','gulf']},
+  {id:'travel',    label:'✈️ Travel',     color:'#b89a4e', keywords:['airport','road trip','travelling','traveling','touring','on our way','highway','motor','route','flying','flight','arrived','journey','vacation','trip','visit','tour']},
+  {id:'history',   label:'🏛️ History',   color:'#9b7ec8', keywords:['colonial','historic','governor','palace','civil war','revolution','heritage','founded','century','1700s','1800s','plantation','williamsburg','independence','constitution','monument','memorial','landmark']},
+  {id:'holiday',   label:'🎄 Holiday',   color:'#c85b5b', keywords:['christmas','merry christmas','happy new year','easter','thanksgiving','halloween','holiday','joyous','seasons greetings','xmas','new year','fourth of july','independence day','labor day','memorial day','valentine']},
+  {id:'attractions',label:'🎡 Attractions',color:'#c8a23a',keywords:['six flags','theme park','amusement','roller coaster','shock wave','kings dominion','disney','world fair','exposition','museum','aquarium','zoo','boardwalk','pier','stadium','arena']},
+  {id:'rural',     label:'🌾 Rural',     color:'#a0845c', keywords:['farm','ranch','field','barn','harvest','crop','rural','small town','county','prairie','plains','countryside','silo','tractor','orchard','grove']},
+  {id:'personal',  label:'💌 Personal',  color:'#c87a9b', keywords:['dear','love','miss you','wish you were','thinking of','write back','answer soon','see you soon','hope you are','lotsa love','xoxo','yours truly','sincerely','affectionately']},
+  {id:'art',       label:'🎨 Art/Novelty',color:'#8ab4c8',keywords:['comic','novelty','illustrated','chromolithograph','embossed','printed in germany','linen','watercolor','art nouveau','illustration by','lithograph','colotype','artist']},
+  {id:'war',       label:'⚔️ War',       color:'#8a7a6e', keywords:['war','military','soldier','army','navy','marine','combat','battle','veteran','troops','camp','fort','wwi','wwii','world war','patriot','flag','front','service']}
+];
+
+function autoTag(card){
+  const haystack = ((card.location||'')+(card.notes||'')+(card.year||'')).toLowerCase();
+  return CATEGORIES.filter(cat => cat.keywords.some(kw => haystack.includes(kw))).map(cat => cat.id);
+}
+
+// Build tags on all cards
+postcards.forEach(c => { c.tags = autoTag(c); });
+
+// ── Category UI ──────────────────────────────────────────────────
+function buildCategoryPills(){
+  const container = document.getElementById('category-pills');
+  container.innerHTML = '';
+  CATEGORIES.forEach(cat => {
+    const count = postcards.filter(c => c.tags.includes(cat.id)).length;
+    if(!count) return;
+    const btn = document.createElement('button');
+    btn.style.cssText = `background:${cat.color}22;border:1px solid ${cat.color}66;color:${cat.color};font-family:'Crimson Pro',serif;font-size:.75rem;letter-spacing:.05em;padding:4px 10px;border-radius:20px;cursor:pointer;transition:all .18s;white-space:nowrap;`;
+    btn.innerHTML = `${cat.label} <span style="opacity:.6;font-size:.7em;">${count}</span>`;
+    btn.dataset.catId = cat.id;
+    btn.addEventListener('click', () => selectCategory(cat.id));
+    container.appendChild(btn);
+  });
+}
+
+function selectCategory(catId){
+  if(activeCategory === catId){ clearCategory(); return; }
+  activeCategory = catId;
+  searchTerm = ''; document.getElementById('search-input').value = '';
+  currentPage = 1;
+  document.getElementById('category-clear').style.display = 'block';
+  document.getElementById('category-btn').classList.add('active');
+  // highlight active pill
+  document.querySelectorAll('#category-pills button').forEach(b => {
+    const active = b.dataset.catId === catId;
+    b.style.fontWeight = active ? '700' : '';
+    b.style.opacity = active ? '1' : '0.55';
+  });
+  document.getElementById('category-dropdown').style.display = 'none';
+  renderList(); refreshMapMarkers();
+}
+
+function clearCategory(){
+  activeCategory = null;
+  document.getElementById('category-clear').style.display = 'none';
+  document.getElementById('category-btn').classList.remove('active');
+  document.querySelectorAll('#category-pills button').forEach(b => { b.style.fontWeight=''; b.style.opacity=''; });
+  currentPage = 1; renderList(); refreshMapMarkers();
+}
+
+document.getElementById('category-btn').addEventListener('click', function(e){
+  e.stopPropagation();
+  const dd = document.getElementById('category-dropdown');
+  dd.style.display = dd.style.display === 'none' ? 'block' : 'none';
+});
+document.addEventListener('click', function(e){
+  if(!e.target.closest('#category-dropdown') && !e.target.closest('#category-btn')){
+    document.getElementById('category-dropdown').style.display = 'none';
+  }
+});
+document.getElementById('category-clear').addEventListener('click', clearCategory);
 
 function parseDecade(yearStr){if(!yearStr)return null;if(/ww\s*i/i.test(yearStr))return 1910;const m=yearStr.match(/\b(1[89]\d{2}|20\d{2})\b/);if(m)return Math.floor(parseInt(m[1])/10)*10;const approx=yearStr.match(/\b(1[89]\d)0s?\b/i);if(approx)return parseInt(approx[1]+'0');return null;}
 
@@ -797,7 +890,7 @@ document.getElementById('timeline-clear').addEventListener('click',clearDecade);
 document.getElementById('search-input').addEventListener('input',function(){searchTerm=this.value.trim().toLowerCase();currentPage=1;renderList();});
 
 renderList=function(){
-  viewList=postcards.filter(c=>{const decadeMatch=activeDecade===null||parseDecade(c.year)===activeDecade;const searchMatch=!searchTerm||searchable(c).includes(searchTerm);return decadeMatch&&searchMatch;}).reverse();
+  viewList=postcards.filter(c=>{const decadeMatch=activeDecade===null||parseDecade(c.year)===activeDecade;const searchMatch=!searchTerm||searchable(c).includes(searchTerm);const catMatch=activeCategory===null||(c.tags&&c.tags.includes(activeCategory));return decadeMatch&&searchMatch&&catMatch;}).reverse();
   const ul=document.getElementById('postcard-list');
   const ce=document.getElementById('card-count');
   const total=postcards.length,shown=viewList.length;
@@ -822,6 +915,7 @@ renderList=function(){
 };
 
 buildTimeline();
+buildCategoryPills();
 renderList();
 </script>
 <footer style="text-align:center;padding:32px 20px;border-top:1px solid rgba(200,170,120,0.15);font-family:'Crimson Pro',Georgia,serif;font-size:0.78rem;letter-spacing:0.12em;color:#9a8a75;opacity:0.7;">
