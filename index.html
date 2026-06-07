@@ -41,14 +41,16 @@
   #search-input::placeholder{color:var(--ink-soft);opacity:.45;font-style:italic}
   .search-hint{margin-top:6px;font-size:.72rem;letter-spacing:.1em;color:var(--ink-soft);opacity:.45;font-style:italic}
   .table-wrap{max-width:900px;margin:0 auto;padding:0 60px 80px;background:rgba(247,243,237,0.92)}
-  .col-headers{display:grid;grid-template-columns:60px 1fr 180px 100px;padding:20px 0 10px;border-bottom:1px solid var(--rule);font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-soft);opacity:.55;font-weight:600}
+  .col-headers{display:grid;grid-template-columns:70px 1fr 180px 100px;padding:20px 0 10px;border-bottom:1px solid var(--rule);font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-soft);opacity:.55;font-weight:600}
   .postcard-list{list-style:none}
-  .postcard-row{display:grid;grid-template-columns:60px 1fr 180px 100px;align-items:baseline;padding:15px 0;border-bottom:1px solid var(--rule);cursor:pointer;position:relative;color:inherit}
+  .postcard-row{display:grid;grid-template-columns:70px 1fr 180px 100px;align-items:center;padding:10px 0;border-bottom:1px solid var(--rule);cursor:pointer;position:relative;color:inherit}
   .postcard-row::before{content:'';position:absolute;inset:0 -60px;background:var(--hover-bg);opacity:0;transition:opacity .15s;pointer-events:none}
   .postcard-row:hover::before{opacity:1}
-  .postcard-row:hover .row-num{color:var(--gold)}
+  .postcard-row:hover .row-num-badge{color:#fff;background:var(--gold);}
   .postcard-row:hover .row-arrow{opacity:1;transform:translateX(4px)}
-  .row-num{font-size:.75rem;letter-spacing:.1em;color:var(--rule);font-variant-numeric:tabular-nums;transition:color .15s;padding-top:2px}
+  .row-thumb{position:relative;width:54px;height:38px;flex-shrink:0;align-self:center;}
+  .row-thumb img{width:54px;height:38px;object-fit:cover;border-radius:2px;border:1px solid rgba(154,124,63,.25);display:block;background:#1a1410;}
+  .row-num-badge{position:absolute;bottom:2px;right:2px;font-size:.58rem;font-weight:700;letter-spacing:.06em;font-family:'Crimson Pro',serif;background:rgba(15,10,5,.75);color:rgba(200,170,100,.85);padding:1px 4px;border-radius:2px;line-height:1.4;transition:background .15s,color .15s;}
   .row-location{font-size:1.15rem;font-weight:400;color:var(--ink);line-height:1.3}
   .row-location-detail{display:block;font-size:.8rem;font-style:italic;color:var(--ink-soft);margin-top:2px;font-weight:300}
   .row-year{font-size:1rem;color:var(--ink-soft);font-variant-numeric:tabular-nums;font-weight:300}
@@ -179,7 +181,7 @@
     .timeline-node-label{font-size:.65rem}
     .masthead{padding:30px 20px 24px}
     .search-wrap,.table-wrap,.contact-section,#map-panel{padding-left:20px;padding-right:20px}
-    .col-headers,.postcard-row{grid-template-columns:40px 1fr 100px 36px}
+    .col-headers,.postcard-row{grid-template-columns:62px 1fr 100px 36px}
     .postcard-row::before{inset:0 -20px}
     #lb-prev{left:4px}#lb-next{right:4px}
     .lb-controls{display:none}
@@ -514,7 +516,7 @@ function renderList(){
     const li=document.createElement('li');
     li.className='postcard-row';li.setAttribute('role','button');li.setAttribute('tabindex','0');
     const det=[card.sender?'From: '+card.sender:'',card.recipient?'To: '+card.recipient:''].filter(Boolean).join('  \u00b7  ');
-    li.innerHTML='<span class="row-num">'+String(gi+1).padStart(2,'0')+'</span>'
+    li.innerHTML='<span class="row-thumb"><img src="'+card.front+'" alt="" loading="lazy"><span class="row-num-badge">'+String(gi+1).padStart(2,'0')+'</span></span>'
       +'<span class="row-location">'+highlight(card.location,searchTerm)
       +(det?'<span class="row-location-detail">'+highlight(det,searchTerm)+'</span>':'')
       +(card.notes?'<span class="row-location-detail">'+highlight(card.notes.substring(0,80)+(card.notes.length>80?'...':''),searchTerm)+'</span>':'')
@@ -854,7 +856,7 @@ renderList=function(){
     const li=document.createElement('li');
     li.className='postcard-row';li.setAttribute('role','button');li.setAttribute('tabindex','0');
     const det=[card.sender?'From: '+card.sender:'',card.recipient?'To: '+card.recipient:''].filter(Boolean).join('  \u00b7  ');
-    li.innerHTML='<span class="row-num">'+String(gi+1).padStart(2,'0')+'</span>'+'<span class="row-location">'+highlight(card.location,searchTerm)+(det?'<span class="row-location-detail">'+highlight(det,searchTerm)+'</span>':'')+(card.notes?'<span class="row-location-detail">'+highlight(card.notes.substring(0,80)+(card.notes.length>80?'...':''),searchTerm)+'</span>':'')+'</span>'+'<span class="row-year">'+highlight(card.year,searchTerm)+'</span>'+'<span class="row-arrow">View \u2192</span>';
+    li.innerHTML='<span class="row-thumb"><img src="'+card.front+'" alt="" loading="lazy"><span class="row-num-badge">'+String(gi+1).padStart(2,'0')+'</span></span>'+'<span class="row-location">'+highlight(card.location,searchTerm)+(det?'<span class="row-location-detail">'+highlight(det,searchTerm)+'</span>':'')+(card.notes?'<span class="row-location-detail">'+highlight(card.notes.substring(0,80)+(card.notes.length>80?'...':''),searchTerm)+'</span>':'')+'</span>'+'<span class="row-year">'+highlight(card.year,searchTerm)+'</span>'+'<span class="row-arrow">View \u2192</span>';
     li.addEventListener('click',()=>openLb(gi));
     li.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' ')openLb(gi);});
     ul.appendChild(li);
