@@ -34,6 +34,16 @@
   .globe-btn{display:flex;align-items:center;gap:6px;background:none;border:1px solid rgba(154,124,63,.35);color:var(--gold);font-family:'Crimson Pro',serif;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;padding:6px 14px;border-radius:2px;cursor:pointer;transition:all .2s;opacity:.75}
   .globe-btn:hover,.globe-btn.active{opacity:1;background:rgba(154,124,63,.12);border-color:var(--gold)}
   .search-wrap{max-width:900px;margin:0 auto;padding:24px 60px 0;background:rgba(247,243,237,0.92)}
+  .griswold-wrap{max-width:900px;margin:0 auto;padding:10px 60px 0;background:rgba(247,243,237,0.92);display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  .griswold-label{font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);font-family:'Crimson Pro',serif;white-space:nowrap;opacity:.85}
+  .griswold-car{height:38px;width:auto;object-fit:contain;opacity:.82;border-radius:2px;transition:opacity .2s;cursor:default}
+  .griswold-car:hover{opacity:1}
+  .griswold-select{background:var(--bg2);border:1px solid rgba(154,124,63,.35);color:var(--ink);font-family:'Crimson Pro',serif;font-size:.92rem;padding:5px 28px 5px 10px;border-radius:2px;outline:none;cursor:pointer;appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%239a7c3f'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 9px center;transition:border-color .2s}
+  .griswold-select:focus{border-color:var(--gold-dim)}
+  .griswold-badge{display:none;align-items:center;gap:6px;background:rgba(154,124,63,.12);border:1px solid rgba(154,124,63,.3);border-radius:2px;padding:3px 10px;font-size:.72rem;letter-spacing:.08em;color:var(--gold);font-family:'Crimson Pro',serif}
+  .griswold-badge.visible{display:flex}
+  .griswold-badge-clear{background:none;border:none;color:var(--gold);cursor:pointer;font-size:.8rem;opacity:.6;padding:0 0 0 4px;line-height:1;transition:opacity .15s}
+  .griswold-badge-clear:hover{opacity:1}
   .search-input-wrap{position:relative}
   .search-input-wrap svg{position:absolute;left:12px;top:50%;transform:translateY(-50%);width:15px;height:15px;color:var(--gold);opacity:.6;pointer-events:none}
   #search-input{width:100%;background:var(--bg2);border:1px solid var(--rule);border-radius:2px;font-family:'Crimson Pro',serif;font-size:1rem;color:var(--ink);padding:9px 12px 9px 36px;outline:none;transition:border-color .2s}
@@ -180,7 +190,7 @@
     .timeline-node{min-width:52px}
     .timeline-node-label{font-size:.65rem}
     .masthead{padding:30px 20px 24px}
-    .search-wrap,.table-wrap,.contact-section,#map-panel{padding-left:20px;padding-right:20px}
+    .search-wrap,.table-wrap,.contact-section,#map-panel,.griswold-wrap{padding-left:20px;padding-right:20px}
     .col-headers,.postcard-row{grid-template-columns:62px 1fr 100px 36px}
     .postcard-row::before{inset:0 -20px}
     #lb-prev{left:4px}#lb-next{right:4px}
@@ -234,6 +244,18 @@
     <input type="text" id="search-input" placeholder="Search by location, year, sender, recipient, address&hellip;">
   </div>
   <div class="search-hint">Searches all fields &mdash; try a name, city, or year</div>
+</div>
+
+<div class="griswold-wrap">
+  <img class="griswold-car" src="https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/griswold-wagon.jpeg" alt="Griswold Wagon">
+  <span class="griswold-label">Griswold Trips</span>
+  <select class="griswold-select" id="griswold-select">
+    <option value="">— Select a trip —</option>
+  </select>
+  <div class="griswold-badge" id="griswold-badge">
+    <span id="griswold-badge-text"></span>
+    <button class="griswold-badge-clear" id="griswold-clear" title="Clear trip filter">&#x2715;</button>
+  </div>
 </div>
 
 <div class="timeline-wrap" id="timeline-wrap">
@@ -493,6 +515,11 @@ let viewList=[],lbIndex=0,rotation=0,scale=1,flipped=false;
 let panX=0,panY=0,dragging=false,dStartX,dStartY,dPanX,dPanY,searchTerm='';
 let rotY3d=0,rotX3d=-4,lb3dDragging=false,lb3dStartX=0,lb3dStartY=0,lb3dDragMoved=false;
 let messageText='',notesRemainder='';
+let tripFilter=null;
+
+const GRISWOLD_TRIPS=[
+  {id:'faye-chicago-1959',name:'Faye \u2014 Chicago, November 1959',ids:[11,12,14,15,28,29,35,100,106,112,120,121]},
+];
 
 function searchable(c){return[c.location,c.year,c.sender,c.recipient,c.address,c.notes].filter(Boolean).join(' ').toLowerCase()}
 function escHtml(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
@@ -514,7 +541,9 @@ function setFlipClock(n){
 }
 
 function renderList(){
-  viewList=searchTerm?postcards.filter(c=>searchable(c).includes(searchTerm)).reverse():[...postcards].reverse();
+  let base=[...postcards].reverse();
+  if(tripFilter) base=base.filter(c=>tripFilter.ids.includes(c.id));
+  viewList=searchTerm?base.filter(c=>searchable(c).includes(searchTerm)):base;
   const ul=document.getElementById('postcard-list');
   const total=postcards.length,shown=viewList.length;
   setFlipClock(searchTerm?shown:total);
@@ -853,11 +882,32 @@ document.getElementById('timeline-clear').addEventListener('click',clearDecade);
 
 document.getElementById('search-input').addEventListener('input',function(){searchTerm=this.value.trim().toLowerCase();currentPage=1;renderList();});
 
+// Griswold Trips init
+(function(){
+  const sel=document.getElementById('griswold-select');
+  const badge=document.getElementById('griswold-badge');
+  const badgeText=document.getElementById('griswold-badge-text');
+  GRISWOLD_TRIPS.forEach(t=>{const o=document.createElement('option');o.value=t.id;o.textContent=t.name;sel.appendChild(o);});
+  function applyTrip(tripId){
+    tripFilter=tripId?GRISWOLD_TRIPS.find(t=>t.id===tripId):null;
+    if(tripFilter){badgeText.textContent=tripFilter.ids.length+' cards';badge.classList.add('visible');}
+    else{badge.classList.remove('visible');sel.value='';}
+    currentPage=1;renderList();
+  }
+  sel.addEventListener('change',function(){applyTrip(this.value);});
+  document.getElementById('griswold-clear').addEventListener('click',function(){applyTrip(null);});
+})();
+
 renderList=function(){
-  viewList=postcards.filter(c=>{const decadeMatch=activeDecade===null||parseDecade(c.year)===activeDecade;const searchMatch=!searchTerm||searchable(c).includes(searchTerm);return decadeMatch&&searchMatch;}).reverse();
+  viewList=postcards.filter(c=>{
+    const decadeMatch=activeDecade===null||parseDecade(c.year)===activeDecade;
+    const searchMatch=!searchTerm||searchable(c).includes(searchTerm);
+    const tripMatch=!tripFilter||tripFilter.ids.includes(c.id);
+    return decadeMatch&&searchMatch&&tripMatch;
+  }).reverse();
   const ul=document.getElementById('postcard-list');
   const total=postcards.length,shown=viewList.length;
-  const filtering=activeDecade!==null||searchTerm;
+  const filtering=activeDecade!==null||searchTerm||tripFilter;
   setFlipClock(filtering?shown:total);
   const lbl=document.querySelector('.flip-clock-label');
   if(lbl)lbl.textContent=filtering?'cards match':'cards in the archive';
@@ -871,8 +921,8 @@ renderList=function(){
     const gi=start+i;
     const li=document.createElement('li');
     li.className='postcard-row';li.setAttribute('role','button');li.setAttribute('tabindex','0');
-    const det=[card.sender?'From: '+card.sender:'',card.recipient?'To: '+card.recipient:''].filter(Boolean).join('  \u00b7  ');
-    li.innerHTML='<span class="row-thumb"><img src="'+card.front+'" alt="" loading="lazy"><span class="row-num-badge">'+String(gi+1).padStart(2,'0')+'</span></span>'+'<span class="row-location">'+highlight(card.location,searchTerm)+(det?'<span class="row-location-detail">'+highlight(det,searchTerm)+'</span>':'')+(card.notes?'<span class="row-location-detail">'+highlight(card.notes.substring(0,80)+(card.notes.length>80?'...':''),searchTerm)+'</span>':'')+'</span>'+'<span class="row-year">'+highlight(shortYear(card.year),searchTerm)+'</span>'+'<span class="row-arrow">View \u2192</span>';
+    const det=[card.sender?'From: '+card.sender:'',card.recipient?'To: '+card.recipient:''].filter(Boolean).join('  ·  ');
+    li.innerHTML='<span class="row-thumb"><img src="'+card.front+'" alt="" loading="lazy"><span class="row-num-badge">'+String(gi+1).padStart(2,'0')+'</span></span>'+'<span class="row-location">'+highlight(card.location,searchTerm)+(det?'<span class="row-location-detail">'+highlight(det,searchTerm)+'</span>':'')+(card.notes?'<span class="row-location-detail">'+highlight(card.notes.substring(0,80)+(card.notes.length>80?'...':''),searchTerm)+'</span>':'')+'</span>'+'<span class="row-year">'+highlight(shortYear(card.year),searchTerm)+'</span>'+'<span class="row-arrow">View →</span>';
     li.addEventListener('click',()=>openLb(gi));
     li.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' ')openLb(gi);});
     ul.appendChild(li);
