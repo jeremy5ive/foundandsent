@@ -623,18 +623,17 @@ function loadCard(){
   const addrLines=document.getElementById('lb-address-lines');
   let mailLines=[];
   if(c.recipient) mailLines.push(c.recipient);
-  if(c.address){
-    const parts=c.address.split(',').map(s=>s.trim()).filter(Boolean);
+  if(c.recipientAddress){
+    const parts=c.recipientAddress.split(',').map(s=>s.trim()).filter(Boolean);
     if(parts.length>=2){
       mailLines.push(parts[0]);
       if(parts.length===2) mailLines.push(parts[1]);
       else if(parts.length===3) mailLines.push(parts[1]+', '+parts[2]);
       else mailLines.push(parts[1]+', '+parts[2]+', '+parts[3]);
     } else {
-      mailLines.push(c.address);
+      mailLines.push(c.recipientAddress);
     }
   }
-  mailLines=mailLines.filter((l,i)=>i===0||!mailLines[0].toLowerCase().includes(l.toLowerCase()));
   addrLines.innerHTML=mailLines.map(l=>'<div>'+escHtml(l)+'</div>').join('');
   const heroMsg=document.getElementById('lb-hero-message');
   const heroBlock=document.getElementById('lb-hero-block');
