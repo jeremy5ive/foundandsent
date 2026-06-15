@@ -211,7 +211,7 @@
 <body>
 
 <div class="masthead">
-  <div class="masthead-eyebrow">A Collection of Rescued Mail</div>
+  <div class="masthead-eyebrow">A Collection of Rescued Postcards</div>
   <a href="/" style="text-decoration:none;color:inherit;display:block;">
     <h1 class="masthead-title">Found <em>&</em> Sent</h1>
   </a>
@@ -221,7 +221,7 @@
       <div class="flip-clock" id="flip-clock-display">
         <div class="flip-digit" id="fd0"><div class="flip-digit-inner"><div class="flip-face" id="ff0">1</div></div></div>
         <div class="flip-digit" id="fd1"><div class="flip-digit-inner"><div class="flip-face" id="ff1">4</div></div></div>
-        <div class="flip-digit" id="fd2"><div class="flip-digit-inner"><div class="flip-face" id="ff2">2</div></div></div>
+        <div class="flip-digit" id="fd2"><div class="flip-digit-inner"><div class="flip-face" id="ff2">5</div></div></div>
       </div>
       <div class="flip-clock-label">cards in the archive</div>
     </div>
@@ -266,6 +266,15 @@
   <div class="griswold-badge" id="family-badge">
     <span id="family-badge-text"></span>
     <button class="griswold-badge-clear" id="family-clear" title="Clear family filter">&#x2715;</button>
+  </div>
+  <div class="griswold-divider"></div>
+  <span class="griswold-label">Holiday Cards</span>
+  <select class="griswold-select" id="holiday-select">
+    <option value="">— Select a holiday —</option>
+  </select>
+  <div class="griswold-badge" id="holiday-badge">
+    <span id="holiday-badge-text"></span>
+    <button class="griswold-badge-clear" id="holiday-clear" title="Clear holiday filter">&#x2715;</button>
   </div>
 </div>
 
@@ -535,7 +544,10 @@ let postcards = [
   {id:139,location:"San Diego, California \u2014 Coronado Bridge and San Diego Bay",address:"Coronado Bridge, San Diego, CA 92118",year:"c. 1970",sender:"Joan & Boi",recipient:"Mr. & Mrs. Carl Guff Fam., Crystal Lake Blacktop, McHenry, Illinois 60050",notes:"Postmarked Chula Vista, CA, PM, 1970. 6\u00a2 Franklin D. Roosevelt stamp. Publisher: Western Publishing & Novelty Co., Los Angeles, CA. Card D-2M. Price sticker: #1843, $1.00. Card back text: San Diego \u2014 Coronado, California \u2014 This picture shows the magnificent land-locked San Diego Bay with the beautiful new bridge, connecting these two cities, Coronado on the left and San Diego on the right. In the background is Mission Bay and the Pacific Ocean. Photo by Palomar Pictures. Front is a sweeping aerial photograph of San Diego Bay \u2014 the brand new Coronado Bridge curving gracefully across the water, the bay a brilliant teal, the city grid spreading across the hills. The Coronado Bridge opened in 1969 \u2014 this card was mailed just one year later. Message: \u201cSaw an arch Tue. in Tucson. Really Sharyland. Put our sign on a Cholla cactus. Pulled into San Diego Tues. nite. Scary mountain drive. Went deep sea fishing Wed. Caught 30 & filet them. Mmm God! We\u2019re staying at mostly K.O.A. camping places. Real nice. Have laundry mats, hot showers, stores & heated pools. Three all over U.S.A. \u2014 Joan \u2014 me too. Boi.\u201d A family road trip dispatched in glorious, exhausting detail.",front:IMG+"1970 - San Diego, Coronado, CA - front.jpeg",back:IMG+"1970 - San Diego, Coronado, CA - back.jpeg"},
   {id:140,location:"Marquette, Michigan \u2014 Presque Isle Park, Lake Superior",address:"Presque Isle Park, Marquette, MI 49855",year:"August 18, 1992",sender:"Ken & Bonnie",recipient:"Dorothy Viola, 1243 Baldwin Lane #609, Palatine, Illinois 60067",notes:"Postmarked Hiawatha, MI, PM, 18 Aug 1992. 19\u00a2 USA stamp \u2014 fawn in meadow design. Publisher: Penrod/Hiawatha Co., Berrien Center, Michigan 49102. Card 7613. Photo by John Penrod. Card back text: Presque Isle Park \u2014 A lovely wilderness park close to home for residents and visitors of Marquette, Michigan. Scenic vistas show the rugged Lake Superior shoreline. Front is a photograph of the Presque Isle Park shoreline \u2014 dramatic sandstone cliffs dropping to brilliant teal Lake Superior waters, dense northern Michigan forest of birch and pine framing the rocky coastline. Message dated 8-18-92: \u201cHi Sis! Took two boat trips (about 2 weeks each). One to N. Channel in Canada and one to Houghton-Hancock in Upper Pen. to Ken\u2019s Mich. Tech. Reunion. Had a great time. We are becoming expert boaters. Received your card \u2014 would like to see you and hear about your trip. Just got back from second trip on Aug. 16. Left on first trip July 3. Ken & Bonnie.\u201d Two summer boat trips, a college reunion, and a sister to catch up with.",front:IMG+"1992 - Marrquette, MI - front.jpeg",back:IMG+"1992 - Marrquette, MI - back.jpeg"},
   {id:141,location:"New York, New York \u2014 Saint Patrick's Cathedral, Main Altar",address:"Saint Patrick's Cathedral, 14 East 51st Street, New York, NY 10022",year:"October 10, 1979",sender:"Faye (mom)",recipient:"Mr. & Mrs. Thomas Barnes, 5501 Gloucester Ln., Austin, TX 78723",notes:"Postmarked New Haven, CT, PM, Oct 11, 1979. 15\u00a2 \u201cSeeing For Me\u201d stamp \u2014 a German Shepherd guide dog with handler, part of a disabled-awareness series. \u201cALWAYS USE ZIP CODE\u201d cancellation slogan. Published by C. Harrison Conroy Co., Newton, NJ. Price sticker: #1843, 50\u00a2. Card back text: Saint Patrick\u2019s Cathedral, Parish House \u2014 14 East 51st Street, New York, New York 10022. Interior view of Main Altar is of Tavernelle Italian Marble. Baldachin or canopy is of bronze. Pulpit on the right is of Sienna Marble. Statue of Saint Patrick on the left is the work of sculptor John Angel. Front is a striking interior photograph of the cathedral\u2019s main altar decked out for Christmas \u2014 soaring Gothic arches, a golden baldachin over the altar, clergy in white vestments gathered for mass, brilliant red poinsettias banking the steps, wreaths with red bows on the columns. Message dated 10-10-79: \u201cDear Buddy & Betsy: Went to N.Y. today. We were inside this cathedral. It is so beautiful. Wished you both were with me. We walked up & down 5th Ave in falling snow. It was really cold but I enjoyed every minute of it. We went over & back on Amtrak. When George met us at the station the car had about 2\u201d of snow. The trees were beautiful. Miss you loads. Please save this card. Love, Faye (mom).\u201d A mother\u2019s snowy day in Manhattan, written to her son and daughter-in-law back in Austin.",front:IMG+"1979 - Saint Patrick's Cathedral, New York, NY - front.jpeg",back:IMG+"1979 - Saint Patrick's Cathedral, New York, NY - back.jpeg"},
-  {id:142,location:"Clinton, Connecticut \u2014 Indian River Bridge",address:"Indian River Bridge, Clinton, CT 06413",year:"May 7, 1980",sender:"S.",recipient:"Mr. & Mrs. David Goldman, Rt 4, Box 200, Richland Center, Wisconsin 53581",notes:"Postmark partially illegible, c. 1980. 10\u00a2 \u201cPeople\u2019s Right to Petition for Redress\u201d stamp \u2014 part of the Bill of Rights bicentennial series. Card 14366, sold through Sedge Le Blanc, 147 W. 39th St., New York, NY. Price markings: #1843, 50\u00a2. Card back text: Indian River Bridge, Clinton, Conn. Front is a quiet autumn photograph of a small stone arch bridge spanning a calm river, golden and rust-colored foliage along the banks, a large tree trunk framing the right side, telephone poles and wires visible along the bridge deck. Message dated 5/7/80, written sideways and faded: \u201c...just received your card. Will write soon \u2014 finally decided to check G.H. He ordered a complete blood profile & will be examined on 5/8 to get report \u2014 hopefully stabilized & feel better. No rain or wind, no headaches the past few days. Have gone swimming in my house pool & wish you both could visit. Love, S.\u201d A health update tucked inside a quiet New England river scene, mailed from Connecticut to Wisconsin.",front:IMG+"1980 - Clinton, CONN - Indian River Bridge - front.jpeg",back:IMG+"1980 - Clinton, CONN - Indian River Bridge - back.jpeg"}
+  {id:142,location:"Clinton, Connecticut \u2014 Indian River Bridge",address:"Indian River Bridge, Clinton, CT 06413",year:"May 7, 1980",sender:"S.",recipient:"Mr. & Mrs. David Goldman, Rt 4, Box 200, Richland Center, Wisconsin 53581",notes:"Postmark partially illegible, c. 1980. 10\u00a2 \u201cPeople\u2019s Right to Petition for Redress\u201d stamp \u2014 part of the Bill of Rights bicentennial series. Card 14366, sold through Sedge Le Blanc, 147 W. 39th St., New York, NY. Price markings: #1843, 50\u00a2. Card back text: Indian River Bridge, Clinton, Conn. Front is a quiet autumn photograph of a small stone arch bridge spanning a calm river, golden and rust-colored foliage along the banks, a large tree trunk framing the right side, telephone poles and wires visible along the bridge deck. Message dated 5/7/80, written sideways and faded: \u201c...just received your card. Will write soon \u2014 finally decided to check G.H. He ordered a complete blood profile & will be examined on 5/8 to get report \u2014 hopefully stabilized & feel better. No rain or wind, no headaches the past few days. Have gone swimming in my house pool & wish you both could visit. Love, S.\u201d A health update tucked inside a quiet New England river scene, mailed from Connecticut to Wisconsin.",front:IMG+"1980 - Clinton, CONN - Indian River Bridge - front.jpeg",back:IMG+"1980 - Clinton, CONN - Indian River Bridge - back.jpeg"},
+  {id:143,location:"Guam \u2014 Christmas Card from Staff Com Marianas",address:"c/o Staff Com Marianas, Box 14, FPO San Francisco, California",year:"November 26, 1949",sender:"Unknown (signature unclear)",recipient:"Mr./Mrs. Jewell Foster, Victor Vaughn Hall, Ann Arbor, Michigan",notes:"Front is a festive Art Deco-style Christmas illustration \u2014 two carolers in green and red coats with polka-dot scarves streaming in the wind, holding open red songbooks, printed text reading \u201cA Merry Christmas and A Happy New Year \u2014 Mark and Virginia Varland,\u201d with a handwritten return address added: c/o Staff Com Marianas, Box 14, FPO San Francisco, Calif. Back: 1\u00a2 green George Washington stamp, postmark partially legible. Price sticker: #1843, $0.29. Sent to Mr./Mrs. Jewell Foster at Victor Vaughn Hall, a University of Michigan dormitory in Ann Arbor. Long handwritten letter dated Nov. 26, 1949: \u201cDear Jewell, How are you enjoying sophomore classes? Do you like psych? I took it with Dr. McKeachie. He\u2019s wonderful! Guam is exciting. We\u2019ve had a typhoon that crushed our crops and made us homeless temporarily...\u201d A holiday card repurposed as stationery for a long letter home from a military posting on Guam to a college sophomore in Michigan.",front:IMG+"1949 - Christmas Card - front.jpeg",back:IMG+"1949 - Christmas Card - back.jpeg"},
+  {id:144,location:"Spokane, Washington \u2014 Expo '74 World's Fair",address:"Expo '74 World's Fair Grounds, Spokane, WA 99201",year:"c. 1974",sender:"Mom",recipient:"Mr. & Mrs. R.F. Delaney, 217 Dodge, Evanston, Illinois 60602",notes:"Official Expo '74 World's Fair card, \u201cThe Fair\u201d \u2014 an aerial photograph of the fairgrounds showing the Spokane River, the iconic U.S. Pavilion tent structure, and downtown Spokane skyline. Back: 8\u00a2 Eisenhower stamp, postmarked. \u201cThe Continental Card\u201d \u2014 Seville Enterprises, Inc., Miami, Florida. Price: #1843, $0.59. Card back text: Helicopter View pinpoints Expo '74 Fairgrounds and its proximity to downtown Spokane. Celebrating tomorrow's fresh new environment. Glistening islands and riverbanks of the Spokane River, open spaces with colorful plazas, dancing fountains, gardens and greenery, and many worldwide pavilions and exhibits. Message: \u201cDear Sue, Ralph & Kathy \u2014 Are here at Expo. Have been here 2 full days & expect to leave as soon as we do our laundry. Will probably head for Coulee Dam & Dry Falls. Love, Mom.\u201d A mother's quick dispatch from the 1974 World's Fair, already planning the next stop on a road trip through the Pacific Northwest.",front:IMG+"1974 - Spokane, Washington - World's Fair - front.jpeg",back:IMG+"1974 - Spokane, Washington - World's Fair - back.jpeg"},
+  {id:145,location:"Cincinnati, Ohio \u2014 Fountain Square at Night",address:"Fountain Square, Cincinnati, OH 45202",year:"August 16, 1989",sender:"Eleanor & Jack",recipient:"Mrs. Mary Jane Wade, 6 Jones Ave, Deptford, NJ 08096",notes:"15\u00a2 Buffalo Bill Cody stamp, postmarked Cincinnati, OH, PM, Aug 16, 1989. \u201cLucky Prints\u201d / Molloy Postcard Services, Covington, KY. Price: #1843, $0.29. Front is a night photograph of Fountain Square \u2014 the illuminated Tyler Davidson Fountain, a horse-drawn carriage waiting in the foreground, downtown skyscrapers lit up behind. Card back text: Cincinnati, Ohio, Fountain Square \u2014 One of the finest public squares in America. Night and day it is the hub of downtown activity where people meet to eat, be entertained and/or take carriage rides through the streets of the Queen City. Photo: James Blank. Message, written at 6:30 AM while her husband slept: \u201cWe are at Jack\u2019s army reunion. We flew in yesterday. You all looked lovely in that picture of your retirement party. Just think you don\u2019t have to worry about Sept opening of school. My son Don got a promotion at his job. He is now manager of an office with 30 people. He is still at the same Ford plant. Much you wouldn\u2019t believe when I\u2019m writing this card. It is 6:30 AM. Jack is still sleeping, so I\u2019m writing cards in the bathroom. Oh well. Eleanor & Jack.\u201d",front:IMG+"1989 - Cincinnatti, OH - Fountain Square - front.jpeg",back:IMG+"1989 - Cincinnatti, OH - Fountain Square - back.jpeg"}
 ];
 
 const PAGE_SIZE=10;
@@ -546,6 +558,7 @@ let rotY3d=0,rotX3d=-4,lb3dDragging=false,lb3dStartX=0,lb3dStartY=0,lb3dDragMove
 let messageText='',notesRemainder='';
 let tripFilter=null;
 let familyFilter=null;
+let holidayFilter=null;
 
 const GRISWOLD_TRIPS=[
   {id:'faye-chicago-1959',name:'Faye \u2014 Chicago, November 1959',ids:[11,12,14,15,28,29,35,100,106,112,120,121]},
@@ -554,6 +567,12 @@ const GRISWOLD_TRIPS=[
 const FAMILY_NETWORKS=[
   {id:'mclouth',name:'McLouth \u2022 McLoutit Family',ids:[65,76,124,128,129],note:'Cards to/from the McLouth and McLoutit families across Texas, Arizona, and Washington — spanning 1968\u20131994.'},
 ];
+
+const HOLIDAY_CARDS=[
+  {id:'christmas',name:'Christmas',ids:[107,119,141,143]},
+  {id:'easter',name:'Easter',ids:[34,105]},
+];
+
 
 function searchable(c){return[c.location,c.year,c.sender,c.recipient,c.address,c.notes].filter(Boolean).join(' ').toLowerCase()}
 function escHtml(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
@@ -771,6 +790,9 @@ const cfForm=document.getElementById('contact-form');
 if(cfForm){cfForm.addEventListener('submit',async function(e){e.preventDefault();const btn=cfForm.querySelector('.cf-submit');btn.textContent='Sending...';btn.disabled=true;try{const res=await fetch(cfForm.action,{method:'POST',body:new FormData(cfForm),headers:{'Accept':'application/json'}});if(res.ok){cfForm.reset();document.getElementById('cf-success').style.display='block';btn.style.display='none';}else{btn.textContent='Error \u2014 try again';btn.disabled=false;}}catch(err){btn.textContent='Error \u2014 try again';btn.disabled=false;}});}
 
 const LOCATIONS=[
+  {name:"Guam \u2014 Christmas Card from Staff Com Marianas",lat:13.4443,lng:144.7937,ids:[143]},
+  {name:"Spokane, Washington \u2014 Expo '74 World's Fair",lat:47.6588,lng:-117.4260,ids:[144]},
+  {name:"Cincinnati, Ohio \u2014 Fountain Square",lat:39.1019,lng:-84.5120,ids:[145]},
   {name:"Seattle, Washington — Forestry Building, AYP Exposition",lat:47.6062,lng:-122.3321,ids:[69]},
   {name:"Langtry, Texas — Judge Roy Bean Museum",lat:29.8108,lng:-101.5639,ids:[70]},
   {name:"Cleveland, Ohio — Cleveland Museum of Art",lat:41.5085,lng:-81.6118,ids:[71]},
@@ -896,6 +918,9 @@ const LOCATIONS=[
 ];
 
 const RECIPIENT_LOCATIONS=[
+  {name:"Ann Arbor, MI \u2014 Victor Vaughn Hall (Foster)",lat:42.2808,lng:-83.7430,ids:[143]},
+  {name:"Evanston, IL \u2014 217 Dodge (Delaney)",lat:42.0451,lng:-87.6877,ids:[144]},
+  {name:"Deptford, NJ \u2014 6 Jones Ave (Wade)",lat:39.8395,lng:-75.1141,ids:[145]},
   {name:"Austin, TX \u2014 5501 Gloucester Ln (Barnes)",lat:30.3168,lng:-97.6889,ids:[141]},
   {name:"Richland Center, WI \u2014 Rt 4, Box 200 (Goldman)",lat:43.3375,lng:-90.3857,ids:[142]},
   {name:"Austin, TX \u2014 2600 San Pedro (Eby)",lat:30.3075,lng:-97.7467,ids:[64]},
@@ -1009,13 +1034,30 @@ document.getElementById('search-input').addEventListener('input',function(){sear
   document.getElementById('family-clear').addEventListener('click',function(){applyFamily(null);});
 })();
 
+// Holiday Cards init
+(function(){
+  const sel=document.getElementById('holiday-select');
+  const badge=document.getElementById('holiday-badge');
+  const badgeText=document.getElementById('holiday-badge-text');
+  HOLIDAY_CARDS.forEach(h=>{const o=document.createElement('option');o.value=h.id;o.textContent=h.name;sel.appendChild(o);});
+  function applyHoliday(holidayId){
+    holidayFilter=holidayId?HOLIDAY_CARDS.find(h=>h.id===holidayId):null;
+    if(holidayFilter){badgeText.textContent=holidayFilter.ids.length+' cards';badge.classList.add('visible');}
+    else{badge.classList.remove('visible');sel.value='';}
+    currentPage=1;renderList();
+  }
+  sel.addEventListener('change',function(){applyHoliday(this.value);});
+  document.getElementById('holiday-clear').addEventListener('click',function(){applyHoliday(null);});
+})();
+
 renderList=function(){
   viewList=postcards.filter(c=>{
     const decadeMatch=activeDecade===null||parseDecade(c.year)===activeDecade;
     const searchMatch=!searchTerm||searchable(c).includes(searchTerm);
     const tripMatch=!tripFilter||tripFilter.ids.includes(c.id);
     const familyMatch=!familyFilter||familyFilter.ids.includes(c.id);
-    return decadeMatch&&searchMatch&&tripMatch&&familyMatch;
+    const holidayMatch=!holidayFilter||holidayFilter.ids.includes(c.id);
+    return decadeMatch&&searchMatch&&tripMatch&&familyMatch&&holidayMatch;
   }).sort((a,b)=>b.id-a.id);
   const ul=document.getElementById('postcard-list');
   const total=postcards.length,shown=viewList.length;
