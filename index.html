@@ -54,19 +54,22 @@
   .search-hint{margin-top:6px;font-size:.72rem;letter-spacing:.1em;color:var(--ink-soft);opacity:.45;font-style:italic}
   .table-wrap{max-width:900px;margin:0 auto;padding:0 60px 80px;background:rgba(247,243,237,0.92)}
   .col-headers{display:grid;grid-template-columns:70px 1fr 180px 100px;padding:20px 0 10px;border-bottom:1px solid var(--rule);font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-soft);opacity:.55;font-weight:600}
-  .postcard-list{list-style:none}
-  .postcard-row{display:grid;grid-template-columns:70px 1fr 180px 100px;align-items:center;padding:10px 0;border-bottom:1px solid var(--rule);cursor:pointer;position:relative;color:inherit}
-  .postcard-row::before{content:'';position:absolute;inset:0 -60px;background:var(--hover-bg);opacity:0;transition:opacity .15s;pointer-events:none}
-  .postcard-row:hover::before{opacity:1}
-  .postcard-row:hover .row-num-badge{color:#fff;background:var(--gold);}
-  .postcard-row:hover .row-arrow{opacity:1;transform:translateX(4px)}
-  .row-thumb{position:relative;width:54px;height:38px;flex-shrink:0;align-self:center;}
-  .row-thumb img{width:54px;height:38px;object-fit:cover;border-radius:2px;border:1px solid rgba(154,124,63,.25);display:block;background:#1a1410;}
-  .row-num-badge{position:absolute;bottom:2px;right:2px;font-size:.58rem;font-weight:700;letter-spacing:.06em;font-family:'Crimson Pro',serif;background:rgba(15,10,5,.75);color:rgba(200,170,100,.85);padding:1px 4px;border-radius:2px;line-height:1.4;transition:background .15s,color .15s;}
-  .row-location{font-size:1.15rem;font-weight:400;color:var(--ink);line-height:1.3}
-  .row-location-detail{display:block;font-size:.8rem;font-style:italic;color:var(--ink-soft);margin-top:2px;font-weight:300}
-  .row-year{font-size:1.35rem;color:var(--ink-soft);font-variant-numeric:tabular-nums;font-weight:300;letter-spacing:.02em}
-  .row-arrow{font-size:.8rem;color:var(--gold);opacity:0;transition:opacity .15s,transform .15s;text-align:right;padding-right:4px}
+  .postcard-list{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:20px;padding:8px 0}
+  .postcard-row{background:var(--bg2);border:1px solid var(--rule);border-radius:4px;overflow:hidden;cursor:pointer;display:flex;flex-direction:column;transition:border-color .15s,box-shadow .15s,transform .15s;color:inherit}
+  .postcard-row:hover{border-color:var(--gold);transform:translateY(-2px);box-shadow:0 4px 16px rgba(154,124,63,.12)}
+  .postcard-row:hover .row-thumb img{transform:scale(1.03)}
+  .postcard-row:hover .row-arrow{opacity:1}
+  .row-thumb{position:relative;width:100%;aspect-ratio:3/2;overflow:hidden;background:var(--rule)}
+  .row-thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .25s}
+  .row-num-badge{position:absolute;top:8px;left:8px;font-size:.72rem;font-weight:700;letter-spacing:.06em;font-family:'Crimson Pro',serif;background:rgba(28,21,16,.72);color:rgba(196,169,106,.95);padding:3px 8px;border-radius:2px;line-height:1.5;transition:background .15s,color .15s}
+  .row-info{padding:12px 14px 14px;display:flex;flex-direction:column;gap:4px;flex:1}
+  .row-location{font-size:1.05rem;font-weight:400;color:var(--ink);line-height:1.35}
+  .row-location-detail{font-size:.78rem;font-style:italic;color:var(--ink-soft);font-weight:300;line-height:1.4}
+  .row-year{display:none}
+  .row-arrow{font-size:.7rem;color:var(--gold);opacity:0;transition:opacity .15s;margin-top:auto;padding-top:8px;letter-spacing:.04em}
+  .row-msg-preview{font-size:.78rem;font-style:italic;color:var(--ink-soft);font-weight:300;line-height:1.4;margin-top:4px;border-top:1px solid var(--rule);padding-top:6px}
+  mark{background:rgba(154,124,63,.2);color:inherit;border-radius:2px;padding:0 1px}
+  @media(max-width:620px){.postcard-list{grid-template-columns:1fr}}
   mark{background:rgba(154,124,63,.2);color:inherit;border-radius:2px;padding:0 1px}
   #map-panel{display:none;max-width:900px;margin:0 auto;padding:0 60px 40px;background:rgba(247,243,237,0.92)}
   #map-panel.open{display:block}
@@ -294,9 +297,6 @@
 </div>
 
 <div class="table-wrap">
-  <div class="col-headers">
-    <span>#</span><span>Location / Details</span><span>Year or Era</span><span></span>
-  </div>
   <ul class="postcard-list" id="postcard-list"></ul>
   <div class="pagination" id="pagination"></div>
   <div class="add-bar">
@@ -555,7 +555,11 @@ let postcards = [
   // ── V9 BATCH ──
   {id:149,location:"Caldwell County, Colorado — Mining Operation",address:"Caldwell Mine, Colorado",year:"January 15, 1907",sender:"R.H. Bennett",recipient:"Mr. R.V. Benney, Breckenridge, Missouri",notes:"Postmarked Boise, Idaho, Jan 15, PM, 1907. Benjamin Franklin 1¢ green stamp (Series of 1902). Undivided back. Color lithograph of a large mining complex — ore processing buildings, smokestacks, and mine tailings piles with a horse-drawn wagon in the foreground. Sent from Boise, Idaho. Message on front: “Jan. 15, 1907 — Boise, Ida. I am shipping you pre-paid a sack of Gold Ore. Look out for it! R.H. Bennett.” A remarkable early postcard documenting the Colorado mining era.",front:IMG+"1907 - Caldwell, CO - front.jpeg",back:IMG+"1907 - Caldwell, CO - back.jpeg"},
   {id:150,location:"Milan, Missouri — Baptist Church",address:"Baptist Church, Milan, MO",year:"July 12, 1912",sender:"Bertha (last name unknown)",recipient:"Unknown recipient, Milan, MO area (address damaged)",notes:"Postmarked Milan, MO, JUL 12 PM 1912. Published by Mewmaw Bros., Milan, Mo., K. 305. Color photo of the Baptist Church, Milan, Missouri — brick building with Gothic pointed steeple tower, arched windows and double front doors. Message heavily faded: “Hello… of course you all… wearing fine and dandy. Haven’t played [?] since you left. Mrs. B. is in [?]. I am glad you like [your?] new home. When are you coming back to M[ilan?]. How are all the boys. I would like to see you all. Give my regards to your fa[ther] and mother. Love, Bertha.” Address portion torn and largely illegible.",front:IMG+"1912 - Baptist Church, Milan, MO - front.jpeg",back:IMG+"1912 - Baptist Church, Milan, MO - back.jpeg"},
-  {id:151,location:"Ouray, Colorado — Camp Bird Road Overlook",address:"Camp Bird Road, Ouray, CO 81427",year:"October 4, 1973",sender:"Unknown (signed ‘Jeyy’ or similar)",recipient:"Erma Tuggle, 3315 Summit, Kansas City, MO 64111",notes:"Written date 10-4-73; note at top reads “Carpenteria [CA]: 10-4-73.” No stamp — card may have been hand-delivered or stamp missing. Color photo by A.R. Tiedemann. Published by Petley Studios, 4001 E. Van Buren, Phoenix, Arizona. Card #104835. Front shows a red jeep and tourists on the narrow cliff-edge Camp Bird Road leading to Camp Bird Mine, Ouray, Colorado. Caption: “Jeep trail riders experience a real thrill on this rugged mountain road leading to Camp Bird Mine.” Message written from Santa Barbara, CA: “Hi Erma: Arrived in Santa Barbara Tues. morning, 10-2, after leaving Salt Lake City on Mon. at 2:30. I had a real nice visit with Pat & family and am enjoying my visit here. I don’t get to see Billy much except after 6:30 PM but will spend Sunday with him & will leave for home Mon. 10-8. We had good times at Rody as Jessie has probably told you. Will see you. Love, [Jeyy?].”",front:IMG+"1973 - Camp Bird Road Overlook - Quray, CO - front.jpeg",back:IMG+"1973 - Camp Bird Road Overlook - Quray, CO - back.jpeg"}
+  {id:151,location:"Ouray, Colorado — Camp Bird Road Overlook",address:"Camp Bird Road, Ouray, CO 81427",year:"October 4, 1973",sender:"Unknown (signed ‘Jeyy’ or similar)",recipient:"Erma Tuggle, 3315 Summit, Kansas City, MO 64111",notes:"Written date 10-4-73; note at top reads “Carpenteria [CA]: 10-4-73.” No stamp — card may have been hand-delivered or stamp missing. Color photo by A.R. Tiedemann. Published by Petley Studios, 4001 E. Van Buren, Phoenix, Arizona. Card #104835. Front shows a red jeep and tourists on the narrow cliff-edge Camp Bird Road leading to Camp Bird Mine, Ouray, Colorado. Caption: “Jeep trail riders experience a real thrill on this rugged mountain road leading to Camp Bird Mine.” Message written from Santa Barbara, CA: “Hi Erma: Arrived in Santa Barbara Tues. morning, 10-2, after leaving Salt Lake City on Mon. at 2:30. I had a real nice visit with Pat & family and am enjoying my visit here. I don’t get to see Billy much except after 6:30 PM but will spend Sunday with him & will leave for home Mon. 10-8. We had good times at Rody as Jessie has probably told you. Will see you. Love, [Jeyy?].”",front:IMG+"1973 - Camp Bird Road Overlook - Quray, CO - front.jpeg",back:IMG+"1973 - Camp Bird Road Overlook - Quray, CO - back.jpeg"},
+  // ── V10 BATCH ──
+  {id:152,location:"Northern Indiana — Amish Farms, Wheat Harvest",address:"Northern Indiana (Amish Country)",year:"1970",sender:"Unknown (family member)",recipient:"Mrs. V.R. Stander, P.O. Box 291, Anahuac, TX 77514",notes:"Postmarked Berrien Center, Michigan, 1970. US Flag 6¢ stamp plus White House 4¢ stamp. Meter slug reads “PRAY FOR PEACE.” Photographed & published by Penrod Studio, Berrien Center, Michigan. Dexter Press Inc., West Nyack, New York. Card 49030-B. Front caption: “Keeping the beliefs & customs of their forefathers, the Amish use horse-drawn equipment on their farms. Fields of neatly stacked sheaves of grain dot the country-side at harvest time in Northern Indiana.” Color photo of horse-drawn harvesting equipment amid stacked sheaves under a wide blue sky. Message: “Well, we are in camp land again. Dawned [fed?] the pigs, cows, horses, etc. We are eating so much I will probably gain 5 pounds. Papa is eating his cereal at night. Take Troy down to Jerry & have him cut his finger nails with your little scissors. Everyone is just fine up here. We won’t see Grandfather until tomorrow — Daddy saw him yesterday.”",front:IMG+"1970 - Amish, IN - front.jpeg",back:IMG+"1970 - Amish, IN - back.jpeg"},
+  {id:153,location:"New York, New York — St. Patrick’s Cathedral",address:"14 East 51st Street, New York, NY 10022",year:"October 10, 1979",sender:"Mom (last name unknown)",recipient:"Mr. & Mrs. Mitchell Kelley, 5501 Gloucester Ln., Austin, TX 78723",notes:"Written 10-10-79. Postmarked New Haven, CT, Oct 11, 1979. USA 15¢ Seeing Eye Dog stamp (“Seeing For Me”). Published by C. Harrison Conroy Co., P.O. Box 594, Newton, NJ 07860. Front shows Gothic twin spires of St. Patrick’s Cathedral against the midtown Manhattan skyline with yellow cabs and American flags below. Back text: “Erected in the Gothic style, this impressive structure of granite and marble, with its two towering spires, is the Cathedral of the Archdiocese of New York. Designed by James Renwick and dedicated in 1879, the Cathedral occupies an entire city block from 50th to 51st Streets and between Madison and Fifth Avenues.” Message: “Dear Sherrie & Mitchell: Having a wonderful time. Went to NY today on Amtrack. Snowed on us nearly all day, but melted as it hit the ground in NY. It was really beautiful tho. It didn’t melt in Conn. Had about 2 to 3 inches on the ground & trees. Went in this beautiful Cathedral today. Miss you. Love, Mom.”",front:IMG+"1979 - St Patricks Cathedral - New York, NY - front.jpeg",back:IMG+"1979 - St Patricks Cathedral - New York, NY - back.jpeg"},
+  {id:154,location:"Reno, Nevada — The Biggest Little City at Night",address:"Virginia Street, Reno, NV 89503",year:"August 9, 1990",sender:"Mary Jane",recipient:"Mrs. Ruth Grady, 4910 Sun Lake Drive, St. Charles, MO 63301",notes:"Written 8-11-90. Postmarked AUG 9 1990, Postmark Jackpot Convention Station, Reno NV 89503. USA 15¢ beach umbrella stamp. Photo by Marino. Published by Western Sales, Inc., Box 5446, Reno, NV 89513. Italcards by fotometalgrafica, Bologna, Italy. Printed in Italy. Front: iconic night photo of the Reno arch — “The Biggest Little City in the World” — Harold’s Club sign, Fitzgerald’s, neon lights, cars on Virginia Street. Card was sent from a philatelic Postmark Convention vacation. Message: “Hi Ruth, I’m on the Postmark Convention vacation with my friends, and we are enjoying the cheap prices of food, the free nickels twice a day, a bus ride to Virginia City and the mountains! Sometimes we see the smoky haze from the fires at Yosemite. It’s very dry out here, but there’s a beauty even in all the desert & nothingness. Love, Mary Jane.”",front:IMG+"1990 - Reno, NV - front.jpeg",back:IMG+"1990 - Reno, NV - back.jpeg"}
 ];
 
 const PAGE_SIZE=10;
@@ -620,14 +624,15 @@ function renderList(){
     const gi=start+i;
     const li=document.createElement('li');
     li.className='postcard-row';li.setAttribute('role','button');li.setAttribute('tabindex','0');
-    const det=[card.sender?'From: '+card.sender:'',card.recipient?'To: '+card.recipient:''].filter(Boolean).join('  \u00b7  ');
-    li.innerHTML='<span class="row-thumb"><img src="'+card.front+'" alt="" loading="lazy"><span class="row-num-badge">'+String(gi+1).padStart(2,'0')+'</span></span>'
-      +'<span class="row-location">'+highlight(card.location,searchTerm)
-      +(det?'<span class="row-location-detail">'+highlight(det,searchTerm)+'</span>':'')
-      +(card.notes?'<span class="row-location-detail">'+highlight(card.notes.substring(0,80)+(card.notes.length>80?'...':''),searchTerm)+'</span>':'')
-      +'</span>'
-      +'<span class="row-year">'+highlight(shortYear(card.year),searchTerm)+'</span>'
-      +'<span class="row-arrow">View \u2192</span>';
+    const sender=card.sender?'From: '+card.sender:'';
+    const recip=card.recipient?'To: '+card.recipient:'';
+    li.innerHTML='<div class="row-thumb"><img src="'+card.front+'" alt="" loading="lazy"><span class="row-num-badge">'+highlight(shortYear(card.year),searchTerm)+'</span></div>'
+      +'<div class="row-info">'
+      +'<div class="row-location">'+highlight(card.location,searchTerm)+'</div>'
+      +(sender?'<div class="row-location-detail">'+highlight(sender,searchTerm)+'</div>':'')
+      +(recip?'<div class="row-location-detail">'+highlight(recip,searchTerm)+'</div>':'')
+      +'<div class="row-arrow">View card →</div>'
+      +'</div>'
     li.addEventListener('click',()=>openLb(gi));
     li.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' ')openLb(gi)});
     ul.appendChild(li);
@@ -968,7 +973,15 @@ const RECIPIENT_LOCATIONS=[
   {name:"Milan, Missouri — Baptist Church (Card 150)",lat:40.2003,lng:-93.1238,ids:[150]},
   {name:"Santa Barbara, California (sender — Card 151)",lat:34.4208,lng:-119.6982,ids:[151]},
   {name:"Kansas City, Missouri (recipient — Card 151)",lat:39.0997,lng:-94.5786,ids:[151]},
-  {name:"Ouray, Colorado — Camp Bird Road (Card 151)",lat:38.0228,lng:-107.6714,ids:[151]}
+  {name:"Ouray, Colorado — Camp Bird Road (Card 151)",lat:38.0228,lng:-107.6714,ids:[151]},
+  {name:"Northern Indiana — Amish Country (Card 152)",lat:41.5868,lng:-85.8328,ids:[152]},
+  {name:"Berrien Center, Michigan (sender — Card 152)",lat:41.9467,lng:-86.3169,ids:[152]},
+  {name:"Anahuac, Texas (recipient — Card 152)",lat:29.7724,lng:-94.6849,ids:[152]},
+  {name:"New York, NY — St. Patrick’s Cathedral (Card 153)",lat:40.7584,lng:-73.9760,ids:[153]},
+  {name:"New Haven, Connecticut (sender — Card 153)",lat:41.3083,lng:-72.9279,ids:[153]},
+  {name:"Austin, Texas (recipient — Card 153)",lat:30.2672,lng:-97.7431,ids:[153]},
+  {name:"Reno, Nevada — Virginia Street Arch (Card 154)",lat:39.5296,lng:-119.8138,ids:[154]},
+  {name:"St. Charles, Missouri (recipient — Card 154)",lat:38.7881,lng:-90.4974,ids:[154]}
 ];
 
 let map=null,mapInitialized=false,_mapMarkers=[];
@@ -1092,8 +1105,17 @@ renderList=function(){
     const gi=start+i;
     const li=document.createElement('li');
     li.className='postcard-row';li.setAttribute('role','button');li.setAttribute('tabindex','0');
-    const det=[card.sender?'From: '+card.sender:'',card.recipient?'To: '+card.recipient:''].filter(Boolean).join('  ·  ');
-    li.innerHTML='<span class="row-thumb"><img src="'+card.front+'" alt="" loading="lazy"><span class="row-num-badge">'+String(gi+1).padStart(2,'0')+'</span></span>'+'<span class="row-location">'+highlight(card.location,searchTerm)+(det?'<span class="row-location-detail">'+highlight(det,searchTerm)+'</span>':'')+(card.notes?'<span class="row-location-detail">'+highlight(card.notes.substring(0,80)+(card.notes.length>80?'...':''),searchTerm)+'</span>':'')+'</span>'+'<span class="row-year">'+highlight(shortYear(card.year),searchTerm)+'</span>'+'<span class="row-arrow">View →</span>';
+    const sender=card.sender?'From: '+card.sender:'';
+    const recip=card.recipient?'To: '+card.recipient:'';
+    const msgPreview=card.notes?(()=>{const m=card.notes.match(/[\u201c\"\u2018\'](.*?)[\u201d\"\u2019\']/);return m?m[1].substring(0,80)+(m[1].length>80?'\u2026':''):card.notes.replace(/^[^.!?]*[.!?]\s*/,'').substring(0,80);})():'';
+    li.innerHTML='<div class="row-thumb"><img src="'+card.front+'" alt="" loading="lazy"><span class="row-num-badge">'+highlight(shortYear(card.year),searchTerm)+'</span></div>'
+      +'<div class="row-info">'
+      +'<div class="row-location">'+highlight(card.location,searchTerm)+'</div>'
+      +(sender?'<div class="row-location-detail">'+highlight(sender,searchTerm)+'</div>':'')
+      +(recip?'<div class="row-location-detail">'+highlight(recip,searchTerm)+'</div>':'')
+      +(msgPreview?'<div class="row-msg-preview">'+highlight(msgPreview,searchTerm)+(msgPreview.length>=80?'\u2026':'')+'</div>':'')
+      +'<div class="row-arrow">View card \u2192</div>'
+      +'</div>'
     li.addEventListener('click',()=>openLb(gi));
     li.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' ')openLb(gi);});
     ul.appendChild(li);
