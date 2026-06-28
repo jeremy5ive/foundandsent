@@ -119,6 +119,8 @@
   .lb-notes-block{max-width:760px;width:90vw;margin-top:8px;text-align:left}
   .lb-notes-label{font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;color:#7a6a55;margin-bottom:5px;padding-bottom:4px;border-bottom:1px solid rgba(200,170,120,.12)}
   .lb-notes-block:empty{display:none}
+  .lb-learn-more{display:inline-block;margin-top:12px;font-size:.75rem;color:var(--gold);text-decoration:none;letter-spacing:.06em;border-bottom:1px solid rgba(154,124,63,.35);padding-bottom:1px;transition:color .15s,border-color .15s}
+  .lb-learn-more:hover{color:var(--ink);border-color:var(--ink)}
   input[type=range]#zoom-slider{-webkit-appearance:none;width:90px;height:2px;background:rgba(200,170,120,.25);border-radius:2px;outline:none}
   input[type=range]#zoom-slider::-webkit-slider-thumb{-webkit-appearance:none;width:11px;height:11px;border-radius:50%;background:var(--gold-dim);cursor:pointer}
   #zoom-pct{min-width:34px;text-align:left}
@@ -278,6 +280,15 @@
   <div class="griswold-badge" id="holiday-badge">
     <span id="holiday-badge-text"></span>
     <button class="griswold-badge-clear" id="holiday-clear" title="Clear holiday filter">&#x2715;</button>
+  </div>
+  <div class="griswold-divider"></div>
+  <span class="griswold-label">Location Tags</span>
+  <select class="griswold-select" id="location-select">
+    <option value="">— Select a location —</option>
+  </select>
+  <div class="griswold-badge" id="location-badge">
+    <span id="location-badge-text"></span>
+    <button class="griswold-badge-clear" id="location-clear" title="Clear location filter">&#x2715;</button>
   </div>
 </div>
 
@@ -561,7 +572,11 @@ let postcards = [
   {id:154,location:"Reno, Nevada — The Biggest Little City at Night",address:"Virginia Street, Reno, NV 89503",year:"August 9, 1990",sender:"Mary Jane",recipient:"Mrs. Ruth Grady, 4910 Sun Lake Drive, St. Charles, MO 63301",notes:"Postmarked AUG 9 1990, Postmark Jackpot Convention Station, Reno NV. USA 15¢ beach umbrella stamp. Photo by Marino. Italcards, Bologna, Italy. Front: iconic night photo of the Reno arch — “The Biggest Little City in the World.” Card sent from a philatelic Postmark Convention vacation. Message: “Hi Ruth, I’m on the Postmark Convention vacation with my friends, and we are enjoying the cheap prices of food, the free nickels twice a day, a bus ride to Virginia City and the mountains! Sometimes we see the smoky haze from the fires at Yosemite. It’s very dry out here, but there’s a beauty even in all the desert & nothingness. Love, Mary Jane.”",front:IMG+"1990 - Reno, NV - front.jpeg",back:IMG+"1990 - Reno, NV - back.jpeg"},
   {id:155,location:"Miami, Florida — Skyline at Night",address:"Miami, FL",year:"c. 1968",sender:"Miss Agnes E. Weiland",recipient:"Mr. & Mrs. Emil Jensen, 3309 Collingwood, Detroit, MI",notes:"Postmarked Miami, FL, c. 1968. Meter slug reads “50th Anniversary Governor’s.” Thomas Jefferson 2¢ pink stamp. “Lusterchrome” card made by Tichnor Bros., Inc., Boston 15, Mass. Card ML-32. Night skyline of Miami reflected in Biscayne Bay with palm tree silhouette. Message: “Dear Friends: Thanks for the literature. We can always learn something more about God’s Word & his promises to us. We pray for his Kingdom to come on Earth etc to bless mankind — those who want the blessing. Sincerely for Truth, Miss Agnes E. Weiland.”",front:IMG+"1968 - Miami, FL - Skyline - front.jpeg",back:IMG+"1968 - Miami, FL - Skyline - back.jpeg"},
   {id:156,location:"Anchorage, Alaska — Log Cabin Visitors Center",address:"Downtown Anchorage, AK",year:"July 13, 1983",sender:"C. Harlene & Ray",recipient:"Mrs. Erma Tuggle, 638 So. Hardesty, Kansas City, MO 64124",notes:"Postmarked Anchorage, AK, PM, 13 JUL 1983. Arctic Circle Enterprises Inc., ACE-377. USA 13¢ Crazy Horse stamp. Photo by Bonnie Godfred. Dexter Press, West Nyack, NY. Card 70124-D. Front shows the authentic trapper’s log cabin Visitors Center in downtown Anchorage with the Anchorage Westward Hilton behind. Recipient Erma Tuggle also received Card #151 (Ouray, CO, 1973) — possible family network. Message: “Greetings from Alaska — arrived here Mon. Had to delay trip. We were awakened Tues. AM 6:15 by the quake. Going to Portage tomorrow. Leaving Anch. Mon by train to McKinley Park. Overnight then on to Fairbanks. Sure miss little ‘tootie’ & Vi too. Able to see sunset at 10:30 PM. Do write. Love, C. Harlene & Ray — Mom better — can write some now.”",front:IMG+"1983 - Anchorage, AK - Visitor Center - front.jpeg",back:IMG+"1983 - Anchorage, AK - Visitor Center - back.jpeg"},
-  {id:157,location:"San Francisco, California — Balclutha Ship, Cape Horn Fleet",address:"Pier 43, San Francisco, CA",year:"c. 1958",sender:"Jennie (last name unknown)",recipient:"Unknown — no address (personal souvenir card)",notes:"No stamp, no postmark, no recipient — card kept as personal souvenir or hand-delivered. Mirro-Krome card by H.S. Crocker Co., Inc., San Francisco. Published by Smith News Co., 219 7th St., S.F., Calif. Card SF-53. Estimated late 1950s based on card style. Front shows the tall ship Balclutha docked at Pier 43. Card text: “Balclutha, the last of the Cape Horn Fleet. Built for the prosperous grain trade between California and the world, she rounded Cape Horn 17 times. In 1954 the ship was bought by The San Francisco Maritime Museum and restored through a community effort of 18 Bay Area unions which donated 16,000 hours of free work.” Message: “Manly & Mr. Corp visited this boat and listened to the lecture. Jennie & I watched the tug boat, gulls & people. The tug boat that accompanied the Lurline tied up in front of our [eyes].”",front:IMG+"Balclutha Ship, Cape Horn Fleet - front.jpeg",back:IMG+"Balclutha Ship, Cape Horn Fleet - back.jpeg"}
+  {id:157,location:"San Francisco, California — Balclutha Ship, Cape Horn Fleet",address:"Pier 43, San Francisco, CA",year:"c. 1958",sender:"Jennie (last name unknown)",recipient:"Unknown — no address (personal souvenir card)",notes:"No stamp, no postmark, no recipient — card kept as personal souvenir or hand-delivered. Mirro-Krome card by H.S. Crocker Co., Inc., San Francisco. Published by Smith News Co., 219 7th St., S.F., Calif. Card SF-53. Estimated late 1950s based on card style. Front shows the tall ship Balclutha docked at Pier 43. Card text: “Balclutha, the last of the Cape Horn Fleet. Built for the prosperous grain trade between California and the world, she rounded Cape Horn 17 times. In 1954 the ship was bought by The San Francisco Maritime Museum and restored through a community effort of 18 Bay Area unions which donated 16,000 hours of free work.” Message: “Manly & Mr. Corp visited this boat and listened to the lecture. Jennie & I watched the tug boat, gulls & people. The tug boat that accompanied the Lurline tied up in front of our [eyes].”",front:IMG+"Balclutha Ship, Cape Horn Fleet - front.jpeg",back:IMG+"Balclutha Ship, Cape Horn Fleet - back.jpeg"},
+  // ── V11 BATCH ──
+  {id:158,location:"Toruń, Poland — The Nonnentor Gate",address:"Nonnentor (Brama Klasztorna), Toruń, Poland",year:"July 27, 1917",sender:"Ulan P. Raatz, ers. Escadron Ulanen Regt. 4, Thorn",recipient:"Fräulein Hilde Raaz, p/a Frau P. Hojka, Salzwedel Altmark, Alpenuerstr. 32, Germany",notes:"Feldpost (German WWI military mail) — no stamp required. Postmarked THORN, 27.7.17. Written date: Thorn 28/7.17. The city of Thorn (now Toruń, Poland) was under German control during WWI. Color lithograph of the Nonnentor (Nuns’ Gate), a massive medieval Gothic brick tower gate in the old city walls. Front inscription: “Herzlichsten Gruss an Tante Else, Onkel Paul und den kleinen Hans.” (Warmest greetings to Aunt Else, Uncle Paul, and little Hans.) Birthday card message (translated from German): “Dear little Hilde! On your birthday I send you the warmest wishes. May you spend the day in the best of health and much enjoyment. Warmest greetings, kisses from your father. Ulan P. Raatz, Reserve Squadron Uhlan Regiment 4, Thorn.” A soldier father writing a birthday card to his daughter during WWI.",front:IMG+"1927 - Torun, Poland - The Nonnentor Gate - front.jpeg",back:IMG+"1927 - Torun, Poland - The Nonnentor Gate - back.jpeg",link:"https://de.wikipedia.org/wiki/Klostertor_(Toruń)"},
+  {id:159,location:"Chicago, Illinois — Sheraton-Blackstone Hotel",address:"Michigan Boulevard, Chicago, IL",year:"November 25, 1957",sender:"Unknown (Grandma or family member)",recipient:"Douglas Fogland, 478A Route 1, Ft. Collins, CO",notes:"Postmarked Plainfield, Iowa, NOV 25 PM 1957. Liberty 3¢ purple stamp (Statue of Liberty series). Published by Colourpicture Publishers, Inc., Boston 15, Mass. Card P12473. Vivid illustrated art of the Sheraton-Blackstone Hotel against a Chicago night skyline with searchlights and Buckingham Fountain. Another Chicago hotel card in the archive’s growing collection. Back text: “The Sheraton-Blackstone, Chicago’s most distinguished Hotel, was created for those who expect the ultimate in gracious living. Desirably located on Michigan Boulevard, this world-famous Hotel overlooks Grant Park, Buckingham Fountain, and Lake Michigan.” Message addressed to “Grandma & Grandpa” at top then: “Dearest Douglas: I tho’t you might like this card for your collection. My cousin sent it to me in a letter. Do you think that Santa will find you since you moved? Have the weather be real nice for Christmas so we can come & see you. Love.” A Christmas card sent to a child who collects postcards!",front:IMG+"1957 - Chicago, ILL - Sheraton Blackstone - front.jpeg",back:IMG+"1957 - Chicago, ILL - Sheraton Blackstone - back.jpeg"},
+  {id:160,location:"Shawnee State Park, Pennsylvania — Native Wild Bear",address:"Shawnee State Park, Schellsburg, PA 15559",year:"June 30, 1971",sender:"Cricket & Doug",recipient:"Miss Irene Morris, 16400 Cerfield Rd., Alliance, Ohio",notes:"Written 6-30-71. Postmarked Bedford, PA, JUL 1 PM 1971. Eisenhower 8¢ stamp. Curt Teich Color / Art-Création Pro-Transparencies. Card K-220. Front shows two black bears on a fallen log in a pine forest, captioned “Native Wild Bear.” Message: “Dear Irene, Hi there! I’m at Shawnee State Park near Schellsburg Pa. We got here Sunday evening about 5 o’clock. Haven’t seen too many nice looking guys. Am having a real nice time. Well, I’ll write when I get back home. Love, Cricket & Doug.”",front:IMG+"1971 - Shawnee State Park, PA - front.jpeg",back:IMG+"1971 - Shawnee State Park, PA - back.jpeg"}
 ];
 
 const PAGE_SIZE=10;
@@ -573,6 +588,7 @@ let messageText='',notesRemainder='';
 let tripFilter=null;
 let familyFilter=null;
 let holidayFilter=null;
+let locationFilter=null;
 
 const GRISWOLD_TRIPS=[
   {id:'faye-chicago-1959',name:'Faye \u2014 Chicago, November 1959',ids:[11,12,14,15,28,29,35,100,106,112,120,121]},
@@ -583,8 +599,16 @@ const FAMILY_NETWORKS=[
 ];
 
 const HOLIDAY_CARDS=[
-  {id:'christmas',name:'Christmas',ids:[107,119,141,143]},
+  {id:'christmas',name:'Christmas',ids:[107,119,141,143,159]},
   {id:'easter',name:'Easter',ids:[34,105]},
+  {id:'birthday',name:'Birthday',ids:[158]},
+];
+
+const LOCATION_TAGS=[
+  {id:'sherman-hotel',name:'The Sherman Hotel — Chicago',ids:[13,14,15,100]},
+  {id:'sheraton-blackstone',name:'Sheraton-Blackstone — Chicago',ids:[5,159]},
+  {id:'national-parks',name:'National Parks',ids:[20,92,118]},
+  {id:'state-parks',name:'State Parks',ids:[160]},
 ];
 
 
@@ -723,6 +747,18 @@ function loadCard(){
   const notesBlock=document.getElementById('lb-notes-block');
   document.getElementById('lb-meta-grid').innerHTML=meta.map(m=>'<span class="lb-meta-item"><strong>'+escHtml(m.label)+'</strong>'+escHtml(m.value)+'</span>').join('');
   notesBlock.style.display=meta.length?'':'none';
+  const existingLink=document.getElementById('lb-learn-more');
+  if(existingLink) existingLink.remove();
+  if(c.link){
+    const a=document.createElement('a');
+    a.id='lb-learn-more';
+    a.className='lb-learn-more';
+    a.href=c.link;
+    a.target='_blank';
+    a.rel='noopener noreferrer';
+    a.textContent='Learn more →';
+    notesBlock.parentNode.insertBefore(a,notesBlock.nextSibling);
+  }
   imgFront.onload=function(){sizeAndApply();imgFront.onload=null};
   imgFront.onerror=function(){sizeAndApply();imgFront.onerror=null};
   imgFront.src=c.front||'';
@@ -986,7 +1022,14 @@ const RECIPIENT_LOCATIONS=[
   {name:"Miami, Florida (Card 155)",lat:25.7617,lng:-80.1918,ids:[155]},
   {name:"Detroit, Michigan (recipient — Card 155)",lat:42.3314,lng:-83.0458,ids:[155]},
   {name:"Anchorage, Alaska (Card 156)",lat:61.2181,lng:-149.9003,ids:[156]},
-  {name:"San Francisco, CA — Pier 43, Balclutha (Card 157)",lat:37.8085,lng:-122.4159,ids:[157]}
+  {name:"San Francisco, CA — Pier 43, Balclutha (Card 157)",lat:37.8085,lng:-122.4159,ids:[157]},
+  {name:"Toruń, Poland — Nonnentor Gate (Card 158)",lat:53.0138,lng:18.5981,ids:[158]},
+  {name:"Salzwedel, Germany (recipient — Card 158)",lat:52.8506,lng:11.1530,ids:[158]},
+  {name:"Chicago, Illinois — Sheraton-Blackstone (Card 159)",lat:41.8715,lng:-87.6234,ids:[159]},
+  {name:"Plainfield, Iowa (sender — Card 159)",lat:42.8775,lng:-92.5349,ids:[159]},
+  {name:"Fort Collins, Colorado (recipient — Card 159)",lat:40.5853,lng:-105.0844,ids:[159]},
+  {name:"Shawnee State Park, Pennsylvania (Card 160)",lat:40.0093,lng:-78.6289,ids:[160]},
+  {name:"Alliance, Ohio (recipient — Card 160)",lat:40.9153,lng:-81.1059,ids:[160]}
 ];
 
 let map=null,mapInitialized=false,_mapMarkers=[];
@@ -1085,6 +1128,21 @@ document.getElementById('search-input').addEventListener('input',function(){sear
   document.getElementById('holiday-clear').addEventListener('click',function(){applyHoliday(null);});
 })();
 
+(function(){
+  const sel=document.getElementById('location-select');
+  const badge=document.getElementById('location-badge');
+  const badgeText=document.getElementById('location-badge-text');
+  LOCATION_TAGS.forEach(t=>{const o=document.createElement('option');o.value=t.id;o.textContent=t.name;sel.appendChild(o);});
+  function applyLocation(locId){
+    locationFilter=locId?LOCATION_TAGS.find(t=>t.id===locId):null;
+    if(locationFilter){badgeText.textContent=locationFilter.ids.length+' cards';badge.classList.add('visible');}
+    else{badge.classList.remove('visible');sel.value='';}
+    currentPage=1;renderList();
+  }
+  sel.addEventListener('change',function(){applyLocation(this.value);});
+  document.getElementById('location-clear').addEventListener('click',function(){applyLocation(null);});
+})();
+
 renderList=function(){
   viewList=postcards.filter(c=>{
     const decadeMatch=activeDecade===null||parseDecade(c.year)===activeDecade;
@@ -1092,7 +1150,8 @@ renderList=function(){
     const tripMatch=!tripFilter||tripFilter.ids.includes(c.id);
     const familyMatch=!familyFilter||familyFilter.ids.includes(c.id);
     const holidayMatch=!holidayFilter||holidayFilter.ids.includes(c.id);
-    return decadeMatch&&searchMatch&&tripMatch&&familyMatch&&holidayMatch;
+    const locationMatch=!locationFilter||locationFilter.ids.includes(c.id);
+    return decadeMatch&&searchMatch&&tripMatch&&familyMatch&&holidayMatch&&locationMatch;
   }).sort((a,b)=>b.id-a.id);
   const ul=document.getElementById('postcard-list');
   const total=postcards.length,shown=viewList.length;
@@ -1110,8 +1169,17 @@ renderList=function(){
     const gi=start+i;
     const li=document.createElement('li');
     li.className='postcard-row';li.setAttribute('role','button');li.setAttribute('tabindex','0');
-    const det=[card.sender?'From: '+card.sender:'',card.recipient?'To: '+card.recipient:''].filter(Boolean).join('  ·  ');
-    li.innerHTML='<span class="row-thumb"><img src="'+card.front+'" alt="" loading="lazy"><span class="row-num-badge">'+String(gi+1).padStart(2,'0')+'</span></span>'+'<span class="row-location">'+highlight(card.location,searchTerm)+(det?'<span class="row-location-detail">'+highlight(det,searchTerm)+'</span>':'')+(card.notes?'<span class="row-location-detail">'+highlight(card.notes.substring(0,80)+(card.notes.length>80?'...':''),searchTerm)+'</span>':'')+'</span>'+'<span class="row-year">'+highlight(shortYear(card.year),searchTerm)+'</span>'+'<span class="row-arrow">View →</span>';
+    const sender=card.sender?'From: '+card.sender:'';
+    const recip=card.recipient?'To: '+card.recipient:'';
+    const msgPreview=card.notes?(()=>{const m=card.notes.match(/[\u201c\"\u2018\'](.*?)[\u201d\"\u2019\']/);return m?m[1].substring(0,80)+(m[1].length>80?'\u2026':''):card.notes.replace(/^[^.!?]*[.!?]\s*/,'').substring(0,80);})():'';
+    li.innerHTML='<div class="row-thumb"><img src="'+card.front+'" alt="" loading="lazy"><span class="row-num-badge">'+highlight(shortYear(card.year),searchTerm)+'</span></div>'
+      +'<div class="row-info">'
+      +'<div class="row-location">'+highlight(card.location,searchTerm)+'</div>'
+      +(sender?'<div class="row-location-detail">'+highlight(sender,searchTerm)+'</div>':'')
+      +(recip?'<div class="row-location-detail">'+highlight(recip,searchTerm)+'</div>':'')
+      +(msgPreview?'<div class="row-msg-preview">'+highlight(msgPreview,searchTerm)+(msgPreview.length>=80?'\u2026':'')+'</div>':'')
+      +'<div class="row-arrow">View card \u2192</div>'
+      +'</div>'
     li.addEventListener('click',()=>openLb(gi));
     li.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' ')openLb(gi);});
     ul.appendChild(li);
