@@ -1237,18 +1237,4 @@ renderList();
   &copy; 2026 Jeremy Schwenk &mdash; <a href="https://foundandsent.net" style="color:#9a8a75;text-decoration:none;">foundandsent.net</a> &mdash; All rights reserved.
 </footer>
 </body>
-</html>pageItems.forEach((card,i)=>{
-    const gi=start+i;
-    const li=document.createElement('li');
-    li.className='postcard-row';li.setAttribute('role','button');li.setAttribute('tabindex','0');
-    const sender=card.sender?'From: '+card.sender:'';
-    const recip=card.recipient?'To: '+card.recipient:'';
-    const msgPreview=card.notes?(()=>{const m=card.notes.match(/[\u201c\"\u2018\'](.*?)[\u201d\"\u2019\']/);return m?m[1].substring(0,80)+(m[1].length>80?'\u2026':''):card.notes.replace(/^[^.!?]*[.!?]\s*/,'').substring(0,80);})():'';
-    li.innerHTML='<div class="row-thumb"><img src="'+card.front+'" alt="" loading="lazy"><span class="row-num-badge">'+highlight(shortYear(card.year),searchTerm)+'</span></div>'
-      +'<div class="row-info">'
-      +'<div class="row-location">'+highlight(card.location,searchTerm)+'</div>'
-      +(sender?'<div class="row-location-detail">'+highlight(sender,searchTerm)+'</div>':'')
-      +(recip?'<div class="row-location-detail">'+highlight(recip,searchTerm)+'</div>':'')
-      +(msgPreview?'<div class="row-msg-preview">'+highlight(msgPreview,searchTerm)+(msgPreview.length>=80?'\u2026':'')+'</div>':'')
-      +'<div class="row-arrow">View card \u2192</div>'
-      +'</div>'
+</html>
