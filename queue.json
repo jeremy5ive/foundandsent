@@ -1,24 +1,5 @@
 [
   {
-    "id": 161,
-    "location": "Unknown Location — Porch Portrait",
-    "address": "Unknown",
-    "year": "March 7, 1908",
-    "sender": "Rod (last name unknown)",
-    "recipient": "Miss Verna Barnes, 410 S. 10th, Salina, Kansas",
-    "notes": "Postmarked March 7, 1908. Benjamin Franklin 1¢ green stamp (Series 1902). Undivided back era. Real photo postcard (RPPC) — sepia portrait of five young people seated on a porch: three women in long dark dresses and two men in suits. Candid early 20th century social scene. Sender’s return address: 1601 [?] 3rd St. Message: “Hello [name]: Well we are back again working hard on a [?] and we had a nice trip and was glad we saw our friends. It is such fine weather. Perhaps you can tell me [where?] Willis & my little sister is in the center. The Floras are college girls (misses Campbell & Robertson). Ta-ta — Rod.”",
-    "front": "1908 - front.jpeg",
-    "back": "1908 - back.jpeg",
-    "map": [
-      {
-        "name": "Salina, Kansas (recipient — Card 161)",
-        "lat": 38.8403,
-        "lng": -97.6114
-      }
-    ],
-    "feed_description": "From: Rod (last name unknown) | To: Miss Verna Barnes, Salina, Kansas | Benjamin Franklin 1¢ stamp, postmarked March 7, 1908. Real photo postcard of five young people on a porch. Message: “Well we are back again working hard. The Floras are college girls (misses Campbell & Robertson). Ta-ta — Rod.”"
-  },
-  {
     "id": 162,
     "location": "Breckenridge, Missouri — Broadway Street",
     "address": "Broadway, Breckenridge, MO",

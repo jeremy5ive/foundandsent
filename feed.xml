@@ -5,8 +5,15 @@
     <link>https://foundandsent.net</link>
     <description>Rescued vintage postcards with their original messages, stamps, and stories. New cards added regularly.</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 28 Jun 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 28 Jun 2026 20:50:48 -0600</lastBuildDate>
     <atom:link href="https://foundandsent.net/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Card #161: Unknown Location — Porch Portrait (March 7, 1908)</title>
+      <link>https://foundandsent.net/#card-161</link>
+      <guid isPermaLink="true">https://foundandsent.net/#card-161</guid>
+      <description>From: Rod (last name unknown) | To: Miss Verna Barnes, Salina, Kansas | Benjamin Franklin 1¢ stamp, postmarked March 7, 1908. Real photo postcard of five young people on a porch. Message: “Well we are back again working hard. The Floras are college girls (misses Campbell &amp; Robertson). Ta-ta — Rod.”</description>
+      <media:thumbnail url="https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1908 - front.jpeg"/>
+    </item>
     <item>
       <title>Card #158: Toruń, Poland — The Nonnentor Gate (July 27, 1917)</title>
       <link>https://foundandsent.net/#card-158</link>
