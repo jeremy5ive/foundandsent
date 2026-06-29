@@ -1,0 +1,47 @@
+name: Daily Card Publisher
+
+on:
+  schedule:
+    # 8am CST = 2pm UTC (14:00)
+    - cron: '0 14 * * *'
+  workflow_dispatch:
+    # Also allows manual trigger from GitHub Actions tab
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Check queue
+        id: check_queue
+        run: |
+          count=$(python3 -c "import json; q=json.load(open('queue.json')); print(len(q))")
+          echo "queue_count=$count" >> $GITHUB_OUTPUT
+          echo "Cards in queue: $count"
+
+      - name: Publish next card
+        if: steps.check_queue.outputs.queue_count != '0'
+        run: python3 publish_card.py
+
+      - name: Commit and push
+        if: steps.check_queue.outputs.queue_count != '0'
+        run: |
+          git config user.name "Found & Sent Bot"
+          git config user.email "bot@foundandsent.net"
+          git add index.html feed.xml queue.json
+          git commit -m "Daily card publish — $(date +'%Y-%m-%d')"
+          git push
+
+      - name: Skip (queue empty)
+        if: steps.check_queue.outputs.queue_count == '0'
+        run: echo "Queue is empty — no card published today. Add cards to queue.json!"
