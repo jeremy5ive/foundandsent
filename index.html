@@ -37,6 +37,7 @@
   .search-wrap{max-width:900px;margin:0 auto;padding:24px 60px 0;background:rgba(247,243,237,0.92)}
   .griswold-wrap{max-width:900px;margin:0 auto;padding:10px 60px 0;background:rgba(247,243,237,0.92);display:flex;align-items:center;gap:10px 16px;flex-wrap:wrap}
   .griswold-group{display:flex;align-items:center;gap:8px;flex-wrap:nowrap}
+  .griswold-group{display:flex;align-items:center;gap:8px;flex-wrap:nowrap}
   .griswold-label{font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);font-family:'Crimson Pro',serif;white-space:nowrap;opacity:.85}
   .griswold-car{height:38px;width:auto;object-fit:contain;opacity:.82;border-radius:2px;transition:opacity .2s;cursor:default}
   .griswold-car:hover{opacity:1}
@@ -120,6 +121,8 @@
   .lb-notes-block{max-width:760px;width:90vw;margin-top:8px;text-align:left}
   .lb-notes-label{font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;color:#7a6a55;margin-bottom:5px;padding-bottom:4px;border-bottom:1px solid rgba(200,170,120,.12)}
   .lb-notes-block:empty{display:none}
+  .lb-learn-more{display:inline-block;margin-top:12px;font-size:.75rem;color:var(--gold);text-decoration:none;letter-spacing:.06em;border-bottom:1px solid rgba(154,124,63,.35);padding-bottom:1px;transition:color .15s,border-color .15s}
+  .lb-learn-more:hover{color:var(--ink);border-color:var(--ink)}
   .lb-learn-more{display:inline-block;margin-top:12px;font-size:.75rem;color:var(--gold);text-decoration:none;letter-spacing:.06em;border-bottom:1px solid rgba(154,124,63,.35);padding-bottom:1px;transition:color .15s,border-color .15s}
   .lb-learn-more:hover{color:var(--ink);border-color:var(--ink)}
   input[type=range]#zoom-slider{-webkit-appearance:none;width:90px;height:2px;background:rgba(200,170,120,.25);border-radius:2px;outline:none}
@@ -616,7 +619,8 @@ const GRISWOLD_TRIPS=[
 ];
 
 const FAMILY_NETWORKS=[
-  {id:'mclouth',name:'McLouth \u2022 McLoutit Family',ids:[65,76,124,128,129],note:'Cards to/from the McLouth and McLoutit families across Texas, Arizona, and Washington — spanning 1968\u20131994.'},
+  {id:'mclouth',name:'McLouth • McLoutit Family',ids:[65,76,124,128,129],note:'Cards to/from the McLouth and McLoutit families across Texas, Arizona, and Washington — spanning 1968–1994.'},
+  {id:'mcclelland',name:'McClelland Family',ids:[164,166],note:'Cards to/from the McClelland family — Jersey City, NJ (1941) and Sharon, MA (1987).'},
 ];
 
 const HOLIDAY_CARDS=[
@@ -634,9 +638,13 @@ const LOCATION_TAGS=[
 
 const HISTORICAL_TAGS=[
   {id:'wwi',name:'World War I',ids:[24,158]},
-  {id:'wwii',name:'World War II',ids:[79,90,143]},
-  {id:'military',name:'Military',ids:[24,79,90,143,158]},
+  {id:'wwii',name:'World War II',ids:[79,90,143,164]},
+  {id:'military',name:'Military',ids:[24,79,90,143,158,164]},
 ];
+
+
+
+
 
 
 function searchable(c){return[c.location,c.year,c.sender,c.recipient,c.address,c.notes].filter(Boolean).join(' ').toLowerCase()}
@@ -786,6 +794,7 @@ function loadCard(){
     a.textContent='Learn more →';
     notesBlock.parentNode.insertBefore(a,notesBlock.nextSibling);
   }
+  
   imgFront.onload=function(){sizeAndApply();imgFront.onload=null};
   imgFront.onerror=function(){sizeAndApply();imgFront.onerror=null};
   imgFront.src=c.front||'';
@@ -1153,6 +1162,36 @@ document.getElementById('search-input').addEventListener('input',function(){sear
   }
   sel.addEventListener('change',function(){applyHoliday(this.value);});
   document.getElementById('holiday-clear').addEventListener('click',function(){applyHoliday(null);});
+})();
+
+(function(){
+  const sel=document.getElementById('location-select');
+  const badge=document.getElementById('location-badge');
+  const badgeText=document.getElementById('location-badge-text');
+  LOCATION_TAGS.forEach(t=>{const o=document.createElement('option');o.value=t.id;o.textContent=t.name;sel.appendChild(o);});
+  function applyLocation(locId){
+    locationFilter=locId?LOCATION_TAGS.find(t=>t.id===locId):null;
+    if(locationFilter){badgeText.textContent=locationFilter.ids.length+' cards';badge.classList.add('visible');}
+    else{badge.classList.remove('visible');sel.value='';}
+    currentPage=1;renderList();
+  }
+  sel.addEventListener('change',function(){applyLocation(this.value);});
+  document.getElementById('location-clear').addEventListener('click',function(){applyLocation(null);});
+})();
+
+(function(){
+  const sel=document.getElementById('historical-select');
+  const badge=document.getElementById('historical-badge');
+  const badgeText=document.getElementById('historical-badge-text');
+  HISTORICAL_TAGS.forEach(t=>{const o=document.createElement('option');o.value=t.id;o.textContent=t.name;sel.appendChild(o);});
+  function applyHistorical(tagId){
+    historicalFilter=tagId?HISTORICAL_TAGS.find(t=>t.id===tagId):null;
+    if(historicalFilter){badgeText.textContent=historicalFilter.ids.length+' cards';badge.classList.add('visible');}
+    else{badge.classList.remove('visible');sel.value='';}
+    currentPage=1;renderList();
+  }
+  sel.addEventListener('change',function(){applyHistorical(this.value);});
+  document.getElementById('historical-clear').addEventListener('click',function(){applyHistorical(null);});
 })();
 
 (function(){
