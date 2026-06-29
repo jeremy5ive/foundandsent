@@ -1,29 +1,5 @@
 [
   {
-    "id": 162,
-    "location": "Breckenridge, Missouri — Broadway Street",
-    "address": "Broadway, Breckenridge, MO",
-    "year": "c. 1910",
-    "sender": "Unknown",
-    "recipient": "Mrs. Hector Cole, Milan, Mo.",
-    "notes": "Postmarked Breckenridge, MO, c. 1910. Benjamin Franklin 1¢ green stamp. Published by Palace Drug Co. Black and white photo of Broadway, Breckenridge, Mo. — unpaved main street with telegraph poles and storefronts. Note written in pencil on front: “not very good.” Partial message on front and back: “Hello, Was thinking of you, & thought would drop you a line. How does this find you? I am feeling fine & would like to have a [lunch?] I think of it so often & the time we had I imagine every — once in a while I can… Not going to town before coming back home.” Note: Breckenridge, MO also appears as sender location for Card #149 (1907 mining card).",
-    "front": "1910 Breckenridge, MO - front.jpeg",
-    "back": "1910 - Breckenridge, MO - back.jpeg",
-    "map": [
-      {
-        "name": "Breckenridge, Missouri (Card 162)",
-        "lat": 39.7553,
-        "lng": -93.8038
-      },
-      {
-        "name": "Milan, Missouri (recipient — Card 162)",
-        "lat": 40.2003,
-        "lng": -93.1238
-      }
-    ],
-    "feed_description": "From: Unknown | To: Mrs. Hector Cole, Milan, Mo. | Postmarked Breckenridge, MO, c. 1910. Palace Drug Co. Unpaved Broadway street scene. Message: “Hello, Was thinking of you, & thought would drop you a line. I am feeling fine & would like to have a lunch. I think of it so often & the time we had.”"
-  },
-  {
     "id": 163,
     "location": "Breckenridge, Missouri — High School Field Day",
     "address": "Breckenridge High School, Breckenridge, MO",
