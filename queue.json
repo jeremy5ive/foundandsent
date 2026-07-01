@@ -1,29 +1,5 @@
 [
   {
-    "id": 164,
-    "location": "Greenwood Lake, New Jersey",
-    "address": "Greenwood Lake, NJ",
-    "year": "August 1, 1941",
-    "sender": "John & Irene",
-    "recipient": "Mr. & Mrs. L. McClelland, 29 Jackson Ave., Jersey City, NJ",
-    "notes": "Postmarked Warwick, NY, AUG 1, 4:30 PM 1941. “For Defense” Industry Agriculture 1¢ green stamp — a WWII defense-era stamp issued 1940–41. Fotocolor — Made by Dexter Press, Pearl River, NY. Card: Landscape No. 26. Color lithograph of serene Greenwood Lake, NJ — tree-framed lake with mountain and beach. Caption: “Greetings From Greenwood Lake, N.J.” Message: “Hello Folks, Sure are having terrible weather. John is all crippled up in his back. Hope you folks are nearly settled at your place. Love, John & Irene.” McClelland family — same family also received Card #166 (Nashville, 1987).",
-    "front": "1941 - Greenwood Lake, NJ - front.jpeg",
-    "back": "1941 - Greenwood Lake, NJ - back.jpeg",
-    "map": [
-      {
-        "name": "Greenwood Lake, New Jersey (Card 164)",
-        "lat": 41.2237,
-        "lng": -74.2971
-      },
-      {
-        "name": "Jersey City, NJ (recipient — Card 164)",
-        "lat": 40.7282,
-        "lng": -74.0776
-      }
-    ],
-    "feed_description": "From: John & Irene | To: Mr. & Mrs. L. McClelland, 29 Jackson Ave., Jersey City, NJ | “For Defense” 1¢ WWII defense stamp, postmarked Warwick, NY, AUG 1 1941. Dexter Press color lithograph of Greenwood Lake. Message: “Sure are having terrible weather. John is all crippled up in his back. Hope you folks are nearly settled at your place. Love, John & Irene.”"
-  },
-  {
     "id": 165,
     "location": "Ruskin, Florida — Quality Inn Bahia Beach",
     "address": "Bahia Beach, Ruskin, FL (3 miles West of U.S. 41)",
