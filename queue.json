@@ -1,29 +1,5 @@
 [
   {
-    "id": 166,
-    "location": "Nashville, Tennessee — Music City U.S.A.",
-    "address": "Nashville, TN",
-    "year": "1987",
-    "sender": "Bob & Theresa",
-    "recipient": "Mr. & Mrs. L. McClelland, 9 Robs Lane, Sharon, Mass. 02067",
-    "notes": "Postmarked Nashville, TN, 1987. Sinclair Lewis 14¢ stamp (Great Americans series). Distributed by Southern Post Card Co., Box 306, Goodlettsville, TN 37072. Plastichrome, Printed in Ireland. Front: color aerial photo of the distinctive geometric Music City U.S.A. building with angular brick rooflines. McClelland family — same family also received Card #164 (Greenwood Lake, NJ, 1941). Message: “Flight was smooth, less than two hours. Did night tours on Sat — all day tours on Sun — & today we go to Opryland & tomorrow we are booked for the dinner cruise on the Belle Carol. Hope to get tickets for Grand Ole Opry. See you on Sat. Bob & Theresa.”",
-    "front": "1987 - Nashville, TN - Music City - front.jpeg",
-    "back": "1987 - Nashville, TN - Music City - back.jpeg",
-    "map": [
-      {
-        "name": "Nashville, Tennessee (Card 166)",
-        "lat": 36.1627,
-        "lng": -86.7816
-      },
-      {
-        "name": "Sharon, Massachusetts (recipient — Card 166)",
-        "lat": 42.1237,
-        "lng": -71.1787
-      }
-    ],
-    "feed_description": "From: Bob & Theresa, Nashville, TN | To: Mr. & Mrs. L. McClelland, 9 Robs Lane, Sharon, Mass. 02067 | Sinclair Lewis 14¢ stamp, postmarked Nashville, 1987. Southern Post Card Co. Aerial photo of Music City U.S.A. Message: “Flight was smooth, less than two hours. Did night tours on Sat, all day tours on Sun. Tomorrow booked for dinner cruise on the Belle Carol. Hope to get tickets for Grand Ole Opry.”"
-  },
-  {
     "id": 167,
     "location": "Bonn, Germany — Bonn am Rhein",
     "address": "Bonn, Germany",
