@@ -1,27 +1,5 @@
 [
   {
-    "id": 168,
-    "location": "Rosebud, Nevada — \"The Original Water-Wagon\" Novelty Postcard",
-    "address": "Rosebud, Nevada",
-    "year": "July 25–29, 1907",
-    "sender": "Viola",
-    "recipient": "Mr. Richard Benney, Rosebud, Nevada",
-    "notes": "Undivided-back era postcard — the U.S. didn't allow divided backs (message + address on same side) until March 1907, so the message is squeezed directly onto the illustrated front. Front is a comic 'temperance' illustration titled THE ORIGINAL WATER-WAGON, showing Noah's Ark reimagined as a wagon being towed by a sea serpent, a nod to the popular early-1900s phrase 'on the water wagon' (teetotaling). 1¢ Franklin green stamp. Postmarked with a partial Missouri origin cancel dated Jul 25 1907, with a second postmark reading ROSEBUD JUL 29 P.M. NEV. — likely the receiving/backstamp at the Nevada end. Rosebud was a short-lived early-1900s Nevada mining camp. Message: 'Hello Papa: I know you like to get postals. Make a collection for me. Be good to your self. Received your postals, hope you are getting along all right, let us hear from you soon, am well. will write a letter nothing to write on a postal. good bye Viola.'",
-    "front": "1907 - Postcard - front.jpeg",
-    "back": "1907 - Postcard - back.jpeg",
-    "mapLocation": {
-      "name": "Rosebud, Nevada — \"The Original Water-Wagon\" Novelty Postcard",
-      "lat": 40.5599,
-      "lng": -117.6567
-    },
-    "recipientLocation": {
-      "name": "Rosebud, NV (Benney)",
-      "lat": 40.5599,
-      "lng": -117.6567
-    },
-    "decadeTag": "1900s"
-  },
-  {
     "id": 169,
     "location": "Pasadena, California — City Hall",
     "address": "100 N Garfield Ave, Pasadena, CA 91101",
