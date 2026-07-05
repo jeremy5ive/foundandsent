@@ -1,24 +1,5 @@
 [
   {
-    "id": 169,
-    "location": "Pasadena, California — City Hall",
-    "address": "100 N Garfield Ave, Pasadena, CA 91101",
-    "year": "November 1948",
-    "sender": "Charlotte McDowell, 1650 Corson St, Pasadena 4, Calif.",
-    "recipient": "Mr. Arthur [surname illegible], Route [illegible], Missouri — NEEDS RE-READ",
-    "notes": "\"Foto-Tone\" card manufactured by M.B. Libman Co., Hollywood. Palm fronds frame a low-angle shot of Pasadena's landmark domed City Hall. 1¢ green Prexie (Washington) stamp; postmark partially legible as Pasadena, late November 1948. Message (best-effort read, cursive is faint/rotated in scan): 'Sorry to hear of so much loss in live stock due to cold. Hope you have not suffered too much. We are about as usual... [several words unclear]... Write soon. Tell everybody hi!' — a condolence note about livestock losses from a cold snap, sent to a rural Missouri farm family.",
-    "front": "1948 - Pasadena, CA - front.jpeg",
-    "back": "1948 - Pasadena, CA - back.jpeg",
-    "mapLocation": {
-      "name": "Pasadena, California — City Hall",
-      "lat": 34.1478,
-      "lng": -118.1445
-    },
-    "recipientLocation": null,
-    "recipientLocationNote": "Recipient address only partially legible (rural Missouri route number + surname unclear) — hold off on a map pin until you can confirm from the physical card.",
-    "decadeTag": "1940s"
-  },
-  {
     "id": 170,
     "location": "Fontana Dam, North Carolina",
     "address": "Fontana Dam, NC 28733",
