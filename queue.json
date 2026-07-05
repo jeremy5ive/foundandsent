@@ -1,1 +1,151 @@
-[]
+[
+  {
+    "id": 168,
+    "location": "Rosebud, Nevada — \"The Original Water-Wagon\" Novelty Postcard",
+    "address": "Rosebud, Nevada",
+    "year": "July 25–29, 1907",
+    "sender": "Viola",
+    "recipient": "Mr. Richard Benney, Rosebud, Nevada",
+    "notes": "Undivided-back era postcard — the U.S. didn't allow divided backs (message + address on same side) until March 1907, so the message is squeezed directly onto the illustrated front. Front is a comic 'temperance' illustration titled THE ORIGINAL WATER-WAGON, showing Noah's Ark reimagined as a wagon being towed by a sea serpent, a nod to the popular early-1900s phrase 'on the water wagon' (teetotaling). 1¢ Franklin green stamp. Postmarked with a partial Missouri origin cancel dated Jul 25 1907, with a second postmark reading ROSEBUD JUL 29 P.M. NEV. — likely the receiving/backstamp at the Nevada end. Rosebud was a short-lived early-1900s Nevada mining camp. Message: 'Hello Papa: I know you like to get postals. Make a collection for me. Be good to your self. Received your postals, hope you are getting along all right, let us hear from you soon, am well. will write a letter nothing to write on a postal. good bye Viola.'",
+    "front": "1907 - Postcard - front.jpeg",
+    "back": "1907 - Postcard - back.jpeg",
+    "mapLocation": {
+      "name": "Rosebud, Nevada — \"The Original Water-Wagon\" Novelty Postcard",
+      "lat": 40.5599,
+      "lng": -117.6567
+    },
+    "recipientLocation": {
+      "name": "Rosebud, NV (Benney)",
+      "lat": 40.5599,
+      "lng": -117.6567
+    },
+    "decadeTag": "1900s"
+  },
+  {
+    "id": 169,
+    "location": "Pasadena, California — City Hall",
+    "address": "100 N Garfield Ave, Pasadena, CA 91101",
+    "year": "November 1948",
+    "sender": "Charlotte McDowell, 1650 Corson St, Pasadena 4, Calif.",
+    "recipient": "Mr. Arthur [surname illegible], Route [illegible], Missouri — NEEDS RE-READ",
+    "notes": "\"Foto-Tone\" card manufactured by M.B. Libman Co., Hollywood. Palm fronds frame a low-angle shot of Pasadena's landmark domed City Hall. 1¢ green Prexie (Washington) stamp; postmark partially legible as Pasadena, late November 1948. Message (best-effort read, cursive is faint/rotated in scan): 'Sorry to hear of so much loss in live stock due to cold. Hope you have not suffered too much. We are about as usual... [several words unclear]... Write soon. Tell everybody hi!' — a condolence note about livestock losses from a cold snap, sent to a rural Missouri farm family.",
+    "front": "1948 - Pasadena, CA - front.jpeg",
+    "back": "1948 - Pasadena, CA - back.jpeg",
+    "mapLocation": {
+      "name": "Pasadena, California — City Hall",
+      "lat": 34.1478,
+      "lng": -118.1445
+    },
+    "recipientLocation": null,
+    "recipientLocationNote": "Recipient address only partially legible (rural Missouri route number + surname unclear) — hold off on a map pin until you can confirm from the physical card.",
+    "decadeTag": "1940s"
+  },
+  {
+    "id": 170,
+    "location": "Fontana Dam, North Carolina",
+    "address": "Fontana Dam, NC 28733",
+    "year": "c. 1963–1968 (dated by stamp, not postmark — see notes)",
+    "sender": "Mary Ellen & Nancy",
+    "recipient": "Misses Carol and Irene Morris, 16400 Canfield St. N.E., Alliance, Ohio, Rt. #5",
+    "notes": "Night View of Fontana Dam — F B11, photographed by Gene Aikens, published by W.M. Cline Co., Chattanooga, TN, copyright 1956, card #18261. The 1956 copyright line is the card's print year, not necessarily its mailing year — postcard racks commonly sold stock for years after printing. Postmark reads '...NKLIN...N.C.' (Franklin, NC) but the date within the cancel is illegible under foxing/staining even under magnification. The stamp is more reliable: a 5¢ Washington (Liberty Series, Scott #1213), issued Nov. 1962 and used for the 5¢ first-class rate 1963–1968 — which places the actual mailing in that window, several years after the card's 1956 print date. Message: 'Pretty huh!!! Hi! We were at Fontana Dam this afternoon. Took several pic. Boy the roads are straight, they go like this [drawing of a squiggle] — over 200 curves in 20 miles. We'll be down at Bear Pen on ___ and send you post cards from there. Until then Bye. Mary Ellen & Nancy. Tell everybody Hi!' POSSIBLE FAMILY NETWORK NODE: recipient 'Irene Morris' reappears as an adult ('Irene D. Morris') on the 1981 Joshua Tree card (#173), then living in Canton, Ohio — about 20 miles from this Alliance, OH address. Worth tagging as the same person if you want to build out the Griswold Trips connection.",
+    "front": "1963 - 68 - Fontana Dam, NC - front.jpeg",
+    "back": "1963 - 68 - Fontana Dam, NC - back.jpeg",
+    "mapLocation": {
+      "name": "Fontana Dam, North Carolina",
+      "lat": 35.4529,
+      "lng": -83.8046
+    },
+    "recipientLocation": {
+      "name": "Alliance, OH — 16400 Canfield St NE (Morris)",
+      "lat": 40.9145,
+      "lng": -81.1054
+    },
+    "decadeTag": "1960s"
+  },
+  {
+    "id": 171,
+    "location": "Chicago, Illinois — The Sands Motel",
+    "address": "Sheridan Rd & Foster Ave, Chicago, IL 60640",
+    "year": "July 20, 1959",
+    "sender": "Olga (best-effort read of signature)",
+    "recipient": "Mrs. Anna Robinson, Oak Grove, Mo.",
+    "notes": "The Sands Motel, Chicago — AAA-rated, 150 air-conditioned rooms with 21-inch television, adjoining the Edgewater Beach Hotel, Sheridan Rd & Foster Ave. Front shows an aerial view of the motel's pool/parking court with the Edgewater Beach Hotel towers behind it and a 'Peter Pan' snack shop sign in the foreground. Three 1¢ Washington (Liberty series) stamps; Chicago postmark JUL 20 1959, plus a transit backstamp from Berrien Springs, Mich. Message describes a whirlwind day of Chicago sightseeing: church, Chinatown, Maxwell Street Market, Hull House, the Palmer House, the Drake Hotel, the Museum of Science and Industry, the Art Institute, then swimming in Lake Michigan — with a plan to spend the next day at Arlington Park race track.",
+    "front": "1959 - Sands Motel - Chicago, ILL - front.jpeg",
+    "back": "1959 - Sands Motel - Chicago, ILL - back.jpeg",
+    "mapLocation": {
+      "name": "Chicago, Illinois — The Sands Motel",
+      "lat": 41.9836,
+      "lng": -87.6555
+    },
+    "recipientLocation": {
+      "name": "Oak Grove, MO (Robinson)",
+      "lat": 39.0089,
+      "lng": -94.1155
+    },
+    "recipientLocationNote": "There's more than one 'Oak Grove' in Missouri — pinned the better-known one near Kansas City (Jackson/Lafayette Co.); flag if you know it's the other.",
+    "decadeTag": "1950s"
+  },
+  {
+    "id": 172,
+    "location": "Laguna Beach, California — Victor Hugo Inn",
+    "address": "Cliff Dr, Laguna Beach, CA 92651",
+    "year": "c. 1968",
+    "sender": "Signature illegible",
+    "recipient": "Mrs. Alice H[uggins?], 40 Somersworth Walk, New Hampshire 03878 — NEEDS RE-READ",
+    "notes": "The Victor Hugo Inn at Laguna Beach, California, described on the back as 'world-famous for its fine cuisine,' fronted by flower-bordered garden paths and a bluff-edge 'Gaze-Bo' overlooking the Pacific. 'Plastichrome' card by Colourpicture, Boston, distributed by Mitock & Sons, Sherman Oaks, Calif.; color by Geo. E. Watson Studio, Long Beach; card #P3235 / GW2118. Printed 'ADDRESS ONLY' panel with no stamp/postmark visible in this scan — may have been mailed inside an envelope. A partial handwritten date near the top reads roughly '9-68' (September 1968). Long cursive letter along the margin not fully transcribed here — recipient's name and street are only partially legible.",
+    "front": "1968 - Laguna Beach, CA - Victor Hugo Inn - front.jpeg",
+    "back": "1968 - Laguna Beach, CA - Victor Hugo Inn - back.jpeg",
+    "mapLocation": {
+      "name": "Laguna Beach, California — Victor Hugo Inn",
+      "lat": 33.5347,
+      "lng": -117.7855
+    },
+    "recipientLocation": null,
+    "recipientLocationNote": "Recipient's exact street/name not fully legible — hold off on a pin until confirmed.",
+    "decadeTag": "1960s"
+  },
+  {
+    "id": 173,
+    "location": "American Southwest — Joshua Trees (Petley Studios, Phoenix, AZ)",
+    "address": "Sonoran/Mojave Desert, American Southwest",
+    "year": "c. 1981",
+    "sender": "Signature illegible",
+    "recipient": "Irene D. Morris, 1441 Wendy St. N.W., Apt. 94, Canton, Ohio 44709",
+    "notes": "Joshua Trees card by Petley Studios, 4051 E. Van Buren, Phoenix, AZ 85008 — card #KV9641. Back copy explains the Joshua tree's Mormon-pioneer naming legend ('praying plant,' up-stretched arms). Since the publisher is Phoenix-based, this may depict Arizona high desert rather than California's Joshua Tree National Park specifically — pinned generally pending confirmation. USA 15¢ flag stamp ('The Land of the Free, The Home of the Brave'), consistent with the 1978–1981 window; meter slogan cancel for Muscular Dystrophy support. Message (partial, cursive faint): 'Hello Irene! Having a wonderful time... trying to see it all... the weather is great... We stopped 3 nights at ___... Write me a line...' POSSIBLE FAMILY NETWORK NODE: recipient 'Irene D. Morris' likely matches the 'Irene Morris' addressed as a girl on the 1956 Fontana Dam card (#170), then in Alliance, Ohio — about 20 miles from this Canton, Ohio address.",
+    "front": "1981 - Joshua Tree, American SW - front.jpeg",
+    "back": "1981 - Joshua Tree, American SW - back.jpeg",
+    "mapLocation": {
+      "name": "American Southwest — Joshua Trees (Petley Studios, Phoenix, AZ)",
+      "lat": 34.1084,
+      "lng": -112.3733
+    },
+    "recipientLocation": {
+      "name": "Canton, OH — 1441 Wendy St NW Apt 94 (Morris)",
+      "lat": 40.7989,
+      "lng": -81.3784
+    },
+    "decadeTag": "1980s"
+  },
+  {
+    "id": 174,
+    "location": "Königswinter, Germany — Drachenfels Castle",
+    "address": "Drachenfelsstraße, 53639 Königswinter, Germany",
+    "year": "July 7, 1960",
+    "sender": "Relative of recipient (signature/name in German cursive not confidently transcribed)",
+    "recipient": "Frau Hildegard Hueskel, 509 Ave. of Oaks, Houston 22, Texas",
+    "notes": "\"Gruss aus Königswinter\" multi-view card: the Drachenfels castle ruin, Drachenfels und Drachenburg, Rheininsel Nonnenwerth, the Autofähre (car ferry) between Mehlem and Königswinter, and Petersberg, framed around the town's coat of arms. Back is a German-language letter dated 7.7.60 (European day-month-year format = July 7, 1960) — opens 'Meine liebe Hilde!' ('My dear Hilde!') and appears to be a birthday letter ('zu Deinem Geburtstag' / 'for your birthday'). No stamp or postmark visible in this scan. Address uses the pre-ZIP postal zone number 'Houston 22, Texas' (zone numbers were phased out when ZIP codes launched in 1963). Full transcription is tentative — this is handwritten German cursive and would benefit from a native-German read for accuracy.",
+    "front": "1960 - Konigswinter - Castle - front.jpeg",
+    "back": "1960 - Konigswinter - Castle - back.jpeg",
+    "mapLocation": {
+      "name": "Königswinter, Germany — Drachenfels Castle",
+      "lat": 50.6666,
+      "lng": 7.1972
+    },
+    "recipientLocation": {
+      "name": "Houston, TX — 509 Ave. of Oaks (Hueskel)",
+      "lat": 29.7604,
+      "lng": -95.3698
+    },
+    "decadeTag": "1960s"
+  }
+]
