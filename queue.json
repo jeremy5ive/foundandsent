@@ -1,27 +1,5 @@
 [
   {
-    "id": 170,
-    "location": "Fontana Dam, North Carolina",
-    "address": "Fontana Dam, NC 28733",
-    "year": "c. 1963–1968 (dated by stamp, not postmark — see notes)",
-    "sender": "Mary Ellen & Nancy",
-    "recipient": "Misses Carol and Irene Morris, 16400 Canfield St. N.E., Alliance, Ohio, Rt. #5",
-    "notes": "Night View of Fontana Dam — F B11, photographed by Gene Aikens, published by W.M. Cline Co., Chattanooga, TN, copyright 1956, card #18261. The 1956 copyright line is the card's print year, not necessarily its mailing year — postcard racks commonly sold stock for years after printing. Postmark reads '...NKLIN...N.C.' (Franklin, NC) but the date within the cancel is illegible under foxing/staining even under magnification. The stamp is more reliable: a 5¢ Washington (Liberty Series, Scott #1213), issued Nov. 1962 and used for the 5¢ first-class rate 1963–1968 — which places the actual mailing in that window, several years after the card's 1956 print date. Message: 'Pretty huh!!! Hi! We were at Fontana Dam this afternoon. Took several pic. Boy the roads are straight, they go like this [drawing of a squiggle] — over 200 curves in 20 miles. We'll be down at Bear Pen on ___ and send you post cards from there. Until then Bye. Mary Ellen & Nancy. Tell everybody Hi!' POSSIBLE FAMILY NETWORK NODE: recipient 'Irene Morris' reappears as an adult ('Irene D. Morris') on the 1981 Joshua Tree card (#173), then living in Canton, Ohio — about 20 miles from this Alliance, OH address. Worth tagging as the same person if you want to build out the Griswold Trips connection.",
-    "front": "1963 - 68 - Fontana Dam, NC - front.jpeg",
-    "back": "1963 - 68 - Fontana Dam, NC - back.jpeg",
-    "mapLocation": {
-      "name": "Fontana Dam, North Carolina",
-      "lat": 35.4529,
-      "lng": -83.8046
-    },
-    "recipientLocation": {
-      "name": "Alliance, OH — 16400 Canfield St NE (Morris)",
-      "lat": 40.9145,
-      "lng": -81.1054
-    },
-    "decadeTag": "1960s"
-  },
-  {
     "id": 171,
     "location": "Chicago, Illinois — The Sands Motel",
     "address": "Sheridan Rd & Foster Ave, Chicago, IL 60640",
