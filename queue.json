@@ -1,28 +1,5 @@
 [
   {
-    "id": 171,
-    "location": "Chicago, Illinois — The Sands Motel",
-    "address": "Sheridan Rd & Foster Ave, Chicago, IL 60640",
-    "year": "July 20, 1959",
-    "sender": "Olga (best-effort read of signature)",
-    "recipient": "Mrs. Anna Robinson, Oak Grove, Mo.",
-    "notes": "The Sands Motel, Chicago — AAA-rated, 150 air-conditioned rooms with 21-inch television, adjoining the Edgewater Beach Hotel, Sheridan Rd & Foster Ave. Front shows an aerial view of the motel's pool/parking court with the Edgewater Beach Hotel towers behind it and a 'Peter Pan' snack shop sign in the foreground. Three 1¢ Washington (Liberty series) stamps; Chicago postmark JUL 20 1959, plus a transit backstamp from Berrien Springs, Mich. Message describes a whirlwind day of Chicago sightseeing: church, Chinatown, Maxwell Street Market, Hull House, the Palmer House, the Drake Hotel, the Museum of Science and Industry, the Art Institute, then swimming in Lake Michigan — with a plan to spend the next day at Arlington Park race track.",
-    "front": "1959 - Sands Motel - Chicago, ILL - front.jpeg",
-    "back": "1959 - Sands Motel - Chicago, ILL - back.jpeg",
-    "mapLocation": {
-      "name": "Chicago, Illinois — The Sands Motel",
-      "lat": 41.9836,
-      "lng": -87.6555
-    },
-    "recipientLocation": {
-      "name": "Oak Grove, MO (Robinson)",
-      "lat": 39.0089,
-      "lng": -94.1155
-    },
-    "recipientLocationNote": "There's more than one 'Oak Grove' in Missouri — pinned the better-known one near Kansas City (Jackson/Lafayette Co.); flag if you know it's the other.",
-    "decadeTag": "1950s"
-  },
-  {
     "id": 172,
     "location": "Laguna Beach, California — Victor Hugo Inn",
     "address": "Cliff Dr, Laguna Beach, CA 92651",
