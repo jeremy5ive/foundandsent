@@ -1,24 +1,5 @@
 [
   {
-    "id": 172,
-    "location": "Laguna Beach, California — Victor Hugo Inn",
-    "address": "Cliff Dr, Laguna Beach, CA 92651",
-    "year": "c. 1968",
-    "sender": "Signature illegible",
-    "recipient": "Mrs. Alice H[uggins?], 40 Somersworth Walk, New Hampshire 03878 — NEEDS RE-READ",
-    "notes": "The Victor Hugo Inn at Laguna Beach, California, described on the back as 'world-famous for its fine cuisine,' fronted by flower-bordered garden paths and a bluff-edge 'Gaze-Bo' overlooking the Pacific. 'Plastichrome' card by Colourpicture, Boston, distributed by Mitock & Sons, Sherman Oaks, Calif.; color by Geo. E. Watson Studio, Long Beach; card #P3235 / GW2118. Printed 'ADDRESS ONLY' panel with no stamp/postmark visible in this scan — may have been mailed inside an envelope. A partial handwritten date near the top reads roughly '9-68' (September 1968). Long cursive letter along the margin not fully transcribed here — recipient's name and street are only partially legible.",
-    "front": "1968 - Laguna Beach, CA - Victor Hugo Inn - front.jpeg",
-    "back": "1968 - Laguna Beach, CA - Victor Hugo Inn - back.jpeg",
-    "mapLocation": {
-      "name": "Laguna Beach, California — Victor Hugo Inn",
-      "lat": 33.5347,
-      "lng": -117.7855
-    },
-    "recipientLocation": null,
-    "recipientLocationNote": "Recipient's exact street/name not fully legible — hold off on a pin until confirmed.",
-    "decadeTag": "1960s"
-  },
-  {
     "id": 173,
     "location": "American Southwest — Joshua Trees (Petley Studios, Phoenix, AZ)",
     "address": "Sonoran/Mojave Desert, American Southwest",
