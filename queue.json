@@ -1,27 +1,5 @@
 [
   {
-    "id": 173,
-    "location": "American Southwest — Joshua Trees (Petley Studios, Phoenix, AZ)",
-    "address": "Sonoran/Mojave Desert, American Southwest",
-    "year": "c. 1981",
-    "sender": "Signature illegible",
-    "recipient": "Irene D. Morris, 1441 Wendy St. N.W., Apt. 94, Canton, Ohio 44709",
-    "notes": "Joshua Trees card by Petley Studios, 4051 E. Van Buren, Phoenix, AZ 85008 — card #KV9641. Back copy explains the Joshua tree's Mormon-pioneer naming legend ('praying plant,' up-stretched arms). Since the publisher is Phoenix-based, this may depict Arizona high desert rather than California's Joshua Tree National Park specifically — pinned generally pending confirmation. USA 15¢ flag stamp ('The Land of the Free, The Home of the Brave'), consistent with the 1978–1981 window; meter slogan cancel for Muscular Dystrophy support. Message (partial, cursive faint): 'Hello Irene! Having a wonderful time... trying to see it all... the weather is great... We stopped 3 nights at ___... Write me a line...' POSSIBLE FAMILY NETWORK NODE: recipient 'Irene D. Morris' likely matches the 'Irene Morris' addressed as a girl on the 1956 Fontana Dam card (#170), then in Alliance, Ohio — about 20 miles from this Canton, Ohio address.",
-    "front": "1981 - Joshua Tree, American SW - front.jpeg",
-    "back": "1981 - Joshua Tree, American SW - back.jpeg",
-    "mapLocation": {
-      "name": "American Southwest — Joshua Trees (Petley Studios, Phoenix, AZ)",
-      "lat": 34.1084,
-      "lng": -112.3733
-    },
-    "recipientLocation": {
-      "name": "Canton, OH — 1441 Wendy St NW Apt 94 (Morris)",
-      "lat": 40.7989,
-      "lng": -81.3784
-    },
-    "decadeTag": "1980s"
-  },
-  {
     "id": 174,
     "location": "Königswinter, Germany — Drachenfels Castle",
     "address": "Drachenfelsstraße, 53639 Königswinter, Germany",

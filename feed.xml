@@ -5,8 +5,15 @@
     <link>https://foundandsent.net</link>
     <description>Rescued vintage postcards with their original messages, stamps, and stories. New cards added regularly.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 08 Jul 2026 09:57:31 -0600</lastBuildDate>
+    <lastBuildDate>Thu, 09 Jul 2026 10:21:29 -0600</lastBuildDate>
     <atom:link href="https://foundandsent.net/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Card #173: American Southwest — Joshua Trees (Petley Studios, Phoenix, AZ) (c. 1981)</title>
+      <link>https://foundandsent.net/#card-173</link>
+      <guid isPermaLink="true">https://foundandsent.net/#card-173</guid>
+      <description>Joshua Trees card by Petley Studios, 4051 E. Van Buren, Phoenix, AZ 85008 — card #KV9641. Back copy explains the Joshua tree's Mormon-pioneer naming legend ('praying plant,' up-stretched arms). Since the publisher is Phoenix-based, this may depict Arizona high desert rather than California's Joshua </description>
+      <media:thumbnail url="https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1981 - Joshua Tree, American SW - front.jpeg"/>
+    </item>
     <item>
       <title>Card #172: Laguna Beach, California — Victor Hugo Inn (c. 1968)</title>
       <link>https://foundandsent.net/#card-172</link>
