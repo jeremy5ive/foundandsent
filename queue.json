@@ -1,29 +1,5 @@
 [
   {
-    "id": 175,
-    "location": "Braymer, Missouri — Farm Scene, Milking Time",
-    "address": "Braymer, Missouri",
-    "year": "June 26, 1923",
-    "sender": "Unknown (signed “Your daughter”)",
-    "recipient": "Mrs. R. H. Benney, Lees Summit, Missouri",
-    "notes": "Real-photo postcard, hand-tinted, stock number “No. 82 — Farm Scene Locals” — a mass-produced generic dairy-farm image overprinted with the caption “Scene near BRAYMER, MO.,” a common practice for small towns that didn’t warrant custom local photography. Front shows a farmer in a straw hat milking a cow beside an open barn door hung with drying corn shocks. Postmarked Braymer, MO, Jun 26, 1923, 6 PM. 1¢ green Washington stamp. Message (best-effort read, cursive is faint): “Dear folks — Hope you are all well. Have been warm. Write a letter before long. Love [to] Sis and every one. Lovingly, your daughter.” Addressed to Mrs. R.H. Benney in Lees Summit, roughly 70 miles southwest — likely a daughter writing home to her mother from a visit or stay near Braymer.",
-    "front": "1923 - Braymer, MO - front.jpeg",
-    "back": "1923 - Braymer, MO - back.jpeg",
-    "feed_description": "A daughter’s quick note home from Braymer, Missouri in June 1923, on a mass-produced “farm scene” postcard overprinted for the local market — hoping folks are well and promising a letter before long.",
-    "map": [
-      {
-        "name": "Braymer, Missouri",
-        "lat": 39.5931,
-        "lng": -93.7869
-      },
-      {
-        "name": "Lees Summit, Missouri (recipient)",
-        "lat": 38.9108,
-        "lng": -94.3822
-      }
-    ]
-  },
-  {
     "id": 176,
     "location": "Tallahassee, Florida — Lake Bradford, “The Disappearing Lake”",
     "address": "Lake Bradford, Tallahassee, Florida",
