@@ -1,29 +1,5 @@
 [
   {
-    "id": 176,
-    "location": "Tallahassee, Florida — Lake Bradford, “The Disappearing Lake”",
-    "address": "Lake Bradford, Tallahassee, Florida",
-    "year": "June 10, 1935",
-    "sender": "Unknown (signature obscured by postmark)",
-    "recipient": "Rev. Wm. Wallace, Wrightsville, Florida",
-    "notes": "Published by Asheville Post Card Co., Asheville, N.C., part of their “Beautiful Florida Series,” C.T. American Art-Colored process. Front (card T-15, no. 93714) shows cypress trees draped in Spanish moss standing in Lake Bradford’s still water at dusk. Back caption explains the lake’s local nickname: “the Disappearing Lake, nearly disappears every seven years” — a real characteristic of several lakes in this karst region of North Florida, which periodically drain through underground limestone sinks and refill over time. Postmarked Tallahassee, FL, Jun 10, 1935, 5 PM. Message, addressed to a Boy Scout troop leader: “Dear Scoutmaster. How are you? Hope you are fine. How are the boys doing on the room? Hope they will not disappoint you like we have been doing. As soon as I come back I will bring mine over. Wish you were with me.” Signature obscured by the postmark. Sent to Rev. Wm. Wallace in Wrightsville, a small community near Jacksonville — likely a scout from Wallace’s troop writing during a summer trip or camp near Tallahassee.",
-    "front": "1935 - Lake Bradford, Tallahassee, FL - front.jpeg",
-    "back": "1935 - Lake Bradford, Tallahassee, FL - back.jpeg",
-    "feed_description": "A scout writes to “Dear Scoutmaster” Rev. Wm. Wallace in June 1935, apologizing for not living up to expectations and promising to make it right — mailed from beside Tallahassee’s Lake Bradford, known locally as “the Disappearing Lake.”",
-    "map": [
-      {
-        "name": "Tallahassee, Florida — Lake Bradford",
-        "lat": 30.4383,
-        "lng": -84.2807
-      },
-      {
-        "name": "Wrightsville, Florida (recipient)",
-        "lat": 30.393,
-        "lng": -81.54
-      }
-    ]
-  },
-  {
     "id": 177,
     "location": "South Texas — Palm-Lined Boulevard",
     "address": "Rio Grande Valley, South Texas (near Harlingen/McAllen)",

@@ -5,8 +5,15 @@
     <link>https://foundandsent.net</link>
     <description>Rescued vintage postcards with their original messages, stamps, and stories. New cards added regularly.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 14 Jul 2026 09:15:28 -0600</lastBuildDate>
+    <lastBuildDate>Wed, 15 Jul 2026 09:17:42 -0600</lastBuildDate>
     <atom:link href="https://foundandsent.net/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Card #176: Tallahassee, Florida — Lake Bradford, “The Disappearing Lake” (June 10, 1935)</title>
+      <link>https://foundandsent.net/#card-176</link>
+      <guid isPermaLink="true">https://foundandsent.net/#card-176</guid>
+      <description>A scout writes to “Dear Scoutmaster” Rev. Wm. Wallace in June 1935, apologizing for not living up to expectations and promising to make it right — mailed from beside Tallahassee’s Lake Bradford, known locally as “the Disappearing Lake.”</description>
+      <media:thumbnail url="https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1935 - Lake Bradford, Tallahassee, FL - front.jpeg"/>
+    </item>
     <item>
       <title>Card #175: Braymer, Missouri — Farm Scene, Milking Time (June 26, 1923)</title>
       <link>https://foundandsent.net/#card-175</link>
