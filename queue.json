@@ -1,29 +1,5 @@
 [
   {
-    "id": 177,
-    "location": "South Texas — Palm-Lined Boulevard",
-    "address": "Rio Grande Valley, South Texas (near Harlingen/McAllen)",
-    "year": "June 25, 1957",
-    "sender": "Helen (last name illegible)",
-    "recipient": "Mr. Arthur Brauer, 509 Ave of Oaks, Houston 29, Texas",
-    "notes": "“A Don Bartels color reproduction,” published by Don R. Bartels, 510 N. 7th St., McAllen, Texas (card DB-166, S6276). Front shows a royal-palm-lined South Texas boulevard. Back caption: “South Texas displays many types of beautiful palms to remind you of it's semi-tropical climate. Warm winters and cool summers bring many visitors to this area both winter and summer.” Postmarked Harlingen, Tex., Jun 25, 1957, 3 PM. 3¢ Statue of Liberty “In God We Trust” stamp. Message (best-effort read, cursive is dense): “Tuesday — Dear Art, Just got to Harlingen, going on to Brownsville now, looks like a storm coming on. Everybody is OK. It's WARM. Told old Houston — 509. Hope you are OK — go see the travel agent, please — see you Friday. Love, Helen.” Addressed to Arthur Brauer at 509 Ave of Oaks, Houston 29 (pre-ZIP postal zone number, standard for the era). A quick travel update from the Rio Grande Valley, likely from a road trip working down toward Brownsville and the Mexican border.",
-    "front": "1957 - South Texas - front.jpeg",
-    "back": "1957 - South Texas - back.jpeg",
-    "feed_description": "Helen writes “Dear Art” from Harlingen, Texas in June 1957, mid-road-trip toward Brownsville with a storm rolling in — sent home on a palm-lined South Texas postcard by McAllen photographer Don Bartels.",
-    "map": [
-      {
-        "name": "Harlingen, Texas",
-        "lat": 26.1906,
-        "lng": -97.6961
-      },
-      {
-        "name": "Houston, Texas (recipient)",
-        "lat": 29.7604,
-        "lng": -95.3698
-      }
-    ]
-  },
-  {
     "id": 178,
     "location": "Myrtle Beach, South Carolina — Ocean Plaza Pier",
     "address": "Ocean Plaza Pier, North Strand, Myrtle Beach, SC",

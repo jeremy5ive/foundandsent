@@ -5,8 +5,15 @@
     <link>https://foundandsent.net</link>
     <description>Rescued vintage postcards with their original messages, stamps, and stories. New cards added regularly.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 15 Jul 2026 09:17:42 -0600</lastBuildDate>
+    <lastBuildDate>Thu, 16 Jul 2026 09:24:50 -0600</lastBuildDate>
     <atom:link href="https://foundandsent.net/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Card #177: South Texas — Palm-Lined Boulevard (June 25, 1957)</title>
+      <link>https://foundandsent.net/#card-177</link>
+      <guid isPermaLink="true">https://foundandsent.net/#card-177</guid>
+      <description>Helen writes “Dear Art” from Harlingen, Texas in June 1957, mid-road-trip toward Brownsville with a storm rolling in — sent home on a palm-lined South Texas postcard by McAllen photographer Don Bartels.</description>
+      <media:thumbnail url="https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1957 - South Texas - front.jpeg"/>
+    </item>
     <item>
       <title>Card #176: Tallahassee, Florida — Lake Bradford, “The Disappearing Lake” (June 10, 1935)</title>
       <link>https://foundandsent.net/#card-176</link>
