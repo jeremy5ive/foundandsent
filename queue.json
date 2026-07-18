@@ -1,29 +1,5 @@
 [
   {
-    "id": 179,
-    "location": "Great Smoky Mountains National Park — Loop-Over Underpass",
-    "address": "U.S. Highway 441 (Newfound Gap Road), Great Smoky Mountains National Park",
-    "year": "April 20, 1961",
-    "sender": "Bernice (last name illegible, possibly “Weiss”)",
-    "recipient": "Erma Tuggle, 3315 Summit, Apt. 4, Kansas City 11, Missouri",
-    "notes": "Curteichcolor 3-D Natural Color Reproduction, card N.117, distributed by James S. Bryant Industries, Orangeburg, S.C. Back caption: “The Loop-Over Underpass on U.S. 441 in the Great Smoky Mountains National Park is one of the spectacular engineering features of the Trans-mountain Highway, and a well remembered landmark of the tourist.” The loop is a real feature of the road's climb toward Newfound Gap, where the highway spirals and passes back under itself through a stone-faced tunnel to gain elevation on the steep mountainside. Postmarked Signal Mountain, Tenn. (near Chattanooga, a common gateway stop for Smokies-bound travelers), Apr 20, 1961. 4¢ “First Automated Post Office in the United States” commemorative stamp (honoring the 1960 Providence, R.I. facility). Message, dated 4-20-61 in the sender's hand: “Hi Erma! Having a wonderful time. Been to a lot of places and seen a lot of things. Took a lot of pictures. This country sure is beautiful. So I'll see you later. Bernice.” Sent to Erma Tuggle in Kansas City 11 (pre-ZIP postal zone), Missouri.",
-    "front": "1961 - Loop-Over Underpass, Great Smoky Mountains National Park - front.jpeg",
-    "back": "1961 - Loop-Over Underpass, Great Smoky Mountains National Park - back.jpeg",
-    "feed_description": "Bernice writes home mid-road-trip through the Smokies in April 1961, raving about the scenery from a stop near Chattanooga — sent on a card featuring U.S. 441's famous spiraling Loop-Over Underpass.",
-    "map": [
-      {
-        "name": "Signal Mountain, Tennessee",
-        "lat": 35.1809,
-        "lng": -85.34
-      },
-      {
-        "name": "Kansas City, Missouri (recipient)",
-        "lat": 39.0997,
-        "lng": -94.5786
-      }
-    ]
-  },
-  {
     "id": 180,
     "location": "Michigan — Autumn Woodland Road",
     "address": "Michigan (general “Fall Color Tour” scene; no specific site named)",
