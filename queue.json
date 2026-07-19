@@ -1,24 +1,5 @@
 [
   {
-    "id": 180,
-    "location": "Michigan — Autumn Woodland Road",
-    "address": "Michigan (general “Fall Color Tour” scene; no specific site named)",
-    "year": "c. 1955 (estimated from printer's code — card was never mailed)",
-    "sender": "Unknown",
-    "recipient": "Unaddressed — never mailed",
-    "notes": "Photographed and published by Penrod Studio, Berrien Center, Michigan; printed by Dexter Press, Inc., West Nyack, NY (card 7152-C). Front shows a man and small child walking hand-in-hand down a leaf-strewn country road under a full canopy of gold and crimson autumn trees. Back caption: “Scenic roads and trails, beautiful lakes and forests make Michigan's Fall Color Tours an exciting experience.” This card was never mailed — no stamp, no postmark, address side left blank except for the message. A small printed code near the stamp box (“5-6/25”) follows Dexter Press's standard print-date shorthand, which points to a plate/print date of roughly May–June 1955 — offered here as a ballpark rather than a confirmed date, since nothing on the card was ever postmarked. The handwritten message is in Portuguese, not English: roughly, translated — “[This place] isn't exactly like the photograph shows it, but you can get an idea [of what it's like].” A generic state-tourism card, likely picked up by a Portuguese-speaking traveler passing through Michigan and written but never sent.",
-    "front": "Autumn in Michigan - front.jpeg",
-    "back": "Autumn in Michigan - back.jpeg",
-    "feed_description": "An unmailed “Fall Color Tour” postcard from Michigan, written in Portuguese and never sent — the message admits the photo doesn't quite do the scene justice, but it gives you an idea. Ballparked to the mid-1950s from a printer's code.",
-    "map": [
-      {
-        "name": "Berrien Center, Michigan (publisher location — approximate)",
-        "lat": 41.9678,
-        "lng": -86.3387
-      }
-    ]
-  },
-  {
     "id": 181,
     "location": "Bochum, Germany — Schauspielhaus (Municipal Theatre)",
     "address": "Schauspielhaus, Bochum, North Rhine-Westphalia, Germany",

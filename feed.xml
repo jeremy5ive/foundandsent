@@ -5,8 +5,15 @@
     <link>https://foundandsent.net</link>
     <description>Rescued vintage postcards with their original messages, stamps, and stories. New cards added regularly.</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 18 Jul 2026 08:44:02 -0600</lastBuildDate>
+    <lastBuildDate>Sun, 19 Jul 2026 08:45:32 -0600</lastBuildDate>
     <atom:link href="https://foundandsent.net/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Card #180: Michigan — Autumn Woodland Road (c. 1955 (estimated from printer's code — card was never mailed))</title>
+      <link>https://foundandsent.net/#card-180</link>
+      <guid isPermaLink="true">https://foundandsent.net/#card-180</guid>
+      <description>An unmailed “Fall Color Tour” postcard from Michigan, written in Portuguese and never sent — the message admits the photo doesn't quite do the scene justice, but it gives you an idea. Ballparked to the mid-1950s from a printer's code.</description>
+      <media:thumbnail url="https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/Autumn in Michigan - front.jpeg"/>
+    </item>
     <item>
       <title>Card #179: Great Smoky Mountains National Park — Loop-Over Underpass (April 20, 1961)</title>
       <link>https://foundandsent.net/#card-179</link>
