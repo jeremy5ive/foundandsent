@@ -1,29 +1,5 @@
 [
   {
-    "id": 181,
-    "location": "Bochum, Germany — Schauspielhaus (Municipal Theatre)",
-    "address": "Schauspielhaus, Bochum, North Rhine-Westphalia, Germany",
-    "year": "c. mid-to-late 1950s (postmark day legible, year worn away — see notes)",
-    "sender": "Unknown (multiple signatures, largely illegible)",
-    "recipient": "Mrs. Elisabeth Pfanneberg, c/o Mimno, 83 Pleasant Street, Lexington 73, Massachusetts, USA",
-    "notes": "Published by Verlag Heinr. Koch, Essen (card 56272). Black-and-white real-photo card of Bochum's Schauspielhaus (municipal drama theatre) seen across its landscaped park grounds, benches and flowering shrubs in the foreground. Sent airmail (“Mit Luftpost / Par Avion” label) with a 40pf blue Theodor Heuss definitive stamp (West German series issued 1954–1960). Postmark shows a Bochum-area cancellation dated the 31st of May, but the year digit isn’t legible on the scan. Addressed to “Lexington 73” — a pre-ZIP postal zone number (zones were retired when ZIP codes launched in 1963), which narrows the likely date to sometime before then, consistent with the Heuss stamp’s 1954–1960 run. Ballparking it to the mid-to-late 1950s on that basis. Message is written in fast, looping German cursive (closer to old Kurrentschrift style than modern hand) across the full back and margin. Best-effort reading after close inspection: opens with “Liebe Mutti!” (“Dear Mommy!”); the body’s content resists confident word-for-word transcription, but its tone reads as warm, casual family chat — touching on good weather/sunshine and day-to-day activities rather than any specific news. It closes with a “viele liebe Grüße” (“many warm greetings”) sign-off signed by several family members, including what appears to be “Oma” (Grandma) — suggesting a multi-generational family greeting rather than a single letter-writer. Sent to Elisabeth Pfanneberg, care of a “Mimno” household in Lexington, Massachusetts — likely German relatives writing to family who had emigrated to the Boston area. Note: the message body remains only partially deciphered despite repeated close review; a native reader of old German cursive would likely get more out of it than this transcription does.",
-    "front": "Schauspielhaus Bochum Drama Theatre, Bochum on Konigsallee - front.jpeg",
-    "back": "Schauspielhaus Bochum Drama Theatre, Bochum on Konigsallee - back.jpeg",
-    "feed_description": "A German family postcard from Bochum's Schauspielhaus, airmailed to Elisabeth Pfanneberg in Lexington, Massachusetts — the German cursive resists full translation, but it's clearly a warm, multi-signature family letter. Ballparked to the mid-to-late 1950s.",
-    "map": [
-      {
-        "name": "Bochum, Germany",
-        "lat": 51.4818,
-        "lng": 7.2162
-      },
-      {
-        "name": "Lexington, Massachusetts (recipient)",
-        "lat": 42.443,
-        "lng": -71.229
-      }
-    ]
-  },
-  {
     "id": 182,
     "location": "Pana, Illinois — Pana Township High School",
     "address": "Pana Township High School, Pana, IL",
