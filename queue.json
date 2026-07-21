@@ -1,29 +1,5 @@
 [
   {
-    "id": 182,
-    "location": "Pana, Illinois — Pana Township High School",
-    "address": "Pana Township High School, Pana, IL",
-    "year": "July 20, 1921",
-    "sender": "Bert",
-    "recipient": "Mrs. Luther Davidson, Findlay, Ill.",
-    "notes": "Front caption: “Pana Township High School, Pana, Ill.” Published by A.R. Vogel Co., Chicago, Ill. (card 2804), “Made in U.S.A.” Pana was known in this era as the “City of Roses” for its many commercial greenhouses (over 100 at one point), and its coal mining industry; the school pictured here traces to the first purpose-built Pana Township High School building, constructed in 1909. 1-cent green Franklin stamp, postmarked what appears to be Windsor, Ill. (a small town near Shelbyville, consistent with the letter's mention of a trip there) — the cancellation shows “JUL 6, 1921,” which doesn't quite match the “July 20” date Bert wrote at the top of the message; hard to say from the scan which is off. Pencilled numbers “1595” and “200” on the address side look like later dealer/collector inventory marks, not part of the original card. Message: “Dear Grayce, Ed & Gusto[?] are going to take us to Shelbyville to the Carnival Sat eve & might and you and Luther go we are going to have a early supper and go so we can do some trading and go home with Ed's and stay till Sunday do go if you can we are all well hope you are. Bert” (the name after “Ed &” is hard to pin down — it reads like “Gusto,” possibly a nickname, but I'm not fully confident in it).",
-    "front": "1921_-_Pana_Township_High_School__ILL_-_front.jpeg",
-    "back": "1921_-_Pana_Township_High_School__ILL_-_back.jpeg",
-    "feed_description": "A 1921 postcard of Pana Township High School in Illinois, with Bert writing to Mrs. Luther Davidson in nearby Findlay about a trip to the Shelbyville carnival.",
-    "map": [
-      {
-        "name": "Pana, Illinois",
-        "lat": 39.3894,
-        "lng": -89.0812
-      },
-      {
-        "name": "Findlay, Illinois (recipient)",
-        "lat": 39.5062,
-        "lng": -88.7448
-      }
-    ]
-  },
-  {
     "id": 183,
     "location": "Reno, Nevada — University of Nevada",
     "address": "University of Nevada, Reno, NV",
