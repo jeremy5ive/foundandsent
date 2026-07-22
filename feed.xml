@@ -5,8 +5,15 @@
     <link>https://foundandsent.net</link>
     <description>Rescued vintage postcards with their original messages, stamps, and stories. New cards added regularly.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 21 Jul 2026 09:28:04 -0600</lastBuildDate>
+    <lastBuildDate>Wed, 22 Jul 2026 09:25:30 -0600</lastBuildDate>
     <atom:link href="https://foundandsent.net/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Card #183: Reno, Nevada — University of Nevada (June 1949 (Thursday))</title>
+      <link>https://foundandsent.net/#card-183</link>
+      <guid isPermaLink="true">https://foundandsent.net/#card-183</guid>
+      <description>A 1949 University of Nevada, Reno postcard — Bill marks their lodging with an X on the front and jokes about losing dimes to a payphone.</description>
+      <media:thumbnail url="https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1949_-_University_of_Nevada__Reno__NV_-_front.jpeg"/>
+    </item>
     <item>
       <title>Card #182: Pana, Illinois — Pana Township High School (July 20, 1921)</title>
       <link>https://foundandsent.net/#card-182</link>

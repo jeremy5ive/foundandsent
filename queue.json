@@ -1,29 +1,5 @@
 [
   {
-    "id": 183,
-    "location": "Reno, Nevada — University of Nevada",
-    "address": "University of Nevada, Reno, NV",
-    "year": "June 1949 (Thursday)",
-    "sender": "Bill",
-    "recipient": "Mr. & Mrs. K.W. Evans, 9102 E. 67 Terr., Kansas City, Missouri",
-    "notes": "Front is a hand-tinted linen aerial illustration of the University of Nevada, Reno campus, with an ink “X” marked over one of the buildings near the quad — which turns out to be the punchline of the message on the back. Back printed text: “UNIVERSITY OF NEVADA. A State maintained University located in Reno, having an enrollment of more than 1200 students, and a faculty of about eighty members. There are twenty-five buildings, mostly modern and a beautiful campus. High standards are maintained, and various courses offered — Science and Liberal Arts, Agriculture and specializing in Engineering and Mining.” Genuine Curteich-Chicago “C.T. Art-Colortone” postcard. 1-cent green Washington stamp, postmarked Reno, Nev., Thursday, June [day unclear], 9:30 AM, 1949. Message: “Thurs. Hello Again (X) That's where we're sleeping tonight. Lost another dime since the last card, which was about 15 min. ago. Love Bill” — a running joke about a payphone eating his coins, with the “X” on the front photo marking their lodging for the night.",
-    "front": "1949_-_University_of_Nevada__Reno__NV_-_front.jpeg",
-    "back": "1949_-_University_of_Nevada__Reno__NV_-_back.jpeg",
-    "feed_description": "A 1949 University of Nevada, Reno postcard — Bill marks their lodging with an X on the front and jokes about losing dimes to a payphone.",
-    "map": [
-      {
-        "name": "Reno, Nevada",
-        "lat": 39.5296,
-        "lng": -119.8138
-      },
-      {
-        "name": "Kansas City, Missouri (recipient)",
-        "lat": 39.0997,
-        "lng": -94.5786
-      }
-    ]
-  },
-  {
     "id": 184,
     "location": "Laredo, Texas — Scenic View Toward Mexico",
     "address": "Laredo, TX (view from downtown looking toward Nuevo Laredo, Mexico)",
