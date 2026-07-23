@@ -5,8 +5,15 @@
     <link>https://foundandsent.net</link>
     <description>Rescued vintage postcards with their original messages, stamps, and stories. New cards added regularly.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 22 Jul 2026 09:25:30 -0600</lastBuildDate>
+    <lastBuildDate>Thu, 23 Jul 2026 09:46:56 -0600</lastBuildDate>
     <atom:link href="https://foundandsent.net/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Card #184: Laredo, Texas — Scenic View Toward Mexico (August 24, 1954)</title>
+      <link>https://foundandsent.net/#card-184</link>
+      <guid isPermaLink="true">https://foundandsent.net/#card-184</guid>
+      <description>A 1954 Laredo, Texas postcard written in German — a road-tripper greets the Brauer family of Houston from a Gulf Coast-to-border loop through German Hill Country.</description>
+      <media:thumbnail url="https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1954 - Laredo, TX - front.jpeg"/>
+    </item>
     <item>
       <title>Card #183: Reno, Nevada — University of Nevada (June 1949 (Thursday))</title>
       <link>https://foundandsent.net/#card-183</link>

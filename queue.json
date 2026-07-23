@@ -1,29 +1,5 @@
 [
   {
-    "id": 184,
-    "location": "Laredo, Texas — Scenic View Toward Mexico",
-    "address": "Laredo, TX (view from downtown looking toward Nuevo Laredo, Mexico)",
-    "year": "August 24, 1954",
-    "sender": "Unknown (signature illegible)",
-    "recipient": "Mr. A. Brauer, 509 Avenue of Oaks, Houston, Texas",
-    "notes": "Front caption: “Laredo, Texas. Scenic view looking toward Mexico from Laredo.” The tall spired tower visible in the photo is almost certainly Laredo's San Agustín Cathedral, whose Gothic Revival bell tower (designed by Father Pierre Yves Keralum, built out from 1866) still anchors the downtown skyline. “Plastichrome” by Colourpicture, Boston (card P619, T25), published by Texacolor Card Co., Dallas, Texas. 2-cent John Adams stamp, postmarked Laredo, Texas, Aug 24, 1954. Card is written sideways in German cursive along the address panel. Message (German): “L. 8.24.54. Lieber Herr Brauer, von unserer großen Rundfahrt – Houston – Fredericksburg – El Paso – Laredo – Monterrey – Laredo grüßt Sie und die Ihren recht herzlich. Nun soll noch Brownsville u. Corpus Christi besucht werden. Danach wieder daheim. Ihr [signature illegible].” Translation: “Laredo, 8.24.54. Dear Mr. Brauer, greetings from our big road trip – Houston, Fredericksburg, El Paso, Laredo, Monterrey, Laredo – warm regards to you and your family. Still to visit are Brownsville and Corpus Christi. Then home again. Yours, [name unclear].” The route runs straight through the German-settled Texas Hill Country (Fredericksburg was founded by German immigrants in 1846), which fits a German-speaking traveler writing home to a fellow German-Texan family in Houston. The signature genuinely resists a confident reading — flagging it as uncertain rather than guessing a name.",
-    "front": "1954 - Laredo, TX - front.jpeg",
-    "back": "1954 - Laredo, TX - back.jpeg",
-    "feed_description": "A 1954 Laredo, Texas postcard written in German — a road-tripper greets the Brauer family of Houston from a Gulf Coast-to-border loop through German Hill Country.",
-    "map": [
-      {
-        "name": "Laredo, Texas",
-        "lat": 27.5306,
-        "lng": -99.4803
-      },
-      {
-        "name": "Houston, Texas (recipient)",
-        "lat": 29.7604,
-        "lng": -95.3698
-      }
-    ]
-  },
-  {
     "id": 185,
     "location": "Miami Beach, Florida — Roney Plaza Hotel",
     "address": "Roney Plaza Hotel, Collins Avenue & 23rd Street, Miami Beach, FL",
