@@ -6,6 +6,7 @@ Run by GitHub Actions at 8am CST daily.
 """
 
 import json
+import os
 import re
 import sys
 from datetime import datetime, timezone, timedelta
@@ -13,6 +14,7 @@ from datetime import datetime, timezone, timedelta
 QUEUE_FILE = "queue.json"
 INDEX_FILE = "index.html"
 FEED_FILE  = "feed.xml"
+IMAGES_DIR = "images"
 BASE_IMG   = "https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/"
 SITE_URL   = "https://foundandsent.net"
 
@@ -24,7 +26,29 @@ if not queue:
     print("Queue is empty — nothing to publish today.")
     sys.exit(0)
 
-card = queue.pop(0)
+card = queue[0]
+print(f"Checking card #{card['id']}: {card['location']} ({card['year']})")
+
+# ── Verify image files actually exist before publishing anything ────────────
+missing = []
+for key in ("front", "back"):
+    fname = card.get(key)
+    if not fname:
+        missing.append(f"{key} (no filename set)")
+        continue
+    full_path = os.path.join(IMAGES_DIR, fname)
+    if not os.path.isfile(full_path):
+        missing.append(f"{key}: \"{fname}\"")
+
+if missing:
+    print(f"ERROR: Card #{card['id']} is missing image file(s) in {IMAGES_DIR}/:")
+    for m in missing:
+        print(f"  - {m}")
+    print("Not publishing. Fix the filename(s) in queue.json (or add the missing "
+          "file(s) to images/) so they match exactly, then re-run.")
+    sys.exit(1)
+
+queue.pop(0)
 print(f"Publishing card #{card['id']}: {card['location']} ({card['year']})")
 
 # ── Save updated queue ───────────────────────────────────────────────────────
