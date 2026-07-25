@@ -1,29 +1,5 @@
 [
   {
-    "id": 186,
-    "location": "Miami Beach, Florida — Bella Vista Hotel Apts.",
-    "address": "9341 Collins Avenue, Miami Beach, FL",
-    "year": "July 14, 1960",
-    "sender": "Helen",
-    "recipient": "Miss Ola Steele[?], 3416 Baltimore, Kansas City, Missouri",
-    "notes": "Front shows the Bella Vista Hotel Apts. entry walk with cars of the era parked out front and an AAA endorsement seal; the building signage in the photo reads ‘9333’ while the back letterhead gives the address as 9341 Collins Avenue — a small discrepancy between the two, not resolved here. Back printed text: “Bella Vista Hotel Apts. 9341 Collins Avenue, Miami Beach, Florida. Directly on the Ocean • Open Year Round. Air-Conditioned.” 3-cent Statue of Liberty stamp, postmarked Miami Beach, Jul 14, 5:30 PM, 1960. Message: “Hi, Just call me the Unguentine Kid. My burn isn't too bad & Dad is better now. He was laid up 3 days with a burn. The other day he counted 26 fishing boats and 2 ocean liners in front of our apt. This is what it's called daily living — swimming morning & night. Helen” Unguentine was a widely sold burn ointment of the era, so “the Unguentine Kid” is Helen's joke about her own sunburn.",
-    "front": "1960 - Miami Beach, FL - Bella Vista Hotel Apts - front.jpeg",
-    "back": "1960 - Miami Beach, FL - Bella Vista Hotel Apts - back.jpeg",
-    "feed_description": "A 1960 postcard from the Bella Vista Hotel Apts. on Miami Beach — Helen jokes about sunburn and counts fishing boats from the balcony.",
-    "map": [
-      {
-        "name": "Miami Beach, Florida",
-        "lat": 25.8657,
-        "lng": -80.1204
-      },
-      {
-        "name": "Kansas City, Missouri (recipient)",
-        "lat": 39.0997,
-        "lng": -94.5786
-      }
-    ]
-  },
-  {
     "id": 187,
     "location": "Rio de Janeiro, Brazil — Candelária Church",
     "address": "Igreja de Nossa Senhora da Candelária, Praça Pio X, Centro, Rio de Janeiro, Brazil",
