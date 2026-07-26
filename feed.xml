@@ -5,8 +5,15 @@
     <link>https://foundandsent.net</link>
     <description>Rescued vintage postcards with their original messages, stamps, and stories. New cards added regularly.</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 25 Jul 2026 08:54:07 -0600</lastBuildDate>
+    <lastBuildDate>Sun, 26 Jul 2026 08:55:43 -0600</lastBuildDate>
     <atom:link href="https://foundandsent.net/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Card #187: Rio de Janeiro, Brazil — Candelária Church (July 31, 1963)</title>
+      <link>https://foundandsent.net/#card-187</link>
+      <guid isPermaLink="true">https://foundandsent.net/#card-187</guid>
+      <description>A 1963 postcard from Rio's Candelária Church — Fulbright student Mary writes about Portuguese classes and cocktail parties in the last calm year before Brazil's 1964 coup.</description>
+      <media:thumbnail url="https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1963 - Rio de Janeiro, Brazil - Candelaria Church - front.jpeg"/>
+    </item>
     <item>
       <title>Card #186: Miami Beach, Florida — Bella Vista Hotel Apts. (July 14, 1960)</title>
       <link>https://foundandsent.net/#card-186</link>
