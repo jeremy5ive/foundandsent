@@ -5,8 +5,15 @@
     <link>https://foundandsent.net</link>
     <description>Rescued vintage postcards with their original messages, stamps, and stories. New cards added regularly.</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 26 Jul 2026 08:55:43 -0600</lastBuildDate>
+    <lastBuildDate>Mon, 27 Jul 2026 10:06:36 -0600</lastBuildDate>
     <atom:link href="https://foundandsent.net/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Card #188: Dallas, Texas — Meadows Building (November 30, 1963)</title>
+      <link>https://foundandsent.net/#card-188</link>
+      <guid isPermaLink="true">https://foundandsent.net/#card-188</guid>
+      <description>A Dallas postcard mailed just eight days after JFK's assassination — ‘we are seeing the place that saddened the nation,’ a family writes home from the Meadows Building.</description>
+      <media:thumbnail url="https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1963 - Dallas, TX - Meadows Building - front.jpeg"/>
+    </item>
     <item>
       <title>Card #187: Rio de Janeiro, Brazil — Candelária Church (July 31, 1963)</title>
       <link>https://foundandsent.net/#card-187</link>
