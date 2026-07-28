@@ -5,8 +5,15 @@
     <link>https://foundandsent.net</link>
     <description>Rescued vintage postcards with their original messages, stamps, and stories. New cards added regularly.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 27 Jul 2026 10:06:36 -0600</lastBuildDate>
+    <lastBuildDate>Tue, 28 Jul 2026 09:57:44 -0600</lastBuildDate>
     <atom:link href="https://foundandsent.net/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Card #189: Nashville, Tennessee — Parthenon and Lake, Centennial Park (June 17, 1948)</title>
+      <link>https://foundandsent.net/#card-189</link>
+      <guid isPermaLink="true">https://foundandsent.net/#card-189</guid>
+      <description>A 1948 postcard of Nashville's illuminated Parthenon reflected in Lake Watauga, with a mother writing to her son's church in Lexington, Kentucky about a stop in Cottontown, TN.</description>
+      <media:thumbnail url="https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1948 - Parthenon and Lake, Centennial Park, Nashville, TN - front.jpeg"/>
+    </item>
     <item>
       <title>Card #188: Dallas, Texas — Meadows Building (November 30, 1963)</title>
       <link>https://foundandsent.net/#card-188</link>
