@@ -1,29 +1,5 @@
 [
   {
-    "id": 190,
-    "location": "Hoover Dam, Nevada/Arizona border",
-    "address": "Hoover Dam, Colorado River, NV/AZ",
-    "year": "February 14, 1966",
-    "sender": "Rudy",
-    "recipient": "Court House Gang, Warsaw, Missouri, c/o Art Call",
-    "notes": "Front: “Greetings from Hoover Dam” — a color photo looking down the canyon at the dam's downstream face, with two women in the foreground and an American flag flying over the intake towers. Back printed text: “HOOVER DAM. Looking towards the outlet tunnels and huge powerhouse below the world's highest dam. This $125,000,000 project is one of man's greatest engineering achievements. Height 727 feet above bedrock, crest 1,244 feet, and 660 feet thick at the base. Photo by Don Lidikay Union Pacific R.R.” Published by Western Resort Publications, Santa Ana, Calif.; copyright Ferris H. Scott. Card codes FS-470 / S-16839-11. 5-cent Washington stamp, postmarked Las Vegas, Nev., Feb 14, 1966. Message: “Feb. 14. Arrived in Las Vegas Sat. 6:00 PM. Nice trip. Rudy” — a quick, cheerful travel update, addressed collectively to the “Court House Gang” back home at the Warsaw, Missouri courthouse (county seat of Benton County) — a charming glimpse of small-town office camaraderie.",
-    "front": "1966 - Hoover Dam - front.jpeg",
-    "back": "1966 - Hoover Dam - back.jpeg",
-    "feed_description": "A 1966 Valentine's Day postcard from Las Vegas — Rudy sends quick greetings from Hoover Dam to the whole ‘Court House Gang’ back in Warsaw, Missouri.",
-    "map": [
-      {
-        "name": "Hoover Dam, Nevada",
-        "lat": 36.0158,
-        "lng": -114.7377
-      },
-      {
-        "name": "Warsaw, Missouri (recipient)",
-        "lat": 38.2434,
-        "lng": -93.3577
-      }
-    ]
-  },
-  {
     "id": 191,
     "location": "Allenstein, East Prussia (now Olsztyn, Poland) — Castle",
     "address": "Allenstein Castle (Ordensburg), now Olsztyn, Poland",

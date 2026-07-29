@@ -5,8 +5,15 @@
     <link>https://foundandsent.net</link>
     <description>Rescued vintage postcards with their original messages, stamps, and stories. New cards added regularly.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 28 Jul 2026 09:57:44 -0600</lastBuildDate>
+    <lastBuildDate>Wed, 29 Jul 2026 09:44:04 -0600</lastBuildDate>
     <atom:link href="https://foundandsent.net/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Card #190: Hoover Dam, Nevada/Arizona border (February 14, 1966)</title>
+      <link>https://foundandsent.net/#card-190</link>
+      <guid isPermaLink="true">https://foundandsent.net/#card-190</guid>
+      <description>A 1966 Valentine's Day postcard from Las Vegas — Rudy sends quick greetings from Hoover Dam to the whole ‘Court House Gang’ back in Warsaw, Missouri.</description>
+      <media:thumbnail url="https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1966 - Hoover Dam - front.jpeg"/>
+    </item>
     <item>
       <title>Card #189: Nashville, Tennessee — Parthenon and Lake, Centennial Park (June 17, 1948)</title>
       <link>https://foundandsent.net/#card-189</link>
