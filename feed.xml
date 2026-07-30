@@ -5,8 +5,15 @@
     <link>https://foundandsent.net</link>
     <description>Rescued vintage postcards with their original messages, stamps, and stories. New cards added regularly.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 29 Jul 2026 09:44:04 -0600</lastBuildDate>
+    <lastBuildDate>Thu, 30 Jul 2026 09:45:27 -0600</lastBuildDate>
     <atom:link href="https://foundandsent.net/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Card #191: Allenstein, East Prussia (now Olsztyn, Poland) — Castle (October 13, 1917)</title>
+      <link>https://foundandsent.net/#card-191</link>
+      <guid isPermaLink="true">https://foundandsent.net/#card-191</guid>
+      <description>A WWI Feldpost card from Allenstein Castle (now Olsztyn, Poland) — once Copernicus's home base — signed by a group of soldiers sending greetings to a wife back in Berlin, October 1917.</description>
+      <media:thumbnail url="https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/Allenstein, Poland - Castle - front.jpeg"/>
+    </item>
     <item>
       <title>Card #190: Hoover Dam, Nevada/Arizona border (February 14, 1966)</title>
       <link>https://foundandsent.net/#card-190</link>

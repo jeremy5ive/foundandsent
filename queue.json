@@ -1,29 +1,5 @@
 [
   {
-    "id": 191,
-    "location": "Allenstein, East Prussia (now Olsztyn, Poland) — Castle",
-    "address": "Allenstein Castle (Ordensburg), now Olsztyn, Poland",
-    "year": "October 13, 1917",
-    "sender": "Unknown (multiple signatures — military comrades)",
-    "recipient": "Frau Martha [surname illegible], Berlin, Germany",
-    "notes": "Front caption: “Allenstein. Partie am Schloß” — a hand-tinted photo of Allenstein Castle's distinctive red tower and Gothic brick hall beside a tree-lined canal. The castle is a 14th-century Teutonic Order stronghold (Ordensburg), begun around 1347–53 as the administrative seat of the Warmia cathedral chapter. Its most famous resident was the astronomer Nicolaus Copernicus, who lived here as chapter administrator from 1516–1521 and personally organized the town's successful defense during a Teutonic Knights' siege in 1520–21. Allenstein was German territory (East Prussia) when this card was sent; after WWII it was transferred to Poland and renamed Olsztyn, its German population expelled in 1945. This is a Feldpost (military field-post) card, exempt from postage under wartime rules, postmarked Allenstein, 13 October 1917 — deep in WWI, about a year before the Armistice. The address and message are both written sideways, running up the card rather than across. Address (partially legible): “Feldpost. Frau Martha [surname illegible], Berlin,” with what may be an old Berlin postal-district code alongside it. The message, in dense wartime cursive, opens “Liebe Frau!” (“Dear wife!” or “Dear Mrs. [name]!”) and seems to touch on travel and field-post/airmail arrangements, but honestly resisted a confident line-by-line transcription even after repeated review — the handwriting leans on a heavily abbreviated, period Kurrentschrift-influenced style. It's signed by several names at the bottom, including what looks like a cavalry rank abbreviation (“Ulan.”, short for Ulanen — lancer cavalry) followed by names including “P. Kaatz” and “Paul Nasser,” with at least one more only partly legible — suggesting a joint greeting from a group of soldier comrades to one of their wives back home. Flagging the body of this one honestly as only partially deciphered; a reader fluent in old German military cursive would likely get more out of it.",
-    "front": "Allenstein, Poland - Castle - front.jpeg",
-    "back": "Allenstein, Poland - Castle - back.jpeg",
-    "feed_description": "A WWI Feldpost card from Allenstein Castle (now Olsztyn, Poland) — once Copernicus's home base — signed by a group of soldiers sending greetings to a wife back in Berlin, October 1917.",
-    "map": [
-      {
-        "name": "Allenstein / Olsztyn, Poland",
-        "lat": 53.7784,
-        "lng": 20.4801
-      },
-      {
-        "name": "Berlin, Germany (recipient)",
-        "lat": 52.52,
-        "lng": 13.405
-      }
-    ]
-  },
-  {
     "id": 192,
     "location": "Salt Lake City, Utah — Brigham Young's Grave",
     "address": "Brigham Young Family Cemetery, 140 East 1st Avenue, Salt Lake City, UT",
