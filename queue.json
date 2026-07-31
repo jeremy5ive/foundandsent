@@ -1,29 +1,5 @@
 [
   {
-    "id": 192,
-    "location": "Salt Lake City, Utah — Brigham Young's Grave",
-    "address": "Brigham Young Family Cemetery, 140 East 1st Avenue, Salt Lake City, UT",
-    "year": "c. 1907–early 1910s (postmark illegible — see notes)",
-    "sender": "R H Berry",
-    "recipient": "Mrs. Viola Berry[?] (surname could also read “Berney”), Breckenridge P.O., Caldwell Co., Missouri",
-    "notes": "Front: “1003. Brigham Young's Grave, Salt Lake City, Utah” — a tinted photo of the ornate wrought-iron-fenced tomb of Brigham Young (1801–1877), second president of the Church of Jesus Christ of Latter-day Saints, who led the Mormon pioneers into the Salt Lake Valley in 1847 and served as the first governor of Utah Territory. He's buried in a small private family cemetery just northeast of Temple Square, alongside other family members and early Church figures. Back: published by The Thayer Publishing Co., Denver, Colo., with the printed reassurance “THIS SPACE CAN BE USED FOR A WRITTEN MESSAGE, USING ONE-CENT STAMP” — the kind of note publishers commonly added right after the U.S. Post Office's March 1907 rule change permitting a divided back (message and address sharing one side). Paired with the 1-cent green Franklin stamp of that same general era, this points to a card from roughly 1907 into the early 1910s, though the postmark itself is too worn to confirm an exact year. Message: “Well how are you. I am at Depot at Salt Lake. am well had to-Lay over Train. Late Every thing shut down in my Business. if I can't get to business in Colorado will be home soon. Your as Ever R H Berry” — the writer delayed en route on a train layover, business plans up in the air. Addressed to “Mrs. Viola Berry” (the surname could also be read as “Berney” — genuinely hard to resolve, though “Berry” would match the sender's own signature), “Breckenridge P.O., Caldwell Co., Mo.” — Breckenridge is a real small town in Caldwell County already familiar from a couple of other cards in the archive.",
-    "front": "Brigham Young's Grave - Salt Lake City, UT - front.jpeg",
-    "back": "Brigham Young's Grave - Salt Lake City, UT - back.jpeg",
-    "feed_description": "An undated early-1900s postcard of Brigham Young's grave in Salt Lake City — a traveler stuck on a train layover writes home to Breckenridge, Missouri.",
-    "map": [
-      {
-        "name": "Salt Lake City, Utah",
-        "lat": 40.7772,
-        "lng": -111.858
-      },
-      {
-        "name": "Breckenridge, Missouri (recipient)",
-        "lat": 39.7553,
-        "lng": -93.8038
-      }
-    ]
-  },
-  {
     "id": 193,
     "location": "Fort Worth, Texas",
     "address": "Downtown Fort Worth, TX (skyline view)",

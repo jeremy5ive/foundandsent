@@ -5,8 +5,15 @@
     <link>https://foundandsent.net</link>
     <description>Rescued vintage postcards with their original messages, stamps, and stories. New cards added regularly.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 30 Jul 2026 09:45:27 -0600</lastBuildDate>
+    <lastBuildDate>Fri, 31 Jul 2026 09:52:45 -0600</lastBuildDate>
     <atom:link href="https://foundandsent.net/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Card #192: Salt Lake City, Utah — Brigham Young's Grave (c. 1907–early 1910s (postmark illegible — see notes))</title>
+      <link>https://foundandsent.net/#card-192</link>
+      <guid isPermaLink="true">https://foundandsent.net/#card-192</guid>
+      <description>An undated early-1900s postcard of Brigham Young's grave in Salt Lake City — a traveler stuck on a train layover writes home to Breckenridge, Missouri.</description>
+      <media:thumbnail url="https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/Brigham Young's Grave - Salt Lake City, UT - front.jpeg"/>
+    </item>
     <item>
       <title>Card #191: Allenstein, East Prussia (now Olsztyn, Poland) — Castle (October 13, 1917)</title>
       <link>https://foundandsent.net/#card-191</link>
