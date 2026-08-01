@@ -1,29 +1,5 @@
 [
   {
-    "id": 193,
-    "location": "Fort Worth, Texas",
-    "address": "Downtown Fort Worth, TX (skyline view)",
-    "year": "c. 1980s (undated — see notes)",
-    "sender": "Fred, Linda & Christy",
-    "recipient": "Robert Bowman, 123 West Main, Shelbyville, Il. 62565",
-    "notes": "Front: a twilight photo of Fort Worth's downtown skyline reflected in a pond, titled simply “FORT WORTH” in bold magenta script — the kind of minimalist, photo-forward postcard design common in the 1980s. Back: “Fort Worth, Texas,” published by The Texas Postcard Company, Plano, TX (card F-116); printed by McGrew Color Graphics, Kansas City, Mo. (a postcard printer active from at least the 1970s onward); photo by Richard Stockton. No postmark or stamp is present — this card appears to have never gone through the mail, likely tucked into an envelope or handed over directly. Pencilled dealer/collector marks “1595” and “100” appear at the top — the same “1595” marking that has now turned up on more than one card in this collection, suggesting several of these postcards passed through the same dealer lot at some point. Message: “Hi! We are having a good time. Saw [?] graduate & also his[?] signed diploma. See you sometime. Student, Fred, Linda & Christy” — a few words here resist full confidence, but the gist is a graduation trip update. Addressed to Robert Bowman in Shelbyville, Illinois — the ZIP code (62565) confirms the card postdates 1963, and the skyline view is consistent with 1980s-era Fort Worth.",
-    "front": "Fort Worth, TX - front.jpeg",
-    "back": "Fort Worth, TX - back.jpeg",
-    "feed_description": "An undated Fort Worth skyline postcard, never mailed — Fred, Linda & Christy write to Robert Bowman in Shelbyville, Illinois about a graduation trip.",
-    "map": [
-      {
-        "name": "Fort Worth, Texas",
-        "lat": 32.7555,
-        "lng": -97.3308
-      },
-      {
-        "name": "Shelbyville, Illinois (recipient)",
-        "lat": 39.4098,
-        "lng": -88.7959
-      }
-    ]
-  },
-  {
     "id": 194,
     "location": "Hector Falls, New York (near Watkins Glen)",
     "address": "Hector Falls, east shore of Seneca Lake, north of Watkins Glen, NY",
