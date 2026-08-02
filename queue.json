@@ -1,29 +1,5 @@
 [
   {
-    "id": 194,
-    "location": "Hector Falls, New York (near Watkins Glen)",
-    "address": "Hector Falls, east shore of Seneca Lake, north of Watkins Glen, NY",
-    "year": "c. 1968–1971 (undated — see notes)",
-    "sender": "‘Ma’ Hadden[s]",
-    "recipient": "Mrs. Lena Stafford, 71 Montreal St., Sanford, Maine 04073",
-    "notes": "Front: a color photo of Hector Falls, a multi-tiered cascade over layered shale, framed by trees with a wooden viewing rail at the base. Back printed text: “Hector Falls — Is a sparkling gem, as it cascades over the rocky slope above the east shore of Seneca Lake, a few miles north of Watkins Glen, N.Y.” Published by Howard Champion, Watkins Glen, N.Y.; “Lustrachrome” process card made by Tichnor Bros., Inc., Boston. 6-cent Flag over White House stamp (first issued January 1968), postmark mostly illegible beyond a partial “...R. N.Y.” Combined with the ZIP code on the address (04073, Sanford, Maine, confirming a post-1963 date) and the 6¢ Flag stamp's common-use window, this card likely dates to around 1968–1971. Message: “Dear Staffy – Polly and I are on a trip to see the Burpees in New York. We went to this spot yesterday and hope to go to Niagara Falls before we come home. However the weather is not too good. Hope to be home by Wednesday. Time will tell. Much love, ‘Ma’ Hadden[s]” — a warm travel update from one older woman to another, touring the Finger Lakes region with a stop planned for Niagara Falls before heading home.",
-    "front": "Hector Falls, NY - front.jpeg",
-    "back": "Hector Falls, NY - back.jpeg",
-    "feed_description": "A postcard from Hector Falls near Watkins Glen, NY — ‘Ma’ Hadden writes to a friend in Sanford, Maine about a Finger Lakes trip with a Niagara Falls stop still to come.",
-    "map": [
-      {
-        "name": "Hector Falls, New York",
-        "lat": 42.4713,
-        "lng": -76.8747
-      },
-      {
-        "name": "Sanford, Maine (recipient)",
-        "lat": 43.4495,
-        "lng": -70.7737
-      }
-    ]
-  },
-  {
     "id": 195,
     "location": "Trappenkamp, Schleswig-Holstein, Germany",
     "address": "Trappenkamp, Kreis Segeberg, Schleswig-Holstein, Germany",
