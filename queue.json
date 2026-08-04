@@ -1,154 +1,114 @@
-#!/usr/bin/env python3
-"""
-Found & Sent — Daily Card Publisher
-Pops the next card from queue.json and injects it into index.html and feed.xml.
-Run by GitHub Actions at 8am CST daily.
-"""
-
-import json
-import os
-import re
-import sys
-from datetime import datetime, timezone, timedelta
-
-QUEUE_FILE = "queue.json"
-INDEX_FILE = "index.html"
-FEED_FILE  = "feed.xml"
-IMAGES_DIR = "images"
-BASE_IMG   = "https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/"
-SITE_URL   = "https://foundandsent.net"
-
-# ── Load queue ──────────────────────────────────────────────────────────────
-with open(QUEUE_FILE, "r", encoding="utf-8") as f:
-    queue = json.load(f)
-
-if not queue:
-    print("Queue is empty — nothing to publish today.")
-    sys.exit(0)
-
-card = queue[0]
-print(f"Checking card #{card['id']}: {card['location']} ({card['year']})")
-
-# ── Verify image files actually exist before publishing anything ────────────
-missing = []
-for key in ("front", "back"):
-    fname = card.get(key)
-    if not fname:
-        missing.append(f"{key} (no filename set)")
-        continue
-    full_path = os.path.join(IMAGES_DIR, fname)
-    if not os.path.isfile(full_path):
-        missing.append(f"{key}: \"{fname}\"")
-
-if missing:
-    print(f"ERROR: Card #{card['id']} is missing image file(s) in {IMAGES_DIR}/:")
-    for m in missing:
-        print(f"  - {m}")
-    print("Not publishing. Fix the filename(s) in queue.json (or add the missing "
-          "file(s) to images/) so they match exactly, then re-run.")
-    sys.exit(1)
-
-queue.pop(0)
-print(f"Publishing card #{card['id']}: {card['location']} ({card['year']})")
-
-# ── Save updated queue ───────────────────────────────────────────────────────
-with open(QUEUE_FILE, "w", encoding="utf-8") as f:
-    json.dump(queue, f, indent=2, ensure_ascii=False)
-print(f"Queue updated — {len(queue)} card(s) remaining.")
-
-# ── Build JS card object ─────────────────────────────────────────────────────
-def esc(s):
-    """Escape a string for use inside a JS double-quoted string."""
-    return s.replace("\\", "\\\\").replace('"', '\\"')
-
-front_path = f'IMG+"{card["front"]}"'
-back_path  = f'IMG+"{card["back"]}"'
-link_field = f',link:"{esc(card["link"])}"' if card.get("link") else ""
-
-card_js = (
-    f'  {{id:{card["id"]},'
-    f'location:"{esc(card["location"])}",'
-    f'address:"{esc(card["address"])}",'
-    f'year:"{esc(card["year"])}",'
-    f'sender:"{esc(card["sender"])}",'
-    f'recipient:"{esc(card["recipient"])}",'
-    f'notes:"{esc(card["notes"])}",'
-    f'front:{front_path},'
-    f'back:{back_path}'
-    f'{link_field}}}'
-)
-
-# ── Inject into index.html ───────────────────────────────────────────────────
-with open(INDEX_FILE, "r", encoding="utf-8") as f:
-    html = f.read()
-
-INSERT_MARKER = "\n];\n\nconst PAGE_SIZE"
-insert_pos = html.rfind(INSERT_MARKER)
-if insert_pos == -1:
-    print("ERROR: Could not find postcards array end marker in index.html")
-    sys.exit(1)
-
-html = html[:insert_pos] + ",\n" + card_js + html[insert_pos:]
-
-# ── Inject map entries ───────────────────────────────────────────────────────
-map_entries = card.get("map", [])
-if map_entries:
-    MAP_MARKER = "\n];\n\nlet map="
-    map_pos = html.rfind(MAP_MARKER)
-    if map_pos != -1:
-        map_js_parts = []
-        for pin in map_entries:
-            name = esc(pin["name"])
-            lat  = pin["lat"]
-            lng  = pin["lng"]
-            map_js_parts.append(
-                f'  {{name:"{name}",lat:{lat},lng:{lng},ids:[{card["id"]}]}}'
-            )
-        map_js = ",\n" + ",\n".join(map_js_parts)
-        html = html[:map_pos] + map_js + html[map_pos:]
-
-with open(INDEX_FILE, "w", encoding="utf-8") as f:
-    f.write(html)
-print("index.html updated ✓")
-
-# ── Inject into feed.xml ─────────────────────────────────────────────────────
-with open(FEED_FILE, "r", encoding="utf-8") as f:
-    feed = f.read()
-
-# Update lastBuildDate
-cst = timezone(timedelta(hours=-6))
-now_cst = datetime.now(cst)
-rss_date = now_cst.strftime("%a, %d %b %Y %H:%M:%S %z")
-feed = re.sub(
-    r"<lastBuildDate>.*?</lastBuildDate>",
-    f"<lastBuildDate>{rss_date}</lastBuildDate>",
-    feed
-)
-
-# Build feed item
-thumb_url = BASE_IMG + card["front"]
-desc = card.get("feed_description", card["notes"][:300])
-desc_escaped = desc.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
-
-new_item = f"""    <item>
-      <title>Card #{card['id']}: {card['location']} ({card['year']})</title>
-      <link>{SITE_URL}/#card-{card['id']}</link>
-      <guid isPermaLink="true">{SITE_URL}/#card-{card['id']}</guid>
-      <description>{desc_escaped}</description>
-      <media:thumbnail url="{thumb_url}"/>
-    </item>
-"""
-
-# Insert as newest item (top of list)
-insert_feed_pos = feed.find("    <item>")
-if insert_feed_pos == -1:
-    print("ERROR: Could not find item insertion point in feed.xml")
-    sys.exit(1)
-
-feed = feed[:insert_feed_pos] + new_item + feed[insert_feed_pos:]
-
-with open(FEED_FILE, "w", encoding="utf-8") as f:
-    f.write(feed)
-print("feed.xml updated ✓")
-
-print(f"\nDone! Card #{card['id']} is now live.")
+[
+  {
+    "id": 196,
+    "location": "South Orange, New Jersey — Askeaton Abbey, Limerick, Ireland",
+    "address": "South Orange, New Jersey",
+    "year": "November 1, c. 1909 (year digit on postmark partly worn)",
+    "sender": "Minnie",
+    "recipient": "Miss L. Ellen Coonan, 305 W. 94th St., New York City",
+    "notes": "Front is a generic Irish scenic view — Askeaton Abbey ruins in Limerick, green-bordered card, print no. 215 — a common practice of the era, sending a stock scenic card unrelated to the sender's actual location. Postmarked South Orange, N.J., Nov 1, 12 noon; 1¢ green Franklin stamp, consistent with a 1908–1912 printing. Message: \"Dear Ellen, I know you are glad to be back in the city again. You will be surprised to hear Mary has left us, but don't let that prevent you coming to South Orange as you promised. Minnie.\"",
+    "front": "1909 - Askeaton Abbey Monastery - Limerick, Ireland - front.jpeg",
+    "back": "1909 - Askeaton Abbey Monastery - Limerick, Ireland - back.jpeg",
+    "feed_description": "Minnie writes to Ellen in New York in 1909, breaking the news that Mary has left the household — but still angling for that promised visit to South Orange.",
+    "map": [
+      { "name": "South Orange, New Jersey", "lat": 40.7487, "lng": -74.2632 },
+      { "name": "New York City, New York (recipient)", "lat": 40.7831, "lng": -73.9712 }
+    ]
+  },
+  {
+    "id": 197,
+    "location": "St. Louis, Missouri — Bluff Scene along Mississippi River",
+    "address": "St. Louis, Missouri",
+    "year": "May 16, 1911",
+    "sender": "Cousin E.G.M. (initials best-guess from cursive)",
+    "recipient": "Miss O.P. Broadman (\"Pearle\"), 206 N. 15th St., Kansas City, Missouri",
+    "notes": "Color litho of a limestone bluff overlooking the Mississippi River, print no. 24991, with \"Mo.\" penciled in the corner. Note is dated \"St. Louis Mo. 5-14-11\" in the sender's hand, two days before the May 16 postmark; 1¢ green Franklin stamp. Message: \"Hello Pearle. How are you? Haven't heard from you for so long, do try and visit us soon. Your cousin, E.G.M.\"",
+    "front": "1911 - Bluff Scene, Mississippi River, MO - front.jpeg",
+    "back": "1911 - Bluff Scene, Mississippi River, MO - back.jpeg",
+    "feed_description": "A cousin's gentle nudge from St. Louis to Kansas City in 1911 — \"haven't heard from you for so long\" — sent on a scenic Mississippi River bluff card.",
+    "map": [
+      { "name": "St. Louis, Missouri", "lat": 38.6270, "lng": -90.1994 },
+      { "name": "Kansas City, Missouri (recipient)", "lat": 39.0997, "lng": -94.5786 }
+    ]
+  },
+  {
+    "id": 198,
+    "location": "Colorado (San Luis Valley) — \"Peace on Earth\" Christmas Postcard",
+    "address": "Colorado — postmark town cut off; best guess Alamosa, the nearest sizeable town to San Acacio",
+    "year": "December 18, 1915",
+    "sender": "Leta (sister)",
+    "recipient": "Mr. Herbert Winner, San Acacio, Colorado",
+    "notes": "Illustrated Christmas card, \"Whitney Made, Worcester, Mass.\" backstock — children seated in a church pew below a stained-glass \"Peace on Earth\" window, holly wreaths on the pew ends. 1¢ green Washington stamp. Message: \"Dec 18, 1915. Dear Brother, How are you? Hope your cold is better. We hear that Hattie & little Mary are home. Hope they are well. Are you going to spend Xmas with them? We will leave next Thursday night for Alamosa to spend Christmas. Hope you spend a merry Xmas too. Your loving sister, Leta.\" (\"Alamosa\" is a best-effort read — the ink is faded at that spot.)",
+    "front": "1915 - Christmas - front.jpeg",
+    "back": "1915 - Christmas - back.jpeg",
+    "feed_description": "Leta writes her brother Herbert in San Acacio, Colorado just before Christmas 1915, checking on his cold and passing along family news before heading off herself for the holiday.",
+    "map": [
+      { "name": "Alamosa, Colorado (postmark, best guess)", "lat": 37.4695, "lng": -105.8700 },
+      { "name": "San Acacio, Colorado (recipient)", "lat": 37.1517, "lng": -105.4325 }
+    ]
+  },
+  {
+    "id": 199,
+    "location": "Copenhagen, Denmark — Fredensborg Castle",
+    "address": "Copenhagen, Denmark",
+    "year": "August 13, 1952",
+    "sender": "Crescence & Lucille (best guess: two convention attendees signing together)",
+    "recipient": "Miss Edith Stoughton, Napoleon, Ohio",
+    "notes": "Fredensborg Slot, one of the Danish king's summer residences, built 1724 — publisher K. W. te Møllers Kunstforlag, Serie 6700-58. Two Danish stamps. The stamp panel also carries a printed Danish postal reminder, \"Husk postdistrikt til København\" (\"Remember to include the postal district for Copenhagen\") — standard boilerplate, not part of the personal note. Message: \"8-13-52. Greetings from the International Convention. Crescence. Lucille.\"",
+    "front": "1952 - Fredensborg Castle, Denmark - front.jpeg",
+    "back": "1952 - Fredensborg Castle, Denmark - back.jpeg",
+    "feed_description": "A quick hello from an international convention in Copenhagen, 1952 — sent to Edith Stoughton in Napoleon, Ohio, on a postcard of the king's summer castle at Fredensborg.",
+    "map": [
+      { "name": "Copenhagen, Denmark", "lat": 55.6761, "lng": 12.5683 },
+      { "name": "Napoleon, Ohio (recipient)", "lat": 41.3925, "lng": -84.1252 }
+    ]
+  },
+  {
+    "id": 200,
+    "location": "South Fork, Colorado — Northwest Coast Masks, Museum of Mankind",
+    "address": "South Fork, Colorado",
+    "year": "August 9, 1977",
+    "sender": "Geo. & Alice",
+    "recipient": "Mr. & Mrs. N.F. Wechel, 645 N. Broadview, Wichita, Kansas 67208",
+    "notes": "Souvenir card from the British Museum's Museum of Mankind (© 1976), showing a carved wooden Northwest Coast headdress mask with a raven's beak and five small animal heads, 27cm tall. 9¢ \"Right of People Peaceably to Assemble\" stamp. Message: \"Arr. yesterday P.M. and everything just same as a year ago. Ate out with Bill last nite & today we've been getting acquainted again with the area. Tomorrow nite will attend a big community elk & deer barbeque. The weather is ideal & the Mts. beautiful. Birds found my feeders this evening. Hope it rains & cools off again there. Geo. & Alice.\"",
+    "front": "1977 - Museum of Mankind, Great Britain - front.jpeg",
+    "back": "1977 - Museum of Mankind, Great Britain - back.jpeg",
+    "feed_description": "Geo. & Alice settle back into their South Fork, Colorado cabin for the summer of 1977 — feeders full of birds, an elk-and-deer barbeque on the calendar — sent on a British Museum mask souvenir card.",
+    "map": [
+      { "name": "South Fork, Colorado", "lat": 37.6725, "lng": -106.6403 },
+      { "name": "Wichita, Kansas (recipient)", "lat": 37.6872, "lng": -97.3301 }
+    ]
+  },
+  {
+    "id": 201,
+    "location": "Government Camp, Oregon — Timberline Lodge, Mount Hood",
+    "address": "Government Camp, Oregon",
+    "year": "January 3, 1981",
+    "sender": "Jan",
+    "recipient": "Mrs. Stella Obszany (surname best-guess from cursive), 322 Nash Rd., New Bedford, Massachusetts 02746",
+    "notes": "Aerial photo of Timberline Lodge on Mount Hood's south slope, \"North America's only year-round ski resort\" (photo: Jim Vincent, publ. Smith-Western Inc., Portland). 10¢ \"We hold these Truths\" Jefferson stamp. Message: \"1-3-81. Hi, It's great up here, so high I feel dizzy. You'll love the view when you come, about 1 hr. 15 min. from our house. Love, Jan.\"",
+    "front": "1981 - Timberline Lodge, OR - front.jpeg",
+    "back": "1981 - Timberline Lodge, OR - back.jpg",
+    "feed_description": "Jan writes home from a snowy, high-altitude visit to Timberline Lodge in January 1981, promising Stella in New Bedford, Mass. a view worth the trip.",
+    "map": [
+      { "name": "Government Camp, Oregon", "lat": 45.3037, "lng": -121.7573 },
+      { "name": "New Bedford, Massachusetts (recipient)", "lat": 41.6362, "lng": -70.9342 }
+    ]
+  },
+  {
+    "id": 202,
+    "location": "Offenbach am Main, Hesse, Germany — Blick in die Bieberer Straße",
+    "address": "Offenbach am Main, Germany",
+    "year": "c. mid-1950s (20pf Heuss Bundespost stamps, issued 1954–1960; postmark date not fully legible)",
+    "sender": "Inge",
+    "recipient": "Mr. & Mrs. R. McKinnon, 940 McPherson St., St. Louis, Missouri",
+    "notes": "Black-and-white street view of Offenbach am Main's Bieberer Straße, showing the Städtische Sparkasse building. Sent air mail (\"Mit Luftpost / Par Avion\" label). Return address partly legible: Schöning & Co., Lübeck, possibly with a Berlin branch line (faint, best guess). Message: \"Dear Dottie & Bob (recipient's first name a best guess from 'R. McKinnon'), Home again and it's just as nice as ever. I'm taking care of my mother, she's very ill. With God's help I'll have her come to the States as soon as possible. I'll be back in Boston in October, please write! Take care of yourselves. Love, Inge.\"",
+    "front": "Hesse, Germany - front.jpeg",
+    "back": "Hesse, Germany - back.jpeg",
+    "feed_description": "Inge writes home to St. Louis from Offenbach am Main, back in Germany to care for her ailing mother and hoping to bring her to the States — a quieter, harder note than most in the archive.",
+    "map": [
+      { "name": "Offenbach am Main, Germany", "lat": 50.1055, "lng": 8.7761 },
+      { "name": "St. Louis, Missouri (recipient)", "lat": 38.6270, "lng": -90.1994 }
+    ]
+  }
+]
