@@ -5,8 +5,15 @@
     <link>https://foundandsent.net</link>
     <description>Rescued vintage postcards with their original messages, stamps, and stories. New cards added regularly.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 04 Aug 2026 09:18:11 -0600</lastBuildDate>
+    <lastBuildDate>Tue, 04 Aug 2026 09:29:49 -0600</lastBuildDate>
     <atom:link href="https://foundandsent.net/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Card #197: St. Louis, Missouri — Bluff Scene along Mississippi River (May 16, 1911)</title>
+      <link>https://foundandsent.net/#card-197</link>
+      <guid isPermaLink="true">https://foundandsent.net/#card-197</guid>
+      <description>A cousin's gentle nudge from St. Louis to Kansas City in 1911 — "haven't heard from you for so long" — sent on a scenic Mississippi River bluff card.</description>
+      <media:thumbnail url="https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1911 - Bluff Scene, Mississippi River, MO - front.jpeg"/>
+    </item>
     <item>
       <title>Card #196: South Orange, New Jersey — Askeaton Abbey, Limerick, Ireland (November 1, c. 1909 (year digit on postmark partly worn))</title>
       <link>https://foundandsent.net/#card-196</link>

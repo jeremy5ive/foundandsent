@@ -1,29 +1,5 @@
 [
   {
-    "id": 197,
-    "location": "St. Louis, Missouri — Bluff Scene along Mississippi River",
-    "address": "St. Louis, Missouri",
-    "year": "May 16, 1911",
-    "sender": "Cousin E.G.M. (initials best-guess from cursive)",
-    "recipient": "Miss O.P. Broadman (\"Pearle\"), 206 N. 15th St., Kansas City, Missouri",
-    "notes": "Color litho of a limestone bluff overlooking the Mississippi River, print no. 24991, with \"Mo.\" penciled in the corner. Note is dated \"St. Louis Mo. 5-14-11\" in the sender's hand, two days before the May 16 postmark; 1¢ green Franklin stamp. Message: \"Hello Pearle. How are you? Haven't heard from you for so long, do try and visit us soon. Your cousin, E.G.M.\"",
-    "front": "1911 - Bluff Scene, Mississippi River, MO - front.jpeg",
-    "back": "1911 - Bluff Scene, Mississippi River, MO - back.jpeg",
-    "feed_description": "A cousin's gentle nudge from St. Louis to Kansas City in 1911 — \"haven't heard from you for so long\" — sent on a scenic Mississippi River bluff card.",
-    "map": [
-      {
-        "name": "St. Louis, Missouri",
-        "lat": 38.627,
-        "lng": -90.1994
-      },
-      {
-        "name": "Kansas City, Missouri (recipient)",
-        "lat": 39.0997,
-        "lng": -94.5786
-      }
-    ]
-  },
-  {
     "id": 198,
     "location": "Colorado (San Luis Valley) — \"Peace on Earth\" Christmas Postcard",
     "address": "Colorado — postmark town cut off; best guess Alamosa, the nearest sizeable town to San Acacio",
