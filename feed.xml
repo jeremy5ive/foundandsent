@@ -5,8 +5,15 @@
     <link>https://foundandsent.net</link>
     <description>Rescued vintage postcards with their original messages, stamps, and stories. New cards added regularly.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 04 Aug 2026 09:29:49 -0600</lastBuildDate>
+    <lastBuildDate>Tue, 04 Aug 2026 10:04:58 -0600</lastBuildDate>
     <atom:link href="https://foundandsent.net/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Card #198: Colorado (San Luis Valley) — "Peace on Earth" Christmas Postcard (December 18, 1915)</title>
+      <link>https://foundandsent.net/#card-198</link>
+      <guid isPermaLink="true">https://foundandsent.net/#card-198</guid>
+      <description>Leta writes her brother Herbert in San Acacio, Colorado just before Christmas 1915, checking on his cold and passing along family news before heading off herself for the holiday.</description>
+      <media:thumbnail url="https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1915 - Christmas - front.jpeg"/>
+    </item>
     <item>
       <title>Card #197: St. Louis, Missouri — Bluff Scene along Mississippi River (May 16, 1911)</title>
       <link>https://foundandsent.net/#card-197</link>

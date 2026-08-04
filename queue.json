@@ -1,29 +1,5 @@
 [
   {
-    "id": 198,
-    "location": "Colorado (San Luis Valley) — \"Peace on Earth\" Christmas Postcard",
-    "address": "Colorado — postmark town cut off; best guess Alamosa, the nearest sizeable town to San Acacio",
-    "year": "December 18, 1915",
-    "sender": "Leta (sister)",
-    "recipient": "Mr. Herbert Winner, San Acacio, Colorado",
-    "notes": "Illustrated Christmas card, \"Whitney Made, Worcester, Mass.\" backstock — children seated in a church pew below a stained-glass \"Peace on Earth\" window, holly wreaths on the pew ends. 1¢ green Washington stamp. Message: \"Dec 18, 1915. Dear Brother, How are you? Hope your cold is better. We hear that Hattie & little Mary are home. Hope they are well. Are you going to spend Xmas with them? We will leave next Thursday night for Alamosa to spend Christmas. Hope you spend a merry Xmas too. Your loving sister, Leta.\" (\"Alamosa\" is a best-effort read — the ink is faded at that spot.)",
-    "front": "1915 - Christmas - front.jpeg",
-    "back": "1915 - Christmas - back.jpeg",
-    "feed_description": "Leta writes her brother Herbert in San Acacio, Colorado just before Christmas 1915, checking on his cold and passing along family news before heading off herself for the holiday.",
-    "map": [
-      {
-        "name": "Alamosa, Colorado (postmark, best guess)",
-        "lat": 37.4695,
-        "lng": -105.87
-      },
-      {
-        "name": "San Acacio, Colorado (recipient)",
-        "lat": 37.1517,
-        "lng": -105.4325
-      }
-    ]
-  },
-  {
     "id": 199,
     "location": "Copenhagen, Denmark — Fredensborg Castle",
     "address": "Copenhagen, Denmark",
