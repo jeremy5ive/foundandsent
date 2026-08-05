@@ -1,29 +1,5 @@
 [
   {
-    "id": 199,
-    "location": "Copenhagen, Denmark — Fredensborg Castle",
-    "address": "Copenhagen, Denmark",
-    "year": "August 13, 1952",
-    "sender": "Crescence & Lucille (best guess: two convention attendees signing together)",
-    "recipient": "Miss Edith Stoughton, Napoleon, Ohio",
-    "notes": "Fredensborg Slot, one of the Danish king's summer residences, built 1724 — publisher K. W. te Møllers Kunstforlag, Serie 6700-58. Two Danish stamps. The stamp panel also carries a printed Danish postal reminder, \"Husk postdistrikt til København\" (\"Remember to include the postal district for Copenhagen\") — standard boilerplate, not part of the personal note. Message: \"8-13-52. Greetings from the International Convention. Crescence. Lucille.\"",
-    "front": "1952 - Fredensborg Castle, Denmark - front.jpeg",
-    "back": "1952 - Fredensborg Castle, Denmark - back.jpeg",
-    "feed_description": "A quick hello from an international convention in Copenhagen, 1952 — sent to Edith Stoughton in Napoleon, Ohio, on a postcard of the king's summer castle at Fredensborg.",
-    "map": [
-      {
-        "name": "Copenhagen, Denmark",
-        "lat": 55.6761,
-        "lng": 12.5683
-      },
-      {
-        "name": "Napoleon, Ohio (recipient)",
-        "lat": 41.3925,
-        "lng": -84.1252
-      }
-    ]
-  },
-  {
     "id": 200,
     "location": "South Fork, Colorado — Northwest Coast Masks, Museum of Mankind",
     "address": "South Fork, Colorado",
