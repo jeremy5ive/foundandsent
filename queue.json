@@ -1,29 +1,5 @@
 [
   {
-    "id": 200,
-    "location": "South Fork, Colorado — Northwest Coast Masks, Museum of Mankind",
-    "address": "South Fork, Colorado",
-    "year": "August 9, 1977",
-    "sender": "Geo. & Alice",
-    "recipient": "Mr. & Mrs. N.F. Wechel, 645 N. Broadview, Wichita, Kansas 67208",
-    "notes": "Souvenir card from the British Museum's Museum of Mankind (© 1976), showing a carved wooden Northwest Coast headdress mask with a raven's beak and five small animal heads, 27cm tall. 9¢ \"Right of People Peaceably to Assemble\" stamp. Message: \"Arr. yesterday P.M. and everything just same as a year ago. Ate out with Bill last nite & today we've been getting acquainted again with the area. Tomorrow nite will attend a big community elk & deer barbeque. The weather is ideal & the Mts. beautiful. Birds found my feeders this evening. Hope it rains & cools off again there. Geo. & Alice.\"",
-    "front": "1977 - Museum of Mankind, Great Britain - front.jpeg",
-    "back": "1977 - Museum of Mankind, Great Britain - back.jpeg",
-    "feed_description": "Geo. & Alice settle back into their South Fork, Colorado cabin for the summer of 1977 — feeders full of birds, an elk-and-deer barbeque on the calendar — sent on a British Museum mask souvenir card.",
-    "map": [
-      {
-        "name": "South Fork, Colorado",
-        "lat": 37.6725,
-        "lng": -106.6403
-      },
-      {
-        "name": "Wichita, Kansas (recipient)",
-        "lat": 37.6872,
-        "lng": -97.3301
-      }
-    ]
-  },
-  {
     "id": 201,
     "location": "Government Camp, Oregon — Timberline Lodge, Mount Hood",
     "address": "Government Camp, Oregon",
