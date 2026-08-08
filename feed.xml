@@ -5,8 +5,15 @@
     <link>https://foundandsent.net</link>
     <description>Rescued vintage postcards with their original messages, stamps, and stories. New cards added regularly.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 07 Aug 2026 08:44:09 -0600</lastBuildDate>
+    <lastBuildDate>Sat, 08 Aug 2026 08:21:48 -0600</lastBuildDate>
     <atom:link href="https://foundandsent.net/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Card #201: Government Camp, Oregon — Timberline Lodge, Mount Hood (January 3, 1981)</title>
+      <link>https://foundandsent.net/#card-201</link>
+      <guid isPermaLink="true">https://foundandsent.net/#card-201</guid>
+      <description>Jan writes home from a snowy, high-altitude visit to Timberline Lodge in January 1981, promising Stella in New Bedford, Mass. a view worth the trip.</description>
+      <media:thumbnail url="https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1981 - Timberline Lodge, OR - front.jpeg"/>
+    </item>
     <item>
       <title>Card #200: South Fork, Colorado — Northwest Coast Masks, Museum of Mankind (August 9, 1977)</title>
       <link>https://foundandsent.net/#card-200</link>

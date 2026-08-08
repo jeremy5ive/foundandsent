@@ -1,29 +1,5 @@
 [
   {
-    "id": 201,
-    "location": "Government Camp, Oregon — Timberline Lodge, Mount Hood",
-    "address": "Government Camp, Oregon",
-    "year": "January 3, 1981",
-    "sender": "Jan",
-    "recipient": "Mrs. Stella Obszany (surname best-guess from cursive), 322 Nash Rd., New Bedford, Massachusetts 02746",
-    "notes": "Aerial photo of Timberline Lodge on Mount Hood's south slope, \"North America's only year-round ski resort\" (photo: Jim Vincent, publ. Smith-Western Inc., Portland). 10¢ \"We hold these Truths\" Jefferson stamp. Message: \"1-3-81. Hi, It's great up here, so high I feel dizzy. You'll love the view when you come, about 1 hr. 15 min. from our house. Love, Jan.\"",
-    "front": "1981 - Timberline Lodge, OR - front.jpeg",
-    "back": "1981 - Timberline Lodge, OR - back.jpg",
-    "feed_description": "Jan writes home from a snowy, high-altitude visit to Timberline Lodge in January 1981, promising Stella in New Bedford, Mass. a view worth the trip.",
-    "map": [
-      {
-        "name": "Government Camp, Oregon",
-        "lat": 45.3037,
-        "lng": -121.7573
-      },
-      {
-        "name": "New Bedford, Massachusetts (recipient)",
-        "lat": 41.6362,
-        "lng": -70.9342
-      }
-    ]
-  },
-  {
     "id": 202,
     "location": "Offenbach am Main, Hesse, Germany — Blick in die Bieberer Straße",
     "address": "Offenbach am Main, Germany",
