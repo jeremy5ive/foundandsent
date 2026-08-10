@@ -2348,5 +2348,16 @@
     "notes": "Black-and-white street view of Offenbach am Main's Bieberer Straße, showing the Städtische Sparkasse building. Sent air mail (\"Mit Luftpost / Par Avion\" label). Return address partly legible: Schöning & Co., Lübeck, possibly with a Berlin branch line (faint, best guess). Message: \"Dear Dottie & Bob (recipient's first name a best guess from 'R. McKinnon'), Home again and it's just as nice as ever. I'm taking care of my mother, she's very ill. With God's help I'll have her come to the States as soon as possible. I'll be back in Boston in October, please write! Take care of yourselves. Love, Inge.\"",
     "front": "https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/Hesse, Germany - front.jpeg",
     "back": "https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/Hesse, Germany - back.jpeg"
+  },
+  {
+    "id": 203,
+    "location": "Seattle, Washington — Ham Radio QSL Card (W7RT to KL7BE)",
+    "address": "1921 Atlantic Street, Seattle 44, Washington",
+    "year": "April 25, 1949",
+    "sender": "John Gruble (W7RT), Seattle, Washington — formerly K7RT, Goodnews Bay, Alaska",
+    "recipient": "KL7BE",
+    "notes": "Printed QSL card, red block lettering ‘W7RT.’ Confirms: WITH KL7BE, ON Apr. 25 1949, BAND 3.5mc Fone. UR SIGS: (5)9-FB! RMX: ‘Tks QSO — Using 9 watts. Input 6V6 final BC-474 portable here — Hi Rx HRO+.’ OLD K7RT (Goodnews Bay, Alaska). Signed John Gruble, Ex-SCM, ARRL, RSGB, NZART, WIA (‘Over 10,000 contacts since 1929, all bands’). Handwritten note on back, same sender: “This little Rig, one of several portables, will be using during Field Day Test June 18–19 — Have 500W AC gas plant on 2-wheel trailer. Regular xmtr's 300W to PP 811's. 73, John, W7RT. Pse QSL enclosed card & business card to KL7AH & thanks OM!”",
+    "front": "https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1949 - Ham Radio QSL 2 Way Contact Confirmation - Alaska - front.jpeg",
+    "back": "https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1949 - Ham Radio QSL 2 Way Contact Confirmation - Alaska - back.jpeg"
   }
 ]
