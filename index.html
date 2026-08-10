@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=VT323&display=swap" rel="stylesheet">
 <style>
   :root{--bg:#f7f3ed;--bg2:#efe9df;--ink:#1c1510;--ink-soft:#5a4a38;--rule:#d4c5b0;--gold:#9a7c3f;--gold-dim:#c4a96a;--red:#7a2e22;--hover-bg:#ece4d8}
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -34,6 +34,15 @@
   @keyframes flipDown{0%{transform:rotateX(0deg)}50%{transform:rotateX(-90deg)}100%{transform:rotateX(0deg)}}
   .globe-btn{display:flex;align-items:center;gap:6px;background:none;border:1px solid rgba(154,124,63,.35);color:var(--gold);font-family:'Crimson Pro',serif;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;padding:6px 14px;border-radius:2px;cursor:pointer;transition:all .2s;opacity:.75}
   .globe-btn:hover,.globe-btn.active{opacity:1;background:rgba(154,124,63,.12);border-color:var(--gold)}
+  /* ── Teletext callout ── */
+  .teletext-callout{position:fixed;top:14px;right:14px;z-index:400;background:#000;border:3px double #00ffff;padding:6px 10px 8px;box-shadow:0 4px 18px rgba(0,0,0,.45);font-family:'VT323','Courier New',monospace;text-transform:uppercase}
+  .teletext-callout .tt-row{font-size:1.15rem;line-height:1.2;letter-spacing:.06em;white-space:nowrap}
+  .teletext-callout .tt-head{background:#ffff00;color:#000;padding:1px 6px;display:inline-block;font-weight:700}
+  .teletext-callout .tt-cyan{color:#00ffff}
+  .teletext-callout .tt-white{color:#fff}
+  .teletext-callout .tt-cursor{display:inline-block;width:.5em;height:1em;background:#00ffff;vertical-align:-2px;margin-left:2px;animation:ttBlink 1s steps(1) infinite}
+  @keyframes ttBlink{50%{opacity:0}}
+  @media(max-width:680px){.teletext-callout{top:8px;right:8px;padding:4px 7px 6px}.teletext-callout .tt-row{font-size:.95rem}}
   .search-wrap{max-width:900px;margin:0 auto;padding:24px 60px 0;background:rgba(247,243,237,0.92)}
   .griswold-wrap{max-width:900px;margin:0 auto;padding:10px 60px 0;background:rgba(247,243,237,0.92);display:flex;align-items:center;gap:10px 16px;flex-wrap:wrap}
   .griswold-group{display:flex;align-items:center;gap:8px;flex-wrap:nowrap}
@@ -218,6 +227,12 @@
 </style>
 </head>
 <body>
+
+<div class="teletext-callout" role="note" aria-label="A new postcard is posted every day at 8 a.m. Eastern time">
+  <div class="tt-row"><span class="tt-head">&nbsp;NEW CARD&nbsp;</span></div>
+  <div class="tt-row tt-cyan">POSTED DAILY</div>
+  <div class="tt-row tt-white">8:00 AM EST<span class="tt-cursor"></span></div>
+</div>
 
 <div class="masthead">
   <div class="masthead-eyebrow">A Collection of Rescued Postcards</div>
