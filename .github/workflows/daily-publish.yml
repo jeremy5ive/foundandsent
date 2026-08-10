@@ -22,6 +22,9 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Install dependencies
+        run: pip install Pillow
+
       - name: Check queue
         id: check_queue
         run: |
@@ -38,7 +41,7 @@ jobs:
         run: |
           git config user.name "Found & Sent Bot"
           git config user.email "bot@foundandsent.net"
-          git add index.html feed.xml queue.json
+          git add index.html cards.json feed.xml queue.json images/thumbs/
           git commit -m "Daily card publish — $(date +'%Y-%m-%d')"
           git push
 
