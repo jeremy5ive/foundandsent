@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """
 Found & Sent — Daily Card Publisher
-Pops the next card from queue.json and injects it into index.html and feed.xml.
+Pops the next card from queue.json and injects it into cards.json, index.html
+(map pins only — card data now lives in cards.json), and feed.xml. Also
+generates a grid thumbnail for the card's front/back images.
 Run by GitHub Actions at 8am CST daily.
 """
 
@@ -11,7 +13,10 @@ import re
 import sys
 from datetime import datetime, timezone, timedelta
 
+from thumbs import make_thumbnail
+
 QUEUE_FILE = "queue.json"
+CARDS_FILE = "cards.json"
 INDEX_FILE = "index.html"
 FEED_FILE  = "feed.xml"
 IMAGES_DIR = "images"
@@ -56,41 +61,49 @@ with open(QUEUE_FILE, "w", encoding="utf-8") as f:
     json.dump(queue, f, indent=2, ensure_ascii=False)
 print(f"Queue updated — {len(queue)} card(s) remaining.")
 
-# ── Build JS card object ─────────────────────────────────────────────────────
+# ── Generate grid thumbnails for front/back ──────────────────────────────────
+for key in ("front", "back"):
+    thumb_rel = make_thumbnail(IMAGES_DIR, card[key])
+    if thumb_rel is None:
+        print(f"WARNING: could not generate thumbnail for {card[key]} — "
+              f"grid will fall back to the full-size image for this card.")
+    else:
+        print(f"Thumbnail ready: {thumb_rel}")
+
+# ── Append into cards.json ───────────────────────────────────────────────────
+with open(CARDS_FILE, "r", encoding="utf-8") as f:
+    cards = json.load(f)
+
+new_card = {
+    "id": card["id"],
+    "location": card["location"],
+    "address": card["address"],
+    "year": card["year"],
+    "sender": card["sender"],
+    "recipient": card["recipient"],
+    "notes": card["notes"],
+    "front": BASE_IMG + card["front"],
+    "back": BASE_IMG + card["back"],
+}
+if card.get("link"):
+    new_card["link"] = card["link"]
+
+cards.append(new_card)
+
+with open(CARDS_FILE, "w", encoding="utf-8") as f:
+    json.dump(cards, f, indent=2, ensure_ascii=False)
+print(f"cards.json updated ✓ ({len(cards)} cards total)")
+
+# ── Inject map entries into index.html ───────────────────────────────────────
+# (Map pin data still lives inline in index.html — untouched by the cards.json
+# migration. This logic is unchanged from before.)
+with open(INDEX_FILE, "r", encoding="utf-8") as f:
+    html = f.read()
+
 def esc(s):
     """Escape a string for use inside a JS double-quoted string."""
     return s.replace("\\", "\\\\").replace('"', '\\"')
 
-front_path = f'IMG+"{card["front"]}"'
-back_path  = f'IMG+"{card["back"]}"'
-link_field = f',link:"{esc(card["link"])}"' if card.get("link") else ""
-
-card_js = (
-    f'  {{id:{card["id"]},'
-    f'location:"{esc(card["location"])}",'
-    f'address:"{esc(card["address"])}",'
-    f'year:"{esc(card["year"])}",'
-    f'sender:"{esc(card["sender"])}",'
-    f'recipient:"{esc(card["recipient"])}",'
-    f'notes:"{esc(card["notes"])}",'
-    f'front:{front_path},'
-    f'back:{back_path}'
-    f'{link_field}}}'
-)
-
-# ── Inject into index.html ───────────────────────────────────────────────────
-with open(INDEX_FILE, "r", encoding="utf-8") as f:
-    html = f.read()
-
-INSERT_MARKER = "\n];\n\nconst PAGE_SIZE"
-insert_pos = html.rfind(INSERT_MARKER)
-if insert_pos == -1:
-    print("ERROR: Could not find postcards array end marker in index.html")
-    sys.exit(1)
-
-html = html[:insert_pos] + ",\n" + card_js + html[insert_pos:]
-
-# ── Inject map entries ───────────────────────────────────────────────────────
 map_entries = card.get("map", [])
 if map_entries:
     MAP_MARKER = "\n];\n\nlet map="
@@ -106,10 +119,13 @@ if map_entries:
             )
         map_js = ",\n" + ",\n".join(map_js_parts)
         html = html[:map_pos] + map_js + html[map_pos:]
-
-with open(INDEX_FILE, "w", encoding="utf-8") as f:
-    f.write(html)
-print("index.html updated ✓")
+        with open(INDEX_FILE, "w", encoding="utf-8") as f:
+            f.write(html)
+        print("index.html map pins updated ✓")
+    else:
+        print("WARNING: Could not find map array marker in index.html — map pins not added.")
+else:
+    print("No map entries for this card — index.html left untouched.")
 
 # ── Inject into feed.xml ─────────────────────────────────────────────────────
 with open(FEED_FILE, "r", encoding="utf-8") as f:
