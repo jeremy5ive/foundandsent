@@ -2392,5 +2392,16 @@
     "notes": "Front: color photo of the Mission Motel building with 'MOTEL' sign. Caption: ‘Located in the heart of the Rosebud Indian Reservation, at the junction of the Chicago Black Hills Highway U.S. 18 and 83… Sixteen Units, each with Private Shower Bath — Good Beds — Close to Cafe — Open Year Around — 24 Hour Service.’ Pub. by Pospeshil Photographers, Sioux City, Iowa. 3¢ Statue of Liberty stamp. Message: “Mon. 17th. Dear Father; We are on our way back to Lincoln — I don't know what day I'll get home, but soon I guess. Hope you are well, Bernice.”",
     "front": "https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1959 - Mission, SD - front.jpeg",
     "back": "https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1959 - Mission, SD - back.jpeg"
+  },
+  {
+    "id": 207,
+    "location": "Oberammergau, Bavaria, Germany — Passionsspieldorf (Passion Play Village)",
+    "address": "Oberammergau, Bavaria, Germany",
+    "year": "Letter dated June 18, 1965 (Bad [town name uncertain] 18.6.65); postmarked/annotated 7.7.65",
+    "sender": "Alwin, Käthe, and Gerda",
+    "recipient": "Albert [surname uncertain, cursive — reads like ‘Hincke’], 509 Avenue of the Oaks, Houston 22, Texas 77009, USA",
+    "notes": "Front: four-panel color postcard of Oberammergau — the Passion Play theater, a painted Lüftlmalerei house with the onion-domed church tower, a fully frescoed Bavarian house, and a cable car over the Alps. Publisher Schöning & Co., Lübeck (Farbkarte). Translation: “Dear Albert! We congratulate you most warmly on your 66th birthday, wishing you good health and God's blessing. With best regards, Alwin, Käthe and Gerda.” Message in German: “Lieber Albert! Wir gratulieren recht herzlich zu Deinem 66.ten Geburtstag, wünschen Dir gute Gesundheit u. Gottes Segen. Mit besten Grüßen, Alwin, Käthe u. Gerda.”",
+    "front": "https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1965 - Oberammergau, Bavarian Alps, Germany - front.jpeg",
+    "back": "https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1965 - Oberammergau, Bavarian Alps, Germany - back.jpeg"
   }
 ]
