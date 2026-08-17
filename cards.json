@@ -2436,5 +2436,16 @@
     "notes": "Front: hand-colored photo postcard, ‘Black Hand Cut, East of Newark, Ohio’ — a steam locomotive threading a narrow rock cut along the Licking River, with a man in shirtsleeves and necktie gesturing beside the tracks. (The gorge takes its name from a large Native American petroglyph of a hand that once marked the canyon wall, destroyed during 19th-century canal and rail construction.) 1¢ Franklin stamp; double Newark, Ohio postmark (Jul 22, 1908, 11:30 PM). Message: “Hello — this place is near where a girl about 17 yrs old eloped late yesterday afternoon. I am going to a dance tonight — will dance once for you. Your friend, Ed.” [A crossed-out word before “dance” is illegible.]",
     "front": "https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1908 - Black Hand Cut - Newark, OH - front.jpeg",
     "back": "https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1908 - Black Hand Cut - Newark, OH - back.jpeg"
+  },
+  {
+    "id": 211,
+    "location": "San Antonio, Texas — saloon interior hung with trophy heads (“Union Bar”)",
+    "address": "San Antonio, Texas",
+    "year": "May 29, 1913",
+    "sender": "[signature illegible, possibly “Hilda”]",
+    "recipient": "Mrs. A.H.S. Peak, Bluffs, Illinois, R.F.D. #2",
+    "notes": "Front: interior photo of a saloon densely hung floor-to-ceiling with mounted deer, antelope, and elk heads and antler racks, a “UNION BAR” sign visible among the trophies, ornate cash registers on the counter — unidentified, but consistent with early-1900s San Antonio saloon photography (possibly the famous Buckhorn Saloon, though not confirmed). Published by Dahrooge Post Card Co. 1¢ green stamp; San Antonio, Texas postmark, May 29, 1913, 11:09 AM. Message: “San Antonio, May 29th. Dear Folks at Home: I leave here to-night (Thursday) for Parsons. Have been in a dreadful stew getting ready to go. Will write you from Aunt Mattie's. Don't feel uneasy about my just writing — love to all, [signature illegible].”",
+    "front": "https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1913 - San Antonio, TX - front.jpeg",
+    "back": "https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1913 - San Antonio, TX - back.jpeg"
   }
 ]
