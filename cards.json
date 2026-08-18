@@ -2447,5 +2447,16 @@
     "notes": "Front: interior photo of a saloon densely hung floor-to-ceiling with mounted deer, antelope, and elk heads and antler racks, a “UNION BAR” sign visible among the trophies, ornate cash registers on the counter — unidentified, but consistent with early-1900s San Antonio saloon photography (possibly the famous Buckhorn Saloon, though not confirmed). Published by Dahrooge Post Card Co. 1¢ green stamp; San Antonio, Texas postmark, May 29, 1913, 11:09 AM. Message: “San Antonio, May 29th. Dear Folks at Home: I leave here to-night (Thursday) for Parsons. Have been in a dreadful stew getting ready to go. Will write you from Aunt Mattie's. Don't feel uneasy about my just writing — love to all, [signature illegible].”",
     "front": "https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1913 - San Antonio, TX - front.jpeg",
     "back": "https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1913 - San Antonio, TX - back.jpeg"
+  },
+  {
+    "id": 212,
+    "location": "Erlangen, Germany — amateur radio QSL card to Anchorage, Alaska",
+    "address": "westl. Stadtmauerstraße 19, Erlangen, Germany (US Occupation Zone)",
+    "year": "December 1, 1948",
+    "sender": "Werner Koch — station DA2AY (ex Ym4ay), nickname “Micky”",
+    "recipient": "Nicholas, operator of shortwave station KL7BE, Anchorage, Alaska",
+    "notes": "Front: printed shortwave QSL card for station DEM=6182 / DA2AY (5 watts), confirming a CW contact with KL7BE (Anchorage) on 14 Mc on Dec 1, 1948 at 0820 GMT, signal report RST 449, weather “foggy.” Operator asks KL7BE to relay a QSL to neighboring station KL7SS (“Frank”) and requests one in return for his HAZ-Diplom award. Distributed via the WBRC-Stuttgart QSL bureau, Box 585. Back (handwritten, in English): “Dear Nicholas! Suppose you have German blood in your arteries? Your name seems so German-like. I found your address in the 1947 call-book edition. Hope to serve you with this report and would be very glad about your QSL, for I need it for one — HAZ-Diplom!! I was licensed in 1937–1939 as a junior operator, stopped [word unclear — possibly flying/service-related] in 1945, and am now on the air as DA2AY. I've called today your neighbor KL7SS but he didn't come back, sorry — I send a QSL also for him, please mediate this card for him, ok! So, I hope to hear from you soon. Wish a very merry X-mas and a Happy New Year! Vy 73's & cheerio! Werner Koch (‘Micky’).” A rare glimpse of postwar amateur radio operators in occupied Germany rebuilding transatlantic contacts.",
+    "front": "https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1948 - Shortwave Ham Radio - front.jpeg",
+    "back": "https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1948 - Shortwave Ham Radio - back.jpeg"
   }
 ]
