@@ -2458,5 +2458,16 @@
     "notes": "Front: printed shortwave QSL card for station DEM=6182 / DA2AY (5 watts), confirming a CW contact with KL7BE (Anchorage) on 14 Mc on Dec 1, 1948 at 0820 GMT, signal report RST 449, weather “foggy.” Operator asks KL7BE to relay a QSL to neighboring station KL7SS (“Frank”) and requests one in return for his HAZ-Diplom award. Distributed via the WBRC-Stuttgart QSL bureau, Box 585. Message (handwritten on the back, in English): “Dear Nicholas! Suppose you have German blood in your arteries? Your name seems so German-like. I found your address in the 1947 call-book edition. Hope to serve you with this report and would be very glad about your QSL, for I need it for one — HAZ-Diplom!! I was licensed in 1937–1939 as a junior operator, stopped [word unclear — possibly flying/service-related] in 1945, and am now on the air as DA2AY. I've called today your neighbor KL7SS but he didn't come back, sorry — I send a QSL also for him, please mediate this card for him, ok! So, I hope to hear from you soon. Wish a very merry X-mas and a Happy New Year! Vy 73's & cheerio! Werner Koch (‘Micky’).” A rare glimpse of postwar amateur radio operators in occupied Germany rebuilding transatlantic contacts.",
     "front": "https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1948 - Shortwave Ham Radio - front.jpeg",
     "back": "https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1948 - Shortwave Ham Radio - back.jpeg"
+  },
+  {
+    "id": 213,
+    "location": "June Lake, California — Rustic June Lake Lodge, June Lake Loop",
+    "address": "June Lake Lodge, June Lake, California (Mono County, Eastern Sierra)",
+    "year": "August 21, 1967",
+    "sender": "[signature illegible]",
+    "recipient": "Mr. & Mrs. M.F. Weckel, 645 N. Broadview, Wichita, Kansas 67208",
+    "notes": "Front: color photo of the rustic June Lake Lodge, red roof and green trim against a Sierra Nevada backdrop. Caption: ‘Rustic June Lake Lodge. World's largest four-sided fireplace. Famous landmark on the scenic June Lake Loop Highway. Breathtaking view of Gull and June Lake, and the High Sierras. Open the year around.’ Color photo by Louis & Virginia Kay. 4¢ Lincoln stamp; June Lake, CA postmark, Aug 21, 1967. Message: “Mon. Aug 21-67. Dear Ones! We arrived here last nite from Yosemite. It's beautiful today, snow on the mts around. We are staying at the old Lodge, which has been remodeled so nicely & we are in the same room we have had several times before, overlooking the lakes & village. Will write again soon. Love, [signature illegible].”",
+    "front": "https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1967 - June Lake Lodge, CA - front.jpeg",
+    "back": "https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1967 - June Lake Lodge, CA - back.jpeg"
   }
 ]

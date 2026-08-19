@@ -5,8 +5,15 @@
     <link>https://foundandsent.net</link>
     <description>Rescued vintage postcards with their original messages, stamps, and stories. New cards added regularly.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 18 Aug 2026 08:21:20 -0600</lastBuildDate>
+    <lastBuildDate>Wed, 19 Aug 2026 08:22:00 -0600</lastBuildDate>
     <atom:link href="https://foundandsent.net/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Card #213: June Lake, California — Rustic June Lake Lodge, June Lake Loop (August 21, 1967)</title>
+      <link>https://foundandsent.net/#card-213</link>
+      <guid isPermaLink="true">https://foundandsent.net/#card-213</guid>
+      <description>Front: color photo of the rustic June Lake Lodge, red roof and green trim against a Sierra Nevada backdrop. Caption: ‘Rustic June Lake Lodge. World's largest four-sided fireplace. Famous landmark on the scenic June Lake Loop Highway. Breathtaking view of Gull and June Lake, and the High Sierras. Ope</description>
+      <media:thumbnail url="https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1967 - June Lake Lodge, CA - front.jpeg"/>
+    </item>
     <item>
       <title>Card #212: Erlangen, Germany — amateur radio QSL card to Anchorage, Alaska (December 1, 1948)</title>
       <link>https://foundandsent.net/#card-212</link>
