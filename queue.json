@@ -1,28 +1,5 @@
 [
   {
-    "id": 219,
-    "location": "Charleston, South Carolina — Y.M.C.A. Building",
-    "address": "Charleston, South Carolina",
-    "year": "1923",
-    "sender": "Joe Williams",
-    "recipient": "Miss Florence Geisler, Box 80, Laramie, Wyoming",
-    "notes": "Front: photochrome view of the Y.M.C.A. Building, Charleston, S.C. — a four-story red-brick building with a white balustraded portico and a palm tree by the entrance, two figures walking past on the sidewalk. Printed caption: ‘The present Y.M.C.A. Building was erected at a cost of $157,000, raised by popular subscription. It has a membership of about 1,600 and an average daily attendance of more than 600 men and boys. Its outdoor athletic field is one of the finest in the United States.’ Publisher code 8553-N (E.C. Kropp Co., Milwaukee). Back: 1-cent green Washington stamp; postmark CHARLESTON, S.C., OCT 5, 1 PM, 1923. Message: ‘Well, here I am back in Dixieland once again. Had a long journey. Have been thinking of all my friends in Laramie and the good time I had. Lots of love from Joe Williams.’ Addressed to Miss Florence Geisler, Laramie, Wyo., Box 80 — the same Laramie, Wyoming address that recurs elsewhere in the archive (card #214, a 1969 Yellowstone card to Mr. & Mrs. A.C. Wright, Box 236, Laramie), a reminder that more than one family in the collection's correspondence called Laramie home over the decades.",
-    "front": "1923 - YMCA Building - Charleston, SC - front.jpeg",
-    "back": "1923 - YMCA Building - Charleston, SC - back.jpeg",
-    "map": [
-      {
-        "name": "Charleston, South Carolina",
-        "lat": 32.7765,
-        "lng": -79.9311
-      },
-      {
-        "name": "Laramie, Wyoming (recipient)",
-        "lat": 41.3114,
-        "lng": -105.5911
-      }
-    ]
-  },
-  {
     "id": 220,
     "location": "Lexington, Kentucky — Lafayette Hotel",
     "address": "Lexington, Kentucky",

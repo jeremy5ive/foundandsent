@@ -5,8 +5,15 @@
     <link>https://foundandsent.net</link>
     <description>Rescued vintage postcards with their original messages, stamps, and stories. New cards added regularly.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 25 Aug 2026 13:14:02 -0600</lastBuildDate>
+    <lastBuildDate>Tue, 25 Aug 2026 13:27:33 -0600</lastBuildDate>
     <atom:link href="https://foundandsent.net/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Card #219: Charleston, South Carolina — Y.M.C.A. Building (1923)</title>
+      <link>https://foundandsent.net/#card-219</link>
+      <guid isPermaLink="true">https://foundandsent.net/#card-219</guid>
+      <description>Front: photochrome view of the Y.M.C.A. Building, Charleston, S.C. — a four-story red-brick building with a white balustraded portico and a palm tree by the entrance, two figures walking past on the sidewalk. Printed caption: ‘The present Y.M.C.A. Building was erected at a cost of $157,000, raised b</description>
+      <media:thumbnail url="https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1923 - YMCA Building - Charleston, SC - front.jpeg"/>
+    </item>
     <item>
       <title>Card #218: Danville, Pennsylvania — Catholic Church (1908)</title>
       <link>https://foundandsent.net/#card-218</link>
