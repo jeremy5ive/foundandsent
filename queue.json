@@ -1,1 +1,360 @@
-[]
+[
+  {
+    "id": 218,
+    "location": "Danville, Pennsylvania — Catholic Church",
+    "address": "Danville, Pennsylvania",
+    "year": "1908",
+    "sender": "Margaret",
+    "recipient": "Mrs. Winifred Reed, c/o Mr. A.G. Raub, Luzerne, Pennsylvania",
+    "notes": "Front: color view of the Catholic Church, Danville, Pa. — a red-brick church with a tall clock tower topped by a domed cupola and cross, twin round clocks below the belfry, mature trees along the iron-fenced churchyard. Caption: ‘Catholic Church, Danville, Pa.’ Made in Germany. Back: 1-cent green Franklin stamp (the Series of 1902/03 design, so the card cannot predate 1903); postmark reads DANVILLE, PA, AUG 12, with the year worn — legible as either 1900 or 1910. The same recipient already appears in the archive on card #126 (Danville, Pa. — Thomas Beaver Free Library, 1910), addressed to ‘Mrs. Winifred Reed, c/o Mr. A.G. Raub, Luzerne, Penna.’ from a different correspondent signing ‘Anne.’ That match — same recipient, same care-of name, same town — is the basis for reading this card’s year as 1910 rather than 1900, and for adopting that entry’s spelling of the recipient’s name and address. Message: ‘Dear [name not legible], [home?] safe. Papa and James met us at the station. They and Will enjoyed your gifts. [word illegible] to wait forty-five minutes [for the train/car — word illegible]. All slept fine last night. Margaret.’ This card and #126 together suggest a small circle of correspondents — Margaret, Anne, and others — all writing to Mrs. Reed from Danville, Pa. around 1910.",
+    "front": "1908 - Danville, PA - front.jpeg",
+    "back": "1908 - Danville, PA - back.jpeg",
+    "map": [
+      {
+        "name": "Danville, Pennsylvania",
+        "lat": 40.9615,
+        "lng": -76.6122
+      },
+      {
+        "name": "Luzerne, Pennsylvania (recipient)",
+        "lat": 41.2887,
+        "lng": -75.9958
+      }
+    ]
+  },
+  {
+    "id": 219,
+    "location": "Charleston, South Carolina — Y.M.C.A. Building",
+    "address": "Charleston, South Carolina",
+    "year": "1923",
+    "sender": "Joe Williams",
+    "recipient": "Miss Florence Geisler, Box 80, Laramie, Wyoming",
+    "notes": "Front: photochrome view of the Y.M.C.A. Building, Charleston, S.C. — a four-story red-brick building with a white balustraded portico and a palm tree by the entrance, two figures walking past on the sidewalk. Printed caption: ‘The present Y.M.C.A. Building was erected at a cost of $157,000, raised by popular subscription. It has a membership of about 1,600 and an average daily attendance of more than 600 men and boys. Its outdoor athletic field is one of the finest in the United States.’ Publisher code 8553-N (E.C. Kropp Co., Milwaukee). Back: 1-cent green Washington stamp; postmark CHARLESTON, S.C., OCT 5, 1 PM, 1923. Message: ‘Well, here I am back in Dixieland once again. Had a long journey. Have been thinking of all my friends in Laramie and the good time I had. Lots of love from Joe Williams.’ Addressed to Miss Florence Geisler, Laramie, Wyo., Box 80 — the same Laramie, Wyoming address that recurs elsewhere in the archive (card #214, a 1969 Yellowstone card to Mr. & Mrs. A.C. Wright, Box 236, Laramie), a reminder that more than one family in the collection's correspondence called Laramie home over the decades.",
+    "front": "1923 - YMCA Building - Charleston, SC - front.jpeg",
+    "back": "1923 - YMCA Building - Charleston, SC - back.jpeg",
+    "map": [
+      {
+        "name": "Charleston, South Carolina",
+        "lat": 32.7765,
+        "lng": -79.9311
+      },
+      {
+        "name": "Laramie, Wyoming (recipient)",
+        "lat": 41.3114,
+        "lng": -105.5911
+      }
+    ]
+  },
+  {
+    "id": 220,
+    "location": "Lexington, Kentucky — Lafayette Hotel",
+    "address": "Lexington, Kentucky",
+    "year": "1924 (postmark: Lexington, Ky., Oct 3, 1924)",
+    "sender": "Signature not confidently legible — possibly ‘Anne’",
+    "recipient": "Address largely illegible — appears to be a Kentucky recipient, possibly Danville, Ky., but this is unconfirmed",
+    "notes": "Front: the Lafayette Hotel, Lexington, Ky. — a tall brick and stone hotel on a street corner, American flags flying from the roofline, period automobiles and pedestrians below. Back: printed by Curt Teich & Co., Chicago; 1-cent green Franklin stamp; postmark LEXINGTON, KY, OCT 3, [AM], 1924. FLAGGED FOR REVIEW: the message is written sideways/rotated across the card in a heavily slanted hand, and neither the message nor the address block could be transcribed with real confidence from this scan. The readable fragments suggest something like ‘…this is mostly business trip for the men, but we are in on it too…’ with a closing that may read ‘Love, Anne’ — all low-confidence. No map pin has been added for the recipient since the address could not be read reliably enough to place a dot on the map without risking a wrong location; Jeremy should take a look at the original for this one before it's queued, or confirm the notes above are close enough to publish as-is.",
+    "front": "1924 - Lafayette Hotel - Lexington, KY - front.jpeg",
+    "back": "1924 - Lafayette Hotel - Lexington, KY - back.jpeg",
+    "map": [
+      {
+        "name": "Lexington, Kentucky",
+        "lat": 38.0406,
+        "lng": -84.5037
+      }
+    ]
+  },
+  {
+    "id": 221,
+    "location": "Ann Arbor, Michigan — Baird Carillon, Burton Memorial Tower",
+    "address": "Ann Arbor, Michigan",
+    "year": "c. 1940 (postmark: Ann Arbor, Mich., Aug [5]; year smudged, best guess 1940)",
+    "sender": "George",
+    "recipient": "Mrs. Clarence Ringstorff, Havana, Illinois",
+    "notes": "Front: painted view of the Baird Carillon, Burton Memorial Tower, Ann Arbor, Mich. — a tall Art Deco limestone tower with twin clock faces, framed by trees on the University of Michigan campus. Publisher: Stofflet News Company, Ann Arbor; ‘C.T. Art-Colortone,’ made by Curt Teich & Co., Chicago (code 7A-H3225). Printed caption on the back: ‘200 feet high. Ohio limestone. 53 bells. Largest 12 tons. Smallest 12 pounds. Donated by Charles Baird, Alumnus. Cost $75,000.00. Tower Cost $175,000.00 obtained by public subscription. Third largest in the World.’ 1-cent green Washington stamp; postmark Ann Arbor, Mich., reading roughly Aug 5 with the year smudged (best guess 1940). Message: ‘Dear Friend, Every noon popular music is played, and in the evening classical and semi-classical music can be heard as much as 1½ miles from the tower. George.’ Addressed to Mrs. Clarence Ringstorff, Havana, Illinois.",
+    "front": "1940 - Baird Carillon, Burton Memorial Tower - Ann Arbor, MI - front.jpeg",
+    "back": "1940 - Baird Carillon, Burton Memorial Tower - Ann Arbor, MI - back.jpeg",
+    "map": [
+      {
+        "name": "Ann Arbor, Michigan",
+        "lat": 42.2808,
+        "lng": -83.743
+      },
+      {
+        "name": "Havana, Illinois (recipient)",
+        "lat": 40.2989,
+        "lng": -90.0576
+      }
+    ]
+  },
+  {
+    "id": 222,
+    "location": "York, Pennsylvania — Y.M.C.A. Building (stock card; message concerns Omaha, Nebraska)",
+    "address": "York, Pennsylvania",
+    "year": "August 5, 1942 (per sender's handwritten date; the postmark itself is not clearly legible)",
+    "sender": "‘Honey’ (signed nickname only)",
+    "recipient": "Jimmie Klahr, Omaha, Nebraska (remaining address lines partly illegible)",
+    "notes": "Front: the Y.M.C.A. Building at the corner of No. Newberry and West Philadelphia Streets, York, Pa. — a large red-brick, five-story building with American flags along its base and period cars parked out front. Caption: ‘Erected 1925–26 at a cost of over $800,000.’ Publisher code 64711. The front image has no evident connection to the message — a generic stock building postcard pressed into service for a personal note, as sometimes happens elsewhere in this collection. Back: message written sideways/rotated across the card. Message: ‘Hello Jimmie: say you know you sen’d swell cards. Thanks for latest. I haven’t forgotten the sweater I promised to send, so be patient. You have a swell handwriting. Ans. soon. “Honey”.’ The address block, in the same rotated hand, reads approximately ‘Jimmie Klahr, [Sishara?], [Apelu?], city bank bldg. & [Apelu/Ak-Sar-Ben?] Theatre, Omaha, 8/5/42’ — several words are not confidently legible; ‘Apelu’ may actually be a misreading of ‘Ak-Sar-Ben,’ a well-known Omaha civic/entertainment name of the era, but that is a guess, not a confirmed read. The postmark cancellation is largely illegible beyond a partial ‘…CHESTER…’ and ‘5 PM’; the date used here is the sender’s own ‘8/5/42,’ not the postmark.",
+    "front": "1942 - YMCA Building - York, PA - front.jpeg",
+    "back": "1942 - YMCA Building - York, PA - back.jpeg",
+    "map": [
+      {
+        "name": "York, Pennsylvania",
+        "lat": 39.9626,
+        "lng": -76.7277
+      },
+      {
+        "name": "Omaha, Nebraska (recipient)",
+        "lat": 41.2565,
+        "lng": -95.9345
+      }
+    ]
+  },
+  {
+    "id": 223,
+    "location": "Chicago, Illinois — Chicago Avenue",
+    "address": "Chicago, Illinois",
+    "year": "1959",
+    "sender": "Erna",
+    "recipient": "J.S. Bennett, 1122 Prospect, Kansas City, Missouri",
+    "notes": "Front: CK-209, ‘Chicago Avenue Looking North’ from the Wrigley Building — the Tribune Tower, Sheraton Hotel, and Allerton Hotel on the right, the Old Water Tower and Palmolive Building in the background; period buses and cars fill the street. Publisher: Aero Distributing Co., Inc., Chicago (‘Natural Color Reproduction — Curteichcolor’). Back: 3-cent purple Statue of Liberty stamp with an ‘In God We Trust’ slogan cancellation and a partial eagle/flag cachet reading ‘…AMERICAN…’ (possibly tied to the American Legion's national convention, held in Chicago in 1959 — plausible but unconfirmed); postmark Chicago, Sept 8, 10:30 PM, 1959. Message (headed ‘Tues. noon.’): ‘Dear Father: Didn’t think I’d get so far away — be home tomorrow. See you soon. Love, Erna.’ Addressed to J.S. Bennett, 1122 Prospect, K.C. Mo. — the same recipient already in the archive on card #206, a Mission, South Dakota card postmarked August 17, 1959 from a correspondent signing ‘Bernice.’ Read together, the two cards trace a road trip through South Dakota in mid-August that reached Chicago by early September 1959, with at least two travelers (Bernice and Erna) writing home to the same Kansas City address. ‘Erna’ also signs an undated Galveston, Texas card elsewhere in the archive (#217), addressed to a different Kansas City, Missouri recipient.",
+    "front": "1959 - Chicago Avenue - Chicago, ILL - front.jpeg",
+    "back": "1959 - Chicago Avenue - Chicago, ILL - back.jpeg",
+    "map": [
+      {
+        "name": "Chicago, Illinois",
+        "lat": 41.8781,
+        "lng": -87.6298
+      },
+      {
+        "name": "Kansas City, Missouri (recipient)",
+        "lat": 39.0997,
+        "lng": -94.5786
+      }
+    ]
+  },
+  {
+    "id": 224,
+    "location": "Canton, Ohio (postmark) — depicting the Hotel Brunswick, Lancaster, Pa.",
+    "address": "Canton, Ohio",
+    "year": "c. 1960 (postmark: Canton, Ohio, Aug 19; year partly worn, best guess 1960)",
+    "sender": "Clara K.",
+    "recipient": "Mrs. Eliza McConkey, Oshkosh, Nebraska",
+    "notes": "Front: the Hotel Brunswick, Lancaster, Pa. — a tall cream-colored hotel on a street corner, orange-curtained windows above cigar-shop awnings at street level. The back carries an unrelated historical marker text keyed to the hotel's site rather than to the hotel itself: ‘1861–1912. Above this spot, on the outer wall of the Caldwell House formerly occupying this site, was an exterior balcony. Abraham Lincoln addressed the people of Lancaster from this balcony February 22, 1861, on the journey from his home in Springfield, Ill., to Washington for his first Inauguration. James Buchanan, fifteenth President of the United States, was welcomed back to his Lancaster home by a great popular ovation under this balcony March 6, 1861.’ Distributed by I. Steinfeldt, Lancaster, Pa.; genuine Curteich-Chicago ‘Art-Colortone’ card (code OC-H1666). The card wasn't mailed from Lancaster, though: the postmark reads Canton, Ohio, Aug 19 — evidently a souvenir picked up earlier in a trip and mailed later from a stop in Canton on the way home, which is why the location/address fields above follow the postmark rather than the pictured scene. Message: ‘Dear Eliza, Blame the bus for this scribbling. We are heading home. Have had a wonderful trip but will be glad to get home. Hope you are feeling better. [word crossed out], Clara K.’ Addressed to Mrs. Eliza McConkey, Oshkosh, Nebraska — the McConkey family recurs elsewhere in the archive (cards #6 and #50, a March 1960 Excelsior Springs, Mo. hospital card to ‘Miss Dixie McConkey, c/o Rev. McConkey, Oshkosh/Oakesh, Nebraska’), suggesting Eliza and Dixie McConkey belonged to the same Oshkosh, Nebraska family.",
+    "front": "1960 - Hotel Brunswick - Lancaster, PA - front.jpeg",
+    "back": "1960 - Hotel Brunswick - Lancaster, PA - back.jpeg",
+    "map": [
+      {
+        "name": "Canton, Ohio (postmark)",
+        "lat": 40.7989,
+        "lng": -81.3784
+      },
+      {
+        "name": "Oshkosh, Nebraska (recipient)",
+        "lat": 41.4033,
+        "lng": -102.3496
+      }
+    ]
+  },
+  {
+    "id": 225,
+    "location": "Roaring River State Park, near Cassville, Missouri — Roaring River Spring",
+    "address": "Cassville, Missouri",
+    "year": "1963",
+    "sender": "Signature not confidently legible — possibly ‘Mac’ or similar",
+    "recipient": "Mr. & Mrs. A.L. Little, 617 [Ivy?] Street, Larned, Kansas",
+    "notes": "Front: Roaring River Spring, a deep, tree-shadowed pool where the spring emerges from a cleft in the rock, with a small group of visitors on the path along its edge; 3-D Natural Color Reproduction. Back caption: ‘Roaring River Spring, Roaring River State Park, near Cassville, Missouri. The huge spring, which is the beginning of Roaring River, gushes 28,000,000 gallons of clear, cold water, and this water course provides an important trout-fishing stream. Beautiful Roaring River State Park, consisting of 3,000 acres is located in the most scenic part of the Ozarks.’ Color photo by Gerald Massie; distributed by Ozark Post Card Publishers, Box 455, Monett, Mo. (code 9C-K2657). Postmark: Cassville, Mo., Aug 21, 2 PM, 1963; a small red rubber-stamped mark near the stamp isn't clearly identifiable. Message: ‘Hi. Well this is an exciting day for Teresa, she got up at 4:15 AM and started fishing at 5 AM and caught her 5 and was back to camp by 5:50 — so excited & cold there was no more sleep for me. [word illegible] stopped, caught 10 yesterday. It’s been so cold, I have almost frozen. We will be leaving Fri or Sat.’ The signature is hard to make out with confidence. Addressed to Mr. & Mrs. A.L. Little, 617 [Ivy?] Street, Larned, Kansas.",
+    "front": "1963 - Roaring River Spring, MO - front.jpeg",
+    "back": "1963 - Roaring River Spring, MO - back.jpeg",
+    "map": [
+      {
+        "name": "Cassville, Missouri",
+        "lat": 36.68,
+        "lng": -93.8697
+      },
+      {
+        "name": "Larned, Kansas (recipient)",
+        "lat": 38.183,
+        "lng": -99.0999
+      }
+    ]
+  },
+  {
+    "id": 226,
+    "location": "Yellowstone National Park, Wyoming — Tower Fall and Towers",
+    "address": "Yellowstone National Park, Wyoming",
+    "year": "1989",
+    "sender": "Ken Lohnes",
+    "recipient": "Chuck, Don, Edith, Joe White, 707 Atlantic St, Peoria Heights, Illinois",
+    "notes": "Front: painted view of Tower Fall and Towers, Height 132 Feet, Yellowstone Park — a narrow waterfall dropping between tall, spire-like rock formations, with wind-fallen timber across the foreground stream (Haynes Inc., Yellowstone Park, Wyoming; code 4A-H288, no. 17384). Back caption: ‘Tower Fall and Towers, Yellowstone Park, and Tower Creek, a tributary of the Yellowstone River, were named by the Washburn-Langford Party of 1870 while encamped nearby. Tower Fall is 132 feet high, only a short distance from which is the Tower Fall Public Automobile Camp.’ Made only by Curt Teich & Co., Inc., Chicago. Postmark: Yellowstone Park, Wyo., Jul 28, 1:30 PM (year not clearly legible on this scan). Message: ‘Have been looking for some stamps but NONE yet. Joe, I NOW SEE why you talk about Yellowstone. Ken. Lohnes.’ Addressed to a household of four — Chuck, Don, Edith, and Joe White — at 707 Atlantic St, Peoria Heights, Ill.",
+    "front": "1989 - Yellowstone - front.jpeg",
+    "back": "1989 - Yellowstone - back.jpeg",
+    "map": [
+      {
+        "name": "Yellowstone National Park, Wyoming",
+        "lat": 44.6,
+        "lng": -110.5
+      },
+      {
+        "name": "Peoria Heights, Illinois (recipient)",
+        "lat": 40.7378,
+        "lng": -89.5787
+      }
+    ]
+  },
+  {
+    "id": 227,
+    "location": "Eugene, Oregon (postmark) — depicting Noyo Harbor, Fort Bragg, California",
+    "address": "Eugene, Oregon",
+    "year": "1996 (postmarked Eugene, Oregon, Oct [8], 1996; dated by the sender '10/8/96')",
+    "sender": "Ray & Maribeth",
+    "recipient": "Dixie & John [surname not fully legible — reads approximately 'Oatstmaker'], RR 2 Box 33, Oshkosh, Nebraska 69154",
+    "notes": "Front: aerial view of Noyo Harbor, Ft. Bragg, California — a wooded river harbor lined with docks, fishing boats, and processing buildings, a trawler heading out to sea in the foreground; captioned ‘Noyo Harbor — Welcome Home.’ Back photo credit: A.W. Anderson (card no. 553). The card describes Ft. Bragg but was mailed the next day, on the road: the postmark reads Eugene, Oregon, Oct [8], 1996, with a 20-cent Blue Jay stamp — hence the location/address fields above follow the postmark rather than the pictured scene, as elsewhere in this archive. Message (dated by the sender '10/8/96'): ‘Dear Dixie & John, We stayed in Ft. Bragg last night having only driven about 180 miles. We drove up the coast on CA-1 and the road does not have any straight miles on it. We drove through the Redwoods today & one in Oregon tonight. We had a great time with my Uncle & Aunt in San Francisco & we will visit my Uncle in Portland on the 10th. Having a great time! Ray & Maribeth.’ Addressed to Dixie & John [surname hard to make out], RR 2 Box 33, Oshkosh, Nebraska. Both Oshkosh, Nebraska and the name ‘Dixie’ recur elsewhere in the archive: cards #6 and #50 (a 1960 Excelsior Springs, Mo. hospital card) are addressed to ‘Miss Dixie McConkey, c/o Rev. McConkey, Oshkosh/Oakesh, Nebraska.’ Given the shared first name and town, this may well be the same Dixie 36 years later, now married.",
+    "front": "1996 - Noyo Harbor, CA - front.jpeg",
+    "back": "1996 - Noyo Harbor, CA - back.jpeg",
+    "map": [
+      {
+        "name": "Eugene, Oregon (postmark)",
+        "lat": 44.0521,
+        "lng": -123.0868
+      },
+      {
+        "name": "Oshkosh, Nebraska (recipient)",
+        "lat": 41.4033,
+        "lng": -102.3496
+      }
+    ]
+  },
+  {
+    "id": 228,
+    "location": "Cheyenne, Wyoming — The Plains Hotel (Lobby)",
+    "address": "Cheyenne, Wyoming",
+    "year": "Undated (day partly legible as 'July 1[2]'; postmark reads roughly '...Jul 8-9...', year not legible; 1-cent green Washington stamp — likely 1910s-1920s)",
+    "sender": "H.M. (initials only)",
+    "recipient": "Miss Florence Geisler, 819 S. 8th St, Laramie, Wyoming",
+    "notes": "Front: the ornate lobby of the Plains Hotel, Cheyenne, Wyo. — tufted leather sofas and armchairs beneath a mezzanine with wrought-iron railings and hanging lantern fixtures. Back: printed 'This Space for Message' header with a small illustrated figure; standard 'Post Card' layout. 1-cent green Washington stamp; postmark partially legible, reading roughly '...Jul 8-9...' with the year not clear. Message, dated by the sender 'July 1[2]': 'Hello F.G. I thought you had forgotten little me. I was in Laramie a couple weeks ago, stayed a[ll] night at [a place name not fully legible — possibly \"Connor\"], but it was so late I didn't call you up. Will come over in my car some day. H.M.' Addressed to Miss Florence Geisler, 819 S. 8th St, Laramie, Wyo. — the same Florence Geisler already in this batch on the Charleston, S.C. Y.M.C.A. card (id 219, from a correspondent signing 'Joe Williams' in 1923), though at a different Laramie address there (Box 80). Between the two, Florence appears to have been a well-connected young woman, with correspondents writing from as far as coastal South Carolina and, here, a friend passing through nearby Cheyenne.",
+    "front": "The Plains Hotel Lobby - Cheyenne, WY - front.jpeg",
+    "back": "The Plains Hotel Lobby - Cheyenne, WY - back.jpeg",
+    "map": [
+      {
+        "name": "Cheyenne, Wyoming",
+        "lat": 41.14,
+        "lng": -104.8202
+      },
+      {
+        "name": "Laramie, Wyoming (recipient)",
+        "lat": 41.3114,
+        "lng": -105.5911
+      }
+    ]
+  },
+  {
+    "id": 229,
+    "location": "Toronto, Ontario, Canada — Ontario Science Centre (unsent)",
+    "address": "Toronto, Ontario, Canada",
+    "year": "Undated (unsent — no postmark, stamp box empty, address lines blank)",
+    "sender": "Bill & Ruth [and possibly another name/initial, not fully legible]",
+    "recipient": "Gloria (no full address given — the card appears unsent, and the printed address lines were left blank)",
+    "notes": "Front: the Ontario Science Centre, Toronto — the building's modern concrete architecture terraced into a wooded hillside, with a long angled ramp and a red fire hydrant for scale (photo by W.J.L. Gibbons, AMPA; publisher Grant-Mann Lithographers Ltd., Vancouver; code KS-3352A). Back: the message is written directly on a card that was apparently never mailed — the 'Postage Stamp' box is empty and the printed address lines are blank, with only a first name ('Gloria') written at the top. A dealer/collector price sticker ('AntiqueLand - USA, Booth #128') is affixed near the address area but isn't part of the original card. Message: 'Gloria — Did you know you're coming to Calgary next summer. We're expecting you. [closing partly illegible] Bill [&] Ruth [additional initials not fully legible].' Because the card was never posted, there's no postmark to date it or a recipient address to place on the map — a companion case to card #13 elsewhere in the archive, another unsent card kept rather than mailed.",
+    "front": "Toronto Science Center - front.jpeg",
+    "back": "Toronto Science Center - back.jpeg",
+    "map": [
+      {
+        "name": "Toronto, Ontario, Canada",
+        "lat": 43.6532,
+        "lng": -79.3832
+      }
+    ]
+  },
+  {
+    "id": 230,
+    "location": "Washington, D.C. — The White House, Queen Room",
+    "address": "Washington, D.C.",
+    "year": "1963 (postmark: Washington, D.C., Aug 19, 1963)",
+    "sender": "Alta",
+    "recipient": "Mrs. M.F. Weckel, 645 N. Broadview, Wichita, Kansas 67208",
+    "notes": "Front: the Queen Room of the White House — deep green damask walls, a gilt-framed portrait, a crystal chandelier and wall sconces, Federal-style furniture in white and mahogany. Back caption: 'This drawing room is used for small receptions. In the days following President Jefferson's administration it became a parlor. The Queen Room today results from periods of redecoration and renovation. The white marble mantelpiece was made in Italy and is one of very few surviving pieces of original architecture ordered after the War of 1812. Normally, open to the public.' Natural Color by Mike Roberts, Berkeley, Calif.; published for Washington Novelty Inc., Washington, D.C. 4-cent purple Lincoln stamp with an 'ABCD Mail — Better Business' slogan cancellation; postmark Washington, D.C., Aug 19, 1963. Message: 'I arrived a little late — 30 min. I was not very tired. Edith met me. On Sun we went to church — Foundry Meth[odist]. In the evening we went to hear Victor Borge. With love, Alta.' Addressed to Mrs. M.F. Weckel, 645 N. Broadview, Wichita, Kansas 67208 — the same Weckel household that recurs repeatedly elsewhere in the archive (cards #200, #213, #215, #216), here receiving a card from a correspondent signing 'Alta,' not otherwise seen in those other cards.",
+    "front": "1963 - White House - Queen Room, Washington, D.C. - front.jpeg",
+    "back": "1963 - White House - Queen Room, Washington, D.C. - back.jpeg",
+    "map": [
+      {
+        "name": "Washington, D.C.",
+        "lat": 38.8951,
+        "lng": -77.0364
+      },
+      {
+        "name": "Wichita, Kansas (recipient)",
+        "lat": 37.6872,
+        "lng": -97.3301
+      }
+    ]
+  },
+  {
+    "id": 231,
+    "location": "Dana Point Harbor, California",
+    "address": "Dana Point, California",
+    "year": "1973 (postmark: Dana Point Harbor, Calif., Jul 23, 1973)",
+    "sender": "Margie (or Marie — signature not fully certain)",
+    "recipient": "Mr. & Mrs. M.F. Weckel, 645 N. Broadview, Wichita, Kansas 67208",
+    "notes": "Front: aerial photograph of Dana Point Harbor, California — a man-made boat harbor with rows of docked sailboats and a breakwater, hillside development beyond. Back copy: 'Dana Point Harbor, California's newest Boating-Vacation Center. Between Laguna Beach and San Clemente (Orange County). Where San Diego Freeway & Coast Highway Meet. Complete Marina Services, Restaurant, Motel, Specialty Shops, Sportfishing, Beach Park,' with the tagline '\"The Only Romantic Spot\" — namesake Richard Henry Dana in Two Years Before the Mast.' Photo: Ace Aerial Photo, Mission Viejo, Calif. 8-cent Eisenhower stamp; postmark Dana Point Harbor, Calif., Jul 23, 1973. Message: 'Dear Aunt Gladys & Uncle Babe, Camping here at the beach for a week with friends, it's so nice — kids all having so much fun. Darcy and friends surfing all the time. We've all been bike riding lots — seems so much nicer to do things like that here. The moon has been beautiful across the water at night. Waited for grunion last night but they didn't come. Your new trip sounds so great — come see us again soon too. Love, [Margie/Marie, signature uncertain].' Addressed to Mr. & Mrs. M.F. Weckel, 645 N. Broadview, Wichita, Kansas — the same Weckel household as elsewhere in the archive; the salutation here ('Aunt Gladys & Uncle Babe') matches the White House card in this same batch (id 230, sent to 'Mrs. M.F. Weckel') and the Hong Kong card that follows it (id 232, addressed 'Dear Gladys & Maurice'), pointing to Gladys and Maurice ('Babe') Weckel as the couple receiving all of these.",
+    "front": "1973 - Dana Point Harbor, CA - front.jpeg",
+    "back": "1973 - Dana Point Harbor, CA - back.jpeg",
+    "map": [
+      {
+        "name": "Dana Point, California",
+        "lat": 33.4672,
+        "lng": -117.6981
+      },
+      {
+        "name": "Wichita, Kansas (recipient)",
+        "lat": 37.6872,
+        "lng": -97.3301
+      }
+    ]
+  },
+  {
+    "id": 232,
+    "location": "Hong Kong — The Hongkong Hilton",
+    "address": "Hong Kong",
+    "year": "1979 (postmark: Hong Kong, Jul 23, 1979)",
+    "sender": "Dolores",
+    "recipient": "Mr. & Mrs. M.F. Weckel, 645 N. Broadview, Wichita, Kansas 67208, U.S.A.",
+    "notes": "Front: night view of the Hongkong Hilton tower, lit windows against the dark hillside and dense high-rise skyline of Hong Kong Island. Back copy: 'The Far East's most dramatic hotel; on Hong Kong Island, overlooking [the] harbor, in the Colony's central area. Fine restaurants and bars, two night clubs, 80-Ft. swimming pool and Island Cruising Brigantine.' HK$1 Queen Elizabeth II definitive stamp; postmark Hong Kong, 23 Jul 1979, sent airmail. Message: 'Dear Gladys & Maurice, We have finally arrived in Hong Kong and find it everything we had hoped for. The trip over was mixed. Hawaii fine, Japan awful and so on. We start looking for a place to live tomorrow. Hope that work[s] out. Love from all, Dolores.' Addressed to Mr. & Mrs. M.F. Weckel, 645 N. Broadview, Wichita, Kansas — this card gives the fullest form of the recipients' names yet seen in the archive, 'Gladys & Maurice,' confirming 'M.F. Weckel' as Maurice F. Weckel; it also matches the 'Aunt Gladys & Uncle Babe' salutation on the Dana Point card in this same batch (id 231), suggesting 'Babe' was Maurice's nickname. The Weckels of 645 N. Broadview, Wichita, now recur across at least seven cards in the archive (ids 200, 213, 215, 216, 230, 231, and this one), a well-documented correspondence circle receiving travel postcards from many different family members and friends over roughly two decades.",
+    "front": "1979 - Hong Kong Island, Hong Kong - front.jpeg",
+    "back": "1979 - Hong Kong Island, Hong Kong - back.jpeg",
+    "map": [
+      {
+        "name": "Hong Kong",
+        "lat": 22.3193,
+        "lng": 114.1694
+      },
+      {
+        "name": "Wichita, Kansas (recipient)",
+        "lat": 37.6872,
+        "lng": -97.3301
+      }
+    ]
+  },
+  {
+    "id": 233,
+    "location": "Evanston, Wyoming (postmark) — a Western tall-tale jackalope scene",
+    "address": "Evanston, Wyoming",
+    "year": "1980",
+    "sender": "Lapole & Bea",
+    "recipient": "Elmer & Tillie Geis, 205 So. Freeborn, Marion, Kansas 66861",
+    "notes": "Front: a tall-tale postcard, 'Saddling Up Big Jack' — a cowboy saddling an enormous jackrabbit as though it were a horse, real horses tethered along a white rail fence behind him. Back caption: 'It is not unusual to break these big fellows and use them for ranch work.' Distributed by Geo Mc. Co., Salt Lake City, Utah, as 'The Continental Card'; © Mike Roberts Color Productions, Emeryville, Calif. (code B8317). 10-cent 'People's Right to Petition for Redress' stamp (part of the 1976 Bicentennial Bill of Rights series); postmark Evanston, Wyo., Aug 16 (year not fully legible on this scan, but consistent with 1976 given the stamp). Message, headed 'Aug 17, Sun. evening, 8PM': 'Dear Onee — We drove all day thru Wyoming. We are at Evanston, Wyo. tonight, will be on the line tomorrow; will head to Salt Lake City and then on. We found Rene & family fine at Arvada. Martha & Mal were good, we were surprised how well he looked. Lapole & I stayed at their place, Gus & Lou at a motel. Really fell in love with Loveland. We also visited Geo. Harmon, Lapole's friend, at Loveland. We drove in rain after we left at 3:30 AM from Marion on to Harper. Things were nice & green in western Ks. We are having a nice time, sure get tired. Don't believe everything you see on the front of this card — we haven't seen any rabbits yet, but antelope & deer. We miss you all. See you in a couple weeks. Love, Lapole & Bea.' A postscript adds: '53° at Loveland this morning, 78 today. Really soaking it in, wearing sweaters.' Addressed to Elmer & Tillie Geis, 205 So. Freeborn, Marion, Kansas — the itinerary (Marion, Ks. to Harper to western Kansas to Arvada, Colo. to Loveland, Colo. to Evanston, Wyo., headed toward Salt Lake City) traces a loop through Kansas, Colorado, and Wyoming.",
+    "front": "1980 - Evanston, WY - front.jpeg",
+    "back": "1980 - Evanston, WY - back.jpeg",
+    "map": [
+      {
+        "name": "Evanston, Wyoming (postmark)",
+        "lat": 41.2683,
+        "lng": -110.9632
+      },
+      {
+        "name": "Marion, Kansas (recipient)",
+        "lat": 38.3536,
+        "lng": -97.0128
+      }
+    ]
+  }
+]
