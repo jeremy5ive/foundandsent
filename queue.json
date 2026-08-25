@@ -1,28 +1,5 @@
 [
   {
-    "id": 218,
-    "location": "Danville, Pennsylvania — Catholic Church",
-    "address": "Danville, Pennsylvania",
-    "year": "1908",
-    "sender": "Margaret",
-    "recipient": "Mrs. Winifred Reed, c/o Mr. A.G. Raub, Luzerne, Pennsylvania",
-    "notes": "Front: color view of the Catholic Church, Danville, Pa. — a red-brick church with a tall clock tower topped by a domed cupola and cross, twin round clocks below the belfry, mature trees along the iron-fenced churchyard. Caption: ‘Catholic Church, Danville, Pa.’ Made in Germany. Back: 1-cent green Franklin stamp (the Series of 1902/03 design, so the card cannot predate 1903); postmark reads DANVILLE, PA, AUG 12, with the year worn — legible as either 1900 or 1910. The same recipient already appears in the archive on card #126 (Danville, Pa. — Thomas Beaver Free Library, 1910), addressed to ‘Mrs. Winifred Reed, c/o Mr. A.G. Raub, Luzerne, Penna.’ from a different correspondent signing ‘Anne.’ That match — same recipient, same care-of name, same town — is the basis for reading this card’s year as 1910 rather than 1900, and for adopting that entry’s spelling of the recipient’s name and address. Message: ‘Dear [name not legible], [home?] safe. Papa and James met us at the station. They and Will enjoyed your gifts. [word illegible] to wait forty-five minutes [for the train/car — word illegible]. All slept fine last night. Margaret.’ This card and #126 together suggest a small circle of correspondents — Margaret, Anne, and others — all writing to Mrs. Reed from Danville, Pa. around 1910.",
-    "front": "1908 - Danville, PA - front.jpeg",
-    "back": "1908 - Danville, PA - back.jpeg",
-    "map": [
-      {
-        "name": "Danville, Pennsylvania",
-        "lat": 40.9615,
-        "lng": -76.6122
-      },
-      {
-        "name": "Luzerne, Pennsylvania (recipient)",
-        "lat": 41.2887,
-        "lng": -75.9958
-      }
-    ]
-  },
-  {
     "id": 219,
     "location": "Charleston, South Carolina — Y.M.C.A. Building",
     "address": "Charleston, South Carolina",
