@@ -2535,5 +2535,16 @@
     "notes": "Front: photochrome view of the Y.M.C.A. Building, Charleston, S.C. — a four-story red-brick building with a white balustraded portico and a palm tree by the entrance, two figures walking past on the sidewalk. Printed caption: ‘The present Y.M.C.A. Building was erected at a cost of $157,000, raised by popular subscription. It has a membership of about 1,600 and an average daily attendance of more than 600 men and boys. Its outdoor athletic field is one of the finest in the United States.’ Publisher code 8553-N (E.C. Kropp Co., Milwaukee). Back: 1-cent green Washington stamp; postmark CHARLESTON, S.C., OCT 5, 1 PM, 1923. Message: ‘Well, here I am back in Dixieland once again. Had a long journey. Have been thinking of all my friends in Laramie and the good time I had. Lots of love from Joe Williams.’ Addressed to Miss Florence Geisler, Laramie, Wyo., Box 80 — the same Laramie, Wyoming address that recurs elsewhere in the archive (card #214, a 1969 Yellowstone card to Mr. & Mrs. A.C. Wright, Box 236, Laramie), a reminder that more than one family in the collection's correspondence called Laramie home over the decades.",
     "front": "https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1923 - YMCA Building - Charleston, SC - front.jpeg",
     "back": "https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1923 - YMCA Building - Charleston, SC - back.jpeg"
+  },
+  {
+    "id": 220,
+    "location": "Lexington, Kentucky — Lafayette Hotel",
+    "address": "Lexington, Kentucky",
+    "year": "1924 (postmark: Lexington, Ky., Oct 3, 1924)",
+    "sender": "Signature not confidently legible — possibly ‘Anne’",
+    "recipient": "Address largely illegible — appears to be a Kentucky recipient, possibly Danville, Ky., but this is unconfirmed",
+    "notes": "Front: the Lafayette Hotel, Lexington, Ky. — a tall brick and stone hotel on a street corner, American flags flying from the roofline, period automobiles and pedestrians below. Back: printed by Curt Teich & Co., Chicago; 1-cent green Franklin stamp; postmark LEXINGTON, KY, OCT 3, [AM], 1924. FLAGGED FOR REVIEW: the message is written sideways/rotated across the card in a heavily slanted hand, and neither the message nor the address block could be transcribed with real confidence from this scan. The readable fragments suggest something like ‘…this is mostly business trip for the men, but we are in on it too…’ with a closing that may read ‘Love, Anne’ — all low-confidence. No map pin has been added for the recipient since the address could not be read reliably enough to place a dot on the map without risking a wrong location; Jeremy should take a look at the original for this one before it's queued, or confirm the notes above are close enough to publish as-is.",
+    "front": "https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1924 - Lafayette Hotel - Lexington, KY - front.jpeg",
+    "back": "https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1924 - Lafayette Hotel - Lexington, KY - back.jpeg"
   }
 ]
