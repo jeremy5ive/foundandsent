@@ -2546,5 +2546,16 @@
     "notes": "Front: the Lafayette Hotel, Lexington, Ky. — a tall brick and stone hotel on a street corner, American flags flying from the roofline, period automobiles and pedestrians below. Back: printed by Curt Teich & Co., Chicago; 1-cent green Franklin stamp; postmark LEXINGTON, KY, OCT 3, [AM], 1924. FLAGGED FOR REVIEW: the message is written sideways/rotated across the card in a heavily slanted hand, and neither the message nor the address block could be transcribed with real confidence from this scan. The readable fragments suggest something like ‘…this is mostly business trip for the men, but we are in on it too…’ with a closing that may read ‘Love, Anne’ — all low-confidence. No map pin has been added for the recipient since the address could not be read reliably enough to place a dot on the map without risking a wrong location; Jeremy should take a look at the original for this one before it's queued, or confirm the notes above are close enough to publish as-is.",
     "front": "https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1924 - Lafayette Hotel - Lexington, KY - front.jpeg",
     "back": "https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1924 - Lafayette Hotel - Lexington, KY - back.jpeg"
+  },
+  {
+    "id": 221,
+    "location": "Ann Arbor, Michigan — Baird Carillon, Burton Memorial Tower",
+    "address": "Ann Arbor, Michigan",
+    "year": "c. 1940 (postmark: Ann Arbor, Mich., Aug [5]; year smudged, best guess 1940)",
+    "sender": "George",
+    "recipient": "Mrs. Clarence Ringstorff, Havana, Illinois",
+    "notes": "Front: painted view of the Baird Carillon, Burton Memorial Tower, Ann Arbor, Mich. — a tall Art Deco limestone tower with twin clock faces, framed by trees on the University of Michigan campus. Publisher: Stofflet News Company, Ann Arbor; ‘C.T. Art-Colortone,’ made by Curt Teich & Co., Chicago (code 7A-H3225). Printed caption on the back: ‘200 feet high. Ohio limestone. 53 bells. Largest 12 tons. Smallest 12 pounds. Donated by Charles Baird, Alumnus. Cost $75,000.00. Tower Cost $175,000.00 obtained by public subscription. Third largest in the World.’ 1-cent green Washington stamp; postmark Ann Arbor, Mich., reading roughly Aug 5 with the year smudged (best guess 1940). Message: ‘Dear Friend, Every noon popular music is played, and in the evening classical and semi-classical music can be heard as much as 1½ miles from the tower. George.’ Addressed to Mrs. Clarence Ringstorff, Havana, Illinois.",
+    "front": "https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1940 - Baird Carillon, Burton Memorial Tower - Ann Arbor, MI - front.jpeg",
+    "back": "https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1940 - Baird Carillon, Burton Memorial Tower - Ann Arbor, MI - back.jpeg"
   }
 ]

@@ -1,28 +1,5 @@
 [
   {
-    "id": 221,
-    "location": "Ann Arbor, Michigan — Baird Carillon, Burton Memorial Tower",
-    "address": "Ann Arbor, Michigan",
-    "year": "c. 1940 (postmark: Ann Arbor, Mich., Aug [5]; year smudged, best guess 1940)",
-    "sender": "George",
-    "recipient": "Mrs. Clarence Ringstorff, Havana, Illinois",
-    "notes": "Front: painted view of the Baird Carillon, Burton Memorial Tower, Ann Arbor, Mich. — a tall Art Deco limestone tower with twin clock faces, framed by trees on the University of Michigan campus. Publisher: Stofflet News Company, Ann Arbor; ‘C.T. Art-Colortone,’ made by Curt Teich & Co., Chicago (code 7A-H3225). Printed caption on the back: ‘200 feet high. Ohio limestone. 53 bells. Largest 12 tons. Smallest 12 pounds. Donated by Charles Baird, Alumnus. Cost $75,000.00. Tower Cost $175,000.00 obtained by public subscription. Third largest in the World.’ 1-cent green Washington stamp; postmark Ann Arbor, Mich., reading roughly Aug 5 with the year smudged (best guess 1940). Message: ‘Dear Friend, Every noon popular music is played, and in the evening classical and semi-classical music can be heard as much as 1½ miles from the tower. George.’ Addressed to Mrs. Clarence Ringstorff, Havana, Illinois.",
-    "front": "1940 - Baird Carillon, Burton Memorial Tower - Ann Arbor, MI - front.jpeg",
-    "back": "1940 - Baird Carillon, Burton Memorial Tower - Ann Arbor, MI - back.jpeg",
-    "map": [
-      {
-        "name": "Ann Arbor, Michigan",
-        "lat": 42.2808,
-        "lng": -83.743
-      },
-      {
-        "name": "Havana, Illinois (recipient)",
-        "lat": 40.2989,
-        "lng": -90.0576
-      }
-    ]
-  },
-  {
     "id": 222,
     "location": "York, Pennsylvania — Y.M.C.A. Building (stock card; message concerns Omaha, Nebraska)",
     "address": "York, Pennsylvania",
