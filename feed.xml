@@ -5,8 +5,15 @@
     <link>https://foundandsent.net</link>
     <description>Rescued vintage postcards with their original messages, stamps, and stories. New cards added regularly.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 27 Aug 2026 17:18:30 -0600</lastBuildDate>
+    <lastBuildDate>Fri, 28 Aug 2026 17:15:42 -0600</lastBuildDate>
     <atom:link href="https://foundandsent.net/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Card #222: York, Pennsylvania — Y.M.C.A. Building (stock card; message concerns Omaha, Nebraska) (August 5, 1942 (per sender's handwritten date; the postmark itself is not clearly legible))</title>
+      <link>https://foundandsent.net/#card-222</link>
+      <guid isPermaLink="true">https://foundandsent.net/#card-222</guid>
+      <description>Front: the Y.M.C.A. Building at the corner of No. Newberry and West Philadelphia Streets, York, Pa. — a large red-brick, five-story building with American flags along its base and period cars parked out front. Caption: ‘Erected 1925–26 at a cost of over $800,000.’ Publisher code 64711. The front ima</description>
+      <media:thumbnail url="https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1942 - YMCA Building - York, PA - front.jpeg"/>
+    </item>
     <item>
       <title>Card #221: Ann Arbor, Michigan — Baird Carillon, Burton Memorial Tower (c. 1940 (postmark: Ann Arbor, Mich., Aug [5]; year smudged, best guess 1940))</title>
       <link>https://foundandsent.net/#card-221</link>
