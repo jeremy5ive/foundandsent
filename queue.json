@@ -1,28 +1,5 @@
 [
   {
-    "id": 223,
-    "location": "Chicago, Illinois — Chicago Avenue",
-    "address": "Chicago, Illinois",
-    "year": "1959",
-    "sender": "Erna",
-    "recipient": "J.S. Bennett, 1122 Prospect, Kansas City, Missouri",
-    "notes": "Front: CK-209, ‘Chicago Avenue Looking North’ from the Wrigley Building — the Tribune Tower, Sheraton Hotel, and Allerton Hotel on the right, the Old Water Tower and Palmolive Building in the background; period buses and cars fill the street. Publisher: Aero Distributing Co., Inc., Chicago (‘Natural Color Reproduction — Curteichcolor’). Back: 3-cent purple Statue of Liberty stamp with an ‘In God We Trust’ slogan cancellation and a partial eagle/flag cachet reading ‘…AMERICAN…’ (possibly tied to the American Legion's national convention, held in Chicago in 1959 — plausible but unconfirmed); postmark Chicago, Sept 8, 10:30 PM, 1959. Message (headed ‘Tues. noon.’): ‘Dear Father: Didn’t think I’d get so far away — be home tomorrow. See you soon. Love, Erna.’ Addressed to J.S. Bennett, 1122 Prospect, K.C. Mo. — the same recipient already in the archive on card #206, a Mission, South Dakota card postmarked August 17, 1959 from a correspondent signing ‘Bernice.’ Read together, the two cards trace a road trip through South Dakota in mid-August that reached Chicago by early September 1959, with at least two travelers (Bernice and Erna) writing home to the same Kansas City address. ‘Erna’ also signs an undated Galveston, Texas card elsewhere in the archive (#217), addressed to a different Kansas City, Missouri recipient.",
-    "front": "1959 - Chicago Avenue - Chicago, ILL - front.jpeg",
-    "back": "1959 - Chicago Avenue - Chicago, ILL - back.jpeg",
-    "map": [
-      {
-        "name": "Chicago, Illinois",
-        "lat": 41.8781,
-        "lng": -87.6298
-      },
-      {
-        "name": "Kansas City, Missouri (recipient)",
-        "lat": 39.0997,
-        "lng": -94.5786
-      }
-    ]
-  },
-  {
     "id": 224,
     "location": "Canton, Ohio (postmark) — depicting the Hotel Brunswick, Lancaster, Pa.",
     "address": "Canton, Ohio",
