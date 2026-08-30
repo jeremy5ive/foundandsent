@@ -1,28 +1,5 @@
 [
   {
-    "id": 224,
-    "location": "Canton, Ohio (postmark) — depicting the Hotel Brunswick, Lancaster, Pa.",
-    "address": "Canton, Ohio",
-    "year": "c. 1960 (postmark: Canton, Ohio, Aug 19; year partly worn, best guess 1960)",
-    "sender": "Clara K.",
-    "recipient": "Mrs. Eliza McConkey, Oshkosh, Nebraska",
-    "notes": "Front: the Hotel Brunswick, Lancaster, Pa. — a tall cream-colored hotel on a street corner, orange-curtained windows above cigar-shop awnings at street level. The back carries an unrelated historical marker text keyed to the hotel's site rather than to the hotel itself: ‘1861–1912. Above this spot, on the outer wall of the Caldwell House formerly occupying this site, was an exterior balcony. Abraham Lincoln addressed the people of Lancaster from this balcony February 22, 1861, on the journey from his home in Springfield, Ill., to Washington for his first Inauguration. James Buchanan, fifteenth President of the United States, was welcomed back to his Lancaster home by a great popular ovation under this balcony March 6, 1861.’ Distributed by I. Steinfeldt, Lancaster, Pa.; genuine Curteich-Chicago ‘Art-Colortone’ card (code OC-H1666). The card wasn't mailed from Lancaster, though: the postmark reads Canton, Ohio, Aug 19 — evidently a souvenir picked up earlier in a trip and mailed later from a stop in Canton on the way home, which is why the location/address fields above follow the postmark rather than the pictured scene. Message: ‘Dear Eliza, Blame the bus for this scribbling. We are heading home. Have had a wonderful trip but will be glad to get home. Hope you are feeling better. [word crossed out], Clara K.’ Addressed to Mrs. Eliza McConkey, Oshkosh, Nebraska — the McConkey family recurs elsewhere in the archive (cards #6 and #50, a March 1960 Excelsior Springs, Mo. hospital card to ‘Miss Dixie McConkey, c/o Rev. McConkey, Oshkosh/Oakesh, Nebraska’), suggesting Eliza and Dixie McConkey belonged to the same Oshkosh, Nebraska family.",
-    "front": "1960 - Hotel Brunswick - Lancaster, PA - front.jpeg",
-    "back": "1960 - Hotel Brunswick - Lancaster, PA - back.jpeg",
-    "map": [
-      {
-        "name": "Canton, Ohio (postmark)",
-        "lat": 40.7989,
-        "lng": -81.3784
-      },
-      {
-        "name": "Oshkosh, Nebraska (recipient)",
-        "lat": 41.4033,
-        "lng": -102.3496
-      }
-    ]
-  },
-  {
     "id": 225,
     "location": "Roaring River State Park, near Cassville, Missouri — Roaring River Spring",
     "address": "Cassville, Missouri",

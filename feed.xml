@@ -5,8 +5,15 @@
     <link>https://foundandsent.net</link>
     <description>Rescued vintage postcards with their original messages, stamps, and stories. New cards added regularly.</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 29 Aug 2026 11:26:25 -0600</lastBuildDate>
+    <lastBuildDate>Sun, 30 Aug 2026 11:49:27 -0600</lastBuildDate>
     <atom:link href="https://foundandsent.net/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Card #224: Canton, Ohio (postmark) — depicting the Hotel Brunswick, Lancaster, Pa. (c. 1960 (postmark: Canton, Ohio, Aug 19; year partly worn, best guess 1960))</title>
+      <link>https://foundandsent.net/#card-224</link>
+      <guid isPermaLink="true">https://foundandsent.net/#card-224</guid>
+      <description>Front: the Hotel Brunswick, Lancaster, Pa. — a tall cream-colored hotel on a street corner, orange-curtained windows above cigar-shop awnings at street level. The back carries an unrelated historical marker text keyed to the hotel's site rather than to the hotel itself: ‘1861–1912. Above this spot, </description>
+      <media:thumbnail url="https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1960 - Hotel Brunswick - Lancaster, PA - front.jpeg"/>
+    </item>
     <item>
       <title>Card #223: Chicago, Illinois — Chicago Avenue (1959)</title>
       <link>https://foundandsent.net/#card-223</link>
