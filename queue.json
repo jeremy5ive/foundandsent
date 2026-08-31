@@ -1,28 +1,5 @@
 [
   {
-    "id": 225,
-    "location": "Roaring River State Park, near Cassville, Missouri — Roaring River Spring",
-    "address": "Cassville, Missouri",
-    "year": "1963",
-    "sender": "Signature not confidently legible — possibly ‘Mac’ or similar",
-    "recipient": "Mr. & Mrs. A.L. Little, 617 [Ivy?] Street, Larned, Kansas",
-    "notes": "Front: Roaring River Spring, a deep, tree-shadowed pool where the spring emerges from a cleft in the rock, with a small group of visitors on the path along its edge; 3-D Natural Color Reproduction. Back caption: ‘Roaring River Spring, Roaring River State Park, near Cassville, Missouri. The huge spring, which is the beginning of Roaring River, gushes 28,000,000 gallons of clear, cold water, and this water course provides an important trout-fishing stream. Beautiful Roaring River State Park, consisting of 3,000 acres is located in the most scenic part of the Ozarks.’ Color photo by Gerald Massie; distributed by Ozark Post Card Publishers, Box 455, Monett, Mo. (code 9C-K2657). Postmark: Cassville, Mo., Aug 21, 2 PM, 1963; a small red rubber-stamped mark near the stamp isn't clearly identifiable. Message: ‘Hi. Well this is an exciting day for Teresa, she got up at 4:15 AM and started fishing at 5 AM and caught her 5 and was back to camp by 5:50 — so excited & cold there was no more sleep for me. [word illegible] stopped, caught 10 yesterday. It’s been so cold, I have almost frozen. We will be leaving Fri or Sat.’ The signature is hard to make out with confidence. Addressed to Mr. & Mrs. A.L. Little, 617 [Ivy?] Street, Larned, Kansas.",
-    "front": "1963 - Roaring River Spring, MO - front.jpeg",
-    "back": "1963 - Roaring River Spring, MO - back.jpeg",
-    "map": [
-      {
-        "name": "Cassville, Missouri",
-        "lat": 36.68,
-        "lng": -93.8697
-      },
-      {
-        "name": "Larned, Kansas (recipient)",
-        "lat": 38.183,
-        "lng": -99.0999
-      }
-    ]
-  },
-  {
     "id": 226,
     "location": "Yellowstone National Park, Wyoming — Tower Fall and Towers",
     "address": "Yellowstone National Park, Wyoming",
