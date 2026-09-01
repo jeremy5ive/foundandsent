@@ -1,28 +1,5 @@
 [
   {
-    "id": 226,
-    "location": "Yellowstone National Park, Wyoming — Tower Fall and Towers",
-    "address": "Yellowstone National Park, Wyoming",
-    "year": "1989",
-    "sender": "Ken Lohnes",
-    "recipient": "Chuck, Don, Edith, Joe White, 707 Atlantic St, Peoria Heights, Illinois",
-    "notes": "Front: painted view of Tower Fall and Towers, Height 132 Feet, Yellowstone Park — a narrow waterfall dropping between tall, spire-like rock formations, with wind-fallen timber across the foreground stream (Haynes Inc., Yellowstone Park, Wyoming; code 4A-H288, no. 17384). Back caption: ‘Tower Fall and Towers, Yellowstone Park, and Tower Creek, a tributary of the Yellowstone River, were named by the Washburn-Langford Party of 1870 while encamped nearby. Tower Fall is 132 feet high, only a short distance from which is the Tower Fall Public Automobile Camp.’ Made only by Curt Teich & Co., Inc., Chicago. Postmark: Yellowstone Park, Wyo., Jul 28, 1:30 PM (year not clearly legible on this scan). Message: ‘Have been looking for some stamps but NONE yet. Joe, I NOW SEE why you talk about Yellowstone. Ken. Lohnes.’ Addressed to a household of four — Chuck, Don, Edith, and Joe White — at 707 Atlantic St, Peoria Heights, Ill.",
-    "front": "1989 - Yellowstone - front.jpeg",
-    "back": "1989 - Yellowstone - back.jpeg",
-    "map": [
-      {
-        "name": "Yellowstone National Park, Wyoming",
-        "lat": 44.6,
-        "lng": -110.5
-      },
-      {
-        "name": "Peoria Heights, Illinois (recipient)",
-        "lat": 40.7378,
-        "lng": -89.5787
-      }
-    ]
-  },
-  {
     "id": 227,
     "location": "Eugene, Oregon (postmark) — depicting Noyo Harbor, Fort Bragg, California",
     "address": "Eugene, Oregon",
