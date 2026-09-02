@@ -2612,5 +2612,16 @@
     "notes": "Front: painted view of Tower Fall and Towers, Height 132 Feet, Yellowstone Park — a narrow waterfall dropping between tall, spire-like rock formations, with wind-fallen timber across the foreground stream (Haynes Inc., Yellowstone Park, Wyoming; code 4A-H288, no. 17384). Back caption: ‘Tower Fall and Towers, Yellowstone Park, and Tower Creek, a tributary of the Yellowstone River, were named by the Washburn-Langford Party of 1870 while encamped nearby. Tower Fall is 132 feet high, only a short distance from which is the Tower Fall Public Automobile Camp.’ Made only by Curt Teich & Co., Inc., Chicago. Postmark: Yellowstone Park, Wyo., Jul 28, 1:30 PM (year not clearly legible on this scan). Message: ‘Have been looking for some stamps but NONE yet. Joe, I NOW SEE why you talk about Yellowstone. Ken. Lohnes.’ Addressed to a household of four — Chuck, Don, Edith, and Joe White — at 707 Atlantic St, Peoria Heights, Ill.",
     "front": "https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1989 - Yellowstone - front.jpeg",
     "back": "https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1989 - Yellowstone - back.jpeg"
+  },
+  {
+    "id": 227,
+    "location": "Eugene, Oregon (postmark) — depicting Noyo Harbor, Fort Bragg, California",
+    "address": "Eugene, Oregon",
+    "year": "1996 (postmarked Eugene, Oregon, Oct [8], 1996; dated by the sender '10/8/96')",
+    "sender": "Ray & Maribeth",
+    "recipient": "Dixie & John [surname not fully legible — reads approximately 'Oatstmaker'], RR 2 Box 33, Oshkosh, Nebraska 69154",
+    "notes": "Front: aerial view of Noyo Harbor, Ft. Bragg, California — a wooded river harbor lined with docks, fishing boats, and processing buildings, a trawler heading out to sea in the foreground; captioned ‘Noyo Harbor — Welcome Home.’ Back photo credit: A.W. Anderson (card no. 553). The card describes Ft. Bragg but was mailed the next day, on the road: the postmark reads Eugene, Oregon, Oct [8], 1996, with a 20-cent Blue Jay stamp — hence the location/address fields above follow the postmark rather than the pictured scene, as elsewhere in this archive. Message (dated by the sender '10/8/96'): ‘Dear Dixie & John, We stayed in Ft. Bragg last night having only driven about 180 miles. We drove up the coast on CA-1 and the road does not have any straight miles on it. We drove through the Redwoods today & one in Oregon tonight. We had a great time with my Uncle & Aunt in San Francisco & we will visit my Uncle in Portland on the 10th. Having a great time! Ray & Maribeth.’ Addressed to Dixie & John [surname hard to make out], RR 2 Box 33, Oshkosh, Nebraska. Both Oshkosh, Nebraska and the name ‘Dixie’ recur elsewhere in the archive: cards #6 and #50 (a 1960 Excelsior Springs, Mo. hospital card) are addressed to ‘Miss Dixie McConkey, c/o Rev. McConkey, Oshkosh/Oakesh, Nebraska.’ Given the shared first name and town, this may well be the same Dixie 36 years later, now married.",
+    "front": "https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1996 - Noyo Harbor, CA - front.jpeg",
+    "back": "https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1996 - Noyo Harbor, CA - back.jpeg"
   }
 ]
