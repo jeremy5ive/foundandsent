@@ -2634,5 +2634,16 @@
     "notes": "Front: the ornate lobby of the Plains Hotel, Cheyenne, Wyo. — tufted leather sofas and armchairs beneath a mezzanine with wrought-iron railings and hanging lantern fixtures. Back: printed 'This Space for Message' header with a small illustrated figure; standard 'Post Card' layout. 1-cent green Washington stamp; postmark partially legible, reading roughly '...Jul 8-9...' with the year not clear. Message, dated by the sender 'July 1[2]': 'Hello F.G. I thought you had forgotten little me. I was in Laramie a couple weeks ago, stayed a[ll] night at [a place name not fully legible — possibly \"Connor\"], but it was so late I didn't call you up. Will come over in my car some day. H.M.' Addressed to Miss Florence Geisler, 819 S. 8th St, Laramie, Wyo. — the same Florence Geisler already in this batch on the Charleston, S.C. Y.M.C.A. card (id 219, from a correspondent signing 'Joe Williams' in 1923), though at a different Laramie address there (Box 80). Between the two, Florence appears to have been a well-connected young woman, with correspondents writing from as far as coastal South Carolina and, here, a friend passing through nearby Cheyenne.",
     "front": "https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/The Plains Hotel Lobby - Cheyenne, WY - front.jpeg",
     "back": "https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/The Plains Hotel Lobby - Cheyenne, WY - back.jpeg"
+  },
+  {
+    "id": 229,
+    "location": "Toronto, Ontario, Canada — Ontario Science Centre (unsent)",
+    "address": "Toronto, Ontario, Canada",
+    "year": "Undated (unsent — no postmark, stamp box empty, address lines blank)",
+    "sender": "Bill & Ruth [and possibly another name/initial, not fully legible]",
+    "recipient": "Gloria (no full address given — the card appears unsent, and the printed address lines were left blank)",
+    "notes": "Front: the Ontario Science Centre, Toronto — the building's modern concrete architecture terraced into a wooded hillside, with a long angled ramp and a red fire hydrant for scale (photo by W.J.L. Gibbons, AMPA; publisher Grant-Mann Lithographers Ltd., Vancouver; code KS-3352A). Back: the message is written directly on a card that was apparently never mailed — the 'Postage Stamp' box is empty and the printed address lines are blank, with only a first name ('Gloria') written at the top. A dealer/collector price sticker ('AntiqueLand - USA, Booth #128') is affixed near the address area but isn't part of the original card. Message: 'Gloria — Did you know you're coming to Calgary next summer. We're expecting you. [closing partly illegible] Bill [&] Ruth [additional initials not fully legible].' Because the card was never posted, there's no postmark to date it or a recipient address to place on the map — a companion case to card #13 elsewhere in the archive, another unsent card kept rather than mailed.",
+    "front": "https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/Toronto Science Center - front.jpeg",
+    "back": "https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/Toronto Science Center - back.jpeg"
   }
 ]

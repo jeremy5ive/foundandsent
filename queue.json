@@ -1,23 +1,5 @@
 [
   {
-    "id": 229,
-    "location": "Toronto, Ontario, Canada — Ontario Science Centre (unsent)",
-    "address": "Toronto, Ontario, Canada",
-    "year": "Undated (unsent — no postmark, stamp box empty, address lines blank)",
-    "sender": "Bill & Ruth [and possibly another name/initial, not fully legible]",
-    "recipient": "Gloria (no full address given — the card appears unsent, and the printed address lines were left blank)",
-    "notes": "Front: the Ontario Science Centre, Toronto — the building's modern concrete architecture terraced into a wooded hillside, with a long angled ramp and a red fire hydrant for scale (photo by W.J.L. Gibbons, AMPA; publisher Grant-Mann Lithographers Ltd., Vancouver; code KS-3352A). Back: the message is written directly on a card that was apparently never mailed — the 'Postage Stamp' box is empty and the printed address lines are blank, with only a first name ('Gloria') written at the top. A dealer/collector price sticker ('AntiqueLand - USA, Booth #128') is affixed near the address area but isn't part of the original card. Message: 'Gloria — Did you know you're coming to Calgary next summer. We're expecting you. [closing partly illegible] Bill [&] Ruth [additional initials not fully legible].' Because the card was never posted, there's no postmark to date it or a recipient address to place on the map — a companion case to card #13 elsewhere in the archive, another unsent card kept rather than mailed.",
-    "front": "Toronto Science Center - front.jpeg",
-    "back": "Toronto Science Center - back.jpeg",
-    "map": [
-      {
-        "name": "Toronto, Ontario, Canada",
-        "lat": 43.6532,
-        "lng": -79.3832
-      }
-    ]
-  },
-  {
     "id": 230,
     "location": "Washington, D.C. — The White House, Queen Room",
     "address": "Washington, D.C.",

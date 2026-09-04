@@ -5,8 +5,15 @@
     <link>https://foundandsent.net</link>
     <description>Rescued vintage postcards with their original messages, stamps, and stories. New cards added regularly.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 03 Sep 2026 11:22:58 -0600</lastBuildDate>
+    <lastBuildDate>Fri, 04 Sep 2026 11:13:42 -0600</lastBuildDate>
     <atom:link href="https://foundandsent.net/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Card #229: Toronto, Ontario, Canada — Ontario Science Centre (unsent) (Undated (unsent — no postmark, stamp box empty, address lines blank))</title>
+      <link>https://foundandsent.net/#card-229</link>
+      <guid isPermaLink="true">https://foundandsent.net/#card-229</guid>
+      <description>Front: the Ontario Science Centre, Toronto — the building's modern concrete architecture terraced into a wooded hillside, with a long angled ramp and a red fire hydrant for scale (photo by W.J.L. Gibbons, AMPA; publisher Grant-Mann Lithographers Ltd., Vancouver; code KS-3352A). Back: the message is </description>
+      <media:thumbnail url="https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/Toronto Science Center - front.jpeg"/>
+    </item>
     <item>
       <title>Card #228: Cheyenne, Wyoming — The Plains Hotel (Lobby) (Undated (day partly legible as 'July 1[2]'; postmark reads roughly '...Jul 8-9...', year not legible; 1-cent green Washington stamp — likely 1910s-1920s))</title>
       <link>https://foundandsent.net/#card-228</link>
