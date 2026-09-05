@@ -1,28 +1,5 @@
 [
   {
-    "id": 230,
-    "location": "Washington, D.C. — The White House, Queen Room",
-    "address": "Washington, D.C.",
-    "year": "1963 (postmark: Washington, D.C., Aug 19, 1963)",
-    "sender": "Alta",
-    "recipient": "Mrs. M.F. Weckel, 645 N. Broadview, Wichita, Kansas 67208",
-    "notes": "Front: the Queen Room of the White House — deep green damask walls, a gilt-framed portrait, a crystal chandelier and wall sconces, Federal-style furniture in white and mahogany. Back caption: 'This drawing room is used for small receptions. In the days following President Jefferson's administration it became a parlor. The Queen Room today results from periods of redecoration and renovation. The white marble mantelpiece was made in Italy and is one of very few surviving pieces of original architecture ordered after the War of 1812. Normally, open to the public.' Natural Color by Mike Roberts, Berkeley, Calif.; published for Washington Novelty Inc., Washington, D.C. 4-cent purple Lincoln stamp with an 'ABCD Mail — Better Business' slogan cancellation; postmark Washington, D.C., Aug 19, 1963. Message: 'I arrived a little late — 30 min. I was not very tired. Edith met me. On Sun we went to church — Foundry Meth[odist]. In the evening we went to hear Victor Borge. With love, Alta.' Addressed to Mrs. M.F. Weckel, 645 N. Broadview, Wichita, Kansas 67208 — the same Weckel household that recurs repeatedly elsewhere in the archive (cards #200, #213, #215, #216), here receiving a card from a correspondent signing 'Alta,' not otherwise seen in those other cards.",
-    "front": "1963 - White House - Queen Room, Washington, D.C. - front.jpeg",
-    "back": "1963 - White House - Queen Room, Washington, D.C. - back.jpeg",
-    "map": [
-      {
-        "name": "Washington, D.C.",
-        "lat": 38.8951,
-        "lng": -77.0364
-      },
-      {
-        "name": "Wichita, Kansas (recipient)",
-        "lat": 37.6872,
-        "lng": -97.3301
-      }
-    ]
-  },
-  {
     "id": 231,
     "location": "Dana Point Harbor, California",
     "address": "Dana Point, California",

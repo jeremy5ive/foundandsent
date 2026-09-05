@@ -2645,5 +2645,16 @@
     "notes": "Front: the Ontario Science Centre, Toronto — the building's modern concrete architecture terraced into a wooded hillside, with a long angled ramp and a red fire hydrant for scale (photo by W.J.L. Gibbons, AMPA; publisher Grant-Mann Lithographers Ltd., Vancouver; code KS-3352A). Back: the message is written directly on a card that was apparently never mailed — the 'Postage Stamp' box is empty and the printed address lines are blank, with only a first name ('Gloria') written at the top. A dealer/collector price sticker ('AntiqueLand - USA, Booth #128') is affixed near the address area but isn't part of the original card. Message: 'Gloria — Did you know you're coming to Calgary next summer. We're expecting you. [closing partly illegible] Bill [&] Ruth [additional initials not fully legible].' Because the card was never posted, there's no postmark to date it or a recipient address to place on the map — a companion case to card #13 elsewhere in the archive, another unsent card kept rather than mailed.",
     "front": "https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/Toronto Science Center - front.jpeg",
     "back": "https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/Toronto Science Center - back.jpeg"
+  },
+  {
+    "id": 230,
+    "location": "Washington, D.C. — The White House, Queen Room",
+    "address": "Washington, D.C.",
+    "year": "1963 (postmark: Washington, D.C., Aug 19, 1963)",
+    "sender": "Alta",
+    "recipient": "Mrs. M.F. Weckel, 645 N. Broadview, Wichita, Kansas 67208",
+    "notes": "Front: the Queen Room of the White House — deep green damask walls, a gilt-framed portrait, a crystal chandelier and wall sconces, Federal-style furniture in white and mahogany. Back caption: 'This drawing room is used for small receptions. In the days following President Jefferson's administration it became a parlor. The Queen Room today results from periods of redecoration and renovation. The white marble mantelpiece was made in Italy and is one of very few surviving pieces of original architecture ordered after the War of 1812. Normally, open to the public.' Natural Color by Mike Roberts, Berkeley, Calif.; published for Washington Novelty Inc., Washington, D.C. 4-cent purple Lincoln stamp with an 'ABCD Mail — Better Business' slogan cancellation; postmark Washington, D.C., Aug 19, 1963. Message: 'I arrived a little late — 30 min. I was not very tired. Edith met me. On Sun we went to church — Foundry Meth[odist]. In the evening we went to hear Victor Borge. With love, Alta.' Addressed to Mrs. M.F. Weckel, 645 N. Broadview, Wichita, Kansas 67208 — the same Weckel household that recurs repeatedly elsewhere in the archive (cards #200, #213, #215, #216), here receiving a card from a correspondent signing 'Alta,' not otherwise seen in those other cards.",
+    "front": "https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1963 - White House - Queen Room, Washington, D.C. - front.jpeg",
+    "back": "https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1963 - White House - Queen Room, Washington, D.C. - back.jpeg"
   }
 ]
