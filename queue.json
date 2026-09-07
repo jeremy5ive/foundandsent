@@ -1,1 +1,99 @@
-[]
+[
+  {
+    "id": 234,
+    "location": "Grand Rapids, Michigan — Michigan Soldiers' Home",
+    "address": "Grand Rapids, Michigan",
+    "year": "1941 (postmark: Grand Rapids, Mich., Feb 17, 1941)",
+    "sender": "Not clearly legible — the letter closes \"Your [?]\" but the signature could not be confidently read",
+    "recipient": "Mrs. J. N. Heiser, 806 Wenk[?] Ave. S.E., Huron, South Dakota",
+    "notes": "Front: the Michigan Soldiers' Home in Grand Rapids — a Romanesque-influenced brick building with a tall corner tower reading \"SOLDIERS HOME,\" seen through mature shade trees across a broad lawn with a small cannon on a pedestal in the foreground (photo code 8A-H2355). Back: a 1-cent green \"For Defense\" stamp; postmarked Grand Rapids, Mich., Feb 17, 1941, 9 PM; printed \"Shaw News Agency, Grand Rapids, Mich.\" and \"Genuine Curteich-Chicago 'C.T. Art-Colortone' Post Card.\" A pencil dealer/collector mark (\"128\" and a price of \"$1.00\") appears near the stamp and isn't part of the original card. Unusually, the sender used the printed \"This Space For Writing Messages\" panel by turning the card 90° and writing straight down the panel, so every line of pencil runs perpendicular to the printed heading — it took rotating and cropping the scan repeatedly to untangle. Message (several words remain genuinely uncertain even after that): \"Feb 17th. Dear folks: Received Vi's [letter?] + were glad to hear [you were better?] and [will] be glad when they get here. The weather has been terrible here, a [regular blizzard?] for many [days]. I miss [Cec?][?]. [Hope] you [are] getting settled [in] the [new] rooms. We are moving there + that ought to [give] [?] a job for me. We are 3 1/2 blocks from the office. Everyone seems to think I can get work here. Hope so. What is the weather in [?]. Hope you are well. Your [signature illegible].\" The pencil is faint and the script small even before accounting for the sideways orientation, so this transcription has more [?] flags than usual — flagged honestly rather than guessed at.",
+    "front": "1941 - Michigan Soldiers Home, Grand Rapids, MI - front.jpeg",
+    "back": "1941 - Michigan Soldiers Home, Grand Rapids, MI - back.jpeg",
+    "map": [
+      {
+        "name": "Grand Rapids, Michigan",
+        "lat": 42.9634,
+        "lng": -85.6681
+      },
+      {
+        "name": "Huron, South Dakota (recipient)",
+        "lat": 44.3633,
+        "lng": -98.214
+      }
+    ]
+  },
+  {
+    "id": 235,
+    "location": "Tulsa, Oklahoma — The Irish Castle",
+    "address": "Tulsa, Oklahoma",
+    "year": "1942 (postmark: Tahlequah, Okla., Jun 6, 1942)",
+    "sender": "Mrs. G.F. Walters, 415 N. Muskogee Ave., Tahlequah, Oklahoma",
+    "recipient": "Mrs. Fred Haney, P.O. Box 503, Lisco, Nebraska",
+    "notes": "Front: \"The Irish Castle, Tulsa, Okla.\" — a Tudor-style cottage built to resemble a thatched Irish home, framed by manicured gardens and flowering borders (photo by the Howards). Back caption: \"The Irish Castle is a home beautiful and in the springtime it is truly a home that would bring you to dear old Erin 'Where Irish eyes always smile.' Legend has it that this home is a genuine replica of a home that now stands in Ireland.\" Published by Oklahoma News Company, Tulsa, Okla. A green \"For Defense\"-series U.S. stamp; postmarked Tahlequah, Okla., Jun 6, 1942, 4:30 PM. This is a \"card pal\" exchange rather than a travel postcard — a postcard-collecting pen-pal note. Message: \"Hello Card Pal; Liked your card a lot. No I don't have any special type of cards. Like all but comics. But would like Neb. Capitol and state flower, if you ever have them. Write again. Mrs G.F. Walters, 415 N. Muskogee Ave., Tahlequah, Okla.\" Addressed to Mrs. Fred Haney, P.O. Box 503, Lisco, Neb. Two short notations in different ink near the address — \"Veterans Hospital 2, Omaha\" and \"State Capital, Lincoln,\" dated \"6-14-42\" — read like the recipient's own follow-up notes logging which cards she later sent to fill the request, not part of the sender's original message. A pencil dealer/collector price mark (\"527.50\" / \"150\") appears near the stamp.",
+    "front": "1942 - Irish Castle, Tulsa, OK - front.jpeg",
+    "back": "1942 - Irish Castle, Tulsa, OK - back.jpeg",
+    "map": [
+      {
+        "name": "Tulsa, Oklahoma (Irish Castle)",
+        "lat": 36.154,
+        "lng": -95.9928
+      },
+      {
+        "name": "Tahlequah, Oklahoma (sender)",
+        "lat": 35.9151,
+        "lng": -94.97
+      },
+      {
+        "name": "Lisco, Nebraska (recipient)",
+        "lat": 41.6739,
+        "lng": -102.6349
+      }
+    ]
+  },
+  {
+    "id": 236,
+    "location": "Western Wyoming — Big Horn Ram",
+    "address": "Western Wyoming",
+    "year": "1964 (postmark: Pinedale[?], Wyo., Aug 1964 — town name partly obscured by an added note, day not legible)",
+    "sender": "Eldon (a grandchild; no return address given)",
+    "recipient": "Curley Wright, Box 236, Laramie, Wyoming",
+    "notes": "Front: a bighorn ram (Ovis canadensis) walking a grassy, snow-streaked hillside, captioned \"Big Horn Ram — A Prized Trophy\" with a paragraph on the species' range and habits in Wyoming (photo code S-48934). Published by M & R Photos, Rock Springs, Wyo. Back: a 4-cent Lincoln stamp; postmark reads what appears to be [Pinedale?], Wyo., Aug 1964, though it's partly obscured. Across the top of the card, in the same blue ballpoint as the letter, someone added a separate one-line joke — \"SCHNEIDER SAYS JOHNSON IS A MILKSOP\" — crossing right through the printed ram description; it has nothing to do with the letter and reads like a private family joke rather than part of it. Message, from a grandchild named Eldon: \"Dear Grandma & Grandad, Yesterday we went camping. Early this morning we saw 4 cow moose, 1 coyote, 3 deer, 2 antelope, and yesterday we saw 2 sand hill cranes, 1 blue heron, & 1 antelope. Today we went swimming & learned how to swim. We have some glass animals for Grandma. Love, Eldon.\" Addressed to Curley Wright, Box 236, Laramie, Wyoming — presumably Eldon's grandparents. A pencil dealer/collector price mark (\"527.50\" / \"$1.50\") appears near the stamp.",
+    "front": "1964 - Western Wyoming - front.jpeg",
+    "back": "1964 - Western Wyoming - back.jpeg",
+    "map": [
+      {
+        "name": "Pinedale, Wyoming (postmark, uncertain)",
+        "lat": 42.8666,
+        "lng": -109.8631
+      },
+      {
+        "name": "Laramie, Wyoming (recipient)",
+        "lat": 41.3114,
+        "lng": -105.5911
+      }
+    ]
+  },
+  {
+    "id": 237,
+    "location": "Lemon Grove, California — Monte Vista Lodge",
+    "address": "Lemon Grove, California",
+    "year": "1966 (postmark: La Mesa, Calif., Aug 11, 1966)",
+    "sender": "Signature not found in the message body; a pencil annotation near the postmark (likely a dealer's cataloging note rather than the card itself) reads \"Norma\"",
+    "recipient": "Mrs. Carl Harshfield[?], 326 So. Lorraine, Wichita, Kansas",
+    "notes": "Front: an aerial-angle photo of the Monte Vista Lodge's interior garden courtyard — a landscaped walkway with palms and tropical plantings, a small footbridge over a decorative stream, flanked by two low-rise apartment buildings with red tile roofs. Back: promotional copy for \"Monte Vista Lodge — Luxurious Leisure Apartments for Adults, Optional Services Available, 2211 Massachusetts, Lemon Grove, California, Phone 465-1331,\" an adults-only residential community; a facility of the same name still operates at this address today as senior housing. Photographed and published by Al Howell, San Diego. A 5-cent Washington stamp; postmarked La Mesa, Calif., Aug 11, 1966 (a few miles from Lemon Grove). A short additional note is squeezed sideways along the very top edge of the card, apparently added after the letter was finished — the handwriting there is too small and faint to transcribe with any confidence. Message: \"Dear Neva, Thank you for your prompt answer to my long overdue letter to you. Sorry I slipped up on your birthday but wish you the very best for many more. This is where Augie lives, unfortunately it does not do the place justice because of poor color in the photos. It really is lovely & beautiful. We are getting along okay.\" No clear signature appears in the body of the message. The recipient's address is written as Wichita, Kansas, but the zip code beside it (92120) matches a San Diego-area zip rather than a Kansas one — likely a slip by the original writer rather than a real Wichita zip. A pencil dealer/collector price mark (\"527.50\") appears near the stamp.",
+    "front": "1966 - Lemon Grove, CA - front.jpeg",
+    "back": "1966 - Lemon Grove, CA - back.jpeg",
+    "map": [
+      {
+        "name": "Lemon Grove, California",
+        "lat": 32.742,
+        "lng": -117.0311
+      },
+      {
+        "name": "Wichita, Kansas (recipient)",
+        "lat": 37.6872,
+        "lng": -97.3301
+      }
+    ]
+  }
+]
