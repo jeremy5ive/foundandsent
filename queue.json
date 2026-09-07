@@ -1,28 +1,5 @@
 [
   {
-    "id": 234,
-    "location": "Grand Rapids, Michigan — Michigan Soldiers' Home",
-    "address": "Grand Rapids, Michigan",
-    "year": "1941 (postmark: Grand Rapids, Mich., Feb 17, 1941)",
-    "sender": "Not clearly legible — the letter closes \"Your [?]\" but the signature could not be confidently read",
-    "recipient": "Mrs. J. N. Heiser, 806 Wenk[?] Ave. S.E., Huron, South Dakota",
-    "notes": "Front: the Michigan Soldiers' Home in Grand Rapids — a Romanesque-influenced brick building with a tall corner tower reading \"SOLDIERS HOME,\" seen through mature shade trees across a broad lawn with a small cannon on a pedestal in the foreground (photo code 8A-H2355). Back: a 1-cent green \"For Defense\" stamp; postmarked Grand Rapids, Mich., Feb 17, 1941, 9 PM; printed \"Shaw News Agency, Grand Rapids, Mich.\" and \"Genuine Curteich-Chicago 'C.T. Art-Colortone' Post Card.\" A pencil dealer/collector mark (\"128\" and a price of \"$1.00\") appears near the stamp and isn't part of the original card. Unusually, the sender used the printed \"This Space For Writing Messages\" panel by turning the card 90° and writing straight down the panel, so every line of pencil runs perpendicular to the printed heading — it took rotating and cropping the scan repeatedly to untangle. Message (several words remain genuinely uncertain even after that): \"Feb 17th. Dear folks: Received Vi's [letter?] + were glad to hear [you were better?] and [will] be glad when they get here. The weather has been terrible here, a [regular blizzard?] for many [days]. I miss [Cec?][?]. [Hope] you [are] getting settled [in] the [new] rooms. We are moving there + that ought to [give] [?] a job for me. We are 3 1/2 blocks from the office. Everyone seems to think I can get work here. Hope so. What is the weather in [?]. Hope you are well. Your [signature illegible].\" The pencil is faint and the script small even before accounting for the sideways orientation, so this transcription has more [?] flags than usual — flagged honestly rather than guessed at.",
-    "front": "1941 - Michigan Soldiers Home, Grand Rapids, MI - front.jpeg",
-    "back": "1941 - Michigan Soldiers Home, Grand Rapids, MI - back.jpeg",
-    "map": [
-      {
-        "name": "Grand Rapids, Michigan",
-        "lat": 42.9634,
-        "lng": -85.6681
-      },
-      {
-        "name": "Huron, South Dakota (recipient)",
-        "lat": 44.3633,
-        "lng": -98.214
-      }
-    ]
-  },
-  {
     "id": 235,
     "location": "Tulsa, Oklahoma — The Irish Castle",
     "address": "Tulsa, Oklahoma",
