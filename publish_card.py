@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
-Found & Sent — Daily Card Publisher
+Found & Sent — Weekly Card Publisher
 Pops the next card from queue.json and injects it into cards.json, index.html
 (map pins only — card data now lives in cards.json), and feed.xml. Also
 generates a grid thumbnail for the card's front/back images.
-Run by GitHub Actions at 8am CST daily.
+Run by GitHub Actions Monday mornings at 8am CST.
 """
 
 import json
@@ -28,7 +28,7 @@ with open(QUEUE_FILE, "r", encoding="utf-8") as f:
     queue = json.load(f)
 
 if not queue:
-    print("Queue is empty — nothing to publish today.")
+    print("Queue is empty — nothing to publish this week.")
     sys.exit(0)
 
 card = queue[0]
