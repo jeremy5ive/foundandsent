@@ -1,9 +1,9 @@
-name: Daily Card Publisher
+name: Weekly Card Publisher
 
 on:
   schedule:
-    # 8am CST = 2pm UTC (14:00)
-    - cron: '0 14 * * *'
+    # Monday 8am CST = 2pm UTC (14:00)
+    - cron: '0 14 * * 1'
   workflow_dispatch:
     # Also allows manual trigger from GitHub Actions tab
 
@@ -42,9 +42,9 @@ jobs:
           git config user.name "Found & Sent Bot"
           git config user.email "bot@foundandsent.net"
           git add index.html cards.json feed.xml queue.json images/thumbs/
-          git commit -m "Daily card publish — $(date +'%Y-%m-%d')"
+          git commit -m "Weekly card publish — $(date +'%Y-%m-%d')"
           git push
 
       - name: Skip (queue empty)
         if: steps.check_queue.outputs.queue_count == '0'
-        run: echo "Queue is empty — no card published today. Add cards to queue.json!"
+        run: echo "Queue is empty — no card published this week. Add cards to queue.json!"
