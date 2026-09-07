@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Found & Sent — shared thumbnail helper.
-Used by both publish_card.py (new cards, run daily) and backfill_thumbnails.py
+Used by both publish_card.py (new cards, run weekly) and backfill_thumbnails.py
 (one-time pass over the existing archive). Keeping this in one place means the
 two callers can never drift out of sync on size/quality.
 """
