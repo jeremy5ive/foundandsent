@@ -5,8 +5,15 @@
     <link>https://foundandsent.net</link>
     <description>Rescued vintage postcards with their original messages, stamps, and stories. New cards added regularly.</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 05 Sep 2026 10:20:51 -0600</lastBuildDate>
+    <lastBuildDate>Sun, 06 Sep 2026 20:46:46 -0600</lastBuildDate>
     <atom:link href="https://foundandsent.net/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Card #231: Dana Point Harbor, California (1973 (postmark: Dana Point Harbor, Calif., Jul 23, 1973))</title>
+      <link>https://foundandsent.net/#card-231</link>
+      <guid isPermaLink="true">https://foundandsent.net/#card-231</guid>
+      <description>Front: aerial photograph of Dana Point Harbor, California — a man-made boat harbor with rows of docked sailboats and a breakwater, hillside development beyond. Back copy: 'Dana Point Harbor, California's newest Boating-Vacation Center. Between Laguna Beach and San Clemente (Orange County). Where San</description>
+      <media:thumbnail url="https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1973 - Dana Point Harbor, CA - front.jpeg"/>
+    </item>
     <item>
       <title>Card #230: Washington, D.C. — The White House, Queen Room (1963 (postmark: Washington, D.C., Aug 19, 1963))</title>
       <link>https://foundandsent.net/#card-230</link>
