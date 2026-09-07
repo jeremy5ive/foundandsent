@@ -1,28 +1,5 @@
 [
   {
-    "id": 232,
-    "location": "Hong Kong — The Hongkong Hilton",
-    "address": "Hong Kong",
-    "year": "1979 (postmark: Hong Kong, Jul 23, 1979)",
-    "sender": "Dolores",
-    "recipient": "Mr. & Mrs. M.F. Weckel, 645 N. Broadview, Wichita, Kansas 67208, U.S.A.",
-    "notes": "Front: night view of the Hongkong Hilton tower, lit windows against the dark hillside and dense high-rise skyline of Hong Kong Island. Back copy: 'The Far East's most dramatic hotel; on Hong Kong Island, overlooking [the] harbor, in the Colony's central area. Fine restaurants and bars, two night clubs, 80-Ft. swimming pool and Island Cruising Brigantine.' HK$1 Queen Elizabeth II definitive stamp; postmark Hong Kong, 23 Jul 1979, sent airmail. Message: 'Dear Gladys & Maurice, We have finally arrived in Hong Kong and find it everything we had hoped for. The trip over was mixed. Hawaii fine, Japan awful and so on. We start looking for a place to live tomorrow. Hope that work[s] out. Love from all, Dolores.' Addressed to Mr. & Mrs. M.F. Weckel, 645 N. Broadview, Wichita, Kansas — this card gives the fullest form of the recipients' names yet seen in the archive, 'Gladys & Maurice,' confirming 'M.F. Weckel' as Maurice F. Weckel; it also matches the 'Aunt Gladys & Uncle Babe' salutation on the Dana Point card in this same batch (id 231), suggesting 'Babe' was Maurice's nickname. The Weckels of 645 N. Broadview, Wichita, now recur across at least seven cards in the archive (ids 200, 213, 215, 216, 230, 231, and this one), a well-documented correspondence circle receiving travel postcards from many different family members and friends over roughly two decades.",
-    "front": "1979 - Hong Kong Island, Hong Kong - front.jpeg",
-    "back": "1979 - Hong Kong Island, Hong Kong - back.jpeg",
-    "map": [
-      {
-        "name": "Hong Kong",
-        "lat": 22.3193,
-        "lng": 114.1694
-      },
-      {
-        "name": "Wichita, Kansas (recipient)",
-        "lat": 37.6872,
-        "lng": -97.3301
-      }
-    ]
-  },
-  {
     "id": 233,
     "location": "Evanston, Wyoming (postmark) — a Western tall-tale jackalope scene",
     "address": "Evanston, Wyoming",
