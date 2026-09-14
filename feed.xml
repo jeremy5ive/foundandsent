@@ -5,8 +5,15 @@
     <link>https://foundandsent.net</link>
     <description>Rescued vintage postcards with their original messages, stamps, and stories. New cards added regularly.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 07 Sep 2026 12:39:19 -0600</lastBuildDate>
+    <lastBuildDate>Mon, 14 Sep 2026 13:06:56 -0600</lastBuildDate>
     <atom:link href="https://foundandsent.net/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Card #235: Tulsa, Oklahoma — The Irish Castle (1942 (postmark: Tahlequah, Okla., Jun 6, 1942))</title>
+      <link>https://foundandsent.net/#card-235</link>
+      <guid isPermaLink="true">https://foundandsent.net/#card-235</guid>
+      <description>Front: "The Irish Castle, Tulsa, Okla." — a Tudor-style cottage built to resemble a thatched Irish home, framed by manicured gardens and flowering borders (photo by the Howards). Back caption: "The Irish Castle is a home beautiful and in the springtime it is truly a home that would bring you to dear</description>
+      <media:thumbnail url="https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1942 - Irish Castle, Tulsa, OK - front.jpeg"/>
+    </item>
     <item>
       <title>Card #234: Grand Rapids, Michigan — Michigan Soldiers' Home (1941 (postmark: Grand Rapids, Mich., Feb 17, 1941))</title>
       <link>https://foundandsent.net/#card-234</link>

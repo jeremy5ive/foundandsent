@@ -1,33 +1,5 @@
 [
   {
-    "id": 235,
-    "location": "Tulsa, Oklahoma — The Irish Castle",
-    "address": "Tulsa, Oklahoma",
-    "year": "1942 (postmark: Tahlequah, Okla., Jun 6, 1942)",
-    "sender": "Mrs. G.F. Walters, 415 N. Muskogee Ave., Tahlequah, Oklahoma",
-    "recipient": "Mrs. Fred Haney, P.O. Box 503, Lisco, Nebraska",
-    "notes": "Front: \"The Irish Castle, Tulsa, Okla.\" — a Tudor-style cottage built to resemble a thatched Irish home, framed by manicured gardens and flowering borders (photo by the Howards). Back caption: \"The Irish Castle is a home beautiful and in the springtime it is truly a home that would bring you to dear old Erin 'Where Irish eyes always smile.' Legend has it that this home is a genuine replica of a home that now stands in Ireland.\" Published by Oklahoma News Company, Tulsa, Okla. A green \"For Defense\"-series U.S. stamp; postmarked Tahlequah, Okla., Jun 6, 1942, 4:30 PM. This is a \"card pal\" exchange rather than a travel postcard — a postcard-collecting pen-pal note. Message: \"Hello Card Pal; Liked your card a lot. No I don't have any special type of cards. Like all but comics. But would like Neb. Capitol and state flower, if you ever have them. Write again. Mrs G.F. Walters, 415 N. Muskogee Ave., Tahlequah, Okla.\" Addressed to Mrs. Fred Haney, P.O. Box 503, Lisco, Neb. Two short notations in different ink near the address — \"Veterans Hospital 2, Omaha\" and \"State Capital, Lincoln,\" dated \"6-14-42\" — read like the recipient's own follow-up notes logging which cards she later sent to fill the request, not part of the sender's original message. A pencil dealer/collector price mark (\"527.50\" / \"150\") appears near the stamp.",
-    "front": "1942 - Irish Castle, Tulsa, OK - front.jpeg",
-    "back": "1942 - Irish Castle, Tulsa, OK - back.jpeg",
-    "map": [
-      {
-        "name": "Tulsa, Oklahoma (Irish Castle)",
-        "lat": 36.154,
-        "lng": -95.9928
-      },
-      {
-        "name": "Tahlequah, Oklahoma (sender)",
-        "lat": 35.9151,
-        "lng": -94.97
-      },
-      {
-        "name": "Lisco, Nebraska (recipient)",
-        "lat": 41.6739,
-        "lng": -102.6349
-      }
-    ]
-  },
-  {
     "id": 236,
     "location": "Western Wyoming — Big Horn Ram",
     "address": "Western Wyoming",
