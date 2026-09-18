@@ -81,10 +81,10 @@
   mark{background:rgba(154,124,63,.2);color:inherit;border-radius:2px;padding:0 1px}
   @media(max-width:620px){.postcard-list{grid-template-columns:1fr}}
   mark{background:rgba(154,124,63,.2);color:inherit;border-radius:2px;padding:0 1px}
-  #map-panel{display:none;max-width:900px;margin:0 auto;padding:0 60px 40px;background:rgba(247,243,237,0.92)}
+  #map-panel{display:none;max-width:1200px;margin:0 auto;padding:0 60px 40px;background:rgba(247,243,237,0.92)}
   #map-panel.open{display:block}
   .globe-wrap{position:relative}
-  #map-container{height:520px;border-radius:4px;overflow:hidden;border:1px solid var(--rule);box-shadow:0 4px 20px rgba(0,0,0,.08);background:var(--bg2)}
+  #map-container{height:780px}
   .map-hint{font-style:italic;font-size:.8rem;color:var(--ink-soft);opacity:.5;margin-top:8px;text-align:center}
   #globe-card-panel{display:none;position:absolute;top:14px;right:14px;max-width:250px;max-height:calc(100% - 28px);overflow-y:auto;background:rgba(247,243,237,.97);border:1px solid var(--rule);border-radius:4px;padding:14px 16px;box-shadow:0 4px 20px rgba(0,0,0,.18);z-index:500}
   #globe-card-panel.open{display:block}
@@ -223,7 +223,7 @@
     .lb-stage{height:50vh;cursor:pointer}
     .lb-tap-hint{display:block!important}
     .lb-mobile-controls{display:flex!important}
-    #map-container{height:360px}
+    #map-container{height:460px}
     .upload-box{padding:28px 20px}
     .lb-address-bar{width:calc(100vw - 20px);padding:0 4px 4px}
     .lb-address-lines{font-size:.85rem}
@@ -1043,22 +1043,22 @@ function refreshMapMarkers(){
     const visibleIds=loc.ids.filter(id=>{const c=postcards.find(x=>x.id===id);if(!c)return false;if(activeDecade!==null&&parseDecade(c.year)!==activeDecade)return false;return true;});
     if(!visibleIds.length)return;
     visibleIds.forEach(id=>{originByCard[id]={lat:loc.lat,lng:loc.lng};});
-    const r=Math.min(.28+visibleIds.length*.06,.85);
-    pts.push({lat:loc.lat,lng:loc.lng,r,color:'rgba(154,124,63,0.85)',name:loc.name,ids:visibleIds,type:'origin'});
+    const r=Math.min(.32+visibleIds.length*.07,.95);
+    pts.push({lat:loc.lat,lng:loc.lng,r,color:'rgba(212,175,95,0.95)',name:loc.name,ids:visibleIds,type:'origin'});
   });
   RECIPIENT_LOCATIONS.forEach(loc=>{
     const visibleIds=loc.ids.filter(id=>{const c=postcards.find(x=>x.id===id);if(!c)return false;if(activeDecade!==null&&parseDecade(c.year)!==activeDecade)return false;return true;});
     if(!visibleIds.length)return;
     visibleIds.forEach(id=>{destByCard[id]={lat:loc.lat,lng:loc.lng};});
-    const r=Math.min(.24+visibleIds.length*.06,.8);
-    pts.push({lat:loc.lat,lng:loc.lng,r,color:'rgba(122,46,34,0.85)',name:loc.name,ids:visibleIds,type:'dest'});
+    const r=Math.min(.28+visibleIds.length*.07,.9);
+    pts.push({lat:loc.lat,lng:loc.lng,r,color:'rgba(122,46,34,0.95)',name:loc.name,ids:visibleIds,type:'dest'});
   });
   const arcs=[];
   Object.keys(originByCard).forEach(id=>{
     const d=destByCard[id];
     if(!d)return;
     const o=originByCard[id];
-    arcs.push({startLat:o.lat,startLng:o.lng,endLat:d.lat,endLng:d.lng,color:['rgba(154,124,63,0.55)','rgba(122,46,34,0.55)']});
+    arcs.push({startLat:o.lat,startLng:o.lng,endLat:d.lat,endLng:d.lng,color:['rgba(255,213,140,0.85)','rgba(200,80,60,0.85)']});
   });
   map.pointsData(pts).arcsData(arcs);
   closeLocationCards();
@@ -1087,17 +1087,17 @@ function initMap(){
   mapInitialized=true;
   map=Globe()(document.getElementById('map-container'))
     .backgroundColor('rgba(0,0,0,0)')
-    .globeImageUrl('https://unpkg.com/three-globe@2.45.2/example/img/earth-dark.jpg')
+    .globeImageUrl('https://unpkg.com/three-globe@2.45.2/example/img/earth-blue-marble.jpg')
     .showAtmosphere(true)
     .atmosphereColor('#c4a96a')
-    .atmosphereAltitude(.2)
-    .pointAltitude(.008)
+    .atmosphereAltitude(.22)
+    .pointAltitude(.01)
     .pointRadius('r')
     .pointColor('color')
     .pointLabel(d=>escHtml(d.name)+' ('+d.ids.length+' card'+(d.ids.length>1?'s':'')+')')
     .onPointClick(showLocationCards)
     .arcColor('color')
-    .arcStroke(.4)
+    .arcStroke(.55)
     .arcAltitudeAutoScale(.35)
     .pointsData([])
     .arcsData([]);
