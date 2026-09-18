@@ -84,7 +84,7 @@
   #map-panel{display:none;max-width:1200px;margin:0 auto;padding:0 60px 40px;background:rgba(247,243,237,0.92)}
   #map-panel.open{display:block}
   .globe-wrap{position:relative}
-  #map-container{height:780px}
+  #map-container{height:780px;cursor:grab}
   .map-hint{font-style:italic;font-size:.8rem;color:var(--ink-soft);opacity:.5;margin-top:8px;text-align:center}
   #globe-card-panel{display:none;position:absolute;top:14px;right:14px;max-width:250px;max-height:calc(100% - 28px);overflow-y:auto;background:rgba(247,243,237,.97);border:1px solid var(--rule);border-radius:4px;padding:14px 16px;box-shadow:0 4px 20px rgba(0,0,0,.18);z-index:500}
   #globe-card-panel.open{display:block}
@@ -348,7 +348,7 @@
     <div id="map-container"></div>
     <div id="globe-card-panel"></div>
   </div>
-  <div class="map-hint">Drag to spin the globe &nbsp;&#183;&nbsp; Gold = sent from &nbsp;&#183;&nbsp; Red = delivered to &nbsp;&#183;&nbsp; Click a point to see its postcards</div>
+  <div class="map-hint">Drag to spin the globe &nbsp;&#183;&nbsp; Gold = sent from &nbsp;&#183;&nbsp; Red = delivered to &nbsp;&#183;&nbsp; Click a point to see its postcards and, if known, the route between them</div>
 </div>
 
 <div class="table-wrap">
@@ -1034,7 +1034,7 @@ const RECIPIENT_LOCATIONS=[
   {name:"Lisco, Nebraska (recipient)",lat:41.6739,lng:-102.6349,ids:[235]}
 ];
 
-let map=null,mapInitialized=false;
+let map=null,mapInitialized=false,_originByCard={},_destByCard={};
 
 function refreshMapMarkers(){
   if(!map)return;
@@ -1043,25 +1043,31 @@ function refreshMapMarkers(){
     const visibleIds=loc.ids.filter(id=>{const c=postcards.find(x=>x.id===id);if(!c)return false;if(activeDecade!==null&&parseDecade(c.year)!==activeDecade)return false;return true;});
     if(!visibleIds.length)return;
     visibleIds.forEach(id=>{originByCard[id]={lat:loc.lat,lng:loc.lng};});
-    const r=Math.min(.32+visibleIds.length*.07,.95);
+    const r=Math.min(.55+visibleIds.length*.08,1.3);
     pts.push({lat:loc.lat,lng:loc.lng,r,color:'rgba(212,175,95,0.95)',name:loc.name,ids:visibleIds,type:'origin'});
   });
   RECIPIENT_LOCATIONS.forEach(loc=>{
     const visibleIds=loc.ids.filter(id=>{const c=postcards.find(x=>x.id===id);if(!c)return false;if(activeDecade!==null&&parseDecade(c.year)!==activeDecade)return false;return true;});
     if(!visibleIds.length)return;
     visibleIds.forEach(id=>{destByCard[id]={lat:loc.lat,lng:loc.lng};});
-    const r=Math.min(.28+visibleIds.length*.07,.9);
+    const r=Math.min(.5+visibleIds.length*.08,1.25);
     pts.push({lat:loc.lat,lng:loc.lng,r,color:'rgba(122,46,34,0.95)',name:loc.name,ids:visibleIds,type:'dest'});
   });
-  const arcs=[];
-  Object.keys(originByCard).forEach(id=>{
-    const d=destByCard[id];
-    if(!d)return;
-    const o=originByCard[id];
-    arcs.push({startLat:o.lat,startLng:o.lng,endLat:d.lat,endLng:d.lng,color:['rgba(255,213,140,0.85)','rgba(200,80,60,0.85)']});
-  });
-  map.pointsData(pts).arcsData(arcs);
+  _originByCard=originByCard;
+  _destByCard=destByCard;
+  map.pointsData(pts).arcsData([]);
   closeLocationCards();
+}
+
+function arcsForIds(ids){
+  const arcs=[];
+  ids.forEach(id=>{
+    const o=_originByCard[id],d=_destByCard[id];
+    if(o&&d){
+      arcs.push({startLat:o.lat,startLng:o.lng,endLat:d.lat,endLng:d.lng,color:['rgba(255,213,140,0.85)','rgba(200,80,60,0.85)']});
+    }
+  });
+  return arcs;
 }
 
 function showLocationCards(pt){
@@ -1078,9 +1084,10 @@ function showLocationCards(pt){
   }).filter(Boolean).join('');
   panel.innerHTML='<button class="gcp-close" onclick="closeLocationCards()" title="Close">&#x2715;</button><div class="map-popup-title">'+escHtml(pt.name)+'</div>'+cards;
   panel.classList.add('open');
+  if(map)map.arcsData(arcsForIds(pt.ids));
 }
 
-function closeLocationCards(){const panel=document.getElementById('globe-card-panel');if(panel){panel.classList.remove('open');panel.innerHTML='';}}
+function closeLocationCards(){const panel=document.getElementById('globe-card-panel');if(panel){panel.classList.remove('open');panel.innerHTML='';}if(map)map.arcsData([]);}
 
 function initMap(){
   if(mapInitialized)return;
@@ -1096,6 +1103,7 @@ function initMap(){
     .pointColor('color')
     .pointLabel(d=>escHtml(d.name)+' ('+d.ids.length+' card'+(d.ids.length>1?'s':'')+')')
     .onPointClick(showLocationCards)
+    .onPointHover(d=>{document.getElementById('map-container').style.cursor=d?'pointer':'grab';})
     .arcColor('color')
     .arcStroke(.55)
     .arcAltitudeAutoScale(.35)
