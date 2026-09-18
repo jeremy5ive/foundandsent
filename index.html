@@ -5,8 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link rel="alternate" type="application/rss+xml" title="Found &amp; Sent - New Postcards" href="https://foundandsent.net/feed.xml">
 <title>Found & Sent — A Postcard Archive</title>
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://unpkg.com/globe.gl@2.46.2/dist/globe.gl.min.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=VT323&display=swap" rel="stylesheet">
 <style>
@@ -84,8 +83,13 @@
   mark{background:rgba(154,124,63,.2);color:inherit;border-radius:2px;padding:0 1px}
   #map-panel{display:none;max-width:900px;margin:0 auto;padding:0 60px 40px;background:rgba(247,243,237,0.92)}
   #map-panel.open{display:block}
-  #map-container{height:520px;border-radius:4px;overflow:hidden;border:1px solid var(--rule);box-shadow:0 4px 20px rgba(0,0,0,.08)}
+  .globe-wrap{position:relative}
+  #map-container{height:520px;border-radius:4px;overflow:hidden;border:1px solid var(--rule);box-shadow:0 4px 20px rgba(0,0,0,.08);background:var(--bg2)}
   .map-hint{font-style:italic;font-size:.8rem;color:var(--ink-soft);opacity:.5;margin-top:8px;text-align:center}
+  #globe-card-panel{display:none;position:absolute;top:14px;right:14px;max-width:250px;max-height:calc(100% - 28px);overflow-y:auto;background:rgba(247,243,237,.97);border:1px solid var(--rule);border-radius:4px;padding:14px 16px;box-shadow:0 4px 20px rgba(0,0,0,.18);z-index:500}
+  #globe-card-panel.open{display:block}
+  .gcp-close{position:absolute;top:6px;right:9px;background:none;border:none;color:var(--ink-soft);cursor:pointer;font-size:.8rem;opacity:.5;line-height:1;padding:4px}
+  .gcp-close:hover{opacity:1;color:var(--gold)}
   .map-popup-title{font-family:'Playfair Display',serif;font-size:.95rem;font-style:italic;color:#1c1510;margin-bottom:6px;padding-bottom:5px;border-bottom:1px solid #d4c5b0}
   .map-popup-card{font-size:.8rem;color:#5a4a38;padding:4px 0;cursor:pointer;border-bottom:1px solid rgba(212,197,176,.3);line-height:1.4}
   .map-popup-card:last-child{border-bottom:none}
@@ -257,7 +261,7 @@
     </div>
     <button id="globe-btn" class="globe-btn">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" width="20" height="20" style="pointer-events:none;"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418"/></svg>
-      Map View
+      Globe View
     </button>
     <a href="https://foundandsent.net/feed.xml" title="Subscribe via RSS" style="margin-left:auto;display:inline-flex;align-items:center;opacity:.85;text-decoration:none;" target="_blank"><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="5" fill="#f26522"/><circle cx="6.18" cy="17.82" r="2.18" fill="white"/><path d="M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27V4.44z" fill="white"/><path d="M4 10.1a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93V10.1z" fill="white"/></svg></a>
   </div>
@@ -340,8 +344,11 @@
 </div>
 
 <div id="map-panel">
-  <div id="map-container"></div>
-  <div class="map-hint">Click any marker to see postcards from that location &nbsp;&#183;&nbsp; Larger markers = more cards</div>
+  <div class="globe-wrap">
+    <div id="map-container"></div>
+    <div id="globe-card-panel"></div>
+  </div>
+  <div class="map-hint">Drag to spin the globe &nbsp;&#183;&nbsp; Gold = sent from &nbsp;&#183;&nbsp; Red = delivered to &nbsp;&#183;&nbsp; Click a point to see its postcards</div>
 </div>
 
 <div class="table-wrap">
@@ -1027,37 +1034,82 @@ const RECIPIENT_LOCATIONS=[
   {name:"Lisco, Nebraska (recipient)",lat:41.6739,lng:-102.6349,ids:[235]}
 ];
 
-let map=null,mapInitialized=false,_mapMarkers=[];
+let map=null,mapInitialized=false;
 
 function refreshMapMarkers(){
   if(!map)return;
-  _mapMarkers.forEach(m=>m.remove());
-  _mapMarkers=[];
+  const originByCard={},destByCard={},pts=[];
   LOCATIONS.forEach(loc=>{
     const visibleIds=loc.ids.filter(id=>{const c=postcards.find(x=>x.id===id);if(!c)return false;if(activeDecade!==null&&parseDecade(c.year)!==activeDecade)return false;return true;});
     if(!visibleIds.length)return;
-    const r=Math.min(6+visibleIds.length*3,22);
-    const m=L.circleMarker([loc.lat,loc.lng],{radius:r,fillColor:'#9a7c3f',color:'#6b5229',weight:1.5,opacity:.9,fillOpacity:.75}).addTo(map);
-    const cards=visibleIds.map(id=>{const c=postcards.find(x=>x.id===id);if(!c)return'';const sl=c.location.split('\u2014')[0].trim();return'<div class="map-popup-card" onclick="openCardFromMap('+id+')">'+'<div>'+escHtml(sl)+'</div><div class="map-popup-year">'+escHtml(c.year||'')+'</div></div>';}).filter(Boolean).join('');
-    m.bindPopup('<div class="map-popup-title">'+escHtml(loc.name)+'</div>'+cards,{maxWidth:280});
-    _mapMarkers.push(m);
+    visibleIds.forEach(id=>{originByCard[id]={lat:loc.lat,lng:loc.lng};});
+    const r=Math.min(.28+visibleIds.length*.06,.85);
+    pts.push({lat:loc.lat,lng:loc.lng,r,color:'rgba(154,124,63,0.85)',name:loc.name,ids:visibleIds,type:'origin'});
   });
   RECIPIENT_LOCATIONS.forEach(loc=>{
     const visibleIds=loc.ids.filter(id=>{const c=postcards.find(x=>x.id===id);if(!c)return false;if(activeDecade!==null&&parseDecade(c.year)!==activeDecade)return false;return true;});
     if(!visibleIds.length)return;
-    const icon=L.divIcon({className:'',html:'<div style="width:12px;height:12px;transform:rotate(45deg);border:2px solid #7a2e22;background:rgba(122,46,34,0.25);margin-top:-6px;margin-left:-6px;"></div>',iconSize:[12,12],iconAnchor:[6,6]});
-    const m=L.marker([loc.lat,loc.lng],{icon}).addTo(map);
-    const cards=visibleIds.map(id=>{const c=postcards.find(x=>x.id===id);if(!c)return'';return'<div class="map-popup-card" onclick="openCardFromMap('+id+')">'+'<div style="font-size:.7rem;color:#a05040;">&#9671; Delivered to</div><div>'+escHtml(c.recipient||'')+'</div><div class="map-popup-year">'+escHtml(c.year||'')+'</div></div>';}).filter(Boolean).join('');
-    m.bindPopup('<div class="map-popup-title">'+escHtml(loc.name)+'</div>'+cards,{maxWidth:300});
-    _mapMarkers.push(m);
+    visibleIds.forEach(id=>{destByCard[id]={lat:loc.lat,lng:loc.lng};});
+    const r=Math.min(.24+visibleIds.length*.06,.8);
+    pts.push({lat:loc.lat,lng:loc.lng,r,color:'rgba(122,46,34,0.85)',name:loc.name,ids:visibleIds,type:'dest'});
   });
+  const arcs=[];
+  Object.keys(originByCard).forEach(id=>{
+    const d=destByCard[id];
+    if(!d)return;
+    const o=originByCard[id];
+    arcs.push({startLat:o.lat,startLng:o.lng,endLat:d.lat,endLng:d.lng,color:['rgba(154,124,63,0.55)','rgba(122,46,34,0.55)']});
+  });
+  map.pointsData(pts).arcsData(arcs);
+  closeLocationCards();
 }
 
-function initMap(){if(mapInitialized)return;mapInitialized=true;map=L.map('map-container',{center:[20,0],zoom:2,minZoom:2,scrollWheelZoom:true,maxBounds:[[-85,-180],[85,180]],maxBoundsViscosity:1.0,worldCopyJump:false});L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{attribution:'&copy; OpenStreetMap &copy; CARTO',subdomains:'abcd',maxZoom:19,noWrap:true}).addTo(map);refreshMapMarkers();}
+function showLocationCards(pt){
+  const panel=document.getElementById('globe-card-panel');
+  if(!panel||!pt)return;
+  const cards=pt.ids.map(id=>{
+    const c=postcards.find(x=>x.id===id);
+    if(!c)return'';
+    if(pt.type==='dest'){
+      return'<div class="map-popup-card" onclick="openCardFromMap('+id+')"><div style="font-size:.7rem;color:#a05040;">&#9671; Delivered to</div><div>'+escHtml(c.recipient||'')+'</div><div class="map-popup-year">'+escHtml(c.year||'')+'</div></div>';
+    }
+    const sl=c.location.split('\u2014')[0].trim();
+    return'<div class="map-popup-card" onclick="openCardFromMap('+id+')"><div>'+escHtml(sl)+'</div><div class="map-popup-year">'+escHtml(c.year||'')+'</div></div>';
+  }).filter(Boolean).join('');
+  panel.innerHTML='<button class="gcp-close" onclick="closeLocationCards()" title="Close">&#x2715;</button><div class="map-popup-title">'+escHtml(pt.name)+'</div>'+cards;
+  panel.classList.add('open');
+}
 
-function openCardFromMap(id){if(map)map.closePopup();toggleMap(false);searchTerm='';document.getElementById('search-input').value='';currentPage=1;renderList();const idx=viewList.findIndex(c=>c.id===id);if(idx>=0){currentPage=Math.ceil((idx+1)/PAGE_SIZE);renderList();setTimeout(()=>openLb(idx),150);}}
+function closeLocationCards(){const panel=document.getElementById('globe-card-panel');if(panel){panel.classList.remove('open');panel.innerHTML='';}}
 
-function toggleMap(forceClose){const panel=document.getElementById('map-panel');const btn=document.getElementById('globe-btn');const tw=document.querySelector('.table-wrap');const sw=document.querySelector('.search-wrap');const isOpen=panel.classList.contains('open');if(forceClose===true||isOpen){panel.classList.remove('open');btn.classList.remove('active');if(tw)tw.style.display='';if(sw)sw.style.display='';}else{panel.classList.add('open');btn.classList.add('active');if(tw)tw.style.display='none';if(sw)sw.style.display='none';initMap();setTimeout(()=>{if(map)map.invalidateSize();},200);}}
+function initMap(){
+  if(mapInitialized)return;
+  mapInitialized=true;
+  map=Globe()(document.getElementById('map-container'))
+    .backgroundColor('rgba(0,0,0,0)')
+    .globeImageUrl('https://unpkg.com/three-globe@2.45.2/example/img/earth-dark.jpg')
+    .showAtmosphere(true)
+    .atmosphereColor('#c4a96a')
+    .atmosphereAltitude(.2)
+    .pointAltitude(.008)
+    .pointRadius('r')
+    .pointColor('color')
+    .pointLabel(d=>escHtml(d.name)+' ('+d.ids.length+' card'+(d.ids.length>1?'s':'')+')')
+    .onPointClick(showLocationCards)
+    .arcColor('color')
+    .arcStroke(.4)
+    .arcAltitudeAutoScale(.35)
+    .pointsData([])
+    .arcsData([]);
+  map.pointOfView({lat:39,lng:-98,altitude:2.1},0);
+  map.controls().autoRotate=false;
+  map.controls().enableZoom=true;
+  refreshMapMarkers();
+}
+
+function openCardFromMap(id){closeLocationCards();toggleMap(false);searchTerm='';document.getElementById('search-input').value='';currentPage=1;renderList();const idx=viewList.findIndex(c=>c.id===id);if(idx>=0){currentPage=Math.ceil((idx+1)/PAGE_SIZE);renderList();setTimeout(()=>openLb(idx),150);}}
+
+function toggleMap(forceClose){const panel=document.getElementById('map-panel');const btn=document.getElementById('globe-btn');const tw=document.querySelector('.table-wrap');const sw=document.querySelector('.search-wrap');const isOpen=panel.classList.contains('open');if(forceClose===true||isOpen){panel.classList.remove('open');btn.classList.remove('active');if(tw)tw.style.display='';if(sw)sw.style.display='';}else{panel.classList.add('open');btn.classList.add('active');if(tw)tw.style.display='none';if(sw)sw.style.display='none';initMap();setTimeout(()=>{if(map){const el=document.getElementById('map-container');map.width(el.clientWidth);map.height(el.clientHeight);}},200);}}
 document.getElementById('globe-btn').addEventListener('click',toggleMap);
 
 let activeDecade=null;
