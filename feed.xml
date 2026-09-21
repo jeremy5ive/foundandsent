@@ -5,8 +5,15 @@
     <link>https://foundandsent.net</link>
     <description>Rescued vintage postcards with their original messages, stamps, and stories. New cards added regularly.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 14 Sep 2026 13:06:56 -0600</lastBuildDate>
+    <lastBuildDate>Mon, 21 Sep 2026 13:08:37 -0600</lastBuildDate>
     <atom:link href="https://foundandsent.net/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Card #236: Western Wyoming — Big Horn Ram (1964 (postmark: Pinedale[?], Wyo., Aug 1964 — town name partly obscured by an added note, day not legible))</title>
+      <link>https://foundandsent.net/#card-236</link>
+      <guid isPermaLink="true">https://foundandsent.net/#card-236</guid>
+      <description>Front: a bighorn ram (Ovis canadensis) walking a grassy, snow-streaked hillside, captioned "Big Horn Ram — A Prized Trophy" with a paragraph on the species' range and habits in Wyoming (photo code S-48934). Published by M &amp; R Photos, Rock Springs, Wyo. Back: a 4-cent Lincoln stamp; postmark reads wh</description>
+      <media:thumbnail url="https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1964 - Western Wyoming - front.jpeg"/>
+    </item>
     <item>
       <title>Card #235: Tulsa, Oklahoma — The Irish Castle (1942 (postmark: Tahlequah, Okla., Jun 6, 1942))</title>
       <link>https://foundandsent.net/#card-235</link>

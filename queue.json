@@ -1,28 +1,5 @@
 [
   {
-    "id": 236,
-    "location": "Western Wyoming — Big Horn Ram",
-    "address": "Western Wyoming",
-    "year": "1964 (postmark: Pinedale[?], Wyo., Aug 1964 — town name partly obscured by an added note, day not legible)",
-    "sender": "Eldon (a grandchild; no return address given)",
-    "recipient": "Curley Wright, Box 236, Laramie, Wyoming",
-    "notes": "Front: a bighorn ram (Ovis canadensis) walking a grassy, snow-streaked hillside, captioned \"Big Horn Ram — A Prized Trophy\" with a paragraph on the species' range and habits in Wyoming (photo code S-48934). Published by M & R Photos, Rock Springs, Wyo. Back: a 4-cent Lincoln stamp; postmark reads what appears to be [Pinedale?], Wyo., Aug 1964, though it's partly obscured. Across the top of the card, in the same blue ballpoint as the letter, someone added a separate one-line joke — \"SCHNEIDER SAYS JOHNSON IS A MILKSOP\" — crossing right through the printed ram description; it has nothing to do with the letter and reads like a private family joke rather than part of it. Message, from a grandchild named Eldon: \"Dear Grandma & Grandad, Yesterday we went camping. Early this morning we saw 4 cow moose, 1 coyote, 3 deer, 2 antelope, and yesterday we saw 2 sand hill cranes, 1 blue heron, & 1 antelope. Today we went swimming & learned how to swim. We have some glass animals for Grandma. Love, Eldon.\" Addressed to Curley Wright, Box 236, Laramie, Wyoming — presumably Eldon's grandparents. A pencil dealer/collector price mark (\"527.50\" / \"$1.50\") appears near the stamp.",
-    "front": "1964 - Western Wyoming - front.jpeg",
-    "back": "1964 - Western Wyoming - back.jpeg",
-    "map": [
-      {
-        "name": "Pinedale, Wyoming (postmark, uncertain)",
-        "lat": 42.8666,
-        "lng": -109.8631
-      },
-      {
-        "name": "Laramie, Wyoming (recipient)",
-        "lat": 41.3114,
-        "lng": -105.5911
-      }
-    ]
-  },
-  {
     "id": 237,
     "location": "Lemon Grove, California — Monte Vista Lodge",
     "address": "Lemon Grove, California",
