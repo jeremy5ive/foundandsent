@@ -1,1 +1,285 @@
-[]
+[
+  {
+    "id": 238,
+    "location": "South Omaha, Nebraska — South Omaha Stock Exchange",
+    "address": "South Omaha, Nebraska",
+    "year": "1909 (postmark: Omaha, Neb., Oct 29, 1909, 1:30 PM)",
+    "sender": "Elbert H. T. Miller (the recipient's cousin)",
+    "recipient": "Miss Mary Miller, No. Chambers St., Galesburg, Ill.",
+    "notes": "Front: the South Omaha Stock Exchange, a large red-brick building at the stockyards with \"EXCHANGE\" over its arched entrance, a domed corner tower, a \"Geo. Burke & Co.\" livestock-commission sign, and horses tied at the hitching rails out front (card no. 14541). South Omaha was still a separate city then; Omaha annexed it in 1915. Back: divided back with an ornate maroon \"Post Card\" heading; a 1-cent green Franklin stamp; postmarked Omaha, Neb., Oct 29, 1909, 1:30 PM, with a wavy machine cancel. The writer mentions two events that both seem to line up with the record: the national convention of the Woman's Christian Temperance Union met in Omaha in late October 1909, and the New York State Woman Suffrage Association held its annual convention in Troy, N.Y., that same month. Message: \"Omaha, Nebr., Octo. 29th 1909. Dear Cousin:— Arrived here a.m. yesterday from Lincoln. It is Indian Summer weather. Am at Mrs. May Halbert-Finley's, 1612 Burdette St. (a cousin of Mother's). The National W.C.T.U. is in session here. My mother has just gotten home from N.Y. State Woman's Suffrage Convention at Troy, N.Y. Hope to see you soon. Best wishes to all. Your Cousin, Elbert H. T. Miller\" A pencil dealer mark (\"527 $2\") appears above the stamp.",
+    "front": "1909 - South Omaha Stock Exchange - Omaha, Neb - front.jpeg",
+    "back": "1909 - South Omaha Stock Exchange - Omaha, Neb - back.jpeg",
+    "feed_description": "A cousin writes from Omaha in October 1909 while the national W.C.T.U. is in session there, and mentions that his mother has just come home from the New York State woman suffrage convention in Troy.",
+    "map": [
+      {
+        "name": "Omaha, Nebraska (postmark)",
+        "lat": 41.2565,
+        "lng": -95.9345
+      },
+      {
+        "name": "Galesburg, Illinois (recipient)",
+        "lat": 40.9478,
+        "lng": -90.3712
+      }
+    ]
+  },
+  {
+    "id": 239,
+    "location": "Washington — Heading Oats",
+    "address": "Washington",
+    "year": "1910 (postmark: Seattle[?], Wash., Sep 28, 1910)",
+    "sender": "\"C. J.\" (initials only)",
+    "recipient": "Miss Christine Petersen, c/o Ole Petersen, Kent, Wash.",
+    "notes": "Front: a tinted photo of an oat harvest on open, rolling farmland. A team of horses pulls a header (its reel is visible) at right, a driver stands on the rig, stacked grain is beside it, and more horses and figures stand in the uncut oats. \"Heading\" meant cutting off just the grain heads with a header rather than binding whole stalks into sheaves. Published by The Lowman & Hanford Co., Seattle (no. 1162, \"Heading Oats, Washington\"). Back: ornate \"Post Card\" heading, \"This space can be used for a written message, using one-cent stamp\"; a 1-cent green Franklin stamp; the postmark is partly legible (it appears to read Seattle, Wash.), dated Sep 28, 1910, with a wavy machine cancel. The message is in Danish, written in purple. Kent, in the White River Valley south of Seattle, had a sizeable Scandinavian farming community at the time. Message (Danish): \"Kære Christine Petersen. Jeg ved ikke noget nyt andet end som alt gaar som sædvanlig. Haaber at høre fra dig engang inden Søndag. C. J. Hils dem alle i Kent.\" Translation: \"Dear Christine Petersen, I don't know anything new, other than that everything is going as usual. Hope to hear from you sometime before Sunday. C. J. Greet them all in Kent.\" A pencil dealer mark (\"3.00\") is at top left.",
+    "front": "1910 - Heading Oats, WA - front.jpeg",
+    "back": "1910 - Heading Oats, WA - back.jpeg",
+    "feed_description": "A short note in Danish, sent in 1910 to a young woman in Kent, Washington, on a card showing horses heading oats: nothing new, everything as usual, write before Sunday.",
+    "map": [
+      {
+        "name": "Seattle, Washington (postmark, uncertain)",
+        "lat": 47.6062,
+        "lng": -122.3321
+      },
+      {
+        "name": "Kent, Washington (recipient)",
+        "lat": 47.3809,
+        "lng": -122.2348
+      }
+    ]
+  },
+  {
+    "id": 240,
+    "location": "Toledo, Ohio — Collingwood Avenue",
+    "address": "Toledo, Ohio",
+    "year": "1914 (dated July 30, 1914 by the writer; postmark: [town illegible], Mich., July 1914)",
+    "sender": "Winnie[?], writing from Lacota, Michigan",
+    "recipient": "Wm. G. Cooper, Eau Claire, Mich.",
+    "notes": "Front: \"Collingwood Ave. south from Floyd St., Toledo, Ohio\", a tinted view of a shady residential avenue with large houses, striped porch awnings, a stepped Dutch-gabled house, and a long sidewalk under tall trees. The card is only a Toledo view: it was actually written in Lacota, a small crossroads in Van Buren County, Michigan, and mailed to Eau Claire, Michigan, about 25 miles south. Back: a brown \"Post Card\" heading, \"This space may be used for correspondence / For address only\"; a 1-cent green Washington stamp; the postmark shows only \"JUL\" and \"MICH\", and the town is illegible. The message fills the left side, then runs up the left margin and across the top. Its closing words are cramped and hard to read, so the ending and signature are uncertain. Message: \"July 30 1914, Lacota Mich. Dear Will, You said you were going to write in two or three days but we did not here from [you]. I went to So. Haven this week and got my new dress. Edna gave me money for a new hat for Donald[?]. Mother and I both have colds. The children are pretty well and send love. Write [to your sister?]. Winnie[?]\" (\"here\" is the writer's spelling of \"hear\"; a stray \"and\" is struck out before \"Edna\"; the word \"you\" after \"from\" was never written.) A dealer sticker (\"1843 / $0.99\") is on the address side.",
+    "front": "1914 - Toledo, OH - front.jpeg",
+    "back": "1914 - Toledo, OH - back.jpeg",
+    "feed_description": "Written in Lacota, Michigan, in July 1914 on a Toledo street view: a new dress from South Haven, a new hat for Donald, colds at home, and a gentle scolding for not writing.",
+    "map": [
+      {
+        "name": "Lacota, Michigan (sender)",
+        "lat": 42.4131,
+        "lng": -86.0395
+      },
+      {
+        "name": "Eau Claire, Michigan (recipient)",
+        "lat": 42.0103,
+        "lng": -86.3036
+      }
+    ]
+  },
+  {
+    "id": 241,
+    "location": "Columbia, Missouri — The Columns, University of Missouri",
+    "address": "Columbia, Missouri",
+    "year": "1929 (postmark: Columbia, Mo., Sep 11, 1929, 10 AM)",
+    "sender": "Ray (the recipient's husband, apparently)",
+    "recipient": "Mrs. Ray L. Hamon[?], Box 255, Gorham, Maine",
+    "notes": "Front: \"Class Day Exercises around the Columns, University of Missouri, Columbia, Mo.\" Graduates in caps and gowns process along a walk past the six ivy-covered Ionic columns on the Francis Quadrangle while a crowd of spectators, some with parasols, gathers on the lawn. The columns are what remained of Academic Hall after it burned in January 1892. Published by Joe Janousek's Art Shop, Columbia, Mo.; printed by Curt Teich (\"C.T. American Art\", A-74976). Back: a 1-cent green Franklin stamp; postmarked Columbia, Mo., Sep 11, 1929, 10 AM, with a wavy machine cancel. Sep 11, 1929 was a Wednesday, so the card was written the night before it was mailed. Message: \"Tuesday night. Dear Florence, why don't you write? I have had no word since I left. I shall be here for a week yet and may be longer, then to Jeff. City and Rolla. Ray\" (\"here\" is added above the line with a caret.) Jefferson City and Rolla are both in central Missouri, which suggests a work trip around the state. A dealer sticker (\"#1843 $0.79\") is on the address side.",
+    "front": "1929 - University of Missouri - Columbia, MO - front.jpeg",
+    "back": "1929 - University of Missouri - Columbia, MO - back.jpeg",
+    "feed_description": "A traveling husband writes home to Maine from Columbia, Missouri, in 1929: why don't you write? A week more here, then on to Jefferson City and Rolla.",
+    "map": [
+      {
+        "name": "Columbia, Missouri (postmark)",
+        "lat": 38.9517,
+        "lng": -92.3341
+      },
+      {
+        "name": "Gorham, Maine (recipient)",
+        "lat": 43.6795,
+        "lng": -70.4442
+      }
+    ]
+  },
+  {
+    "id": 242,
+    "location": "Fort Collins, Colorado — \"Barely Able to Write\" Lazy Correspondence Card",
+    "address": "Fort Collins, Colorado",
+    "year": "1940 (postmark: Fort Collins, Colo., Nov 4, 1940, 5 PM)",
+    "sender": "\"Poppy\" (the front checklist is signed with the initials \"DEW\")",
+    "recipient": "Myrne G. Watrous, 273 Soto St., Hayward, California",
+    "notes": "Front: a humorous \"Barely Able to Write — Lazy Correspondence Card\" (no. 217), with a verse (\"I'm all dressed up with no place to go…\") and a color checklist the sender marks with X's instead of writing. The picture at left is a period stereotype of a Native American man in a feathered headdress with bow and arrow. The boxes checked: Dear Old Kid; Doing lots of Thinking of You; Will be Writing You Again; I Am Missing You; Hope You Have Kept Well; I Have Seen Lots of Good-Looking Girls; Wish I Had More Ambition; Things are Fine; Yours 'Till the Cows Come Home. The name line is signed \"DEW\". Back: Sanborn Souvenir Co., Denver, Colo.; a 1-cent green Washington stamp; postmarked Fort Collins, Colo., Nov 4, 1940, 5 PM. The handwritten note on the back reads like a grandfather or other older relative gently teasing a child about spelling. Message: \"Myrne: Thank you for your really nice letter. Glad you're playing baseball — must be lots of fun. Maybe you'd better check up on how to spell \"supper,\" \"restaurant\" and \"school.\" You will get a whole flock of postcards before I come home, from time to time. Lots of love, Poppy.\" A pencil dealer mark (\"527 / 15\") is near the stamp.",
+    "front": "1940 - Fort Collins, CO - front.jpeg",
+    "back": "1940 - Fort Collins, CO - back.jpeg",
+    "feed_description": "A checkbox \"lazy correspondence card\" from Fort Collins in 1940, with a handwritten note from \"Poppy\" praising a child's letter and baseball, and suggesting they check how to spell \"supper,\" \"restaurant\" and \"school.\"",
+    "map": [
+      {
+        "name": "Fort Collins, Colorado (postmark)",
+        "lat": 40.5853,
+        "lng": -105.0844
+      },
+      {
+        "name": "Hayward, California (recipient)",
+        "lat": 37.6688,
+        "lng": -122.0808
+      }
+    ]
+  },
+  {
+    "id": 243,
+    "location": "Detroit, Michigan — Nancy Brown Peace Carillon, Belle Isle",
+    "address": "Belle Isle, Detroit, Michigan",
+    "year": "1957 (dated Sept. 18, 1957; postmark: Dearborn, Mich., Sep 18, 1957)",
+    "sender": "Mary and Randle",
+    "recipient": "Mrs. E. C. Harrison, Methodist Home, Lawrenceville, Ga.",
+    "notes": "Front: the Nancy Brown Peace Carillon, a slender white Art Deco bell tower on Belle Isle, framed by tree branches against a deep blue sky. The tower was dedicated in 1940 and named for Nancy Brown, the pen name of the Detroit News advice columnist whose readers paid for it. Back: \"The Famous Nancy Brown Peace Carillon — Erected on Belle Isle, by the people of Detroit Michigan and dedicated to the cause of World Peace\" (P1160, D5). Published by the Hiawatha Card Co., Ypsilanti, Mich.; \"Plastichrome\" by Colourpicture, Boston. A 2-cent John Adams stamp; postmarked Dearborn, Mich., Sep 18, 1957. The written date, \"Sept. 18, 1957,\" runs right into the postmark. Addressed to the writer's mother at a Methodist retirement home in Lawrenceville, Georgia. Message: \"Dearest Mom — We are keeping busy visiting all the relatives and old friends here and having a fine time. The weather is nice and cool, but rainy today. Will write again in a few days. Love, Mary and Randle\" A pencil dealer mark (\"527 / 1.00\") is near the stamp.",
+    "front": "1957 - Nancy Brown Peace Carillon - Detroit, MI - front.jpeg",
+    "back": "1957 - Nancy Brown Peace Carillon - Detroit, MI - back.jpeg",
+    "feed_description": "Mary and Randle write home to Mom in Georgia from a 1957 visit to Detroit: busy seeing relatives and old friends, cool and rainy, more soon.",
+    "map": [
+      {
+        "name": "Dearborn, Michigan (postmark)",
+        "lat": 42.3223,
+        "lng": -83.1763
+      },
+      {
+        "name": "Lawrenceville, Georgia (recipient)",
+        "lat": 33.9562,
+        "lng": -83.988
+      }
+    ]
+  },
+  {
+    "id": 244,
+    "location": "Boston, Massachusetts — Prudential Tower",
+    "address": "Boston, Massachusetts",
+    "year": "1967 (postmark: Boston, Mass., Apr 18, 1967)",
+    "sender": "Unsigned (\"Love XXX\")",
+    "recipient": "Tootie Kennedy, 4201 N. [street not written], Lincoln, Nebraska",
+    "notes": "Front: \"Prudential Center in The New Boston — All America City\" — the lit-up Prudential Tower (completed 1964) and the Sheraton-Boston Hotel at dusk, seen across the Charles River over a row of Back Bay brownstones, with their reflections on the water. Back: \"Boston, Massachusetts — Prudential Tower and Sheraton Boston Hotel from across the Charles River.\" Plastichrome by Colourpicture, Boston. An 8-cent U.S. Air Mail stamp (a jet over the Capitol dome); postmarked Boston, Mass., Apr 18, 1967, PM, with a partly legible machine slogan cancel. The address line reads \"4201 N.\" and nothing more. \"Sorry about that\" was the famous catchphrase from TV's Get Smart (1965–70). Wymore is a small town in southeast Nebraska. \"Elaine\" may be the addressee's real name behind the nickname \"Tootie,\" but that's only a guess. Message: \"Sorry about that Elaine. How's the organ? Glad you did Wymore! Any cake on Dave's birthday?? People slower in New York State + Boston, Lincoln is a \"swinger\" of a town. So are Colo places. I am maybe buying a \"coat-suit\" today. Love XXX\" (\"slower,\" \"So are\" and \"Colo\" are underlined.) A pencil dealer mark (\"9744 / 1-\") is at top left.",
+    "front": "1967 - Prudential Tower - Boston, MA - front.jpeg",
+    "back": "1967 - Prudential Tower - Boston, MA - back.jpeg",
+    "feed_description": "Airmail from Boston in April 1967 to a friend in Lincoln, Nebraska: people are slower out East, Lincoln is a \"swinger\" of a town, and maybe a new coat-suit today.",
+    "map": [
+      {
+        "name": "Boston, Massachusetts (postmark)",
+        "lat": 42.3601,
+        "lng": -71.0589
+      },
+      {
+        "name": "Lincoln, Nebraska (recipient)",
+        "lat": 40.8136,
+        "lng": -96.7026
+      }
+    ]
+  },
+  {
+    "id": 245,
+    "location": "Cheyenne, Wyoming — The Plains Hotel Lobby",
+    "address": "Cheyenne, Wyoming",
+    "year": "1914 (dated \"7/23-14\" by the writer; postmark town and date illegible)",
+    "sender": "\"A. M.\" (initials only)",
+    "recipient": "Miss Florence Giesler[?], 819 S. 8th St., Laramie, Wyo.",
+    "notes": "Front: \"The Lobby — The Plains Hotel, Cheyenne, Wyo.\", a tinted view of the grand lobby with tufted black leather sofas and armchairs, square columns, a mezzanine balcony with potted palms, a wall clock above the front desk, and electric sconces. The Plains Hotel opened in 1911 and still operates in downtown Cheyenne. Machine-cancel lines also struck across the front at upper left. Back: an ornate \"Post Card\" heading with an eagle and shield, and \"This Space May Be Used for a Written Message\"; a 1-cent green Washington stamp; the flag-style machine cancel is too smudged to read. The message is written diagonally across the left half of the card, and several words at the ends of the upper lines disappear under the printed \"Post Card\" heading, so those readings are uncertain. The writer dated it \"7/23-14\" (July 23, 1914), and the stamp fits that date. Message: \"Hello Florence — Received your letter yesterday and [will answer it?] tonight. [Don't know?] why Ros[e?] has not written to you as she did not[?] seem to be peeved the time I saw her. Was to a dance last night for a little while. As ever, A. M.\" A pencil dealer mark (\"527 / 1.50\") is on the address side.",
+    "front": "1973 - The Plains Hotel - Cheyenne, WY - front.jpeg",
+    "back": "1973 - The Plains Hotel - Cheyenne, WY - back.jpeg",
+    "feed_description": "A 1914 note to Laramie on a card of the Plains Hotel lobby, written diagonally: why hasn't Rose written, she didn't seem peeved; and a dance last night, for a little while.",
+    "map": [
+      {
+        "name": "Cheyenne, Wyoming (card view; postmark illegible)",
+        "lat": 41.14,
+        "lng": -104.8202
+      },
+      {
+        "name": "Laramie, Wyoming (recipient)",
+        "lat": 41.3114,
+        "lng": -105.5911
+      }
+    ]
+  },
+  {
+    "id": 246,
+    "location": "South Padre Island, Texas",
+    "address": "South Padre Island, Texas",
+    "year": "1993 (dated 1-25-93; postmark: McAllen, Tex., Jan 26, 1993)",
+    "sender": "Carol [surname illegible], writing with Bob",
+    "recipient": "Mrs. Olive[?] Richter, Room 101, Whispering Pines Good Samaritan Home, Pine River, Mn. 56474",
+    "notes": "Front: an aerial view looking north up South Padre Island, with the Laguna Madre at left, the Gulf of Mexico surf at right, and a strip of high-rise condominiums, hotels, and tennis courts along the beach. Photo by Frank Whaley (FW-102). Back: \"The new Miami Beach of South Texas with its beautiful white beaches, superb surfing, fishing and luxurious accommodations… and is the meeting place for thousands of college students during the Annual Spring Break.\" Published by Frank Whaley Post Cards, Corpus Christi, Texas. A 29-cent Flag Over White House stamp; postmarked McAllen, Tex., Jan 26, 1993, PM. It also carries sorting marks from Minneapolis (\"MPLS MN 554 01/28/93\") and St. Cloud (\"ST CLD 563\") on the way to a Good Samaritan nursing home in Pine River, Minnesota; \"Room 101\" is added below the address. The writers were likely winter Texans, northerners who spend the winter in the Rio Grande Valley. Across the top, over the printed caption, the writer added: \"We're 30 miles inland from here.\" Message: \"Dear Ollie, We hope you're having a good winter! Our weather has been so-so, but each week has brought 2 or 3 days in the 70's and so Bob golfs and I swim and together we dance & play cards. Jim is coming to visit for 3 days this weekend! Love Carol [surname illegible]\" Pencil and pen marks (\"9744 / 2-\", \"104\") are near the stamp.",
+    "front": "1993 - South Padre Island, TX - front.jpeg",
+    "back": "1993 - South Padre Island, TX - back.jpeg",
+    "feed_description": "Winter Texans write home to a Minnesota nursing home in January 1993: some days in the 70s, Bob golfs, Carol swims, and together they dance and play cards.",
+    "map": [
+      {
+        "name": "McAllen, Texas (postmark)",
+        "lat": 26.2034,
+        "lng": -98.23
+      },
+      {
+        "name": "Pine River, Minnesota (recipient)",
+        "lat": 46.7219,
+        "lng": -94.4042
+      }
+    ]
+  },
+  {
+    "id": 247,
+    "location": "Menlo Park, California — Convent of the Sacred Heart",
+    "address": "Menlo Park, California",
+    "year": "c. 1911–1922 (undated and never mailed; written \"July 16,\" and a note mentions \"Saturday the 22nd,\" which fits 1911, 1916 or 1922)",
+    "sender": "\"Aunt Anne\"",
+    "recipient": "Miss Anne Hanna, 37 Park View[?] (no city given)",
+    "notes": "Front: \"Convent of the Sacred Heart, Menlo Park, California. View of West and South Wings.\", a sepia view of the convent's mansard-roofed wing with a rounded corner tower and a cupola, half hidden behind palms and framed by a huge oak. The Religious of the Sacred Heart opened the convent school in 1898; the grounds became part of Atherton when it incorporated in 1923, and the school continues today as Sacred Heart Schools. Back: divided back with a rose ornament; no stamp and no postmark (just an \"X\" in the stamp box), so it was probably hand-delivered or sent in an envelope. The writer appears to be a guest at the convent who plans to return to Seattle. The main message runs crosswise to the address. Two extra notes are squeezed around the address: \"I expect to return to 2700 Jackson at the end of the week —\" and, upside down beside the stamp box, \"I am to return to 2700[?] Jackson on Saturday the 22nd.\" Several names are hard to read and flagged. Message: \"July 16 — Last Monday I came here with Mme. Wille[?], Mgr. Cantwell[?] and Norma Bourbon[?]. It was indeed a lovely ride[?] — we came through the Presidio and had several beautiful sights of the Golden Gate. But you would scarcely[?] know the place, as well[?]. To-morrow the Novena for the Feast of St. Anne will begin. Be assured you will be included in mine. Keep me in yours. I hope to see you before I start back for Seattle. Miss Conley[?] is lovely. Kindest love to all from Aunt Anne\" (The novena to St. Anne traditionally starts July 17 and ends on her feast day, July 26, which fits \"To-morrow\" on July 16.) A pencil dealer mark (\"527.50\") is on the address side.",
+    "front": "Convent of The Sacred Heart, Menlo Park, CA - front.jpeg",
+    "back": "Convent of The Sacred Heart, Menlo Park, CA - back.jpeg",
+    "feed_description": "An aunt staying at the Convent of the Sacred Heart in Menlo Park writes to her namesake niece: a drive through the Presidio past the Golden Gate, and a novena to St. Anne starting tomorrow.",
+    "map": [
+      {
+        "name": "Menlo Park, California (card view; unposted)",
+        "lat": 37.453,
+        "lng": -122.1817
+      }
+    ]
+  },
+  {
+    "id": 248,
+    "location": "Jerusalem — The Old City from the Mount of Olives",
+    "address": "Jerusalem",
+    "year": "c. early 1970s (dated Oct. 13; postmark: Jerusalem, Cheshvan, 15.10[?] — year not legible)",
+    "sender": "Cathy B. (a niece, studying abroad with a group)",
+    "recipient": "Mrs. Mary E. Andrus, 7855 Willow Hill Court No. 3[?]2, Dallas, Texas 75230, U.S.A.",
+    "notes": "Front: \"Jerusalem, Old City\", seen from the Mount of Olives: the golden Dome of the Rock and the Old City walls, the onion domes of the Russian Church of Mary Magdalene in the middle distance, the Dormition Abbey on the horizon at left, and a man plowing a hillside field with a mule in the foreground. Back: \"General view of the Old City of Jerusalem from Mt. of Olives\" (also in French); copyright by Palphot, printed in the Holy Land (no. 9851). Two Israeli stamps, a 0.10 Bet She'an town emblem and a 0.70 En Gedi landscape, the latter apparently from the landscape definitives of the early 1970s. The Jerusalem postmark gives the Hebrew month (Cheshvan) and a date that looks like 15.10; the year is not legible. Marked \"AIRMAIL.\" The greeting \"Aunt Betty\" suggests Betty is a nickname for the addressee. Message: \"Oct. 13. Dear Aunt Betty, Our group has been here in Jerusalum for almost two weeks now, and even though Israel kinda reminds me of Phoenix — I love it here! There's so much value to there culture, I wish I understood it better. As a group we've traveled all over the place — studying as we go, and have spent a lot of time inside the old city of Jerusalum as well. Some of the best times I've had here were when just a few of us would wander around the old city shops & sites. We stay another week, have a final or two, then we'll leave for Greece. I loved England & Scotland. We also spent some time in Cairo and a couple days in Jordan. I'm really learning a lot — wishing I could learn more — but I'm getting so smart that my wisdom teeth are coming in!! Sending love to you, Cathy B.\" Added at the bottom: \"Hi to my cousin & new cousin-in-law too!!\" A dealer sticker (\"#1843 CARD $0.49\") is on the address side.",
+    "front": "Jerusalem, front.jpeg",
+    "back": "Jerusalem, back.jpeg",
+    "feed_description": "A student on a study-abroad tour writes from Jerusalem: Israel reminds her of Phoenix, but she loves it, and she's getting so smart her wisdom teeth are coming in.",
+    "map": [
+      {
+        "name": "Jerusalem (postmark)",
+        "lat": 31.7683,
+        "lng": 35.2137
+      },
+      {
+        "name": "Dallas, Texas (recipient)",
+        "lat": 32.7767,
+        "lng": -96.797
+      }
+    ]
+  },
+  {
+    "id": 249,
+    "location": "Madrid, Spain — Puerta de Alcalá",
+    "address": "Madrid, Spain",
+    "year": "c. 1970s (postmark: Granada[?], June — year digits unclear)",
+    "sender": "\"Mom\"",
+    "recipient": "Mr. & Mrs. T. C. Barnes & Family, 5501 Gloucester, Austin, Texas, U.S. 78723",
+    "notes": "Front: the Puerta de Alcalá at night, floodlit, with streaks of traffic light around it; the attic inscription reads \"REGE CAROLO III ANNO MDCCLXXVIII\" (in the reign of Charles III, 1778). Back: \"326.— Madrid, Puerta de Alcala\"; published by J. L. Gallegos, Madrid. A 15-peseta stamp honoring the architect Secundino Zuazo. The machine slogan cancel reminds senders that letters for Madrid and Barcelona must carry the postal district number. The circular postmark is only partly legible (it appears to read Granada), dated June, with an unclear year. Message: \"Dearest Faye, Buddy & Family: You just can't imagine what a beautiful country Spain is and we're having a wonderful time. Donna is our guide. She speaks like a native and understands the customs of the country. She has reserved rooms in beautiful hotels for us in each town we plan to tour. The car we have engaged is a Renault. She handles it like a cowboy riding a bronk. People here drive like mad. I'm enjoying every minute — We don't get to bed before 2:00–3:00 A.M. Will have lots to tell you. Love Mom\" A dealer sticker (\"1843 $0.49\") is on the address side; it matches the Jerusalem card and came from the same dealer lot.",
+    "front": "Madrid - front.jpeg",
+    "back": "Madrid - back.jpeg",
+    "feed_description": "Mom writes home to Austin from Spain: Donna is their guide, speaks like a native and drives the rented Renault \"like a cowboy riding a bronk,\" and nobody gets to bed before 2 or 3 A.M.",
+    "map": [
+      {
+        "name": "Granada, Spain (postmark, uncertain)",
+        "lat": 37.1773,
+        "lng": -3.5986
+      },
+      {
+        "name": "Austin, Texas (recipient)",
+        "lat": 30.2672,
+        "lng": -97.7431
+      }
+    ]
+  }
+]
