@@ -1,29 +1,5 @@
 [
   {
-    "id": 238,
-    "location": "South Omaha, Nebraska — South Omaha Stock Exchange",
-    "address": "South Omaha, Nebraska",
-    "year": "1909 (postmark: Omaha, Neb., Oct 29, 1909, 1:30 PM)",
-    "sender": "Elbert H. T. Miller (the recipient's cousin)",
-    "recipient": "Miss Mary Miller, No. Chambers St., Galesburg, Ill.",
-    "notes": "Front: the South Omaha Stock Exchange, a large red-brick building at the stockyards with \"EXCHANGE\" over its arched entrance, a domed corner tower, a \"Geo. Burke & Co.\" livestock-commission sign, and horses tied at the hitching rails out front (card no. 14541). South Omaha was still a separate city then; Omaha annexed it in 1915. Back: divided back with an ornate maroon \"Post Card\" heading; a 1-cent green Franklin stamp; postmarked Omaha, Neb., Oct 29, 1909, 1:30 PM, with a wavy machine cancel. The writer mentions two events that both seem to line up with the record: the national convention of the Woman's Christian Temperance Union met in Omaha in late October 1909, and the New York State Woman Suffrage Association held its annual convention in Troy, N.Y., that same month. Message: \"Omaha, Nebr., Octo. 29th 1909. Dear Cousin:— Arrived here a.m. yesterday from Lincoln. It is Indian Summer weather. Am at Mrs. May Halbert-Finley's, 1612 Burdette St. (a cousin of Mother's). The National W.C.T.U. is in session here. My mother has just gotten home from N.Y. State Woman's Suffrage Convention at Troy, N.Y. Hope to see you soon. Best wishes to all. Your Cousin, Elbert H. T. Miller\" A pencil dealer mark (\"527 $2\") appears above the stamp.",
-    "front": "1909 - South Omaha Stock Exchange - Omaha, Neb - front.jpeg",
-    "back": "1909 - South Omaha Stock Exchange - Omaha, Neb - back.jpeg",
-    "feed_description": "A cousin writes from Omaha in October 1909 while the national W.C.T.U. is in session there, and mentions that his mother has just come home from the New York State woman suffrage convention in Troy.",
-    "map": [
-      {
-        "name": "Omaha, Nebraska (postmark)",
-        "lat": 41.2565,
-        "lng": -95.9345
-      },
-      {
-        "name": "Galesburg, Illinois (recipient)",
-        "lat": 40.9478,
-        "lng": -90.3712
-      }
-    ]
-  },
-  {
     "id": 239,
     "location": "Washington — Heading Oats",
     "address": "Washington",
