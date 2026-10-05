@@ -5,8 +5,15 @@
     <link>https://foundandsent.net</link>
     <description>Rescued vintage postcards with their original messages, stamps, and stories. New cards added regularly.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 05 Oct 2026 11:58:28 -0600</lastBuildDate>
+    <lastBuildDate>Mon, 05 Oct 2026 15:25:28 -0600</lastBuildDate>
     <atom:link href="https://foundandsent.net/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Card #239: Washington — Heading Oats (1910 (postmark: Seattle[?], Wash., Sep 28, 1910))</title>
+      <link>https://foundandsent.net/#card-239</link>
+      <guid isPermaLink="true">https://foundandsent.net/#card-239</guid>
+      <description>A short note in Danish, sent in 1910 to a young woman in Kent, Washington, on a card showing horses heading oats: nothing new, everything as usual, write before Sunday.</description>
+      <media:thumbnail url="https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1910 - Heading Oats, WA - front.jpeg"/>
+    </item>
     <item>
       <title>Card #238: South Omaha, Nebraska — South Omaha Stock Exchange (1909 (postmark: Omaha, Neb., Oct 29, 1909, 1:30 PM))</title>
       <link>https://foundandsent.net/#card-238</link>

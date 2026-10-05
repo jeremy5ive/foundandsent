@@ -1,29 +1,5 @@
 [
   {
-    "id": 239,
-    "location": "Washington — Heading Oats",
-    "address": "Washington",
-    "year": "1910 (postmark: Seattle[?], Wash., Sep 28, 1910)",
-    "sender": "\"C. J.\" (initials only)",
-    "recipient": "Miss Christine Petersen, c/o Ole Petersen, Kent, Wash.",
-    "notes": "Front: a tinted photo of an oat harvest on open, rolling farmland. A team of horses pulls a header (its reel is visible) at right, a driver stands on the rig, stacked grain is beside it, and more horses and figures stand in the uncut oats. \"Heading\" meant cutting off just the grain heads with a header rather than binding whole stalks into sheaves. Published by The Lowman & Hanford Co., Seattle (no. 1162, \"Heading Oats, Washington\"). Back: ornate \"Post Card\" heading, \"This space can be used for a written message, using one-cent stamp\"; a 1-cent green Franklin stamp; the postmark is partly legible (it appears to read Seattle, Wash.), dated Sep 28, 1910, with a wavy machine cancel. The message is in Danish, written in purple. Kent, in the White River Valley south of Seattle, had a sizeable Scandinavian farming community at the time. Message (Danish): \"Kære Christine Petersen. Jeg ved ikke noget nyt andet end som alt gaar som sædvanlig. Haaber at høre fra dig engang inden Søndag. C. J. Hils dem alle i Kent.\" Translation: \"Dear Christine Petersen, I don't know anything new, other than that everything is going as usual. Hope to hear from you sometime before Sunday. C. J. Greet them all in Kent.\" A pencil dealer mark (\"3.00\") is at top left.",
-    "front": "1910 - Heading Oats, WA - front.jpeg",
-    "back": "1910 - Heading Oats, WA - back.jpeg",
-    "feed_description": "A short note in Danish, sent in 1910 to a young woman in Kent, Washington, on a card showing horses heading oats: nothing new, everything as usual, write before Sunday.",
-    "map": [
-      {
-        "name": "Seattle, Washington (postmark, uncertain)",
-        "lat": 47.6062,
-        "lng": -122.3321
-      },
-      {
-        "name": "Kent, Washington (recipient)",
-        "lat": 47.3809,
-        "lng": -122.2348
-      }
-    ]
-  },
-  {
     "id": 240,
     "location": "Toledo, Ohio — Collingwood Avenue",
     "address": "Toledo, Ohio",
