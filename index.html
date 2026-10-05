@@ -460,11 +460,17 @@
 <script>
 const IMG = "https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/";
 
+// Serve images from our own domain instead of raw.githubusercontent.com
 let postcards = (function(){
   var xhr = new XMLHttpRequest();
   xhr.open('GET', 'cards.json', false);
   xhr.send(null);
-  return JSON.parse(xhr.responseText);
+  var cards = JSON.parse(xhr.responseText);
+  cards.forEach(function(c){
+    if(c.front) c.front = c.front.replace(IMG, '/images/');
+    if(c.back) c.back = c.back.replace(IMG, '/images/');
+  });
+  return cards;
 })();
 
 const PAGE_SIZE=10;
