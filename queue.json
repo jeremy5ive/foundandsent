@@ -1,29 +1,5 @@
 [
   {
-    "id": 240,
-    "location": "Toledo, Ohio — Collingwood Avenue",
-    "address": "Toledo, Ohio",
-    "year": "1914 (dated July 30, 1914 by the writer; postmark: [town illegible], Mich., July 1914)",
-    "sender": "Winnie[?], writing from Lacota, Michigan",
-    "recipient": "Wm. G. Cooper, Eau Claire, Mich.",
-    "notes": "Front: \"Collingwood Ave. south from Floyd St., Toledo, Ohio\", a tinted view of a shady residential avenue with large houses, striped porch awnings, a stepped Dutch-gabled house, and a long sidewalk under tall trees. The card is only a Toledo view: it was actually written in Lacota, a small crossroads in Van Buren County, Michigan, and mailed to Eau Claire, Michigan, about 25 miles south. Back: a brown \"Post Card\" heading, \"This space may be used for correspondence / For address only\"; a 1-cent green Washington stamp; the postmark shows only \"JUL\" and \"MICH\", and the town is illegible. The message fills the left side, then runs up the left margin and across the top. Its closing words are cramped and hard to read, so the ending and signature are uncertain. Message: \"July 30 1914, Lacota Mich. Dear Will, You said you were going to write in two or three days but we did not here from [you]. I went to So. Haven this week and got my new dress. Edna gave me money for a new hat for Donald[?]. Mother and I both have colds. The children are pretty well and send love. Write [to your sister?]. Winnie[?]\" (\"here\" is the writer's spelling of \"hear\"; a stray \"and\" is struck out before \"Edna\"; the word \"you\" after \"from\" was never written.) A dealer sticker (\"1843 / $0.99\") is on the address side.",
-    "front": "1914 - Toledo, OH - front.jpeg",
-    "back": "1914 - Toledo, OH - back.jpeg",
-    "feed_description": "Written in Lacota, Michigan, in July 1914 on a Toledo street view: a new dress from South Haven, a new hat for Donald, colds at home, and a gentle scolding for not writing.",
-    "map": [
-      {
-        "name": "Lacota, Michigan (sender)",
-        "lat": 42.4131,
-        "lng": -86.0395
-      },
-      {
-        "name": "Eau Claire, Michigan (recipient)",
-        "lat": 42.0103,
-        "lng": -86.3036
-      }
-    ]
-  },
-  {
     "id": 241,
     "location": "Columbia, Missouri — The Columns, University of Missouri",
     "address": "Columbia, Missouri",
