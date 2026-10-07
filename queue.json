@@ -1,29 +1,5 @@
 [
   {
-    "id": 241,
-    "location": "Columbia, Missouri — The Columns, University of Missouri",
-    "address": "Columbia, Missouri",
-    "year": "1929 (postmark: Columbia, Mo., Sep 11, 1929, 10 AM)",
-    "sender": "Ray (the recipient's husband, apparently)",
-    "recipient": "Mrs. Ray L. Hamon[?], Box 255, Gorham, Maine",
-    "notes": "Front: \"Class Day Exercises around the Columns, University of Missouri, Columbia, Mo.\" Graduates in caps and gowns process along a walk past the six ivy-covered Ionic columns on the Francis Quadrangle while a crowd of spectators, some with parasols, gathers on the lawn. The columns are what remained of Academic Hall after it burned in January 1892. Published by Joe Janousek's Art Shop, Columbia, Mo.; printed by Curt Teich (\"C.T. American Art\", A-74976). Back: a 1-cent green Franklin stamp; postmarked Columbia, Mo., Sep 11, 1929, 10 AM, with a wavy machine cancel. Sep 11, 1929 was a Wednesday, so the card was written the night before it was mailed. Message: \"Tuesday night. Dear Florence, why don't you write? I have had no word since I left. I shall be here for a week yet and may be longer, then to Jeff. City and Rolla. Ray\" (\"here\" is added above the line with a caret.) Jefferson City and Rolla are both in central Missouri, which suggests a work trip around the state. A dealer sticker (\"#1843 $0.79\") is on the address side.",
-    "front": "1929 - University of Missouri - Columbia, MO - front.jpeg",
-    "back": "1929 - University of Missouri - Columbia, MO - back.jpeg",
-    "feed_description": "A traveling husband writes home to Maine from Columbia, Missouri, in 1929: why don't you write? A week more here, then on to Jefferson City and Rolla.",
-    "map": [
-      {
-        "name": "Columbia, Missouri (postmark)",
-        "lat": 38.9517,
-        "lng": -92.3341
-      },
-      {
-        "name": "Gorham, Maine (recipient)",
-        "lat": 43.6795,
-        "lng": -70.4442
-      }
-    ]
-  },
-  {
     "id": 242,
     "location": "Fort Collins, Colorado — \"Barely Able to Write\" Lazy Correspondence Card",
     "address": "Fort Collins, Colorado",

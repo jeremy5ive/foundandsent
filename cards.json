@@ -2766,5 +2766,16 @@
     "notes": "Front: \"Collingwood Ave. south from Floyd St., Toledo, Ohio\", a tinted view of a shady residential avenue with large houses, striped porch awnings, a stepped Dutch-gabled house, and a long sidewalk under tall trees. The card is only a Toledo view: it was actually written in Lacota, a small crossroads in Van Buren County, Michigan, and mailed to Eau Claire, Michigan, about 25 miles south. Back: a brown \"Post Card\" heading, \"This space may be used for correspondence / For address only\"; a 1-cent green Washington stamp; the postmark shows only \"JUL\" and \"MICH\", and the town is illegible. The message fills the left side, then runs up the left margin and across the top. Its closing words are cramped and hard to read, so the ending and signature are uncertain. Message: \"July 30 1914, Lacota Mich. Dear Will, You said you were going to write in two or three days but we did not here from [you]. I went to So. Haven this week and got my new dress. Edna gave me money for a new hat for Donald[?]. Mother and I both have colds. The children are pretty well and send love. Write [to your sister?]. Winnie[?]\" (\"here\" is the writer's spelling of \"hear\"; a stray \"and\" is struck out before \"Edna\"; the word \"you\" after \"from\" was never written.) A dealer sticker (\"1843 / $0.99\") is on the address side.",
     "front": "https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1914 - Toledo, OH - front.jpeg",
     "back": "https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1914 - Toledo, OH - back.jpeg"
+  },
+  {
+    "id": 241,
+    "location": "Columbia, Missouri — The Columns, University of Missouri",
+    "address": "Columbia, Missouri",
+    "year": "1929 (postmark: Columbia, Mo., Sep 11, 1929, 10 AM)",
+    "sender": "Ray (the recipient's husband, apparently)",
+    "recipient": "Mrs. Ray L. Hamon[?], Box 255, Gorham, Maine",
+    "notes": "Front: \"Class Day Exercises around the Columns, University of Missouri, Columbia, Mo.\" Graduates in caps and gowns process along a walk past the six ivy-covered Ionic columns on the Francis Quadrangle while a crowd of spectators, some with parasols, gathers on the lawn. The columns are what remained of Academic Hall after it burned in January 1892. Published by Joe Janousek's Art Shop, Columbia, Mo.; printed by Curt Teich (\"C.T. American Art\", A-74976). Back: a 1-cent green Franklin stamp; postmarked Columbia, Mo., Sep 11, 1929, 10 AM, with a wavy machine cancel. Sep 11, 1929 was a Wednesday, so the card was written the night before it was mailed. Message: \"Tuesday night. Dear Florence, why don't you write? I have had no word since I left. I shall be here for a week yet and may be longer, then to Jeff. City and Rolla. Ray\" (\"here\" is added above the line with a caret.) Jefferson City and Rolla are both in central Missouri, which suggests a work trip around the state. A dealer sticker (\"#1843 $0.79\") is on the address side.",
+    "front": "https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1929 - University of Missouri - Columbia, MO - front.jpeg",
+    "back": "https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1929 - University of Missouri - Columbia, MO - back.jpeg"
   }
 ]
