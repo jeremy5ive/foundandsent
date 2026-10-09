@@ -5,8 +5,15 @@
     <link>https://foundandsent.net</link>
     <description>Rescued vintage postcards with their original messages, stamps, and stories. New cards added regularly.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 07 Oct 2026 08:35:22 -0600</lastBuildDate>
+    <lastBuildDate>Fri, 09 Oct 2026 16:21:01 -0600</lastBuildDate>
     <atom:link href="https://foundandsent.net/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Card #242: Fort Collins, Colorado — "Barely Able to Write" Lazy Correspondence Card (1940 (postmark: Fort Collins, Colo., Nov 4, 1940, 5 PM))</title>
+      <link>https://foundandsent.net/#card-242</link>
+      <guid isPermaLink="true">https://foundandsent.net/#card-242</guid>
+      <description>A checkbox "lazy correspondence card" from Fort Collins in 1940, with a handwritten note from "Poppy" praising a child's letter and baseball, and suggesting they check how to spell "supper," "restaurant" and "school."</description>
+      <media:thumbnail url="https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1940 - Fort Collins, CO - front.jpeg"/>
+    </item>
     <item>
       <title>Card #241: Columbia, Missouri — The Columns, University of Missouri (1929 (postmark: Columbia, Mo., Sep 11, 1929, 10 AM))</title>
       <link>https://foundandsent.net/#card-241</link>

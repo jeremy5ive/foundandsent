@@ -1,29 +1,5 @@
 [
   {
-    "id": 242,
-    "location": "Fort Collins, Colorado — \"Barely Able to Write\" Lazy Correspondence Card",
-    "address": "Fort Collins, Colorado",
-    "year": "1940 (postmark: Fort Collins, Colo., Nov 4, 1940, 5 PM)",
-    "sender": "\"Poppy\" (the front checklist is signed with the initials \"DEW\")",
-    "recipient": "Myrne G. Watrous, 273 Soto St., Hayward, California",
-    "notes": "Front: a humorous \"Barely Able to Write — Lazy Correspondence Card\" (no. 217), with a verse (\"I'm all dressed up with no place to go…\") and a color checklist the sender marks with X's instead of writing. The picture at left is a period stereotype of a Native American man in a feathered headdress with bow and arrow. The boxes checked: Dear Old Kid; Doing lots of Thinking of You; Will be Writing You Again; I Am Missing You; Hope You Have Kept Well; I Have Seen Lots of Good-Looking Girls; Wish I Had More Ambition; Things are Fine; Yours 'Till the Cows Come Home. The name line is signed \"DEW\". Back: Sanborn Souvenir Co., Denver, Colo.; a 1-cent green Washington stamp; postmarked Fort Collins, Colo., Nov 4, 1940, 5 PM. The handwritten note on the back reads like a grandfather or other older relative gently teasing a child about spelling. Message: \"Myrne: Thank you for your really nice letter. Glad you're playing baseball — must be lots of fun. Maybe you'd better check up on how to spell \"supper,\" \"restaurant\" and \"school.\" You will get a whole flock of postcards before I come home, from time to time. Lots of love, Poppy.\" A pencil dealer mark (\"527 / 15\") is near the stamp.",
-    "front": "1940 - Fort Collins, CO - front.jpeg",
-    "back": "1940 - Fort Collins, CO - back.jpeg",
-    "feed_description": "A checkbox \"lazy correspondence card\" from Fort Collins in 1940, with a handwritten note from \"Poppy\" praising a child's letter and baseball, and suggesting they check how to spell \"supper,\" \"restaurant\" and \"school.\"",
-    "map": [
-      {
-        "name": "Fort Collins, Colorado (postmark)",
-        "lat": 40.5853,
-        "lng": -105.0844
-      },
-      {
-        "name": "Hayward, California (recipient)",
-        "lat": 37.6688,
-        "lng": -122.0808
-      }
-    ]
-  },
-  {
     "id": 243,
     "location": "Detroit, Michigan — Nancy Brown Peace Carillon, Belle Isle",
     "address": "Belle Isle, Detroit, Michigan",
