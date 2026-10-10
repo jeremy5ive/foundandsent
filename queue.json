@@ -1,30 +1,5 @@
 [
   {
-    "id": 243,
-    "location": "Detroit, Michigan — Nancy Brown Peace Carillon, Belle Isle",
-    "address": "Belle Isle, Detroit, Michigan",
-    "year": "1957 (dated Sept. 18, 1957; postmark: Dearborn, Mich., Sep 18, 1957)",
-    "sender": "Mary and Randle",
-    "recipient": "Mrs. E. C. Harrison, Methodist Home, Lawrenceville, Ga.",
-    "notes": "Front: the Nancy Brown Peace Carillon, a slender white Art Deco bell tower on Belle Isle, framed by tree branches against a deep blue sky. The tower was dedicated in 1940 and named for Nancy Brown, the pen name of the Detroit News advice columnist whose readers paid for it. Back: \"The Famous Nancy Brown Peace Carillon — Erected on Belle Isle, by the people of Detroit Michigan and dedicated to the cause of World Peace\" (P1160, D5). Published by the Hiawatha Card Co., Ypsilanti, Mich.; \"Plastichrome\" by Colourpicture, Boston. A 2-cent John Adams stamp; postmarked Dearborn, Mich., Sep 18, 1957. The written date, \"Sept. 18, 1957,\" runs right into the postmark. Addressed to the writer's mother at a Methodist retirement home in Lawrenceville, Georgia. Message: \"Dearest Mom — We are keeping busy visiting all the relatives and old friends here and having a fine time. The weather is nice and cool, but rainy today. Will write again in a few days. Love, Mary and Randle\" A pencil dealer mark (\"527 / 1.00\") is near the stamp.",
-    "front": "1957 - Nancy Brown Peace Carillon - Detroit, MI - front.jpeg",
-    "back": "1957 - Nancy Brown Peace Carillon - Detroit, MI - back.jpeg",
-    "feed_description": "Mary and Randle write home to Mom in Georgia from a 1957 visit to Detroit: busy seeing relatives and old friends, cool and rainy, more soon.",
-    "map": [
-      {
-        "name": "Dearborn, Michigan (postmark)",
-        "lat": 42.3223,
-        "lng": -83.1763
-      },
-      {
-        "name": "Lawrenceville, Georgia (recipient)",
-        "lat": 33.9562,
-        "lng": -83.988
-      }
-    ],
-    "lead": "back"
-  },
-  {
     "id": 244,
     "location": "Boston, Massachusetts — Prudential Tower",
     "address": "Boston, Massachusetts",
