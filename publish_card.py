@@ -87,6 +87,9 @@ new_card = {
 }
 if card.get("link"):
     new_card["link"] = card["link"]
+# Optional: "lead": "back" makes the site open on the written side
+if card.get("lead") == "back":
+    new_card["lead"] = "back"
 
 cards.append(new_card)
 
@@ -142,7 +145,7 @@ feed = re.sub(
 )
 
 # Build feed item
-thumb_url = BASE_IMG + card["front"]
+thumb_url = BASE_IMG + card["back" if card.get("lead") == "back" else "front"]
 desc = card.get("feed_description", card["notes"][:300])
 desc_escaped = desc.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
 

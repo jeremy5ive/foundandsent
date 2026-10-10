@@ -647,11 +647,12 @@ function loadCard(){
   imgFront.src='';
   document.getElementById('img-back').src=c.back||c.front||'';
   document.getElementById('lb-title-text').textContent=c.location||'';
-  document.getElementById('lb-side').textContent='Front';
-  document.getElementById('btn-flip').classList.remove('active');
+  document.getElementById('lb-side').textContent=c.lead==='back'?'Back':'Front';
+  document.getElementById('btn-flip').classList.toggle('active',c.lead==='back');
   document.getElementById('zoom-slider').value=100;
   document.getElementById('zoom-pct').textContent='100%';
-  rotY3d=0;rotX3d=-4;flipped=false;
+  // Cards marked lead:'back' open on the written side
+  rotY3d=c.lead==='back'?180:0;rotX3d=-4;flipped=false;
   const addrLines=document.getElementById('lb-address-lines');
   let mailLines=[];
   if(c.recipient) mailLines.push(c.recipient);
@@ -798,7 +799,7 @@ document.getElementById('btn-rotl').addEventListener('click',()=>rotateLb(-90));
 document.getElementById('btn-rotr').addEventListener('click',()=>rotateLb(90));
 document.getElementById('btn-zin').addEventListener('click',()=>zoomTo(scale*1.25));
 document.getElementById('btn-zout').addEventListener('click',()=>zoomTo(scale/1.25));
-document.getElementById('btn-reset').addEventListener('click',()=>{scale=1;rotation=0;panX=0;panY=0;document.getElementById('lb-side').textContent='Front';document.getElementById('btn-flip').classList.remove('active');syncZoom();sizeAndApply();animateLbToXY(0,-4,400)});
+document.getElementById('btn-reset').addEventListener('click',()=>{scale=1;rotation=0;panX=0;panY=0;syncZoom();sizeAndApply();animateLbToXY(lbList[lbIndex].lead==='back'?180:0,-4,400)});
 document.getElementById('zoom-slider').addEventListener('input',function(){zoomTo(parseInt(this.value)/100,null,null,true)});
 document.getElementById('mob-rotl').addEventListener('click',()=>rotateLb(-90));
 document.getElementById('mob-rotr').addEventListener('click',()=>rotateLb(90));
@@ -1374,7 +1375,9 @@ function wireThumb(li,card){
   const finePointer=window.matchMedia('(hover:hover) and (pointer:fine)').matches;
   // Every device swaps in the full scan (phones included, as a trial: ~4MB each, heavy on memory and data)
   const wantFull=true;
-  const st={rotY:0,rot:0,mag:finePointer};
+  // Cards marked lead:'back' start turned over to the written side
+  const lead=card.lead==='back'?'back':'front';
+  const st={rotY:lead==='back'?180:0,rot:0,mag:finePointer};
   const magBtn=tools.querySelector('[data-tool=magnify]'),flipBtn=tools.querySelector('[data-tool=flip]');
   magBtn.classList.toggle('active',st.mag);magBtn.setAttribute('aria-pressed',st.mag);box.classList.toggle('magnify',st.mag);
   let drag=null,suppressClick=false,pressTimer=null,touchLoupe=false;
@@ -1391,8 +1394,9 @@ function wireThumb(li,card){
     im.src=fullUrl[k];
   }
   function ensure(k){if(!faceImg[k].getAttribute('src'))faceImg[k].src=thumbUrl(fullUrl[k]);if(wantFull)loadFull(k);}
-  box._loadFull=()=>loadFull('front');
-  if(wantFull){if(fullImageObserver)fullImageObserver.observe(box);else loadFull('front');}
+  if(lead==='back')faceImg.back.src=thumbUrl(fullUrl.back);
+  box._loadFull=()=>loadFull(lead);
+  if(wantFull){if(fullImageObserver)fullImageObserver.observe(box);else loadFull(lead);}
 
   const norm=a=>((a%360)+360)%360;
   const side=()=>{const n=norm(st.rotY);return n>90&&n<270?'back':'front';};
