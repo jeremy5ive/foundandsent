@@ -1,29 +1,5 @@
 [
   {
-    "id": 244,
-    "location": "Boston, Massachusetts — Prudential Tower",
-    "address": "Boston, Massachusetts",
-    "year": "1967 (postmark: Boston, Mass., Apr 18, 1967)",
-    "sender": "Unsigned (\"Love XXX\")",
-    "recipient": "Tootie Kennedy, 4201 N. [street not written], Lincoln, Nebraska",
-    "notes": "Front: \"Prudential Center in The New Boston — All America City\" — the lit-up Prudential Tower (completed 1964) and the Sheraton-Boston Hotel at dusk, seen across the Charles River over a row of Back Bay brownstones, with their reflections on the water. Back: \"Boston, Massachusetts — Prudential Tower and Sheraton Boston Hotel from across the Charles River.\" Plastichrome by Colourpicture, Boston. An 8-cent U.S. Air Mail stamp (a jet over the Capitol dome); postmarked Boston, Mass., Apr 18, 1967, PM, with a partly legible machine slogan cancel. The address line reads \"4201 N.\" and nothing more. \"Sorry about that\" was the famous catchphrase from TV's Get Smart (1965–70). Wymore is a small town in southeast Nebraska. \"Elaine\" may be the addressee's real name behind the nickname \"Tootie,\" but that's only a guess. Message: \"Sorry about that Elaine. How's the organ? Glad you did Wymore! Any cake on Dave's birthday?? People slower in New York State + Boston, Lincoln is a \"swinger\" of a town. So are Colo places. I am maybe buying a \"coat-suit\" today. Love XXX\" (\"slower,\" \"So are\" and \"Colo\" are underlined.) A pencil dealer mark (\"9744 / 1-\") is at top left.",
-    "front": "1967 - Prudential Tower - Boston, MA - front.jpeg",
-    "back": "1967 - Prudential Tower - Boston, MA - back.jpeg",
-    "feed_description": "Airmail from Boston in April 1967 to a friend in Lincoln, Nebraska: people are slower out East, Lincoln is a \"swinger\" of a town, and maybe a new coat-suit today.",
-    "map": [
-      {
-        "name": "Boston, Massachusetts (postmark)",
-        "lat": 42.3601,
-        "lng": -71.0589
-      },
-      {
-        "name": "Lincoln, Nebraska (recipient)",
-        "lat": 40.8136,
-        "lng": -96.7026
-      }
-    ]
-  },
-  {
     "id": 245,
     "location": "Cheyenne, Wyoming — The Plains Hotel Lobby",
     "address": "Cheyenne, Wyoming",
