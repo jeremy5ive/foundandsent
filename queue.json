@@ -1,29 +1,5 @@
 [
   {
-    "id": 245,
-    "location": "Cheyenne, Wyoming — The Plains Hotel Lobby",
-    "address": "Cheyenne, Wyoming",
-    "year": "1914 (dated \"7/23-14\" by the writer; postmark town and date illegible)",
-    "sender": "\"A. M.\" (initials only)",
-    "recipient": "Miss Florence Giesler[?], 819 S. 8th St., Laramie, Wyo.",
-    "notes": "Front: \"The Lobby — The Plains Hotel, Cheyenne, Wyo.\", a tinted view of the grand lobby with tufted black leather sofas and armchairs, square columns, a mezzanine balcony with potted palms, a wall clock above the front desk, and electric sconces. The Plains Hotel opened in 1911 and still operates in downtown Cheyenne. Machine-cancel lines also struck across the front at upper left. Back: an ornate \"Post Card\" heading with an eagle and shield, and \"This Space May Be Used for a Written Message\"; a 1-cent green Washington stamp; the flag-style machine cancel is too smudged to read. The message is written diagonally across the left half of the card, and several words at the ends of the upper lines disappear under the printed \"Post Card\" heading, so those readings are uncertain. The writer dated it \"7/23-14\" (July 23, 1914), and the stamp fits that date. Message: \"Hello Florence — Received your letter yesterday and [will answer it?] tonight. [Don't know?] why Ros[e?] has not written to you as she did not[?] seem to be peeved the time I saw her. Was to a dance last night for a little while. As ever, A. M.\" A pencil dealer mark (\"527 / 1.50\") is on the address side.",
-    "front": "1973 - The Plains Hotel - Cheyenne, WY - front.jpeg",
-    "back": "1973 - The Plains Hotel - Cheyenne, WY - back.jpeg",
-    "feed_description": "A 1914 note to Laramie on a card of the Plains Hotel lobby, written diagonally: why hasn't Rose written, she didn't seem peeved; and a dance last night, for a little while.",
-    "map": [
-      {
-        "name": "Cheyenne, Wyoming (card view; postmark illegible)",
-        "lat": 41.14,
-        "lng": -104.8202
-      },
-      {
-        "name": "Laramie, Wyoming (recipient)",
-        "lat": 41.3114,
-        "lng": -105.5911
-      }
-    ]
-  },
-  {
     "id": 246,
     "location": "South Padre Island, Texas",
     "address": "South Padre Island, Texas",
