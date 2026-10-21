@@ -5,8 +5,15 @@
     <link>https://foundandsent.net</link>
     <description>Rescued vintage postcards with their original messages, stamps, and stories. New cards added regularly.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 19 Oct 2026 13:43:34 -0600</lastBuildDate>
+    <lastBuildDate>Wed, 21 Oct 2026 08:53:17 -0600</lastBuildDate>
     <atom:link href="https://foundandsent.net/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Card #246: South Padre Island, Texas (1993 (dated 1-25-93; postmark: McAllen, Tex., Jan 26, 1993))</title>
+      <link>https://foundandsent.net/#card-246</link>
+      <guid isPermaLink="true">https://foundandsent.net/#card-246</guid>
+      <description>Winter Texans write home to a Minnesota nursing home in January 1993: some days in the 70s, Bob golfs, Carol swims, and together they dance and play cards.</description>
+      <media:thumbnail url="https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1993 - South Padre Island, TX - front.jpeg"/>
+    </item>
     <item>
       <title>Card #245: Cheyenne, Wyoming — The Plains Hotel Lobby (1914 (dated "7/23-14" by the writer; postmark town and date illegible))</title>
       <link>https://foundandsent.net/#card-245</link>
