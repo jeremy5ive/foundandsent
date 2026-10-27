@@ -1,29 +1,5 @@
 [
   {
-    "id": 248,
-    "location": "Jerusalem — The Old City from the Mount of Olives",
-    "address": "Jerusalem",
-    "year": "c. early 1970s (dated Oct. 13; postmark: Jerusalem, Cheshvan, 15.10[?] — year not legible)",
-    "sender": "Cathy B. (a niece, studying abroad with a group)",
-    "recipient": "Mrs. Mary E. Andrus, 7855 Willow Hill Court No. 3[?]2, Dallas, Texas 75230, U.S.A.",
-    "notes": "Front: \"Jerusalem, Old City\", seen from the Mount of Olives: the golden Dome of the Rock and the Old City walls, the onion domes of the Russian Church of Mary Magdalene in the middle distance, the Dormition Abbey on the horizon at left, and a man plowing a hillside field with a mule in the foreground. Back: \"General view of the Old City of Jerusalem from Mt. of Olives\" (also in French); copyright by Palphot, printed in the Holy Land (no. 9851). Two Israeli stamps, a 0.10 Bet She'an town emblem and a 0.70 En Gedi landscape, the latter apparently from the landscape definitives of the early 1970s. The Jerusalem postmark gives the Hebrew month (Cheshvan) and a date that looks like 15.10; the year is not legible. Marked \"AIRMAIL.\" The greeting \"Aunt Betty\" suggests Betty is a nickname for the addressee. Message: \"Oct. 13. Dear Aunt Betty, Our group has been here in Jerusalum for almost two weeks now, and even though Israel kinda reminds me of Phoenix — I love it here! There's so much value to there culture, I wish I understood it better. As a group we've traveled all over the place — studying as we go, and have spent a lot of time inside the old city of Jerusalum as well. Some of the best times I've had here were when just a few of us would wander around the old city shops & sites. We stay another week, have a final or two, then we'll leave for Greece. I loved England & Scotland. We also spent some time in Cairo and a couple days in Jordan. I'm really learning a lot — wishing I could learn more — but I'm getting so smart that my wisdom teeth are coming in!! Sending love to you, Cathy B.\" Added at the bottom: \"Hi to my cousin & new cousin-in-law too!!\" A dealer sticker (\"#1843 CARD $0.49\") is on the address side.",
-    "front": "Jerusalem, front.jpeg",
-    "back": "Jerusalem, back.jpeg",
-    "feed_description": "A student on a study-abroad tour writes from Jerusalem: Israel reminds her of Phoenix, but she loves it, and she's getting so smart her wisdom teeth are coming in.",
-    "map": [
-      {
-        "name": "Jerusalem (postmark)",
-        "lat": 31.7683,
-        "lng": 35.2137
-      },
-      {
-        "name": "Dallas, Texas (recipient)",
-        "lat": 32.7767,
-        "lng": -96.797
-      }
-    ]
-  },
-  {
     "id": 249,
     "location": "Madrid, Spain — Puerta de Alcalá",
     "address": "Madrid, Spain",
