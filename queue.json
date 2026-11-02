@@ -1,29 +1,5 @@
 [
   {
-    "id": 249,
-    "location": "Madrid, Spain — Puerta de Alcalá",
-    "address": "Madrid, Spain",
-    "year": "c. 1970s (postmark: Granada[?], June — year digits unclear)",
-    "sender": "\"Mom\"",
-    "recipient": "Mr. & Mrs. T. C. Barnes & Family, 5501 Gloucester, Austin, Texas, U.S. 78723",
-    "notes": "Front: the Puerta de Alcalá at night, floodlit, with streaks of traffic light around it; the attic inscription reads \"REGE CAROLO III ANNO MDCCLXXVIII\" (in the reign of Charles III, 1778). Back: \"326.— Madrid, Puerta de Alcala\"; published by J. L. Gallegos, Madrid. A 15-peseta stamp honoring the architect Secundino Zuazo. The machine slogan cancel reminds senders that letters for Madrid and Barcelona must carry the postal district number. The circular postmark is only partly legible (it appears to read Granada), dated June, with an unclear year. Message: \"Dearest Faye, Buddy & Family: You just can't imagine what a beautiful country Spain is and we're having a wonderful time. Donna is our guide. She speaks like a native and understands the customs of the country. She has reserved rooms in beautiful hotels for us in each town we plan to tour. The car we have engaged is a Renault. She handles it like a cowboy riding a bronk. People here drive like mad. I'm enjoying every minute — We don't get to bed before 2:00–3:00 A.M. Will have lots to tell you. Love Mom\" A dealer sticker (\"1843 $0.49\") is on the address side; it matches the Jerusalem card and came from the same dealer lot.",
-    "front": "Madrid - front.jpeg",
-    "back": "Madrid - back.jpeg",
-    "feed_description": "Mom writes home to Austin from Spain: Donna is their guide, speaks like a native and drives the rented Renault \"like a cowboy riding a bronk,\" and nobody gets to bed before 2 or 3 A.M.",
-    "map": [
-      {
-        "name": "Granada, Spain (postmark, uncertain)",
-        "lat": 37.1773,
-        "lng": -3.5986
-      },
-      {
-        "name": "Austin, Texas (recipient)",
-        "lat": 30.2672,
-        "lng": -97.7431
-      }
-    ]
-  },
-  {
     "id": 250,
     "location": "Aurora, Illinois — West Bridge across the Fox River",
     "address": "Aurora, Illinois",
