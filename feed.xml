@@ -5,8 +5,15 @@
     <link>https://foundandsent.net</link>
     <description>Rescued vintage postcards with their original messages, stamps, and stories. New cards added regularly.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 02 Nov 2026 16:40:09 -0600</lastBuildDate>
+    <lastBuildDate>Mon, 02 Nov 2026 17:22:50 -0600</lastBuildDate>
     <atom:link href="https://foundandsent.net/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Card #250: Aurora, Illinois — West Bridge across the Fox River (1913 (postmarked Big Rock, Ill., Feb 22, 1913))</title>
+      <link>https://foundandsent.net/#card-250</link>
+      <guid isPermaLink="true">https://foundandsent.net/#card-250</guid>
+      <description>February 1913, Big Rock, Illinois: "the worst sleet storm I ever saw" — 31 telephone poles down, trees that look like a cyclone went through, and a child who calls it "chicken box."</description>
+      <media:thumbnail url="https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1913 - Fox River, Aurora, ILL - front.jpeg"/>
+    </item>
     <item>
       <title>Card #249: Madrid, Spain — Puerta de Alcalá (c. 1970s (postmark: Granada[?], June — year digits unclear))</title>
       <link>https://foundandsent.net/#card-249</link>

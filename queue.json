@@ -1,29 +1,5 @@
 [
   {
-    "id": 250,
-    "location": "Aurora, Illinois — West Bridge across the Fox River",
-    "address": "Aurora, Illinois",
-    "year": "1913 (postmarked Big Rock, Ill., Feb 22, 1913)",
-    "sender": "\"Sarah M.\" (Big Rock, Illinois)",
-    "recipient": "Mrs. Emma Loeper[?], Dacoma, Okla., Alfalfa Co.",
-    "notes": "Front: \"West Bridge across Fox River, Aurora, Ill.\" — a hand-tinted view of a triple-arched concrete bridge with a balustrade, a streetcar crossing, and a red-brick block on the far bank. Published by E. C. Kropp Co., Milwaukee, No. 6920. Back: divided \"Post Card\" back with a green 1-cent Washington stamp, postmarked Big Rock, Ill., Feb 22, 6 PM, 1913. Big Rock is a farm village about ten miles west of Aurora; \"the Beacon\" the writer promises to send is surely the Aurora Beacon newspaper. Dacoma is a small town in northwest Oklahoma; the card says \"Alfalfa Co.,\" though Dacoma sits in Woods County just across the line. Feb 22, 1913 was a Saturday, so the \"Thurs night\" rain fits the dates. The message is written in pencil without punctuation; punctuation is not added here. The last lines turn into a joke: little Marion calls chicken pox \"chicken box\" and asks Ma to look for boxes on a chicken. Message: \"Big Rock Feb 22th 1913 Dear Cousins received your card I sent you a letter and a card on the 13th and a card before that did you not receive them we had the worst sleet storm yesterday I ever saw it commenced to rain Thurs night at midnight rained all day yesterday and froze on the trees but last night it got warmer and at midnight the wind blew and some of the ice came off going north of town to Mells[?] there is 31 poles down and lots of wires down and the trees looks as though a cyclone had been along will send you the Beacon so you can read it Fannie's[?] children have the chicken pox Marion says the chicken box Ma see if there is any boxes on one snow squalls to day we got Vera's[?] picture Love to all[?] Sarah M\" A dealer sticker (\"1843 / 0.99\") is on the address side, from the same dealer lot as the Madrid card.",
-    "front": "1913 - Fox River, Aurora, ILL - front.jpeg",
-    "back": "1913 - Fox River, Aurora, ILL - back.jpeg",
-    "feed_description": "February 1913, Big Rock, Illinois: \"the worst sleet storm I ever saw\" — 31 telephone poles down, trees that look like a cyclone went through, and a child who calls it \"chicken box.\"",
-    "map": [
-      {
-        "name": "Big Rock, Illinois (postmark)",
-        "lat": 41.7639,
-        "lng": -88.5468
-      },
-      {
-        "name": "Dacoma, Oklahoma (recipient)",
-        "lat": 36.6606,
-        "lng": -98.5626
-      }
-    ]
-  },
-  {
     "id": 251,
     "location": "Kansas City, Missouri — Liberty Memorial",
     "address": "Kansas City, Missouri",
