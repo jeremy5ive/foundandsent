@@ -5,8 +5,15 @@
     <link>https://foundandsent.net</link>
     <description>Rescued vintage postcards with their original messages, stamps, and stories. New cards added regularly.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 02 Nov 2026 17:22:50 -0600</lastBuildDate>
+    <lastBuildDate>Mon, 09 Nov 2026 17:19:39 -0600</lastBuildDate>
     <atom:link href="https://foundandsent.net/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Card #251: Kansas City, Missouri — Liberty Memorial (1944 (postmarked Kansas City, Mo., Sep 19, 1944))</title>
+      <link>https://foundandsent.net/#card-251</link>
+      <guid isPermaLink="true">https://foundandsent.net/#card-251</guid>
+      <description>Two travelers climb up to Kansas City's Liberty Memorial in September 1944: "in the picture it looks quite level, but really it is on quite a hill."</description>
+      <media:thumbnail url="https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1944 - Liberty Memorial, Kansas City, MO - front.jpeg"/>
+    </item>
     <item>
       <title>Card #250: Aurora, Illinois — West Bridge across the Fox River (1913 (postmarked Big Rock, Ill., Feb 22, 1913))</title>
       <link>https://foundandsent.net/#card-250</link>

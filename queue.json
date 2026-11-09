@@ -1,29 +1,5 @@
 [
   {
-    "id": 251,
-    "location": "Kansas City, Missouri — Liberty Memorial",
-    "address": "Kansas City, Missouri",
-    "year": "1944 (postmarked Kansas City, Mo., Sep 19, 1944)",
-    "sender": "\"Lora[?] & Ruth\"",
-    "recipient": "Miss Iva Pirtle, R. 2, Fordland, Missouri",
-    "notes": "Front: \"Liberty Memorial, Kansas City, Missouri\" — a real-photo view of the World War I memorial's tower between its two flanking halls, with the carved frieze on the north wall and the lawn and stairs below. Dedicated in 1926, the memorial is now home to the National WWI Museum and Memorial. Back: \"This is a genuine Grogan photograph\" (Grogan Photo Co., Danville, Illinois). A 1-cent green \"For Defense\" Statue of Liberty stamp (1940 National Defense issue), machine-cancelled Kansas City, Mo., Sep 19, 5 PM, 1944, with a \"Post Card\" slogan. Fordland is a small town in Webster County east of Springfield. Sept 19, 1944 was a Tuesday, matching the heading. Message: \"Tues. 2-30 O'Clock Sept 19-44 Dear Iva: We got into K.C. about 10, & will leave out here to-night. Ruth & I went up & saw this memorial, in the picture it looks quite level, but really it is on quite a hill, it certainly a lovely place & view, you can see so far. It is World War I Memorial. It was raining here when we got here but has cleared off & the sun is really hot. Lots of Love Lora[?] & Ruth\" A pencil dealer mark (\"527.50\") is on the address side, matching the Menlo Park convent card.",
-    "front": "1944 - Liberty Memorial, Kansas City, MO - front.jpeg",
-    "back": "1944 - Liberty Memorial, Kansas City, MO - back.jpeg",
-    "feed_description": "Two travelers climb up to Kansas City's Liberty Memorial in September 1944: \"in the picture it looks quite level, but really it is on quite a hill.\"",
-    "map": [
-      {
-        "name": "Kansas City, Missouri (postmark)",
-        "lat": 39.0806,
-        "lng": -94.586
-      },
-      {
-        "name": "Fordland, Missouri (recipient)",
-        "lat": 37.1584,
-        "lng": -92.9405
-      }
-    ]
-  },
-  {
     "id": 252,
     "location": "Denver, Colorado — Union Station",
     "address": "Denver, Colorado",
