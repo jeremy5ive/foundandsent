@@ -1,29 +1,5 @@
 [
   {
-    "id": 252,
-    "location": "Denver, Colorado — Union Station",
-    "address": "Denver, Colorado",
-    "year": "1944 (postmarked Junction City, Kans., Apr 4, 1944)",
-    "sender": "Pvt. Sherman H. Osborn, 37112487[?], B. Co. of M.P.[?], Fort Riley, Kansas",
-    "recipient": "Mrs.[?] Sherman Osborn, Box 383, Edmonds, Washington (the message is to \"Aunt Addie\")",
-    "notes": "Front: \"15805. Union Station, Denver, Colorado\" — a linen-style tinted view of the station's granite and terra-cotta front with its three great arched windows, a row of 1930s cars parked out front. Published by the H. H. Tammen Co., Denver (\"H-H-T-Co\" arrow logo). The printed back text reads: \"The Union Station is one of the most beautiful in this section of the country. The main waiting room is 100 feet by 110 feet. Seats 400 people comfortably. Waiting room 67 feet high. The cost of the main building alone was $500,000. Built of granite and terra cotta.\" Back: no stamp — \"Free\" is written in the stamp box, the free-mail privilege granted to servicemen during World War II. Machine-cancelled Junction City, Kans., Apr 4, 6:30 PM, 1944; Junction City is the town just outside Fort Riley. The soldier wrote his return address across the top; the serial number and unit abbreviation are hard to read and flagged. The address is in a different, neater hand from the message. Manhattan, Kansas (where he spent Saturday night) is about 20 miles east of Fort Riley. The message has almost no punctuation; light punctuation follows his own dots. Message: \"Aunt Addie. just a line to say hello and tell you that I am just fine and hope the same with you. These[?] nice fine day. The weather is sure nice out here in Kansas. How is it out that way fine & hope. I hope this card finds you all well at home Thursday. I was[?] over at Manhattan last sat night & was it cold over there Aunt Addie. well so long for this time. Sherman H. Osborn\" A pencil dealer mark (\"1.00\") is on the address side.",
-    "front": "1944 - Union Station, Denver, CO - front.jpeg",
-    "back": "1944 - Union Station, Denver, CO - back.jpeg",
-    "feed_description": "A private at Fort Riley sends a free soldier's card to Aunt Addie in Washington state, April 1944: the Kansas weather is \"sure nice,\" but Manhattan was cold last Saturday night.",
-    "map": [
-      {
-        "name": "Junction City, Kansas (postmark; Fort Riley)",
-        "lat": 39.0286,
-        "lng": -96.8314
-      },
-      {
-        "name": "Edmonds, Washington (recipient)",
-        "lat": 47.8107,
-        "lng": -122.3774
-      }
-    ]
-  },
-  {
     "id": 253,
     "location": "Garden City, Kansas — Hotel Warren",
     "address": "Garden City, Kansas",

@@ -5,8 +5,15 @@
     <link>https://foundandsent.net</link>
     <description>Rescued vintage postcards with their original messages, stamps, and stories. New cards added regularly.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 09 Nov 2026 17:19:39 -0600</lastBuildDate>
+    <lastBuildDate>Tue, 10 Nov 2026 09:38:46 -0600</lastBuildDate>
     <atom:link href="https://foundandsent.net/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Card #252: Denver, Colorado — Union Station (1944 (postmarked Junction City, Kans., Apr 4, 1944))</title>
+      <link>https://foundandsent.net/#card-252</link>
+      <guid isPermaLink="true">https://foundandsent.net/#card-252</guid>
+      <description>A private at Fort Riley sends a free soldier's card to Aunt Addie in Washington state, April 1944: the Kansas weather is "sure nice," but Manhattan was cold last Saturday night.</description>
+      <media:thumbnail url="https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1944 - Union Station, Denver, CO - front.jpeg"/>
+    </item>
     <item>
       <title>Card #251: Kansas City, Missouri — Liberty Memorial (1944 (postmarked Kansas City, Mo., Sep 19, 1944))</title>
       <link>https://foundandsent.net/#card-251</link>
