@@ -1,29 +1,5 @@
 [
   {
-    "id": 253,
-    "location": "Garden City, Kansas — Hotel Warren",
-    "address": "Garden City, Kansas",
-    "year": "1948 (dated 6/18/48; postmarked Garden City, Kans., Jun 19, 1948)",
-    "sender": "\"Mother\"",
-    "recipient": "John W. Tutt[?], 1205 N. Cascade, Colo. Springs, Colorado",
-    "notes": "Front: \"Hotel Warren, Garden City, Kansas\" — a linen-style view of the brick hotel on a street corner, with a rooftop \"Hotel Warren\" sign, a vertical \"Warren Hotel\" sign, a \"Coffee Shop\" arrow, an \"Air Conditioned\" Coca-Cola sign and \"Pearl Drugs\" in the ground floor. Back: \"Pub. by Pearl Drug Store, Garden City, Kansas\" (the drugstore pictured inside the hotel), card number 1166. A green 1-cent Washington stamp, deliberately placed upside down, machine-cancelled Garden City, Kans., Jun 19, 1948. The message is written across the card, crossing the postmark, and the address is written upside down relative to the message. The \"4th\" is partly hidden under the postmark but reads clearly enough. Message: \"Dear John — 6/18/48 We had a very hot trip down. It was about 103° at 2 o'clock. Everyone asks for you and misses you. Upon our arrival Kies[?] conducted us on a tour of the new power plant. They are building a 4th story on this hotel. How are the movies? Much love, Mother\" A pencil dealer mark (\"527.50\") is on the address side, matching the Liberty Memorial and Menlo Park cards.",
-    "front": "1948 - Hotel Warren, Garden, KS - front.jpeg",
-    "back": "1948 - Hotel Warren, Garden, KS - back.jpeg",
-    "feed_description": "Mother writes to John in Colorado Springs from Garden City, Kansas, June 1948: 103° on the drive down, a tour of the new power plant, and a new story going up on the hotel.",
-    "map": [
-      {
-        "name": "Garden City, Kansas (postmark)",
-        "lat": 37.9717,
-        "lng": -100.8727
-      },
-      {
-        "name": "Colorado Springs, Colorado (recipient)",
-        "lat": 38.8339,
-        "lng": -104.8214
-      }
-    ]
-  },
-  {
     "id": 254,
     "location": "Ogallala, Nebraska — \"Mama — Can Jimmy Stay for Lunch?\"",
     "address": "Ogallala, Nebraska",
