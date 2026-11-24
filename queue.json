@@ -1,29 +1,5 @@
 [
   {
-    "id": 254,
-    "location": "Ogallala, Nebraska — \"Mama — Can Jimmy Stay for Lunch?\"",
-    "address": "Ogallala, Nebraska",
-    "year": "1949 (postmarked Ogallala, Nebr., Sep 26, 1949)",
-    "sender": "Unsigned",
-    "recipient": "Miss Elaine Kennedy, 4201 N St., Lincoln, Nebr.",
-    "notes": "Front: a black-and-white cartoon by Wm. Standing of a grinning cow with a flower in her mouth and two calves, one asking \"Mama — Can Jimmy Stay for Lunch?\" Back: \"From an original etching by Wm. Standing, noted Indian artist\"; published by Western Stationery Co., Yachats, Oregon. William Standing (1904–1951) was an Assiniboine artist from the Fort Peck Reservation in Montana, known for humorous ranch and reservation drawings sold widely as postcards. A green 1-cent Washington stamp, machine-cancelled Ogallala, Nebr., Sep 26, 10 AM, 1949. Sep 26, 1949 was a Monday, so \"Sun Night\" was the 25th. Ogallala sits on U.S. 30 (the Lincoln Highway), lined in those years with tourist courts like the Mission Courts. Message: \"Ogallala Nebr. Sun Night. Here we are at the Mission Courts have a cute cabin bath Radio & garage — will be home tomorrow noon. Hope your fine, we are tired.\" A pencil dealer mark (\"9744 1—\") is in the upper corner.",
-    "front": "1949 - Ogallala, NEB - front.jpeg",
-    "back": "1949 - Ogallala, NEB - back.jpeg",
-    "feed_description": "A cow cartoon by Assiniboine artist William Standing, mailed from Ogallala in 1949: a cute cabin at the Mission Courts with bath, radio and garage — \"will be home tomorrow noon.\"",
-    "map": [
-      {
-        "name": "Ogallala, Nebraska (postmark)",
-        "lat": 41.128,
-        "lng": -101.7196
-      },
-      {
-        "name": "Lincoln, Nebraska (recipient)",
-        "lat": 40.8136,
-        "lng": -96.7026
-      }
-    ]
-  },
-  {
     "id": 255,
     "location": "Kotor, Montenegro (Yugoslavia) — Bay of Kotor",
     "address": "Kotor, Montenegro",

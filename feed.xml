@@ -5,8 +5,15 @@
     <link>https://foundandsent.net</link>
     <description>Rescued vintage postcards with their original messages, stamps, and stories. New cards added regularly.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 16 Nov 2026 17:16:12 -0600</lastBuildDate>
+    <lastBuildDate>Mon, 23 Nov 2026 19:32:09 -0600</lastBuildDate>
     <atom:link href="https://foundandsent.net/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Card #254: Ogallala, Nebraska — "Mama — Can Jimmy Stay for Lunch?" (1949 (postmarked Ogallala, Nebr., Sep 26, 1949))</title>
+      <link>https://foundandsent.net/#card-254</link>
+      <guid isPermaLink="true">https://foundandsent.net/#card-254</guid>
+      <description>A cow cartoon by Assiniboine artist William Standing, mailed from Ogallala in 1949: a cute cabin at the Mission Courts with bath, radio and garage — "will be home tomorrow noon."</description>
+      <media:thumbnail url="https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1949 - Ogallala, NEB - front.jpeg"/>
+    </item>
     <item>
       <title>Card #253: Garden City, Kansas — Hotel Warren (1948 (dated 6/18/48; postmarked Garden City, Kans., Jun 19, 1948))</title>
       <link>https://foundandsent.net/#card-253</link>
