@@ -5,8 +5,15 @@
     <link>https://foundandsent.net</link>
     <description>Rescued vintage postcards with their original messages, stamps, and stories. New cards added regularly.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 25 Nov 2026 12:45:50 -0600</lastBuildDate>
+    <lastBuildDate>Wed, 25 Nov 2026 12:47:28 -0600</lastBuildDate>
     <atom:link href="https://foundandsent.net/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Card #256: Trinidad, Colorado — Fishers Peak (Undated (est. c. 1915–1925; never mailed))</title>
+      <link>https://foundandsent.net/#card-256</link>
+      <guid isPermaLink="true">https://foundandsent.net/#card-256</guid>
+      <description>A faint pencil card from Trinidad, Colorado, to "Little Oleta" in Utopia, Texas — too small to read it yet, so "keep and read it when your older and can understand."</description>
+      <media:thumbnail url="https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/Fishers Peak, Trinidad, CO - front.jpeg"/>
+    </item>
     <item>
       <title>Card #255: Kotor, Montenegro (Yugoslavia) — Bay of Kotor (1961 (written "July 10 — Split"; postmarked Split, 10.VII.1961))</title>
       <link>https://foundandsent.net/#card-255</link>
