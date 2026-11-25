@@ -1,29 +1,5 @@
 [
   {
-    "id": 257,
-    "location": "Victoria, British Columbia — The Gorge",
-    "address": "Victoria, British Columbia, Canada",
-    "year": "1908 (dated \"Victoria August 30. 08\"; postmarked Victoria, B.C., Aug 30, 1908)",
-    "sender": "\"Din Ven\" (your friend), initials C. J.[?]",
-    "recipient": "Miss Christine Petersen, Kent, Wash.",
-    "notes": "Front: \"The Gorge, Victoria, B.C.\" — a tinted view of the Gorge Waterway, the narrow tidal inlet north of downtown Victoria, with a white arched bridge over the narrows, a boathouse landing and a cottage on the rocks. In the early 1900s the Gorge was Victoria's favourite spot for picnics, boating and swimming, reached by streetcar. Back: \"Souvenir Post Card\" published by The Valentine & Sons' Publishing Co., Ltd., Montreal and Toronto, \"Printed in Great Britain\" (front stock number 102039[?]). Postmarked Victoria, B.C., Aug 30, 1908, 1 PM, with a machine cancel; the stamp has been torn away along with a piece of the card. The message is written in Danish (or the Dano-Norwegian still used in Norway at the time), to a young woman in Kent, Washington, a farming town south of Seattle. The writer calls Victoria a fine town and in the next breath says the streets are full of dead rats, cats and dogs — apparently tongue-in-cheek. The first two words are in a fainter ink. Translation: \"Victoria, August 30, '08. I was in Victoria on Sunday. It's a fine town, believe you me. The streets are full of dead rats, cats, dogs, etc. Now farewell, and be well until I see you again. From your friend, C. J.[?]\" Message: \"Victoria August 30. 08 / Jeg var til Victoria i Søndags. Det er en pæn By kan du tro. Gaderne er fulde af døde Rotter, Katte, Hunde o.s.v. Nu maa du have farvel og lev vel til jeg ser dig igen. Fra din Ven C. J.[?]\"",
-    "front": "1908 - The Gorge, Victoria, BC - front.jpeg",
-    "back": "1908 - The Gorge, Victoria, BC - back.jpeg",
-    "feed_description": "A Danish note from Victoria, B.C., 1908: \"It's a fine town, believe you me. The streets are full of dead rats, cats, dogs, etc.\"",
-    "map": [
-      {
-        "name": "Victoria, British Columbia (The Gorge)",
-        "lat": 48.4466,
-        "lng": -123.3946
-      },
-      {
-        "name": "Kent, Washington (recipient)",
-        "lat": 47.3809,
-        "lng": -122.2348
-      }
-    ]
-  },
-  {
     "id": 258,
     "location": "North St. Paul, Minnesota — New Year Greeting",
     "address": "c/o Mr. Gillette, North St. Paul, Minnesota",

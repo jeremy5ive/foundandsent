@@ -5,8 +5,15 @@
     <link>https://foundandsent.net</link>
     <description>Rescued vintage postcards with their original messages, stamps, and stories. New cards added regularly.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 25 Nov 2026 12:47:28 -0600</lastBuildDate>
+    <lastBuildDate>Wed, 25 Nov 2026 17:24:07 -0600</lastBuildDate>
     <atom:link href="https://foundandsent.net/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Card #257: Victoria, British Columbia — The Gorge (1908 (dated "Victoria August 30. 08"; postmarked Victoria, B.C., Aug 30, 1908))</title>
+      <link>https://foundandsent.net/#card-257</link>
+      <guid isPermaLink="true">https://foundandsent.net/#card-257</guid>
+      <description>A Danish note from Victoria, B.C., 1908: "It's a fine town, believe you me. The streets are full of dead rats, cats, dogs, etc."</description>
+      <media:thumbnail url="https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1908 - The Gorge, Victoria, BC - front.jpeg"/>
+    </item>
     <item>
       <title>Card #256: Trinidad, Colorado — Fishers Peak (Undated (est. c. 1915–1925; never mailed))</title>
       <link>https://foundandsent.net/#card-256</link>
