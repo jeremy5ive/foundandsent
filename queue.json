@@ -51,5 +51,292 @@
         "lng": -99.5317
       }
     ]
+  },
+  {
+    "id": 257,
+    "location": "Victoria, British Columbia — The Gorge",
+    "address": "Victoria, British Columbia, Canada",
+    "year": "1908 (dated \"Victoria August 30. 08\"; postmarked Victoria, B.C., Aug 30, 1908)",
+    "sender": "\"Din Ven\" (your friend), initials C. J.[?]",
+    "recipient": "Miss Christine Petersen, Kent, Wash.",
+    "notes": "Front: \"The Gorge, Victoria, B.C.\" — a tinted view of the Gorge Waterway, the narrow tidal inlet north of downtown Victoria, with a white arched bridge over the narrows, a boathouse landing and a cottage on the rocks. In the early 1900s the Gorge was Victoria's favourite spot for picnics, boating and swimming, reached by streetcar. Back: \"Souvenir Post Card\" published by The Valentine & Sons' Publishing Co., Ltd., Montreal and Toronto, \"Printed in Great Britain\" (front stock number 102039[?]). Postmarked Victoria, B.C., Aug 30, 1908, 1 PM, with a machine cancel; the stamp has been torn away along with a piece of the card. The message is written in Danish (or the Dano-Norwegian still used in Norway at the time), to a young woman in Kent, Washington, a farming town south of Seattle. The writer calls Victoria a fine town and in the next breath says the streets are full of dead rats, cats and dogs — apparently tongue-in-cheek. The first two words are in a fainter ink. Translation: \"Victoria, August 30, '08. I was in Victoria on Sunday. It's a fine town, believe you me. The streets are full of dead rats, cats, dogs, etc. Now farewell, and be well until I see you again. From your friend, C. J.[?]\" Message: \"Victoria August 30. 08 / Jeg var til Victoria i Søndags. Det er en pæn By kan du tro. Gaderne er fulde af døde Rotter, Katte, Hunde o.s.v. Nu maa du have farvel og lev vel til jeg ser dig igen. Fra din Ven C. J.[?]\"",
+    "front": "1908 - The Gorge, Victoria, BC - front.jpeg",
+    "back": "1908 - The Gorge, Victoria, BC - back.jpeg",
+    "feed_description": "A Danish note from Victoria, B.C., 1908: \"It's a fine town, believe you me. The streets are full of dead rats, cats, dogs, etc.\"",
+    "map": [
+      {
+        "name": "Victoria, British Columbia (The Gorge)",
+        "lat": 48.4466,
+        "lng": -123.3946
+      },
+      {
+        "name": "Kent, Washington (recipient)",
+        "lat": 47.3809,
+        "lng": -122.2348
+      }
+    ]
+  },
+  {
+    "id": 258,
+    "location": "North St. Paul, Minnesota — New Year Greeting",
+    "address": "c/o Mr. Gillette, North St. Paul, Minnesota",
+    "year": "1909 (postmarked North Saint Paul, Minn., Dec 30, 1909)",
+    "sender": "\"Your Sister\" M. Ogg[?]",
+    "recipient": "Mrs. H. Swift, c/o Mr. Gillette, North St. Paul",
+    "notes": "Front: \"Best Wishes for a happy New Year\" — an embossed card of an open book, one page lettered in gold script and the other showing a snowy lane and church steeple, set on pine boughs and pinecones over a green ground. Back: trilingual \"Post card / Postkarte / Carte postale\" heading, \"Printed in Germany,\" design no. 239 — German lithographers produced most of the fine embossed greeting cards sold in America before World War I. 1¢ green Franklin stamp (1908 series), postmarked North Saint Paul, Minn., Dec 30, 1909, 5 PM. The card was mailed within town, a thank-you for a Christmas present; the signature runs up the left margin. Pencil dealer mark \"527 $1.00\". Message: \"With much love and best wishes for a happy new year and thanking you for the present you sent me. I am feeling better [?] … Your Sister M. Ogg[?]\"",
+    "front": "1909 - Happy New Year - North St Paul, MN - front.jpeg",
+    "back": "1909 - Happy New Year - North St Paul, MN - back.jpeg",
+    "feed_description": "A sister's New Year thank-you, mailed across town in North St. Paul, Minnesota, Dec 30, 1909: \"thanking you for the present you sent me. I am feeling better.\"",
+    "map": [
+      {
+        "name": "North St. Paul, Minnesota",
+        "lat": 45.0125,
+        "lng": -92.9919
+      }
+    ]
+  },
+  {
+    "id": 259,
+    "location": "McKinney, Texas — Christmas Greeting",
+    "address": "204 S. College St., McKinney, Texas",
+    "year": "1911 (postmarked Dec 22, 1911 — town name only partly legible, \"…COSTA[?]\")",
+    "sender": "Mrs. Adam[?] Edlington[?]",
+    "recipient": "Mrs. W. F. Richardson, 204 S. College St., McKinney, Texas",
+    "notes": "Front: \"A Merry Christmas — A Happy New Year\" — a heavily embossed card with sprays of holly and red berries over silver-stippled panels, and a band showing Santa climbing into a chimney on a snowy rooftop, his reindeer and sleigh waiting beside him. Back: copyright 1910 by A. Jaeger[?]; \"Christmas Series No. 2\"[?] printed upside down at the foot. 1¢ green Franklin stamp, duplex postmark Dec 22, 1911; only the end of the town name (\"…COSTA\"[?]) can be read, so the sending town is uncertain. McKinney is the county seat of Collin County, north of Dallas. The writer mentions a lively boy of her own (\"a whirlwind\") and the recipient's little Joseph. Pencil dealer mark \"527 #1.50\"[?]. Message: \"Just recd your card and all as usual. Yes I wish I could see your boy we have one here that is a whirlwind. Hope you & little Joseph will have a merry Xmas. I will write you a long letter after holidays. Lovingly yours Mrs. Adam[?] Edlington[?]\"",
+    "front": "1911 - Merry Christmas - front.jpeg",
+    "back": "1911 - Merry Christmas - back.jpeg",
+    "feed_description": "A 1911 Christmas card to McKinney, Texas: \"Yes I wish I could see your boy — we have one here that is a whirlwind.\"",
+    "map": [
+      {
+        "name": "McKinney, Texas (recipient)",
+        "lat": 33.1976,
+        "lng": -96.6153
+      }
+    ]
+  },
+  {
+    "id": 260,
+    "location": "Fort Smith, Arkansas — Camp Chaffee (\"75mm Gun in Action\")",
+    "address": "146 Armd. Sig. Co., 6 Armd. Div., APO 256[?], Camp Chaffee, Ark.",
+    "year": "1942 (postmarked Fort Smith, Ark., May 2, 1942)",
+    "sender": "Pvt. Karl Walters, 146th Armored Signal Company, 6th Armored Division, Camp Chaffee, Arkansas",
+    "recipient": "Miss Bertha Lee Wallace, 1108 – 22nd Street, Galveston, Texas",
+    "notes": "Front: \"No. 3[?]1 — 75mm. Gun in Action — Photo by U.S. Army Signal Corps\" — soldiers in campaign hats silhouetted beside a field gun under the trees, an older training photo. Back: \"Defend Your Country — Join the U.S. Army,\" published by the Thompson Company, Richmond, Virginia. No stamp: Walters wrote \"FREE\" in the stamp box — Congress gave members of the armed forces free mailing privileges in March 1942. Postmarked Fort Smith, Ark., May 2, 1942, 6:30 PM. The 6th Armored Division was activated in February 1942 and moved to newly built Camp Chaffee, outside Fort Smith, that spring; the 146th Armored Signal Company was its communications unit. The division later fought across France and Germany (1944–45). Pencil dealer mark \"#1986 3.00\". Message: \"Dear Bertha Lee; Just a card to let you know I am feeling fine and hope you are too. Say \"Hello!\" to Amy for me and give my regards to \"Shorty\"! Please write me as soon as you can I will be looking forward to your reply! Pvt Karl Walters\"",
+    "front": "1942 - Army Correspondance - Fort Smith, AR - front.jpeg",
+    "back": "1942 - Army Correspondance - Fort Smith, AR - back.jpeg",
+    "feed_description": "A new private at Camp Chaffee, Arkansas, writes to Galveston in May 1942: \"Please write me as soon as you can — I will be looking forward to your reply!\"",
+    "map": [
+      {
+        "name": "Fort Smith, Arkansas (postmark; Camp Chaffee)",
+        "lat": 35.3859,
+        "lng": -94.3985
+      },
+      {
+        "name": "Galveston, Texas (recipient)",
+        "lat": 29.3013,
+        "lng": -94.7977
+      }
+    ]
+  },
+  {
+    "id": 261,
+    "location": "San Diego, California — Horton Plaza (mailed from National City)",
+    "address": "U.S. Naval Repair Base, Div. 7-1, San Diego, California",
+    "year": "1944 (postmarked National City, Calif., Nov 6, 1944)",
+    "sender": "K. S. Elwell Jr., SF3/c, U.S. Naval Repair Base, Div. 7-1, San Diego",
+    "recipient": "Alda Elwell, Nobleboro, Maine",
+    "notes": "Front: \"Typical Crowd Around San Diego's Famous Plaza\" — a wartime photo of a packed sidewalk at Horton Plaza, sailors and civilians in front of Painless Parker Dentist, Plaza Jewelry, Western Union and the Cabrillo Theatre, whose marquee advertises \"Salute to the Marines\" and \"Street of Chance\" (both 1942–43 films). Back: \"Foto-Gloss\" by M. B. Libman Co., 1240 S. Main, L.A. No stamp — \"Free\" written in the stamp box (servicemen's free mail). Postmarked National City, Calif., Nov 6, 1944, 11:30 AM. The sender was a Shipfitter Third Class at the U.S. Naval Repair Base, San Diego, on the bayfront next to National City. The \"water fountain that turns all colors at night\" is the Broadway Fountain in Horton Plaza, designed by Irving Gill and lit with colored electric lights in 1910. Part of the third line is hidden under the postmark. Same sender as card #262, written to the mother of his little daughter Judy. Pencil dealer mark \"#1986 $1.00\". Message: \"From K S Elwell Jr SF3/c USNRB Div 7-1 San Deigo Calif. this is were the [?] [?] to take anouth one from any Port of San Deigo. I whish you cood see it. there is a water fountain Jest one such that turn all culler at night it Pretty I wihish you cood see it. By love and Kisses\"",
+    "front": "1944 - National City, CA - front.jpeg",
+    "back": "1944 - National City, CA - back.jpeg",
+    "feed_description": "A Navy shipfitter writes home to Maine about San Diego's Horton Plaza fountain, 1944: \"there is a water fountain… that turn all culler at night. I wish you cood see it.\"",
+    "map": [
+      {
+        "name": "San Diego, California (Horton Plaza)",
+        "lat": 32.7157,
+        "lng": -117.1611
+      },
+      {
+        "name": "National City, California (postmark)",
+        "lat": 32.6781,
+        "lng": -117.0992
+      },
+      {
+        "name": "Nobleboro, Maine (recipient)",
+        "lat": 44.0798,
+        "lng": -69.4878
+      }
+    ]
+  },
+  {
+    "id": 262,
+    "location": "San Diego, California — USO Card from a Navy Father",
+    "address": "U.S. Naval Repair Base, Div. 7-1, San Diego 36, California",
+    "year": "1944 (postmarked San Diego, Calif., Sep 9, 1944)",
+    "sender": "K. S. Elwell Jr., SF3/c (\"your Navy Soller Daddy\"), U.S. Naval Repair Base, Div. 7-1, San Diego 36, Calif.",
+    "recipient": "Juddy [Judy] A. Elwell, Nobleboro, Maine",
+    "notes": "A plain USO correspondence card: the address side has printed \"From\" lines, \"Message Continued Here,\" and \"To\"; the message side carries a small USO flag emblem. The USO (United Service Organizations, founded 1941) handed out free stationery at its servicemen's clubs. No stamp; machine-cancelled San Diego, Calif., Sep 9, 1944, 8:30 AM, sta. 2. The first \"Maine\" is scribbled out and rewritten. The sender was a Shipfitter Third Class at the U.S. Naval Repair Base, San Diego; two months later he mailed card #261 to Alda Elwell at the same address. Here he writes to his little girl, apologizing for the plain card and promising a long-awaited present; \"Dee\" and \"Jene\" are probably her siblings. The message ends with a row of nine X's. Pencil dealer marks \"#1980\" and \"#1021\"[?]. Message: \"My Dear little Judy -: how is you, are you a good girl. this is not a very good card but it is all I have handy. thought that you might[?] like to get mail, tell daddy if you do. daddy like to get mail from his good little angle girl that seem all that he can get from you, daddy is going to send that Present to you to morrow that he has ben going to send for a long time. well Dear Good by a lot of Kisses to you and Dee[?] and Jene[?] kiss them for me. and be good to mama From your Navy Soller Daddy XXXXXXXXX\"",
+    "front": "1944 - War Correspondance - San Diego, CA - front.jpeg",
+    "back": "1944 - War Correspondance - San Diego, CA - back.jpeg",
+    "feed_description": "A sailor in San Diego writes to his little girl in Maine, 1944: \"daddy like to get mail from his good little angle girl… From your Navy Soller Daddy.\"",
+    "map": [
+      {
+        "name": "San Diego, California (postmark)",
+        "lat": 32.7157,
+        "lng": -117.1611
+      },
+      {
+        "name": "Nobleboro, Maine (recipient)",
+        "lat": 44.0798,
+        "lng": -69.4878
+      }
+    ]
+  },
+  {
+    "id": 263,
+    "location": "Pikes Peak, Colorado — Switchbacks near the Summit",
+    "address": "Pikes Peak Highway, Colorado",
+    "year": "1947 (Summit of Pikes Peak cachet Sep 25, 1947; postmarked Manitou Springs, Colo., Sep 26, 1947)",
+    "sender": "Josie, Charlie, G. Bird[?], Elsie[?], Cleo & \"Pickles\"",
+    "recipient": "Mr. & Mrs. Maynard Abrahams[?], Taft, Texas",
+    "notes": "Front: a linen view of the gravel auto highway looping up the bare, rust-colored upper slopes of Pikes Peak. Back: \"2117 Nearing the Top of Pike's Peak on the Auto Highway, Showing a Portion of the Switchbacks and the Summit of the Peak, 14,109 Feet Above the Sea\"; \"C. T. Art-Colortone\" (Curt Teich, Chicago) for Sanborn Souvenir Co., Denver. Hand-stamped souvenir cachet \"Summit of Pikes Peak, Sep 25, 1947, Altitude 14,110 Feet\" — the summit house kept a rubber stamp for visitors' cards — then machine-postmarked at Manitou Springs, Colo., Sep 26, 1947, 4 PM, with a 1¢ green Washington stamp. The toll highway was built by Spencer Penrose in 1915; today's official elevation is 14,115 ft. Written in faint pencil, signed by a carload of travelers (\"Pickles\" may be a dog). Taft is a small town near Corpus Christi. Dealer sticker \"1843 $0.99\" (same dealer lot as the Trinidad card). Message: \"Boy, this altitude really makes you puff + pant — we were lucky to get to the top — it will be snowing in any day now. Josie, Charlie, G. Bird[?], Elsie[?], Cleo + Pickles\"",
+    "front": "1947 - Pikes Peak - front.jpeg",
+    "back": "1947 - Pikes Peak - back.jpeg",
+    "feed_description": "A carload of Texans at the top of Pikes Peak, Sept. 1947: \"Boy, this altitude really makes you puff + pant — we were lucky to get to the top.\"",
+    "map": [
+      {
+        "name": "Pikes Peak summit, Colorado",
+        "lat": 38.8409,
+        "lng": -105.0423
+      },
+      {
+        "name": "Manitou Springs, Colorado (postmark)",
+        "lat": 38.8597,
+        "lng": -104.9172
+      },
+      {
+        "name": "Taft, Texas (recipient)",
+        "lat": 27.9789,
+        "lng": -97.3986
+      }
+    ]
+  },
+  {
+    "id": 264,
+    "location": "New Orleans, Louisiana — Huey P. Long Bridge",
+    "address": "New Orleans, Louisiana",
+    "year": "1950 (postmarked New Orleans, La., Jul 10, 1950)",
+    "sender": "\"Baby\"",
+    "recipient": "Miss Evelyn Branson[?], Sta. A, Box 178, Abilene, Texas",
+    "notes": "Front: \"Huey P. Long Bridge, Across the Mississippi, New Orlean[s], La. — 187\" — a linen view of the long steel truss bridge and its curving trestle approach, a passenger train crossing at sunset. Back: printed history — 4.4 miles long including approaches, cost $13,000,000, two 18 ft. auto roadways, linking the Old Spanish Trail and the Jefferson Highway, central pier resting on sand 170 ft. below the water, 409 ft. high overall. \"New Orleans — America's Most Interesting City\"; published by New Orleans News Co., \"Natural Color\" card made by E. C. Kropp Co., Milwaukee (no. 14951). The bridge, upriver from the city in Jefferson Parish, opened in December 1935 and was named for the governor assassinated that September. 1¢ green Washington stamp, machine-postmarked New Orleans, Jul 10, 1950, 7:30 AM. Written Sunday evening by a homesick traveler who finds the city's water hard to take. The surname could read Bransom or Branson. Pencil dealer mark \"1986 $1.00\". Message: \"Sun. eve. Dear Evelyn — Just ate half a fried chicken — Start my reducing diet tomorrow! It was so good. Having to get back nearer home or start importing water. Am homesick any-way. I do like New Orleans. Rode a streecar from church — fun. Love, Baby\"",
+    "front": "1950 - Huey P Long Bridge, New Orleans, LA - front.jpeg",
+    "back": "1950 - Huey P Long Bridge, New Orleans, LA - back.jpeg",
+    "feed_description": "New Orleans to Abilene, 1950: \"Just ate half a fried chicken — Start my reducing diet tomorrow! It was so good.\"",
+    "map": [
+      {
+        "name": "Huey P. Long Bridge, Louisiana",
+        "lat": 29.9436,
+        "lng": -90.168
+      },
+      {
+        "name": "New Orleans, Louisiana (postmark)",
+        "lat": 29.9511,
+        "lng": -90.0715
+      },
+      {
+        "name": "Abilene, Texas (recipient)",
+        "lat": 32.4487,
+        "lng": -99.7331
+      }
+    ]
+  },
+  {
+    "id": 265,
+    "location": "Buellton, California — U.S. Highway 101 and Andersen's",
+    "address": "Buellton, California",
+    "year": "1971 (dated Nov. 22-71; postmarked Buellton, Calif., Nov 24, 1971)",
+    "sender": "Vera[?] & Clarence",
+    "recipient": "Mr. & Mrs. M. F. Weckel[?], 645 No. Broadview, Wichita, Kansas",
+    "notes": "Front: \"Buellton, California — U.S. Highway 101\" — the main street with flags flying, late-1960s cars, and the half-timbered Andersen's restaurant with its big rooftop sign. Back: \"Picturesque community in the heart of a richly scenic area of central California on Calif.–U.S. Hwy. Route between Los Angeles and San Francisco — Home of the world famous Andersen's 'Pea Soup Restaurant'.\" Photo by S. M. Gilletto; Pacific Distributors, San Simeon and Pacific Grove; Plastichrome by Colourpicture, Boston. Andersen's started as a small roadside café in 1924 and became famous for split pea soup advertised on billboards up and down 101. 8¢ Eisenhower stamp (1971), postmarked Buellton, Nov 24, 1971, 93427. The travelers were heading home after visiting Ann and Mike, and send birthday wishes. Pencil dealer mark \"527 .50\". Message: \"Nov. 22-71 Dear Ones: We are on our way back home after having a lovely visit with Ann & Mike. The weather is heavenly[?] & its so pretty up here. Happy Birthday to you[?] Babe[?]. Love, Vera[?] & Clarence.\"",
+    "front": "1971 - Highway 101, Buellton, CA - front.jpeg",
+    "back": "1971 - Highway 101, Buellton, CA - back.jpeg",
+    "feed_description": "From the home of Andersen's Pea Soup, Nov. 1971: \"We are on our way back home after having a lovely visit with Ann & Mike… its so pretty up here.\"",
+    "map": [
+      {
+        "name": "Buellton, California",
+        "lat": 34.6136,
+        "lng": -120.1927
+      },
+      {
+        "name": "Wichita, Kansas (recipient)",
+        "lat": 37.6872,
+        "lng": -97.3301
+      }
+    ]
+  },
+  {
+    "id": 266,
+    "location": "Mexico City, Mexico — Fountain in the Alameda Central",
+    "address": "Mexico City, Mexico",
+    "year": "1976 (dated Sunday 5/23/76; postmarked Mexico City, 28.5.76)",
+    "sender": "Florence & Don",
+    "recipient": "Mrs. Verna C. Reedy, Lincoln Community Nursing Home, Lincoln, Missouri 65338, U.S.A.",
+    "notes": "Front: a bronze nymph rising from a fountain in the Alameda Central, jets of water around her, with the Torre Latinoamericana rising behind the trees. Back: \"Una Fuente en la Alameda Central — Picturesque Alameda Park in the center of Mexico City, México, D.F.\" Foto J. Kipi Turok; \"Tarjeta Postal 'Vistacolor', Lito en México,\" Ammex Asociados, S.A. The writers translated the caption for their aunt, writing \"a fountain\" over \"una fuente\" and circling \"en\" with \"in.\" The Alameda, laid out in 1592, is often called the oldest public park in the Americas. The 44-story Torre Latinoamericana (1956), with a restaurant near the top, was long billed as the tallest building in Latin America and survived the 1957 and 1985 earthquakes. Sent air mail (\"correo aéreo\") with a 1.60-peso Mexican stamp for Interphil 76, the international stamp exhibition held in Philadelphia for the U.S. Bicentennial, postmarked 28 May 1976. Lincoln is a small town in Benton County, central Missouri. Pencil dealer mark \"1986 $1.00\". Message: \"Sunday 5/23/76 Dear Aunt Verna, we walked here Sat. The tall tower supposed to be tallest in Latin America, I think. We ate in restaurant on top floor when here before. We have a nice room in South part of Mexico City so we have been trying the subway. We can see mountains out our window — Rains & cools off evenings (nearly everyday.) Do have to clean our room & will wash clothes but won't have to cook much. Love, Florence & Don.\"",
+    "front": "1976 - Alameda Park, Mexico City, MX - front.jpeg",
+    "back": "1976 - Alameda Park, Mexico City, MX - back.jpeg",
+    "feed_description": "Mexico City to a Missouri nursing home, 1976: \"The tall tower supposed to be tallest in Latin America, I think. We ate in restaurant on top floor when here before.\"",
+    "map": [
+      {
+        "name": "Mexico City, Mexico (Alameda Central)",
+        "lat": 19.4357,
+        "lng": -99.1441
+      },
+      {
+        "name": "Lincoln, Missouri (recipient)",
+        "lat": 38.3906,
+        "lng": -93.3327
+      }
+    ]
+  },
+  {
+    "id": 267,
+    "location": "Ames Hill, Vermont — View from the Orchards",
+    "address": "Ames Hill, Marlboro, Vermont",
+    "year": "c. 1910s (postmarked Brattleboro, Vt., Aug 30, 19[1?] — year digits not legible)",
+    "sender": "\"Hetty\"",
+    "recipient": "Miss Margaret Davis, Lake George, New York, R.F.D. #1, c/o Mr. Wm. Davis",
+    "notes": "Front: \"View from the Orchads [sic], Ames Hill, Vt.\" — a real photo postcard looking down over farmhouses, brushy pasture and a dirt road into a valley, with a rounded wooded peak (Round Mountain) beyond. Ames Hill is a hilltop farming neighborhood in Marlboro, west of Brattleboro. Back: CYKO photo paper stamp box (used on real photo cards c. 1904–1920s), divided \"Correspondence / Name and Address\" back. Flag machine cancel, Brattleboro, Aug 30, 6:30 PM; the year digits did not print clearly. There is no stamp and no sign of one ever being attached. Two ink blots cover a few words near the end of the message. The writer quizzes her friend on the landmarks — apparently Margaret knew the place well, perhaps from summers there. Pencil dealer mark \"WC $1.00\". Message: \"Metty dear — Do you recognize the view taken from good old 'Bawggy Rock'[?]? And do you also recognize 'The Orchards' & The Farm House & Round Mountain & Ames Hill & all the rest. If you look hard you can see Lawrence[?] Howe coming up the path with the [ink blot] & there you go down the [ink blot] to the spring. Please write. Your[?] Hetty.\"",
+    "front": "Ames Hill, VT - front.jpeg",
+    "back": "Ames Hill, VT - back.jpeg",
+    "feed_description": "A real photo card from Ames Hill, Vermont: \"Do you recognize the view… If you look hard you can see Lawrence Howe coming up the path.\"",
+    "map": [
+      {
+        "name": "Ames Hill, Marlboro, Vermont",
+        "lat": 42.87,
+        "lng": -72.73
+      },
+      {
+        "name": "Brattleboro, Vermont (postmark)",
+        "lat": 42.8509,
+        "lng": -72.5579
+      },
+      {
+        "name": "Lake George, New York (recipient)",
+        "lat": 43.4262,
+        "lng": -73.7123
+      }
+    ]
+  },
+  {
+    "id": 268,
+    "location": "Romantic Couple on a Bench — Christmas Letter (Part 3)",
+    "address": "Unknown",
+    "year": "Undated (est. c. 1907–1915; never mailed)",
+    "sender": "Unsigned",
+    "recipient": "Unknown (no address)",
+    "notes": "Front: a hand-tinted studio photograph of a courting couple on a park bench — she in a wide straw hat, white shirtwaist and wine-red skirt, he with a moustache and walking stick leaning in close, a newspaper and flowers on the ground. Back: \"Serie 532,\" with a divided back and dotted stamp box but no address, stamp or postmark; the message runs straight across both halves. Someone (probably the writer) wrote \"scene 3\" at the top: this is the third card of a letter written across several postcards, which were probably mailed together in an envelope. It begins mid-sentence, so the first cards are missing. The writer works and studies at the same time, is making Christmas gifts by hand, and plans to take string-music lessons after the holidays. Pencil dealer mark on the back. Message: \"…Santa Claus? I have but don't know for sure if it will take effect. & will be busy from now on 'till that day, I won't be able to make as many gifts as had planned. You see I work all the time, and study right along. so you just can imagine what time I have. Am going to take a few string music lessons after the holidays. What are you going to do Xmas?\"",
+    "front": "General Card - front.jpeg",
+    "back": "General Card - back.jpeg",
+    "feed_description": "Page three of a letter written across several postcards: \"You see I work all the time, and study right along… What are you going to do Xmas?\"",
+    "map": []
   }
 ]
