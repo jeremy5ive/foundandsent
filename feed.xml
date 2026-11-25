@@ -5,8 +5,15 @@
     <link>https://foundandsent.net</link>
     <description>Rescued vintage postcards with their original messages, stamps, and stories. New cards added regularly.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 23 Nov 2026 19:32:09 -0600</lastBuildDate>
+    <lastBuildDate>Wed, 25 Nov 2026 12:45:50 -0600</lastBuildDate>
     <atom:link href="https://foundandsent.net/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Card #255: Kotor, Montenegro (Yugoslavia) — Bay of Kotor (1961 (written "July 10 — Split"; postmarked Split, 10.VII.1961))</title>
+      <link>https://foundandsent.net/#card-255</link>
+      <guid isPermaLink="true">https://foundandsent.net/#card-255</guid>
+      <description>A traveler writes to Austin from Split in July 1961: the Dalmatian coast is "a trifle like the Norwegian fjord country" but sub-tropical, and next it's the train to Zagreb.</description>
+      <media:thumbnail url="https://raw.githubusercontent.com/jeremy5ive/foundandsent/main/images/1961 - Kotor, Montenegro - front.jpeg"/>
+    </item>
     <item>
       <title>Card #254: Ogallala, Nebraska — "Mama — Can Jimmy Stay for Lunch?" (1949 (postmarked Ogallala, Nebr., Sep 26, 1949))</title>
       <link>https://foundandsent.net/#card-254</link>

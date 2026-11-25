@@ -1,34 +1,5 @@
 [
   {
-    "id": 255,
-    "location": "Kotor, Montenegro (Yugoslavia) — Bay of Kotor",
-    "address": "Kotor, Montenegro",
-    "year": "1961 (written \"July 10 — Split\"; postmarked Split, 10.VII.1961)",
-    "sender": "\"Ruthe\"[?]",
-    "recipient": "Dr. & Mrs. F. Eby, 2612 San Pedro, Austin, Texas, U.S.A.",
-    "notes": "Front: a color view from the mountainside above Kotor, looking across the town and its newer outskirts to the inner Bay of Kotor and the steep mountains beyond, with a switchback road climbing at right. The card is worn, with a torn lower-right corner. Back: \"Kotor\" and \"Snimak: O. Hohnjec\" (photo by O. Hohnjec); published by \"Duvan\" Kotor. The stamp has been torn away, leaving only the wavy cancel; the circular postmark reads Split 2, 10 VII, 13–14 h, with the year digits partly hidden. In 1961 Kotor and Split were both part of Yugoslavia. The recipient is very likely Frederick Eby (1874–1968), the longtime University of Texas professor of the history and philosophy of education, who lived in Austin. The writer's religious statistics are her own impressions. Message: \"July 10 — Split. Kotor is a little harbor where we stopped en route to Dubrovnik where we stayed two nights. The scenery along the Dalmatian coast is a trifle like that of the Norwegian fjord country except that the vegetation is sub-tropical. The population of Dubrovnik is 100% R.C. so evidently the church flourishes in this land. In other parts some are Moslem, some Gk. Orthodox. We came here by boat yesterday. Tomorrow we go by train to Zagreb. Then back to Italy (Venice, Milan, Lake Como.) Love to all, Ruthe[?]\" A dealer sticker (\"1843 $0.39\") is on the address side, from the same dealer lot as the Madrid card, also sent to Austin.",
-    "front": "1961 - Kotor, Montenegro - front.jpeg",
-    "back": "1961 - Kotor, Montenegro - back.jpeg",
-    "feed_description": "A traveler writes to Austin from Split in July 1961: the Dalmatian coast is \"a trifle like the Norwegian fjord country\" but sub-tropical, and next it's the train to Zagreb.",
-    "map": [
-      {
-        "name": "Kotor, Montenegro (pictured)",
-        "lat": 42.4247,
-        "lng": 18.7712
-      },
-      {
-        "name": "Split, Croatia (postmark)",
-        "lat": 43.5081,
-        "lng": 16.4402
-      },
-      {
-        "name": "Austin, Texas (recipient)",
-        "lat": 30.2672,
-        "lng": -97.7431
-      }
-    ]
-  },
-  {
     "id": 256,
     "location": "Trinidad, Colorado — Fishers Peak",
     "address": "Trinidad, Colorado",
